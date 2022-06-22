@@ -29,16 +29,16 @@ const Page = ({ posts, sectionMap, author }: IProps) => {
 
   return (
     <ArticleLayout title="Home">
-      <div className="grid grid-cols-1 lg:grid-cols-4">
-        <article className="col-span-1">
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
+        <article className="flex flex-col items-center xl:items-start col-span-1">
           <AvatarImageLarge author={author} />
 
           <p className="mt-8">
-            <FontAwesomeIcon icon={faEnvelope} className="w-8 mr-2" />
+            <FontAwesomeIcon icon={faEnvelope} className="w-8" />
             <ToBlueLink href={`mailto:${EMAIL}`}>{EMAIL}</ToBlueLink>
           </p>
           <p className="mt-2">
-            <FontAwesomeIcon icon={faLink} className="w-8 mr-2" />
+            <FontAwesomeIcon icon={faLink} className="w-8" />
             <ToBlueLink href="https://github.com/antonybholmes">
               github.com/antonybholmes
             </ToBlueLink>
