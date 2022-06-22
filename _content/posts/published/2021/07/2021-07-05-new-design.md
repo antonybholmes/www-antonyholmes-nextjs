@@ -12,6 +12,8 @@ hero: ""
 
 I've redesigned my web site using React and Gatsby.
 
+<!-- end -->
+
 If you're a developer and you are interested in how the work is done, here are some details. The site is not open source but please feel free to get in touch at antony@antonyholmes.com if you would like to view the code base.
 
 The site is primarily developed using Gatsby, a framework for building websites in React. Gatsby is component based and takes care of the tiresome routing, transpiling, and hot-reloading that can make React annoying.

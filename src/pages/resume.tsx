@@ -1,7 +1,3 @@
-import ArticleLayout from '../components/layouts/article-layout'
-import PageTitle from '../components/page-title'
-import TwoThirdsColLayout from '../components/two-thirds-col-layout'
-
 import jobs from '../../_content/jobs.json'
 import volunteer from '../../_content/volunteer.json'
 import education from '../../_content/education.json'

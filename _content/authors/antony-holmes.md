@@ -1,9 +1,9 @@
 ---
 id: 'antony-holmes'
 name: 'Antony Holmes'
-title: 'Polite Investor, CEO, CTO, employee #1, whatever'
+title: 'CEO, CTO, employee #1, whatever'
 picture: 'antony-holmes'
-email: 'antony@politeinvestor.com'
+email: 'antony@antonyholmes.dev'
 ---
 
 Hello, I am the The Polite Investor, a polite Englishman that has been

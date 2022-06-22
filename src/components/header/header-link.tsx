@@ -77,7 +77,7 @@ const HeaderLink = ({ link, selected, onClick }: IProps) => {
       href={link.url}
       aria={`View ${link.name}`}
       className={cn(
-        `block relative font-medium tracking-tight py-2 animate-button`,
+        `block relative font-semibold tracking-tight py-2 animate-button`,
         [selected, 'text-blue-400', 'text-blue-900 hover:text-blue-500']
       )}
       onClick={onClick}

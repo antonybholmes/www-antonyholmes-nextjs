@@ -2,6 +2,7 @@ export const SITE_NAME = 'Antony Holmes'
 export const SITE_DOMAIN = 'antonyholmes.dev'
 export const SITE_URL = `https://www.${SITE_DOMAIN}`
 export const SITE_DESCRIPTION = 'Antony Holmes website.'
+export const EMAIL = 'hello@antonyholmes.dev'
 export const TWITTER = '@antonyholmes'
 export const RECORDS_PER_PAGE = 6
 export const AUTHOR_LATEST_POSTS = 6

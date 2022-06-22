@@ -27,7 +27,10 @@ const Page = () => {
   const publicationMap = sortByDate(publications)
 
   return (
-    <SideLayout title="Publications">
+    <SideLayout
+      title="Publications"
+      description="All the papers I've worked on"
+    >
       <ul className="mt-8">
         {Array.from(publicationMap.keys())
           .sort()

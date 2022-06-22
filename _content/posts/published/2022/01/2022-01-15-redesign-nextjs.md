@@ -1,6 +1,6 @@
 ---
 title: "Experiments with NextJS"
-description: "I've redesigned my web site again using NextJS."
+description: "I have redesigned my web site again using NextJS."
 author: "Antony Holmes"
 readtime: "1 min"
 section: "Blog"
@@ -10,9 +10,9 @@ hero: ""
 
 ---
 
-I've redesigned my web site using NextJS.
-
 If you're a developer and you are interested in how the work is done, here are some details. The site is not open source but please feel free to get in touch at [hello@antonyholmes.dev](mailto:hello@antonyholmes.dev) if you would like to view the code base.
+
+<!-- end -->
 
 The site is was originally developed using Gatsby, a framework for building websites in React. Gatsby is component based and takes care of the tiresome routing, transpiling, and hot-reloading that can make React annoying.
 

@@ -31,6 +31,7 @@ export const getPostPaths = () => {
 export const getPostBySlug = (
   path: string,
   fields: string[] = [],
+  index: number,
   isPublished: boolean
 ) => {
   const canonicalSlug = getCanonicalPostSlug(path)
@@ -54,7 +55,7 @@ export const getPostBySlug = (
   }
 
   if (post.fields.hero === '') {
-    post.fields.hero = GENERIC_COVER_IMAGES[0]
+    post.fields.hero = GENERIC_COVER_IMAGES[index % GENERIC_COVER_IMAGES.length]
   }
 
   return post
@@ -63,7 +64,7 @@ export const getPostBySlug = (
 export const getAllPosts = (fields: string[] = []) => {
   const paths = getPostPaths()
   const posts = paths
-    .map(path => getPostBySlug(path, fields, true))
+    .map((path, index) => getPostBySlug(path, fields, index, true))
     // sort posts by date in descending order
     .sort((post1, post2) => {
       const d1 = new Date(post1.date)

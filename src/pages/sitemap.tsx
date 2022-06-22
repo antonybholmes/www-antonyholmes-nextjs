@@ -43,8 +43,8 @@ const Page = () => {
           </div>
 
           <div className="mt-2">
-            <BlueLink href="/contact" aria={`Contact us`}>
-              Contact Us
+            <BlueLink href="/contact" aria={`Contact`}>
+              Contact
             </BlueLink>
           </div>
         </section>
