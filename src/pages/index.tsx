@@ -104,8 +104,6 @@ export default Page
 export const getStaticProps = async () => {
   const authorMap = getAuthorMap(['id', 'name', 'title', 'picture'])
 
-  console.log(authorMap)
-
   // Get all the posts and add the authors in
   let posts = getAllPosts([
     'title',

@@ -107,7 +107,7 @@ export const getDraftPaths = () => {
 export const getAllDrafts = (fields: string[] = []) => {
   const paths = getDraftPaths()
   const posts = paths
-    .map(path => getPostBySlug(path, fields, false))
+    .map((path, index) => getPostBySlug(path, fields, index, false))
     // sort posts by date in descending order
     .sort((post1, post2) => {
       const d1 = new Date(post1.date)
