@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Programming Languages",
+    "skills": [
+      {
+        "name": "Java",
+        "details": "Tomcat, Spring Boot, Eclipse, Maven",
+        "notes": ""
+      },
+      {
+        "name": "Python",
+        "details": "Django, Pandas, Scikit-learn, Matplotlib, Seaborn",
+        "notes": ""
+      },
+      {
+        "name": "Javascript",
+        "details": "React, Typescript, Gatsby, Electron, Astro",
+        "notes": ""
+      },
+      {
+        "name": "C++",
+        "details": "STL, Boost",
+        "notes": ""
+      },
+      {
+        "name": "Mathematical",
+        "details": "R, MATLAB",
+        "notes": ""
+      },
+      {
+        "name": "Scripting",
+        "details": "BASH",
+        "notes": ""
+      }
+    ]
+  },
+  {
+    "name": "Services",
+    "skills": [
+      {
+        "name": "Amazon Web Services",
+        "details": "EC2, S3, Lambda, CloudFront, Route 53"
+      },
+      {
+        "name": "Databases",
+        "details": "Postgresql, MySQL/MariaDB"
+      }
+    ]
+  }
+]

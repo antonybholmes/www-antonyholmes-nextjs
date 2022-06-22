@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Polite Investor</title>
+        <link>https://www.politeinvestor.com</link>
+        <description></description>
+        <lastBuildDate>Tue, 21 Jun 2022 03:22:35 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <copyright>All rights reserved 2022, Polite Investor</copyright>
+        <item>
+            <title><![CDATA[I did it my way]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way</link>
+            <guid>https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way</guid>
+            <pubDate>Tue, 21 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to be a DIY investor.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Hack job]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-06-17-hack-job</link>
+            <guid>https://www.politeinvestor.com/blog/2022-06-17-hack-job</guid>
+            <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[10 frugal hacks for saving money.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[I lost my shirt, I pawned my rings, I've done all the dumb things]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-05-25-dumb-things</link>
+            <guid>https://www.politeinvestor.com/blog/2022-05-25-dumb-things</guid>
+            <pubDate>Wed, 25 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Wealth building involves not doing stupid stuff with your money.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Total market funds]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-05-04-total-market-funds</link>
+            <guid>https://www.politeinvestor.com/blog/2022-05-04-total-market-funds</guid>
+            <pubDate>Wed, 04 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to invest across the whole market.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Credit, on the rocks]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks</guid>
+            <pubDate>Mon, 21 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to freeze your credit.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Due credit]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-18-due-credit</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-18-due-credit</guid>
+            <pubDate>Fri, 18 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why you should love credit cards.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Market Noise Or: How I learned to stop worrying and love doing nothing]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-14-market-noise</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-14-market-noise</guid>
+            <pubDate>Mon, 14 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Everybody's doing something, we'll do nothing.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The 50 cent club]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club</guid>
+            <pubDate>Fri, 11 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How much should you be saving?]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Small potatoes]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-07-small-potatoes</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-07-small-potatoes</guid>
+            <pubDate>Mon, 07 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Small changes, big outcomes.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tales from the Crypto]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto</link>
+            <guid>https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto</guid>
+            <pubDate>Wed, 02 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[What is cryptocurrency and should you buy it?]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Fees! Fees! Millions of fees!]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees</link>
+            <guid>https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees</guid>
+            <pubDate>Wed, 19 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Fee-ndish Fees.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[2022 contribution limits]]></title>
+            <link>https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits</link>
+            <guid>https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits</guid>
+            <pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[How much you can invest in 2022]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The vanilla investor]]></title>
+            <link>https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor</link>
+            <guid>https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor</guid>
+            <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[You get what you don't pay for]]></description>
+        </item>
+        <item>
+            <title><![CDATA[A full fat retirement]]></title>
+            <link>https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement</link>
+            <guid>https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement</guid>
+            <pubDate>Tue, 07 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Just like full fat milk, a rich retirement needs to hit the 4% sweet spot]]></description>
+        </item>
+        <item>
+            <title><![CDATA[First post! Welcome]]></title>
+            <link>https://www.politeinvestor.com/blog/2021-12-05-first-post</link>
+            <guid>https://www.politeinvestor.com/blog/2021-12-05-first-post</guid>
+            <pubDate>Sun, 05 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to The Polite Investor.]]></description>
+        </item>
+    </channel>
+</rss>

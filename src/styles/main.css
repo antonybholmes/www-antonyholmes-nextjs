@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-0 bg-white text-gray-800;
+}
+
+.animate-button {
+  @apply transition ease-in-out duration-300;
+}
+
+.animate-shadow {
+  @apply transition-shadow ease-in-out duration-300;
+}
+
+.menu-overlay {
+  @apply invisible opacity-0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.menu-overlay-visible {
+  @apply visible opacity-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold tracking-tight;
+  font-family: "Poppins";
+}
+
+
+.markdown {
+  @apply text-lg leading-relaxed font-light;
+}
+
+.markdown ol {
+  @apply mb-6 list-decimal list-outside ml-8;
+}
+
+.markdown ul {
+  @apply mb-6 list-disc list-outside ml-8;
+}
+
+.markdown a {
+  @apply text-blue-500 hover:underline font-semibold;
+}
+
+.markdown ul li::marker {
+  @apply text-2xl;
+}
+
+.h {
+  @apply mb-4  font-bold;
+}
+
+.markdown h1 {
+  @apply h text-2xl;
+}
+
+.markdown h1:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h2 {
+  @apply h text-3xl;
+}
+
+.markdown h2:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h3 {
+  @apply h text-xl;
+}
+
+.markdown h3:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h4 {
+  @apply h text-lg;
+}
+
+.markdown h4:not(:first-child) {
+  @apply mt-8;
+}
+
+.post p {
+  @apply mb-4;
+}
+
+.post p em {
+  @apply text-sm leading-none;
+}
+
+.post > p:first-of-type::first-letter {
+  @apply text-6xl font-bold mr-1;
+}
+
+.post .sumup {
+  @apply text-sky-500 font-medium;
+}
+
+.post .conclusions {
+  @apply bg-gray-700 rounded-lg p-6 text-gray-100 mt-16 mb-4 text-base;
+}
+
+.post .conclusions ol, .post .conclusions ul {
+  @apply mb-0;
+}
+
+.post .conclusions li {
+  @apply mb-4;
+}
+
+
+
+.post table {
+  @apply border-separate w-full my-4 text-base  bg-amber-50;
+}
+
+.post th {
+  @apply text-white bg-amber-300 py-1;
+}
+
+.post tr td {
+  @apply px-2 py-1;
+}
+
+.tooltip {
+  @apply relative hover:text-blue-600 animate-button;
+}
+
+.tooltip .tooltiptext {
+  @apply absolute invisible shadow bg-white border border-solid border-gray-200  rounded-md px-4 py-3 opacity-0 transition-opacity duration-300 ease-in-out w-48 -ml-24 left-1/2 z-10 text-center text-sm;
+  bottom: 120%;
+}
+
+.tooltip:hover .tooltiptext {
+  @apply visible opacity-100;
+}

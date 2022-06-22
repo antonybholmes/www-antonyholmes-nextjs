@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Start Here",
+    "links": [
+      { "name": "Blog", "url": "/blog" },
+      { "name": "Calculators", "url": "/calculators" },
+      {
+        "name": "Site Map",
+        "url": "/sitemap"
+      }
+    ]
+  },
+  {
+    "title": "Community",
+    "links": [
+      { "name": "Contact Us", "url": "/contact" },
+      { "name": "FAQ", "url": "/faq" },
+      { "name": "Support the Site", "url": "/support" }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Senior Developer",
+    "company": "Institute for Cancer Genetics Columbia University New York",
+    "date": "2015 - Present",
+    "overview": "I design data pipelines for processing single cell RNA-seq data as well as specialized biology application development, database administration, and REST based web application development.",
+    "details": [
+      "Developed database backed genomic web applications running on Amazon Web Services using a mixture of Django, Spring Boot, and Postgresql.",
+      "Developed and implemented a strategy to move lab data and core applications onto Amazon Web Services for significant cost savings.",
+      "Served as AWS administrator and full stack developer for our group working on database and web applications using S3, EC2, Cloudfront for deployment to a team of 20 people.",
+      "Managed the complete redesign of the Institute for Cancer Genetic's web site as a JAMStack application using React and Gatsby in less than 6 months. This modernized and optimized the site to be performant as well as offering a solution tailored to the institute's need. It resulted in a saving of $40,000 by eliminating the reliance on Drupal and an external provider to manage it."
+    ]
+  },
+  {
+    "title": "Associate Research Scientist",
+    "company": "Institute for Cancer Genetics Columbia University New York",
+    "date": "2012 - 2015",
+    "overview": "I design data pipelines for processing single cell RNA-seq data as well as specialized biology application development, database administration, and REST based web application development.",
+    "details": [
+      "Worked as the lead Bioinformatician and software developer.",
+      "Successfully managed the transition of the lab from purely wet biology to a mixed biology and computational group.",
+      "Reduced data analysis time on many projects from days to hours by bringing data analysis in house and standardizing processes and methods.",
+      "Implemented data pipelines to process and analyze next generation sequencing data including microarray, SNP 6.0, RNA-seq, Chip-seq, and single cell genomic data.",
+      "Developed a suite of open source applications in Java for biological data analysis with easy to use interfaces to allow non computational scientists to do common tasks including performing statistical analysis and visualizing large data sets.",
+      "My work resulted resulted in the publication of more than 16 research papers in journals including Nature, Cell, Blood, and the New England Journal of Medicine, primary focussed on B-cell development and genetic lesions associated with development."
+    ]
+  }
+]
