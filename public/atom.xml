@@ -2,115 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.politeinvestor.com</id>
     <title>Polite Investor</title>
-    <updated>2022-06-21T03:22:35.151Z</updated>
+    <updated>2022-06-22T02:39:58.586Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://www.politeinvestor.com"/>
     <link rel="self" href="https://www.politeinvestor.com/atom.xml"/>
     <icon>https://www.politeinvestor.com/favicon.png</icon>
     <rights>All rights reserved 2022, Polite Investor</rights>
     <entry>
-        <title type="html"><![CDATA[I did it my way]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way</id>
-        <link href="https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way"/>
-        <updated>2022-06-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to be a DIY investor.]]></summary>
+        <title type="html"><![CDATA[Experiments with NextJS]]></title>
+        <id>https://www.politeinvestor.com/blog/2022-01-15-redesign-nextjs</id>
+        <link href="https://www.politeinvestor.com/blog/2022-01-15-redesign-nextjs"/>
+        <updated>2022-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I have redesigned my web site again using NextJS.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hack job]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-06-17-hack-job</id>
-        <link href="https://www.politeinvestor.com/blog/2022-06-17-hack-job"/>
-        <updated>2022-06-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[10 frugal hacks for saving money.]]></summary>
+        <title type="html"><![CDATA[Experiments with Astro]]></title>
+        <id>https://www.politeinvestor.com/blog/2021-10-10-astro</id>
+        <link href="https://www.politeinvestor.com/blog/2021-10-10-astro"/>
+        <updated>2021-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I have redesigned my web site again using Astro.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[I lost my shirt, I pawned my rings, I've done all the dumb things]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-05-25-dumb-things</id>
-        <link href="https://www.politeinvestor.com/blog/2022-05-25-dumb-things"/>
-        <updated>2022-05-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Wealth building involves not doing stupid stuff with your money.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Total market funds]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-05-04-total-market-funds</id>
-        <link href="https://www.politeinvestor.com/blog/2022-05-04-total-market-funds"/>
-        <updated>2022-05-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to invest across the whole market.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Credit, on the rocks]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks"/>
-        <updated>2022-02-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How to freeze your credit.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Due credit]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-18-due-credit</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-18-due-credit"/>
-        <updated>2022-02-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Why you should love credit cards.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Market Noise Or: How I learned to stop worrying and love doing nothing]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-14-market-noise</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-14-market-noise"/>
-        <updated>2022-02-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Everybody's doing something, we'll do nothing.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The 50 cent club]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club"/>
-        <updated>2022-02-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How much should you be saving?]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Small potatoes]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-07-small-potatoes</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-07-small-potatoes"/>
-        <updated>2022-02-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Small changes, big outcomes.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tales from the Crypto]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto</id>
-        <link href="https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto"/>
-        <updated>2022-02-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[What is cryptocurrency and should you buy it?]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fees! Fees! Millions of fees!]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees</id>
-        <link href="https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees"/>
-        <updated>2022-01-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Fee-ndish Fees.]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2022 contribution limits]]></title>
-        <id>https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits</id>
-        <link href="https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits"/>
-        <updated>2022-01-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[How much you can invest in 2022]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The vanilla investor]]></title>
-        <id>https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor</id>
-        <link href="https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor"/>
-        <updated>2021-12-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[You get what you don't pay for]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A full fat retirement]]></title>
-        <id>https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement</id>
-        <link href="https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement"/>
-        <updated>2021-12-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Just like full fat milk, a rich retirement needs to hit the 4% sweet spot]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[First post! Welcome]]></title>
-        <id>https://www.politeinvestor.com/blog/2021-12-05-first-post</id>
-        <link href="https://www.politeinvestor.com/blog/2021-12-05-first-post"/>
-        <updated>2021-12-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to The Polite Investor.]]></summary>
+        <title type="html"><![CDATA[New web site design!]]></title>
+        <id>https://www.politeinvestor.com/blog/2021-07-05-new-design</id>
+        <link href="https://www.politeinvestor.com/blog/2021-07-05-new-design"/>
+        <updated>2021-07-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I've redesigned my web site using React.]]></summary>
     </entry>
 </feed>

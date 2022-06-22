@@ -94,7 +94,7 @@ const getAllPosts = (fields = []) => {
   return posts
 }
 
-const generateSiteMap = (headerLinks, resourceLinks, posts) => {
+const generateSiteMap = (headerLinks, posts) => {
   console.log('Creating sitemap...')
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -104,15 +104,6 @@ const generateSiteMap = (headerLinks, resourceLinks, posts) => {
     </url>
 
     ${headerLinks
-      .map(link => {
-        return `
-      <url>
-        <loc>${`${SITE_URL}${link.url}`}</loc>
-      </url>`
-      })
-      .join('')}
-
-    ${resourceLinks
       .map(link => {
         return `
       <url>
@@ -190,10 +181,7 @@ const generateRSS = posts => {
 const headerLinks = JSON.parse(
   fs.readFileSync('./_content/menus/header.json', 'utf8')
 )
-const resourceLinks = JSON.parse(
-  fs.readFileSync('./_content/menus/reviews.json', 'utf8')
-)
 
 const posts = getAllPosts()
-generateSiteMap(headerLinks, resourceLinks, posts)
+generateSiteMap(headerLinks, posts)
 generateRSS(posts)

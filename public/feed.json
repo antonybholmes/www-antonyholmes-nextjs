@@ -5,109 +5,25 @@
     "feed_url": "https://www.politeinvestor.com/feed.json",
     "items": [
         {
-            "id": "https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way",
-            "url": "https://www.politeinvestor.com/blog/2022-06-21-i-did-it-my-way",
-            "title": "I did it my way",
-            "summary": "How to be a DIY investor.",
-            "date_modified": "2022-06-21T00:00:00.000Z"
+            "id": "https://www.politeinvestor.com/blog/2022-01-15-redesign-nextjs",
+            "url": "https://www.politeinvestor.com/blog/2022-01-15-redesign-nextjs",
+            "title": "Experiments with NextJS",
+            "summary": "I have redesigned my web site again using NextJS.",
+            "date_modified": "2022-01-15T00:00:00.000Z"
         },
         {
-            "id": "https://www.politeinvestor.com/blog/2022-06-17-hack-job",
-            "url": "https://www.politeinvestor.com/blog/2022-06-17-hack-job",
-            "title": "Hack job",
-            "summary": "10 frugal hacks for saving money.",
-            "date_modified": "2022-06-17T00:00:00.000Z"
+            "id": "https://www.politeinvestor.com/blog/2021-10-10-astro",
+            "url": "https://www.politeinvestor.com/blog/2021-10-10-astro",
+            "title": "Experiments with Astro",
+            "summary": "I have redesigned my web site again using Astro.",
+            "date_modified": "2021-10-10T00:00:00.000Z"
         },
         {
-            "id": "https://www.politeinvestor.com/blog/2022-05-25-dumb-things",
-            "url": "https://www.politeinvestor.com/blog/2022-05-25-dumb-things",
-            "title": "I lost my shirt, I pawned my rings, I've done all the dumb things",
-            "summary": "Wealth building involves not doing stupid stuff with your money.",
-            "date_modified": "2022-05-25T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-05-04-total-market-funds",
-            "url": "https://www.politeinvestor.com/blog/2022-05-04-total-market-funds",
-            "title": "Total market funds",
-            "summary": "How to invest across the whole market.",
-            "date_modified": "2022-05-04T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks",
-            "url": "https://www.politeinvestor.com/blog/2022-02-21-credit-on-the-rocks",
-            "title": "Credit, on the rocks",
-            "summary": "How to freeze your credit.",
-            "date_modified": "2022-02-21T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-18-due-credit",
-            "url": "https://www.politeinvestor.com/blog/2022-02-18-due-credit",
-            "title": "Due credit",
-            "summary": "Why you should love credit cards.",
-            "date_modified": "2022-02-18T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-14-market-noise",
-            "url": "https://www.politeinvestor.com/blog/2022-02-14-market-noise",
-            "title": "Market Noise Or: How I learned to stop worrying and love doing nothing",
-            "summary": "Everybody's doing something, we'll do nothing.",
-            "date_modified": "2022-02-14T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club",
-            "url": "https://www.politeinvestor.com/blog/2022-02-11-the-50-cent-club",
-            "title": "The 50 cent club",
-            "summary": "How much should you be saving?",
-            "date_modified": "2022-02-11T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-07-small-potatoes",
-            "url": "https://www.politeinvestor.com/blog/2022-02-07-small-potatoes",
-            "title": "Small potatoes",
-            "summary": "Small changes, big outcomes.",
-            "date_modified": "2022-02-07T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto",
-            "url": "https://www.politeinvestor.com/blog/2022-02-02-tales-from-the-crypto",
-            "title": "Tales from the Crypto",
-            "summary": "What is cryptocurrency and should you buy it?",
-            "date_modified": "2022-02-02T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees",
-            "url": "https://www.politeinvestor.com/blog/2022-01-19-fees-fees-millions-of-fees",
-            "title": "Fees! Fees! Millions of fees!",
-            "summary": "Fee-ndish Fees.",
-            "date_modified": "2022-01-19T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits",
-            "url": "https://www.politeinvestor.com/blog/2022-01-16-2022-contribution-limits",
-            "title": "2022 contribution limits",
-            "summary": "How much you can invest in 2022",
-            "date_modified": "2022-01-16T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor",
-            "url": "https://www.politeinvestor.com/blog/2021-12-09-the-vanilla-investor",
-            "title": "The vanilla investor",
-            "summary": "You get what you don't pay for",
-            "date_modified": "2021-12-09T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement",
-            "url": "https://www.politeinvestor.com/blog/2021-12-07-full-fat-retirement",
-            "title": "A full fat retirement",
-            "summary": "Just like full fat milk, a rich retirement needs to hit the 4% sweet spot",
-            "date_modified": "2021-12-07T00:00:00.000Z"
-        },
-        {
-            "id": "https://www.politeinvestor.com/blog/2021-12-05-first-post",
-            "url": "https://www.politeinvestor.com/blog/2021-12-05-first-post",
-            "title": "First post! Welcome",
-            "summary": "Welcome to The Polite Investor.",
-            "date_modified": "2021-12-05T00:00:00.000Z"
+            "id": "https://www.politeinvestor.com/blog/2021-07-05-new-design",
+            "url": "https://www.politeinvestor.com/blog/2021-07-05-new-design",
+            "title": "New web site design!",
+            "summary": "I've redesigned my web site using React.",
+            "date_modified": "2021-07-05T00:00:00.000Z"
         }
     ]
 }
