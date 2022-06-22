@@ -69,7 +69,7 @@ const Page = ({ posts, sectionMap, author }: IProps) => {
             <HCenterRow className="mt-8">
               <div className="grid grid-cols-2 gap-4">
                 <BluePillButtonLink
-                  href={'/blog/page/1'}
+                  href={'/resume'}
                   className="px-6 py-3 font-semibold"
                 >
                   Resume
