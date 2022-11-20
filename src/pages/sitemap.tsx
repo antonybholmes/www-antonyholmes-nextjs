@@ -1,6 +1,6 @@
 import BlueLink from "../components/link/blue-link"
 import ContentLayout from "../layouts/content-layout"
-import { FOOTER_LINKS, FOOTER_LINKS_2, HEADER_LINKS } from "../menus"
+import { FOOTER_LINKS, HEADER_LINKS } from "../menus"
 
 export default function Page() {
   return (

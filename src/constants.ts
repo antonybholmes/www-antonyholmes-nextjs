@@ -40,5 +40,3 @@ export const GROUPS = [
 ]
 
 export const TEXT_SHOW_MORE = "Show More"
-
-export const ICG_URL = env.ICG_URL

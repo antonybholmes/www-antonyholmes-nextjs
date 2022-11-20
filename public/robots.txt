@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.rdflab.org
+Host: https://www.antonyholmes.dev
 
 # Sitemaps
-Sitemap: https://www.rdflab.org/sitemap.xml
+Sitemap: https://www.antonyholmes.dev/sitemap.xml
