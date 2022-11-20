@@ -1,5 +1,5 @@
-import IChildrenProps from '../interfaces/children-props'
-import Expand from './expand'
+import IChildrenProps from "../interfaces/children-props"
+import Expand from "./expand"
 
 interface IProps extends IChildrenProps {
   title: string

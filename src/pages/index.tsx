@@ -23,71 +23,80 @@ import HCenterCol from "../components/h-center-col"
 import BlueLink from "../components/link/blue-link"
 import LinkIcon from "../icons/link"
 
-export default function Page({author, allPosts}) {
+export default function Page({ author, allPosts }) {
   return (
     <ContentLayout title="Home" showTitle={false}>
       <></>
-<div className="grid grid-cols-1 xl:grid-cols-4 gap-y-8 xl:gap-x-8">
-    <article className="bg-white rounded-xl p-8 xl:p-0 xl:bg-transparent">
-      <BaseCol className="items-center gap-y-8">
-        <AvatarImageLarge author={author}  />
+      <div className="grid grid-cols-1 gap-y-8 xl:grid-cols-4 xl:gap-x-8">
+        <article className="rounded-xl bg-white p-8 xl:bg-transparent xl:p-0">
+          <BaseCol className="items-center gap-y-8">
+            <AvatarImageLarge author={author} />
 
-        <BaseCol className="gap-y-2 text-sm ">
-          <VCenterRow className="gap-x-2 justify-center xl:justify-start">
-            <MailIcon className="w-4 fill-gray-400 hidden xl:block" />
-            <ToBlueLink href={`mailto:${EMAIL}`} ariaLabel={""}>{EMAIL}</ToBlueLink>
-          </VCenterRow>
-          <VCenterRow className="gap-x-2 justify-center xl:justify-start">
-            <LinkIcon className="w-4 fill-gray-400 hidden xl:block" />
-            <ToBlueLink href="https://github.com/antonybholmes" ariaLabel={""}>
-              github.com/antonybholmes
-            </ToBlueLink>
-          </VCenterRow>
-        </BaseCol>
-      </BaseCol>
-    </article>
-    <section className="col-span-3">
-      <section>
-        <HCenterCol className="p-8 xl:p-16 text-center bg-white rounded-xl">
-          <h1 className="text-5xl inline-block font-bold">Hi There.</h1>
+            <BaseCol className="gap-y-2 text-sm ">
+              <VCenterRow className="justify-center gap-x-2 xl:justify-start">
+                <MailIcon className="hidden w-4 fill-gray-400 xl:block" />
+                <ToBlueLink href={`mailto:${EMAIL}`} ariaLabel={""}>
+                  {EMAIL}
+                </ToBlueLink>
+              </VCenterRow>
+              <VCenterRow className="justify-center gap-x-2 xl:justify-start">
+                <LinkIcon className="hidden w-4 fill-gray-400 xl:block" />
+                <ToBlueLink
+                  href="https://github.com/antonybholmes"
+                  ariaLabel={""}
+                >
+                  github.com/antonybholmes
+                </ToBlueLink>
+              </VCenterRow>
+            </BaseCol>
+          </BaseCol>
+        </article>
+        <section className="col-span-3">
+          <section>
+            <HCenterCol className="rounded-xl bg-white p-8 text-center xl:p-16">
+              <h1 className="inline-block text-5xl font-bold">Hi There.</h1>
 
-          <p className="mt-4 text-lg">
-            I&apos;m Antony Holmes. Welcome to my personal web site.
-          </p>
+              <p className="mt-4 text-lg">
+                I&apos;m Antony Holmes. Welcome to my personal web site.
+              </p>
 
-          <p className="mt-4 text-lg">
-            I&apos;m a full stack developer with experience using Java, Python,
-            React, Astro, Svelte and other tech, some of which was used to make
-            this very site.
-          </p>
+              <p className="mt-4 text-lg">
+                I&apos;m a full stack developer with experience using Java,
+                Python, React, Astro, Svelte and other tech, some of which was
+                used to make this very site.
+              </p>
 
-          <p className="mt-4 text-lg">
-            I have an aptly named publication page where you can view all of the
-            scientific literature I have written, primarily focused on cancer
-            genetics.
-          </p>
-        </HCenterCol>
+              <p className="mt-4 text-lg">
+                I have an aptly named publication page where you can view all of
+                the scientific literature I have written, primarily focused on
+                cancer genetics.
+              </p>
+            </HCenterCol>
 
-        <VCenterRow className="justify-center mt-8">
-          <div className="flex flex-row gap-6">
-            <BlueButtonLink
+            <VCenterRow className="mt-8 justify-center">
+              <div className="flex flex-row gap-6">
+                <BlueButtonLink
                   href="/resume"
-                  className="px-4 py-2 font-medium text-sm" ariaLabel={""}            >
-              Resume
-            </BlueButtonLink>
-            <BlueLink
+                  className="px-4 py-2 text-sm font-medium"
+                  ariaLabel={""}
+                >
+                  Resume
+                </BlueButtonLink>
+                <BlueLink
                   href="/publications"
-                  className="text-sm flex flex-row items-center" ariaLabel={""}            >
-              Publications
-            </BlueLink>
-          </div>
-        </VCenterRow>
-      </section>
-      {/* <section className="mt-16 pt-16 border-t border-gray-200">
+                  className="flex flex-row items-center text-sm"
+                  ariaLabel={""}
+                >
+                  Publications
+                </BlueLink>
+              </div>
+            </VCenterRow>
+          </section>
+          {/* <section className="mt-16 pt-16 border-t border-gray-200">
         <PostsPage posts={allPosts} page={1} pages={1} showLatestPosts={true} />
       </section> */}
-    </section>
-  </div>
+        </section>
+      </div>
     </ContentLayout>
   )
 }
@@ -95,22 +104,24 @@ export default function Page({author, allPosts}) {
 export async function getStaticProps() {
   const authorMap = getPeopleMap()
 
-let allPosts = await Promise.all(
-  getAllPosts().slice(0, 5).map(async post => {
-    return {
-      ...post,
-      excerpt: await markdownToHtml(post.excerpt || ''),
-      //html : await markdownHtml(post.frontmatter.content || ''),
-    }
-  })
-)
+  let allPosts = await Promise.all(
+    getAllPosts()
+      .slice(0, 5)
+      .map(async post => {
+        return {
+          ...post,
+          excerpt: await markdownToHtml(post.excerpt || ""),
+          //html : await markdownHtml(post.frontmatter.content || ''),
+        }
+      })
+  )
 
-const author = authorMap['Antony Holmes']
+  const author = authorMap["Antony Holmes"]
 
   return {
     props: {
       author,
-      allPosts
+      allPosts,
     },
   }
 }

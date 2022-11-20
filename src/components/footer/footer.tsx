@@ -49,12 +49,8 @@ export default function Footer({ className }: IClassProps) {
                   )}
                 </ul>
               </div>
-
-             
             </div>
           </div>
-
-         
         </>
         <></>
       </ContentDiv>

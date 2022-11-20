@@ -1,6 +1,6 @@
-import { ReactElement } from 'react'
-import cn from '../lib/class-names'
-import ExpandDiv from './expand-div'
+import { ReactElement } from "react"
+import cn from "../lib/class-names"
+import ExpandDiv from "./expand-div"
 
 interface IProps {
   title: string
@@ -11,10 +11,7 @@ interface IProps {
 const ReviewExpandDiv = ({ title, className, children }: IProps) => (
   <ExpandDiv
     title={title}
-    className={cn(
-      'mb-8 rounded-2xl border border-gray-200 p-6',
-      className
-    )}
+    className={cn("mb-8 rounded-2xl border border-gray-200 p-6", className)}
   >
     {children}
   </ExpandDiv>

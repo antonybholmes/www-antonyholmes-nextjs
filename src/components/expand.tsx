@@ -1,7 +1,7 @@
-import { MouseEventHandler, useState } from 'react'
-import cn from '../lib/class-names'
-import IChildrenProps from '../interfaces/children-props'
-import ExpandDetails from './expand-details'
+import { MouseEventHandler, useState } from "react"
+import cn from "../lib/class-names"
+import IChildrenProps from "../interfaces/children-props"
+import ExpandDetails from "./expand-details"
 
 interface IProps extends IChildrenProps {
   isExpanded?: boolean
@@ -15,7 +15,7 @@ const Expand = ({ isExpanded = true, className, children }: IProps) => {
   }
 
   return (
-    <div className={cn('box-shadow animate-shadow', className)}>
+    <div className={cn("box-shadow animate-shadow", className)}>
       {
         //@ts-ignore
         children[0]

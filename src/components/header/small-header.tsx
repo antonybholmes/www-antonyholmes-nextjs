@@ -50,7 +50,7 @@ function SmallHeader({ title, tab, showMenu, onClick, children }: IProps) {
 
         <HCenterRow className="col-span-3 items-center">
           <BaseLink href="/" ariaLabel="Goto Homepage">
-          <LogoIcon />
+            <LogoIcon />
           </BaseLink>
         </HCenterRow>
         <div></div>

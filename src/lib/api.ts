@@ -15,7 +15,6 @@ export const NEWS_DIR = join(CONTENT_DIR, "news")
 export const JOBS_DIR = join(CONTENT_DIR, "jobs")
 export const PUBLICATIONS_DIR = join(CONTENT_DIR, "publications")
 
-
 export const getFields = (path: string, items: IFieldMap) => {
   const fileContents = fs.readFileSync(path, "utf8")
   const { data, content, excerpt } = matter(fileContents, {
@@ -125,7 +124,6 @@ export function getAllPosts(): INewsItem[] {
   const posts = slugs.map(slug => getPostBySlug(slug, POSTS_DIR))
   return posts
 }
-
 
 export function getNewsItemSlugs() {
   return fs.readdirSync(NEWS_DIR)
