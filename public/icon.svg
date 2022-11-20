@@ -1,0 +1,9 @@
+<svg width="15mm" height="15mm" version="1.1" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-132.52 -120.61)">
+  <circle cx="140.02" cy="128.11" r="7.5" fill="#59f" stroke-width=".26305"/>
+  <g transform="matrix(.26458 0 0 .26458 118.6 83.923)" fill="#fff" style="shape-inside:url(#rect7993);white-space:pre" aria-label="AH">
+   <path d="m60.002 178.46 8.7969-22.906h3.2656l9.375 22.906h-3.4531l-2.6719-6.9375h-9.5781l-2.5156 6.9375zm6.6094-9.4062h7.7656l-2.3906-6.3438q-1.0938-2.8906-1.625-4.75-0.4375 2.2031-1.2344 4.375z"/>
+   <path d="m83.955 178.46v-22.906h3.0312v9.4062h11.906v-9.4062h3.0313v22.906h-3.0313v-10.797h-11.906v10.797z"/>
+  </g>
+ </g>
+</svg>

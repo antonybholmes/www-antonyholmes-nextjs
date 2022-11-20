@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-800 text-base font-normal;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply leading-none;
+  // font-family: 'Plus Jakarta Sans';
+}
+
+.color-ani {
+  @apply transition-colors duration-300;
+}
+
+.shadow-ani {
+  @apply transition-shadow duration-300;
+}
+
+.rotate-ani {
+  @apply transition-transform duration-300;
+}
+
+.markdown a {
+  @apply hover:underline;
+}
+
+.markdown-default a {
+  @apply text-blue-600
+}
+
+.markdown-white {
+  @apply text-white;
+}
+
+.markdown ol {
+  @apply mb-6 ml-8 list-outside list-decimal;
+}
+
+.markdown ul {
+  @apply mb-6 ml-8 list-outside list-disc;
+}
+
+.markdown ul li::marker {
+  @apply text-2xl;
+}
+
+.markdown h1 {
+  @apply text-3xl mb-4;
+}
+
+.markdown h1:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h2 {
+  @apply text-2xl mb-4;
+}
+
+.markdown h2:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h3 {
+  @apply text-xl mb-4;
+}
+
+.markdown h3:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown h4 {
+  @apply text-lg mb-4;
+}
+
+.markdown h4:not(:first-child) {
+  @apply mt-8;
+}
+
+.markdown p {
+  @apply mb-4;
+}
+
+.post {
+  @apply text-justify;
+}
+
+.post li {
+  @apply mb-0;
+}
+
+.post p em {
+  @apply mt-8 block w-full text-center leading-none;
+}
+
+.post blockquote {
+  @apply my-4 overflow-hidden rounded-md bg-ms-gray p-6 font-medium md:mx-4;
+}
+
+.post > p:first-of-type::first-letter {
+  @apply mr-1 text-5xl font-medium;
+}
+
+.post .sumup {
+  @apply font-medium text-sky-500;
+}
+
+.post .conclusion {
+  @apply my-16 rounded-lg bg-gray-700 p-6 text-base text-gray-100 shadow lg:my-24;
+}
+
+.post .conclusion a {
+  @apply text-white;
+}
+
+.post .conclusion ol,
+.post .conclusion ul {
+  @apply mb-0;
+}
+
+.post .conclusion li {
+  @apply mb-2;
+}
+
+.post table {
+  @apply my-4 w-full border-separate bg-amber-50  text-base;
+}
+
+.post th {
+  @apply bg-amber-300 py-1 text-white;
+}
+
+.post tr td {
+  @apply px-2 py-1;
+}
+
+
+.hint:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px transparent solid;
+  border-bottom-color: rgba(0,0,0,0.8);
+
+  margin-left: -10px;
+  margin-top: -10px;
+ }

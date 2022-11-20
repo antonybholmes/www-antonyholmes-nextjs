@@ -1,0 +1,39 @@
+{
+  "labId": "riccardo-dalla-favera",
+  "name": "Riccardo Dalla-Favera",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": [
+        "riccardo-dalla-favera",
+        "laura-pasqualucci",
+        "katia-basso"
+      ]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "elodie-bal",
+        "bowen-cai",
+        "clarissa-corinaldesi",
+        "sanaz-firouzi",
+        "antony-holmes",
+        "rahat-jahan",
+        "stefanie-meyer",
+        "tongwei-mo",
+        "sofija-vlasevska",
+        "claudio-scuoppo",
+        "qiong-shen",
+        "chuanjiang-yu"
+      ]
+    },
+    {
+      "name": "Graduate Students",
+      "peopleList": []
+    },
+    {
+      "name": "Students",
+      "peopleList": []
+    }
+  ]
+}

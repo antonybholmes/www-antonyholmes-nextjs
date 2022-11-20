@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.rdflab.org
+
+# Sitemaps
+Sitemap: https://www.rdflab.org/sitemap.xml
