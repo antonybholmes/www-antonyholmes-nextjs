@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { useEffect } from "react"
 import IHoverProps from "../../interfaces/hover-props"
 import ILinkProps from "../../interfaces/link-props"
 import IMouseProps from "../../interfaces/mouse-props"
@@ -16,28 +17,17 @@ function BaseLink({
   onClick,
   onMouseEnter,
   onMouseLeave,
-  onHover,
+  onMouseUp,
+  onMouseDown,
   children,
 }: IProps) {
-  function _onMouseEnter(e: React.MouseEvent<Element, MouseEvent>) {
-    if (onHover) {
-      onHover(true)
-    }
+  useEffect(() => {
+    window.addEventListener("mouseup", onMouseUp)
 
-    if (onMouseEnter) {
-      onMouseEnter(e)
+    return () => {
+      window.removeEventListener("mouseup", onMouseUp)
     }
-  }
-
-  function _onMouseLeave(e: React.MouseEvent<Element, MouseEvent>) {
-    if (onHover) {
-      onHover(false)
-    }
-
-    if (onMouseLeave) {
-      onMouseLeave(e)
-    }
-  }
+  }, [])
 
   if (!ariaLabel) {
     ariaLabel = `Click to visit ${href}`
@@ -59,7 +49,8 @@ function BaseLink({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onHover={onHover}
+        onMouseUp={onMouseUp}
+        onMouseDown={onMouseDown}
       >
         {children}
       </ExtLink>
@@ -75,8 +66,10 @@ function BaseLink({
         aria-label={ariaLabel}
         className={cn([underline, `hover:underline`], className)}
         onClick={onClick}
-        onMouseEnter={_onMouseEnter}
-        onMouseLeave={_onMouseLeave}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+        onMouseDown={onMouseDown}
       >
         {children}
       </Link>

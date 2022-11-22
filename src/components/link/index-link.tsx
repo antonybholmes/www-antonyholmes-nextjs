@@ -1,8 +1,9 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import ChevronRightIcon from "../../icons/chevron-right"
 import IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import cn from "../../lib/class-names"
 import BaseLink from "./base-link"
+import { gsap } from "gsap"
 
 export default function IndexLink({
   href,
@@ -15,15 +16,15 @@ export default function IndexLink({
 
   const iconEl = useRef(null)
 
-  // useEffect(() => {
-  //   gsap
-  //     .timeline()
-  //     .to(
-  //       iconEl.current,
-  //       { x: hover ? '0.15rem' : 0, ease: 'power3.out', duration: 0.2 },
-  //       0
-  //     )
-  // }, [hover])
+  useEffect(() => {
+    gsap
+      .timeline()
+      .to(
+        iconEl.current,
+        { x: hover ? "0.15rem" : 0, ease: "power3.out", duration: 0.2 },
+        0
+      )
+  }, [hover])
 
   function _handleMouseEnter(e: any) {
     setHover(true)
@@ -47,7 +48,7 @@ export default function IndexLink({
       <div ref={iconEl}>
         <ChevronRightIcon
           className={cn(
-            "h-full w-4 stroke-2 transition-transform duration-200"
+            "h-full w-3 stroke-3 transition-transform duration-200"
           )}
         />
       </div>

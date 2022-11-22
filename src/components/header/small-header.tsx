@@ -1,11 +1,11 @@
 import BaseLink from "../link/base-link"
 import MenuOpenButton from "./menu-button-open"
 //import Search from '../search/search'
-import LogoIcon from "../../icons/logo"
 import IHeaderProps from "../../interfaces/header-props"
 import IMenuProps from "../../interfaces/menu-props"
-import ContentDiv from "../content-div"
 import HCenterRow from "../h-center-row"
+import ContentDiv from "../content-div"
+import LogoIcon from "../../icons/logo"
 
 interface IProps extends IMenuProps, IHeaderProps {}
 
@@ -50,7 +50,7 @@ function SmallHeader({ title, tab, showMenu, onClick, children }: IProps) {
 
         <HCenterRow className="col-span-3 items-center">
           <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon />
+            <LogoIcon/>
           </BaseLink>
         </HCenterRow>
         <div></div>

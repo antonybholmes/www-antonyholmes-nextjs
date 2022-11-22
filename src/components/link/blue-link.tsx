@@ -9,7 +9,7 @@ interface IProps extends ILinkProps {
 export default function BlueLink({
   href,
   ariaLabel,
-  underline = true,
+  underline = false,
   className,
   children,
 }: IProps) {

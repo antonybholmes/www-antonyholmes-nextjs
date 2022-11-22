@@ -7,12 +7,12 @@ import BlackLink from "../link/black-link"
 
 export default function Footer({ className }: IClassProps) {
   return (
-    <footer className={cn("mt-32", className)}>
+    <footer className={cn("mt-32 bg-gray-50", className)}>
       <ContentDiv>
         <></>
 
         <>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-200 py-8 text-sm lg:py-16 xl:grid-cols-4 ">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-8 py-8 text-sm lg:py-16 xl:grid-cols-4 ">
             <div>{getCopyright()}</div>
             <div className="col-span-2 flex flex-col justify-between gap-4 md:flex-row">
               <div>

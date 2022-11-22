@@ -1,5 +1,4 @@
 import ILinkProps from "../../interfaces/link-props"
-import cn from "../../lib/class-names"
 import BaseLink from "./base-link"
 
 interface IProps extends ILinkProps {
@@ -9,7 +8,7 @@ interface IProps extends ILinkProps {
 export default function BlackLink({
   href,
   ariaLabel,
-  underline = true,
+  underline = false,
   className,
   children,
 }: IProps) {

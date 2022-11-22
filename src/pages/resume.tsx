@@ -4,6 +4,8 @@ import skills from "../../_content/skills.json"
 import volunteer from "../../_content/volunteer.json"
 import ContentDiv from "../components/content-div"
 import BaseLayout from "../layouts/base-layout"
+import ContentLayout from "../layouts/content-layout"
+import ThreeQuarterLayout from "../layouts/three-quarter-layout"
 import { getAllPeople } from "../lib/api"
 
 export default function Page() {
@@ -16,41 +18,38 @@ export default function Page() {
   })
 
   return (
-    <BaseLayout title="Resume" showTitle={false}>
+    <ContentLayout title="Resume" showTitle={false}>
       <></>
-      <ContentDiv className="py-16">
-        <></>
-        <>
-          <h2 className="text-center text-5xl font-bold">Skills</h2>
+      <>
+      <ThreeQuarterLayout className="py-16 gap-x-32" isRight={false} autoHide={false}>
 
-          <ul className="mt-16 grid grid-cols-1 gap-8 rounded-xl bg-white p-8 text-sm lg:grid-cols-4 xl:p-16">
+          
+
+          <ul className="grid grid-cols-1 gap-8 rounded-xl bg-white text-sm lg:grid-cols-4">
             {skillList.map(skill => {
               return (
-                <li className="p-4 text-center">
+                <li className="p-4 text-center border border-gray-200 rounded-xl">
                   <h4 className="font-semibold">{skill.name}</h4>
                   <p>{skill.details}</p>
                 </li>
               )
             })}
           </ul>
-        </>
-        <></>
-      </ContentDiv>
+          <h2 className="text-4xl font-semibold mb-8">Skills</h2>
+      </ThreeQuarterLayout>
 
-      <ContentDiv className="py-16">
-        <></>
-        <>
-          <h2 className="text-center text-5xl font-bold">Experience</h2>
-          <ul className="mt-16 flex flex-col gap-y-16">
+      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
+  
+          <ul className="flex flex-col gap-y-16">
             {jobs.map((job, jobIndex) => (
               <li>
-                <article className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+                <article>
                   <header>
                     <h3 className="text-lg font-semibold">{job.title}</h3>
                     <h4 className="font-normal">{job.company}</h4>
                     <h4 className="font-light">{job.date}</h4>
                   </header>
-                  <div className="animate-shadow col-span-3 rounded-xl bg-white p-8">
+                  <div className="mt-4">
                     <p>{job.overview}</p>
                     <ul className="ml-6 mt-4 list-disc">
                       {job.details.map((detail, detailIndex) => (
@@ -62,24 +61,20 @@ export default function Page() {
               </li>
             ))}
           </ul>
-        </>
-        <></>
-      </ContentDiv>
+          <h2 className="text-4xl font-semibold mb-8">Experience</h2>
+      </ThreeQuarterLayout>
 
-      <ContentDiv className="py-16">
-        <></>
-        <>
-          <h2 className="text-center text-5xl font-bold">Volunteer Work</h2>
-          <ul className="mt-16 flex flex-col gap-y-8">
+      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
+        <ul className="flex flex-col gap-y-16">
             {volunteer.map((job, jobIndex) => (
               <li>
-                <article className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+                <article >
                   <header>
                     <h3 className="text-lg font-semibold">{job.title}</h3>
                     <h4 className="font-normal">{job.company}</h4>
                     <h4 className="font-light">{job.date}</h4>
                   </header>
-                  <div className="animate-shadow col-span-3 rounded-xl bg-white p-8">
+                  <div className="mt-4">
                     <ul className="ml-6 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
                         <li>{detail}</li>
@@ -90,17 +85,14 @@ export default function Page() {
               </li>
             ))}
           </ul>
-        </>
-        <></>
-      </ContentDiv>
+          <h2 className="text-4xl font-semibold mb-8">Volunteer Work</h2>
+      </ThreeQuarterLayout>
 
-      <ContentDiv className="py-16">
-        <></>
-        <>
-          <h2 className="text-center text-5xl font-bold">Education</h2>
-          <ul className="animate-shadow mt-16 flex flex-col items-center gap-y-8 rounded-xl bg-white p-8 xl:p-16">
+      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
+          
+          <ul className="flex flex-col gap-y-8   ">
             {education.map((degree, degreeIndex) => (
-              <li className="text-center">
+              <li>
                 <header>
                   <h3 className="text-xl font-semibold">{degree.title}</h3>
                   {/* {degree.date !== '' && (
@@ -117,10 +109,10 @@ export default function Page() {
               </li>
             ))}
           </ul>
-        </>
-        <></>
-      </ContentDiv>
-    </BaseLayout>
+          <h2 className="text-4xl font-semibold mb-8">Education</h2>
+          </ThreeQuarterLayout>
+      </>
+    </ContentLayout>
   )
 }
 

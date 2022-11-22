@@ -16,30 +16,9 @@ export default function ExtLink({
   onClick,
   onMouseEnter,
   onMouseLeave,
-  onHover,
   className,
   children,
 }: IProps) {
-  function _onMouseEnter(e: React.MouseEvent<Element, MouseEvent>) {
-    if (onHover) {
-      onHover(true)
-    }
-
-    if (onMouseEnter) {
-      onMouseEnter(e)
-    }
-  }
-
-  function _onMouseLeave(e: React.MouseEvent<Element, MouseEvent>) {
-    if (onHover) {
-      onHover(false)
-    }
-
-    if (onMouseLeave) {
-      onMouseLeave(e)
-    }
-  }
-
   if (!children) {
     children = <>{href}</>
   }
@@ -50,8 +29,8 @@ export default function ExtLink({
       aria-label={ariaLabel}
       target={target}
       onClick={onClick}
-      onMouseEnter={_onMouseEnter}
-      onMouseLeave={_onMouseLeave}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={cn([underline, `hover:underline`], className)}
     >
       {children}

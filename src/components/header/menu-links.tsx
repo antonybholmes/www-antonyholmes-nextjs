@@ -64,7 +64,7 @@ function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
 
   return (
     <ul
-      className={cn("flex flex-col  text-sm", [
+      className={cn("flex flex-col text-sm font-medium", [
         headerMode === "dark",
         "bg-gray-800",
       ])}

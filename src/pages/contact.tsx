@@ -4,7 +4,7 @@ import SideLayout from "../layouts/side-layout"
 
 export default function Page() {
   return (
-    <SideLayout title="Contact Us">
+    <SideLayout title="Contact Me">
       <>
         <div className="mt-8" slot="main">
           <ReviewExpandDiv title="Want to say hello?">

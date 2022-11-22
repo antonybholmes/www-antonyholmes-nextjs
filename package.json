@@ -15,7 +15,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@fontsource/figtree": "^4.5.1",
+    "@fontsource/figtree": "^4.5.2",
     "@fontsource/noto-sans": "^4.5.11",
     "@fontsource/plus-jakarta-sans": "^4.5.10",
     "axios": "^1.1.3",

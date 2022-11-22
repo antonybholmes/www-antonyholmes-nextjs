@@ -2,8 +2,11 @@ import ContentDiv from "../content-div"
 import BaseLink from "../link/base-link"
 import HeaderLinks from "./header-links"
 
-import LogoIcon from "../../icons/logo"
 import IChildrenProps from "../../interfaces/children-props"
+import HCenterCol from "../h-center-col"
+import VCenterRow from "../v-center-row"
+import HCenterRow from "../h-center-row"
+import LogoIcon from "../../icons/logo"
 
 interface IProps extends IChildrenProps {
   title: string
@@ -19,7 +22,7 @@ export default function LargeHeader({ title, tab, children }: IProps) {
         <div className="flex h-16 flex-row  items-center gap-x-8 xl:gap-x-16">
           <div className="grow-0">
             <BaseLink href="/" ariaLabel="Goto Homepage">
-              <LogoIcon />
+              <LogoIcon/>
             </BaseLink>
           </div>
           <div>

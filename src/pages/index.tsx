@@ -1,27 +1,18 @@
-import ContentDiv from "../components/content-div"
-import BaseLayout from "../layouts/base-layout"
 
 //import axios from "axios"
-import BaseImage from "../components/base-image"
-import BaseRow from "../components/base-row"
-import HCenterRow from "../components/h-center-row"
-import IndexPublications from "../components/publication/index-publications"
-import BaseLink from "../components/link/base-link"
+import AvatarImageLarge from "../components/avatar-image-large"
+import BaseCol from "../components/base-col"
+import HCenterCol from "../components/h-center-col"
 import BlueButtonLink from "../components/link/blue-button-link"
-import VCenterCol from "../components/v-center-col"
+import BlueLink from "../components/link/blue-link"
+import ToBlueLink from "../components/link/to-blue-link"
+import VCenterRow from "../components/v-center-row"
+import { EMAIL } from "../constants"
+import LinkIcon from "../icons/link"
+import MailIcon from "../icons/mail"
 import ContentLayout from "../layouts/content-layout"
 import { getAllPosts, getPeopleMap } from "../lib/api"
-import { getPagePosts } from "../lib/paginate"
 import markdownToHtml from "../lib/markdownToHtml"
-import BaseCol from "../components/base-col"
-import AvatarImageLarge from "../components/avatar-image-large"
-import VCenterRow from "../components/v-center-row"
-import MailIcon from "../icons/mail"
-import ToBlueLink from "../components/link/to-blue-link"
-import { EMAIL } from "../constants"
-import HCenterCol from "../components/h-center-col"
-import BlueLink from "../components/link/blue-link"
-import LinkIcon from "../icons/link"
 
 export default function Page({ author, allPosts }) {
   return (
@@ -85,7 +76,8 @@ export default function Page({ author, allPosts }) {
                 <BlueLink
                   href="/publications"
                   className="flex flex-row items-center text-sm"
-                  ariaLabel={""}
+                  ariaLabel="View my publications"
+                  underline={true}
                 >
                   Publications
                 </BlueLink>

@@ -5,7 +5,7 @@ import IndexLink from "./index-link"
 export default function BlueIndexLink({
   href,
   ariaLabel,
-  underline = true,
+  underline = false,
   className,
   children,
 }: IUnderlineLinkProps) {

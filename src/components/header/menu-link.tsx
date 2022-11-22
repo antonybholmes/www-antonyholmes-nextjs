@@ -65,7 +65,7 @@ export default function MenuLink({
           [
             selected,
             "bg-blue-100/80 text-blue-600",
-            [hover || hasFocus, "text-blue-400"],
+            [hover || hasFocus, "bg-gray-100 text-gray-900", "text-gray-600"],
           ]
         )}
       >
