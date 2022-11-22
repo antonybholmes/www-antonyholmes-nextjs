@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react"
-import ChevronDownIcon from "../../icons/chevron-down"
+import ChevronRightIcon from "../../icons/chevron-right"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
-import BaseRow from "../base-row"
+import HCenterCol from "../h-center-col"
 import BlackLink from "../link/black-link"
 import BlueLink from "../link/blue-link"
-import { BASE_BUTTON_CLASSES } from "../link/button-link"
 import PillButton from "../link/pill-button"
-import { ROUNDED_BUTTON_CLASSES } from "../link/rounded-button-link"
-import VCenterCol from "../v-center-col"
-import VCenterRow from "../v-center-row"
 
 type AbstractProps = {
   publication: any
@@ -135,36 +131,35 @@ function BasePublication({
   return (
     <article
       className={cn(
-        "publication flex flex-row items-start gap-x-2 text-sm",
+        "publication flex flex-row  items-start gap-x-2 text-sm",
         className
       )}
     >
-      <VCenterCol className="gap-y-2">
+      <HCenterCol className="mt-1 gap-y-2">
         {showCount && (
           <div className="flex-none grow-0 text-center text-gray-500">{`${
             index + 1
           }`}</div>
         )}
-
         <PillButton
           ariaLabel="Show abstract"
           className="h-7 w-7 min-w-7 hover:bg-gray-200"
           onClick={() => setExpanded(!isExpanded)}
         >
-          <ChevronDownIcon
+          <ChevronRightIcon
             className={cn("rotate-ani w-3 stroke-gray-500 stroke-2", [
               isExpanded,
-              "rotate-180",
+              "rotate-90",
             ])}
           />
         </PillButton>
-      </VCenterCol>
+      </HCenterCol>
       <div className="grow">
-        <div className="grow">
+        <div>
           {/* <ul className="m-0 flex flex-row flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
           {links.map(link => link)}
         </ul> */}
-          <h2 className="text-base lg:text-lg">
+          <h2 className="text-lg">
             {url !== "" ? (
               <BlueLink ariaLabel="View article" href={url} underline={true}>
                 {title}

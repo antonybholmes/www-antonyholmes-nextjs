@@ -78,10 +78,10 @@ export function search(query: any, publications: any[]): any[] {
       default:
         found = publication.pmid.toLowerCase().includes(ql)
 
-        if (!found) {
-          // try pmcid
-          found = publication.pmcid.toLowerCase().includes(ql)
-        }
+        // if (!found) {
+        //   // try pmcid
+        //   found = publication.pmcid.toLowerCase().includes(ql)
+        // }
 
         if (!found) {
           // try journal

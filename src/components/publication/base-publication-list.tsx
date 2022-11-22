@@ -6,7 +6,6 @@
  */
 
 import BasePublication from "./base-publication"
-import * as React from "react"
 
 interface PublicationListProps {
   publications: any[]

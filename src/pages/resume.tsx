@@ -109,10 +109,10 @@ export default function Page() {
                   {/* {degree.date !== '' && (
           <h3 className="degree-date">{degree.date}</h3>
           )} */}
-                  <h4 className="font-light">{degree.school}</h4>
+                  <h4>{degree.school}</h4>
                 </header>
 
-                <ul className="mt-2 text-sm text-gray-500">
+                <ul className="text-sm text-gray-500">
                   {degree.details.map((detail, detailIndex) => (
                     <li>{detail}</li>
                   ))}

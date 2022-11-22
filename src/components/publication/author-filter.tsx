@@ -1,18 +1,10 @@
 import { useState } from "react"
 import cn from "../../lib/class-names"
 import { BASE_BUTTON_CLASSES } from "../link/button-link"
-import CheckBox from "../link/check-box"
 
 import ChevronDownIcon from "../../icons/chevron-down"
 import Button from "../link/button"
-import VCenterRow from "../v-center-row"
 import { Journal } from "./journal-filter"
-
-interface JournalProps {
-  journal: [string, number]
-  selected: boolean
-  onClick: any
-}
 
 interface AuthorFilterProps {
   authors: [string, number][]
