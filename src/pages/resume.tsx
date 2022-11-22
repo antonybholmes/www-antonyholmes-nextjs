@@ -2,6 +2,7 @@ import education from "../../_content/education.json"
 import jobs from "../../_content/jobs.json"
 import skills from "../../_content/skills.json"
 import volunteer from "../../_content/volunteer.json"
+import BaseRow from "../components/base-row"
 import ContentDiv from "../components/content-div"
 import BaseLayout from "../layouts/base-layout"
 import ContentLayout from "../layouts/content-layout"
@@ -36,7 +37,11 @@ export default function Page() {
               )
             })}
           </ul>
-          <h2 className="mb-8 text-4xl font-semibold">Skills</h2>
+          <BaseRow>
+            <h2 className="mb-8 bg-gradient-to-r from-blue-600 via-cyan-400 to-rose-500 bg-clip-text text-2xl font-bold text-transparent">
+              Skills
+            </h2>
+          </BaseRow>
         </ThreeQuarterLayout>
 
         <ThreeQuarterLayout
@@ -65,7 +70,11 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="mb-8 text-4xl font-semibold">Experience</h2>
+          <BaseRow>
+            <h2 className="mb-8 bg-gradient-to-r from-blue-600 via-cyan-400 to-rose-500 bg-clip-text text-2xl font-bold text-transparent">
+              Experience
+            </h2>
+          </BaseRow>
         </ThreeQuarterLayout>
 
         <ThreeQuarterLayout
@@ -93,7 +102,11 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="mb-8 text-4xl font-semibold">Volunteer Work</h2>
+          <BaseRow>
+            <h2 className="mb-8 bg-gradient-to-r from-blue-600 via-cyan-400 to-rose-500 bg-clip-text text-2xl font-bold text-transparent">
+              Volunteer Work
+            </h2>
+          </BaseRow>
         </ThreeQuarterLayout>
 
         <ThreeQuarterLayout
@@ -120,7 +133,11 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="mb-8 text-4xl font-semibold">Education</h2>
+          <BaseRow>
+            <h2 className="mb-8 bg-gradient-to-r from-blue-600 via-cyan-400 to-rose-500 bg-clip-text text-2xl font-bold text-transparent">
+              Education
+            </h2>
+          </BaseRow>
         </ThreeQuarterLayout>
       </>
     </ContentLayout>

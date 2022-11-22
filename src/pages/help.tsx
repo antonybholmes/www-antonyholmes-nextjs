@@ -1,7 +1,9 @@
 import BaseCol from "../components/base-col"
+import BaseRow from "../components/base-row"
 import BlueLink from "../components/link/blue-link"
 import { ROUNDED_BUTTON_CLASSES } from "../components/link/rounded-button-link"
 import { SITE_NAME, UPDATED, VERSION, YEAR } from "../constants"
+import LogoIcon from "../icons/logo"
 import SideLayout from "../layouts/side-layout"
 import cn from "../lib/class-names"
 
@@ -12,15 +14,9 @@ export default function Page() {
     <SideLayout title="Help" showTitle={false}>
       <>
         <BaseCol className="gap-y-4 rounded-xl bg-apple-gray p-6 text-sm">
-          <p>
-            <img
-              src="/assets/svg/logo.svg"
-              alt="Dalla Favera Lab logo"
-              width="236"
-              height="30"
-              className="w-56"
-            />
-          </p>
+          <BaseRow>
+            <LogoIcon />
+          </BaseRow>
 
           <div>
             <p>{`Version ${VERSION}`}</p>
@@ -95,10 +91,6 @@ export default function Page() {
                 Visual Studio Code
               </BlueLink>
             </li>
-
-            {/* <li className={CLS}>
-              <BlueLink href="https://www.cloudflare.com/">Cloudflare</BlueLink>
-            </li> */}
           </ul>
         </div>
       </>

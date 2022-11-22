@@ -36,12 +36,14 @@ export default function SideLayout({
       <></>
       <SeventyLayout className={sideClassName}>
         <>
-          <PageTitle
-            title={title}
-            subtitle={description}
-            supertitle={supertitle}
-            className="mb-8"
-          />
+          {showTitle && (
+            <PageTitle
+              title={title}
+              subtitle={description}
+              supertitle={supertitle}
+              className="mb-8"
+            />
+          )}
           {children[0]}
         </>
         <>{children[1]}</>

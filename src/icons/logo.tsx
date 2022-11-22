@@ -6,7 +6,7 @@ const LogoIcon = ({ className }: IClassProps) => {
   return (
     <div
       className={cn(
-        "block bg-gradient-to-r from-blue-500 via-cyan-500 to-rose-400 bg-clip-text text-xl font-bold text-transparent",
+        "block bg-gradient-to-r from-blue-800 to-blue-400 bg-clip-text text-xl font-bold text-transparent ",
         className
       )}
     >
