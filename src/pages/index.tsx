@@ -1,4 +1,3 @@
-
 //import axios from "axios"
 import AvatarImageLarge from "../components/avatar-image-large"
 import BaseCol from "../components/base-col"

@@ -21,25 +21,29 @@ export default function Page() {
     <ContentLayout title="Resume" showTitle={false}>
       <></>
       <>
-      <ThreeQuarterLayout className="py-16 gap-x-32" isRight={false} autoHide={false}>
-
-          
-
+        <ThreeQuarterLayout
+          className="gap-x-32 py-16"
+          isRight={false}
+          autoHide={false}
+        >
           <ul className="grid grid-cols-1 gap-8 rounded-xl bg-white text-sm lg:grid-cols-4">
             {skillList.map(skill => {
               return (
-                <li className="p-4 text-center border border-gray-200 rounded-xl">
+                <li className="rounded-xl border border-gray-200 p-4 text-center">
                   <h4 className="font-semibold">{skill.name}</h4>
                   <p>{skill.details}</p>
                 </li>
               )
             })}
           </ul>
-          <h2 className="text-4xl font-semibold mb-8">Skills</h2>
-      </ThreeQuarterLayout>
+          <h2 className="mb-8 text-4xl font-semibold">Skills</h2>
+        </ThreeQuarterLayout>
 
-      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
-  
+        <ThreeQuarterLayout
+          className="gap-x-32 pt-16"
+          isRight={false}
+          autoHide={false}
+        >
           <ul className="flex flex-col gap-y-16">
             {jobs.map((job, jobIndex) => (
               <li>
@@ -61,14 +65,18 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="text-4xl font-semibold mb-8">Experience</h2>
-      </ThreeQuarterLayout>
+          <h2 className="mb-8 text-4xl font-semibold">Experience</h2>
+        </ThreeQuarterLayout>
 
-      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
-        <ul className="flex flex-col gap-y-16">
+        <ThreeQuarterLayout
+          className="gap-x-32 pt-16"
+          isRight={false}
+          autoHide={false}
+        >
+          <ul className="flex flex-col gap-y-16">
             {volunteer.map((job, jobIndex) => (
               <li>
-                <article >
+                <article>
                   <header>
                     <h3 className="text-lg font-semibold">{job.title}</h3>
                     <h4 className="font-normal">{job.company}</h4>
@@ -85,11 +93,14 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="text-4xl font-semibold mb-8">Volunteer Work</h2>
-      </ThreeQuarterLayout>
+          <h2 className="mb-8 text-4xl font-semibold">Volunteer Work</h2>
+        </ThreeQuarterLayout>
 
-      <ThreeQuarterLayout className="pt-16 gap-x-32" isRight={false} autoHide={false}>
-          
+        <ThreeQuarterLayout
+          className="gap-x-32 pt-16"
+          isRight={false}
+          autoHide={false}
+        >
           <ul className="flex flex-col gap-y-8   ">
             {education.map((degree, degreeIndex) => (
               <li>
@@ -109,8 +120,8 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <h2 className="text-4xl font-semibold mb-8">Education</h2>
-          </ThreeQuarterLayout>
+          <h2 className="mb-8 text-4xl font-semibold">Education</h2>
+        </ThreeQuarterLayout>
       </>
     </ContentLayout>
   )

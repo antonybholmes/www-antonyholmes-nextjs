@@ -48,7 +48,7 @@ export default function IndexLink({
       <div ref={iconEl}>
         <ChevronRightIcon
           className={cn(
-            "h-full w-3 stroke-3 transition-transform duration-200"
+            "stroke-3 h-full w-3 transition-transform duration-200"
           )}
         />
       </div>

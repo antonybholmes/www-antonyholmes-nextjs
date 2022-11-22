@@ -22,7 +22,7 @@ export default function LargeHeader({ title, tab, children }: IProps) {
         <div className="flex h-16 flex-row  items-center gap-x-8 xl:gap-x-16">
           <div className="grow-0">
             <BaseLink href="/" ariaLabel="Goto Homepage">
-              <LogoIcon/>
+              <LogoIcon />
             </BaseLink>
           </div>
           <div>
