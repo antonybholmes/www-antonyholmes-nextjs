@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 
 import getBooleanSearch from "../lib/boolean-search"
-import getJournalPublications from "../lib/pub/journal-publications"
-import sortPublications from "../lib/pub/sort-publications"
+
 import getTopAuthors from "../lib/top-authors"
 import getTopJournals from "../lib/top-journals"
 import SearchBar from "../components/search/searchbar"
@@ -17,7 +16,6 @@ import BaseRow from "../components/base-row"
 
 import VCenterRow from "../components/v-center-row"
 
-import getAuthorPublications from "../lib/pub/author-publications"
 import HCenterRow from "../components/h-center-row"
 import Pagination from "../components/pagination"
 import AuthorFilter from "../components/publication/author-filter"
@@ -25,13 +23,17 @@ import AuthorFilter from "../components/publication/author-filter"
 import { RECORDS_PER_PAGE, TEXT_SHOW_MORE } from "../constants"
 import SortIcon from "../icons/sort"
 import ThreeQuarterLayout from "../layouts/three-quarter-layout"
-import pubYearCount from "../lib/pub/pub-year-count"
+
 import { getShortName } from "../lib/text"
 import BaseCol from "../components/base-col"
 import BlueRoundedButton from "../components/link/blue-rounded-button"
 import ToggleSwitch from "../components/link/toggle-switch"
 import PubRangeSlider from "../components/publication/pub-range-slider"
 import { getSelectedPublications } from "../lib/api"
+import pubYearCount from "../lib/pub/pub-year-count"
+import sortPublications from "../lib/pub/sort-publications"
+import getJournalPublications from "../lib/pub/journal-publications"
+import getAuthorPublications from "../lib/pub/author-publications"
 
 const EMPTY_QUERY = ""
 
