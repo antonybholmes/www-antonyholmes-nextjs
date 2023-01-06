@@ -1,8 +1,8 @@
 import {
-  AUTHOR_SLUG,
   BROKERAGE_SLUG,
   CREDIT_CARD_SLUG,
   PAGE_1_SLUG,
+  PEOPLE_SLUG,
   PORTFOLIO_SLUG,
   POST_SLUG,
   REVIEW_SLUG,
@@ -13,7 +13,7 @@ import {
 import { getUrlFriendlyTag } from "./tags"
 
 export const getAuthorUrl = (name: string) => {
-  return `${AUTHOR_SLUG}/${name.toLowerCase().replace(" ", "-")}`
+  return `${PEOPLE_SLUG}/${getUrlFriendlyTag(name)}`
 }
 
 export const getReviewBaseUrl = (tag: string) => {

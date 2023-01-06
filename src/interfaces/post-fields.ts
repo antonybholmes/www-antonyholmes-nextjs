@@ -10,6 +10,5 @@ export default interface IPostFields extends IBaseFields {
   section: string
   related: string[]
   status: string
-
   tags: string[]
 }

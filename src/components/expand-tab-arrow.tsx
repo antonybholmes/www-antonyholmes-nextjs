@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import ChevronUpIcon from "../icons/chevron-upp"
+import ChevronUpIcon from "../icons/chevron-up"
 import cn from "../lib/class-names"
 
 const CLASSES = `flex flex-row w-4 h-4 items-center justify-center`

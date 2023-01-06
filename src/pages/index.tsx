@@ -14,6 +14,7 @@ import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
 import markdownToHtml from "../lib/markdown-html"
 import { getAllPosts } from "../lib/api/post"
+import { getAuthorUrl } from "../lib/urls"
 
 export default function Page({ author, posts }) {
   return (
@@ -25,7 +26,10 @@ export default function Page({ author, posts }) {
       >
         <article className="rounded-xl bg-white p-8 xl:bg-transparent xl:p-0">
           <BaseCol className="items-center gap-y-8">
-            <BaseLink href="/author/antony-holmes" ariaLabel="View profile">
+            <BaseLink
+              href={getAuthorUrl("Antony Holmes")}
+              ariaLabel="View profile"
+            >
               <AvatarImageLarge
                 author={author}
                 lazy={false}

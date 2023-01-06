@@ -1,13 +1,12 @@
 import { useState } from "react"
-import cn from "../../lib/class-names"
-import type IPerson from "../../interfaces/person"
-import BaseLink from "../link/base-link"
 import PubMedIcon from "../../icons/pubmed"
+import IAuthor from "../../interfaces/author"
+import BaseLink from "../link/base-link"
 //import SecondaryButtonLink from "../link/secondary-button-link"
 
 // `https://pubmed.ncbi.nlm.nih.gov/?term=${person.lastName}+${person.firstName}%5BAuthor%5D&sort=pubdate`
 
-function getLink(person: IPerson): string {
+function getLink(person: IAuthor): string {
   const tokens = person.frontmatter.name.split(" ")
   const f = tokens[0]
   const l = tokens[tokens.length - 1]
@@ -16,7 +15,7 @@ function getLink(person: IPerson): string {
 }
 
 interface IPubMedLinkProps {
-  person: IPerson
+  person: IAuthor
 }
 
 export default function PubMedLink({ person }: IPubMedLinkProps) {

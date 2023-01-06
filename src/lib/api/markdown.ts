@@ -2,6 +2,7 @@ import fs from "fs"
 import matter from "gray-matter"
 import IAuthorFields from "../../interfaces/author-fields"
 import IFieldMap from "../../interfaces/field-map"
+import IPageFields from "../../interfaces/page-fields"
 import IPostFields from "../../interfaces/post-fields"
 
 export const getFields = (path: string, items: IFieldMap) => {
@@ -82,6 +83,21 @@ export const getAuthorFields = (path: string): IAuthorFields => {
     name: "",
     title: "",
     email: "",
+    pubmed: "",
+    rawContent: "",
+    rawExcerpt: "",
+  }
+
+  getFields(path, items)
+
+  return items
+}
+
+export const getPageFields = (path: string): IPageFields => {
+  const items: IPageFields = {
+    id: "",
+    title: "",
+    authors: [],
     rawContent: "",
     rawExcerpt: "",
   }

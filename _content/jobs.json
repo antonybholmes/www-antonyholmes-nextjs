@@ -6,7 +6,7 @@
     "overview": "I design data pipelines for processing single cell RNA-seq data as well as specialized biology application development, database administration, and REST based web application development.",
     "details": [
       "AWS administrator leading project to move lab to based cloud infrastructure due to the lab transitioning from purely wet biology to a mixed biology and computational group. This reduced storage and data costs by 50% from in house solutions.",
-      
+
       "Developed database backed genomic web applications running on Amazon Web Services using a mixture of Django, Spring Boot, and Postgresql.",
       "Managed the complete redesign of the Institute for Cancer Genetic's web site as a JAMStack application using React and Gatsby in less than 6 months. This modernized and optimized the site to be performant as well as offering a solution tailored to the institute's need. It resulted in a saving of $40,000 by eliminating the reliance on Drupal and an external provider to manage it."
     ]

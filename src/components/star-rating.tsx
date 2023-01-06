@@ -1,5 +1,5 @@
-import StarIcon from "../icons/starr"
-import HalfStarIcon from "../icons/half-starr"
+import StarIcon from "../icons/star"
+import HalfStarIcon from "../icons/half-star"
 import BaseRow from "./base-row"
 
 interface IProps {

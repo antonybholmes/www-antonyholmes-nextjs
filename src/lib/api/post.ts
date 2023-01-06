@@ -3,8 +3,10 @@ import IAuthorMap from "../../interfaces/author-map"
 import IAuthorPost from "../../interfaces/author-post"
 import IBasePost from "../../interfaces/base-post"
 import IFieldMap from "../../interfaces/field-map"
+import IPostAuthor from "../../interfaces/post-author"
 import IStringMap from "../../interfaces/string-map"
 import { getCanonicalPostSlug } from "../slug"
+import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
 import { getPostFields } from "./markdown"
 
@@ -74,39 +76,93 @@ export function addAuthors(
   }
 }
 
-export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
-  const allPosts = getPostPaths()
-    .map(path => getPostByPath(path))
-    .filter(post => {
-      return (
-        process.env.NODE_ENV === "development" ||
-        post.frontmatter.status === "published"
-      )
-    })
-    // sort posts by date in descending order
-    .sort((post1, post2) => {
-      const d1 = new Date(post1.fields.date)
-      const d2 = new Date(post2.fields.date)
-      if (d1 > d2) {
-        return -1
-      } else if (d1 < d2) {
-        return 1
-      } else {
-        // dates equal so compare names
-        return post1.frontmatter.title.localeCompare(post2.frontmatter.title)
-      }
-    })
-    .map((post, index) => {
-      return {
-        ...post,
-        index,
-      }
-    })
-    .map(post => {
-      return addAuthors(post, authorMap)
-    })
+export function sortPosts(
+  posts: IBasePost[],
+  authorMap: IAuthorMap
+): IAuthorPost[] {
+  return (
+    posts
+      .filter(post => {
+        return (
+          process.env.NODE_ENV === "development" ||
+          post.frontmatter.status === "published"
+        )
+      })
+      // sort posts by date in descending order
+      .sort((post1, post2) => {
+        const d1 = new Date(post1.fields.date)
+        const d2 = new Date(post2.fields.date)
+        if (d1 > d2) {
+          return -1
+        } else if (d1 < d2) {
+          return 1
+        } else {
+          // dates equal so compare names
+          return post1.frontmatter.title.localeCompare(post2.frontmatter.title)
+        }
+      })
+      .map((post, index) => {
+        return {
+          ...post,
+          index,
+        }
+      })
+      .map(post => {
+        return addAuthors(post, authorMap)
+      })
+  )
+}
 
-  return allPosts
+export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
+  return sortPosts(
+    getPostPaths().map(path => getPostByPath(path)),
+    authorMap
+  )
+}
+
+export function getSectionPosts(
+  section: string,
+  authorMap: IAuthorMap
+): IAuthorPost[] {
+  section = getUrlFriendlyTag(section)
+
+  return sortPosts(
+    getPostPaths()
+      .map(path => getPostByPath(path))
+      .filter(post => {
+        return getUrlFriendlyTag(post.frontmatter.section).includes(section)
+      }),
+    authorMap
+  )
+}
+
+export function getTagPosts(tag: string, authorMap: IAuthorMap): IAuthorPost[] {
+  tag = getUrlFriendlyTag(tag)
+
+  return sortPosts(
+    getPostPaths()
+      .map(path => getPostByPath(path))
+      .filter(post => {
+        return post.frontmatter.tags
+          .map(t => getUrlFriendlyTag(t))
+          .includes(tag)
+      }),
+    authorMap
+  )
+}
+
+export function getAuthorPosts(
+  author: string,
+  authorMap: IAuthorMap
+): IAuthorPost[] {
+  return sortPosts(
+    getPostPaths()
+      .map(path => getPostByPath(path))
+      .filter(post => {
+        return post.frontmatter.authors.includes(author)
+      }),
+    authorMap
+  )
 }
 
 export function allPostsBySlugMap(
@@ -125,12 +181,14 @@ export function getSectionMap(posts: IBasePost[], max: number = -1): IFieldMap {
   const sectionMap: IFieldMap = {}
 
   posts.forEach(post => {
-    if (!(post.frontmatter.section in sectionMap)) {
-      sectionMap[post.frontmatter.section] = []
+    const s = getUrlFriendlyTag(post.frontmatter.section)
+
+    if (!(s in sectionMap)) {
+      sectionMap[s] = []
     }
 
-    if (max === -1 || sectionMap[post.frontmatter.section].length < max) {
-      sectionMap[post.frontmatter.section].push(post)
+    if (max === -1 || sectionMap[s].length < max) {
+      sectionMap[s].push(post)
     }
   })
 
@@ -150,15 +208,38 @@ export function getTagMap(posts: IBasePost[], max: number = -1): IFieldMap {
 
   posts.forEach(post => {
     post.frontmatter.tags.forEach((tag: string) => {
-      if (!(tag in tagMap)) {
-        tagMap[tag] = []
+      const t = getUrlFriendlyTag(tag)
+
+      if (!(t in tagMap)) {
+        tagMap[t] = []
       }
 
-      if (max === -1 || tagMap[tag].length < max) {
-        tagMap[tag].push(post)
+      if (max === -1 || tagMap[t].length < max) {
+        tagMap[t].push(post)
       }
     })
   })
 
   return tagMap
+}
+
+export function getAuthorPostMap(
+  posts: IBasePost[],
+  max: number = -1
+): IFieldMap {
+  const authurMap: IFieldMap = {}
+
+  posts.forEach(post => {
+    post.frontmatter.authors.forEach((author: string) => {
+      if (!(author in authurMap)) {
+        authurMap[author] = []
+      }
+
+      if (max === -1 || authurMap[author].length < max) {
+        authurMap[author].push(post)
+      }
+    })
+  })
+
+  return authurMap
 }

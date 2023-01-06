@@ -741,11 +741,7 @@
   },
   {
     "pmid": "21124942",
-    "authorList": [
-      "Chan J",
-      "Holmes A",
-      "Rabadan R"
-    ],
+    "authorList": ["Chan J", "Holmes A", "Rabadan R"],
     "year": 2010,
     "month": 11,
     "day": 18,
@@ -780,11 +776,7 @@
   },
   {
     "pmid": "20195493",
-    "authorList": [
-      "Holmes AB",
-      "Kalvala S",
-      "Whitworth DE"
-    ],
+    "authorList": ["Holmes AB", "Kalvala S", "Whitworth DE"],
     "year": 2010,
     "month": 2,
     "day": 26,

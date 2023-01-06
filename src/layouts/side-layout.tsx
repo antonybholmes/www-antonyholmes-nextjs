@@ -6,20 +6,18 @@ import PageTitle from "../components/page-title"
 
 interface IProps extends ITitleLayoutProps {
   sideClassName?: string
-  footerClassName?: string
 }
 
 export default function SideLayout({
   title,
   showTitle = true,
-  description,
   tab,
   isIndexed,
   crumbs,
-  supertitle,
+  superTitle,
+  subTitle,
   sideClassName,
   className,
-  footerClassName,
   children,
 }: IProps) {
   return (
@@ -27,11 +25,10 @@ export default function SideLayout({
       title={title}
       crumbs={crumbs}
       showTitle={false}
-      description={description}
+      superTitle={superTitle}
       tab={tab}
       isIndexed={isIndexed}
       className={className}
-      footerClassName={footerClassName}
     >
       <></>
       <SeventyLayout className={sideClassName}>
@@ -39,8 +36,8 @@ export default function SideLayout({
           {showTitle && (
             <PageTitle
               title={title}
-              subtitle={description}
-              supertitle={supertitle}
+              subTitle={subTitle}
+              superTitle={superTitle}
               className="mb-8"
             />
           )}

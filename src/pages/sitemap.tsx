@@ -1,58 +1,54 @@
 import BlueLink from "../components/link/blue-link"
 import ContentLayout from "../layouts/content-layout"
-import { FOOTER_LINKS, HEADER_LINKS } from "../menus"
+import { HEADER_LINKS } from "../menus"
 
 export default function Page() {
   return (
     <ContentLayout title="Site Map">
       <></>
-      <div className="grid grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 lg:grid-cols-3" slot="main">
         <section>
-          <h2 className="mt-4 font-medium">Learn More</h2>
-          {FOOTER_LINKS.map((link: any, i: number) => {
-            return (
-              <div className="mt-2" key={i}>
-                <BlueLink ariaLabel={`Goto ${link.name}`} href={link.url}>
-                  {link.name}
-                </BlueLink>
-              </div>
-            )
-          })}
+          <h3 className="mt-4 font-bold">Learn More</h3>
+          <ul className="mt-4 flex flex-col gap-y-2">
+            {HEADER_LINKS.map((link: any, i: number) => {
+              return (
+                <li key={i}>
+                  <BlueLink ariaLabel={`Goto ${link.name}`} href={link.url}>
+                    {link.name}
+                  </BlueLink>
+                </li>
+              )
+            })}
+          </ul>
         </section>
 
         <section>
-          <h2 className="mt-4 font-medium">About</h2>
+          <h3 className="mt-4 font-bold">About</h3>
+          <ul className="mt-4 flex flex-col gap-y-2">
+            <li>
+              <BlueLink href="/help" ariaLabel="View help information">
+                Help
+              </BlueLink>
+            </li>
 
-          <div className="mt-2">
-            <BlueLink href="/privacy" ariaLabel="View privacy information">
-              Privacy policy
-            </BlueLink>
-          </div>
-          <div className="mt-2">
-            <BlueLink href="/terms" ariaLabel="View terms and conditions">
-              Terms of use
-            </BlueLink>
-          </div>
+            <li>
+              <BlueLink href="/privacy" ariaLabel="View privacy information">
+                Privacy Policy
+              </BlueLink>
+            </li>
+            <li>
+              <BlueLink href="/terms" ariaLabel="View terms and conditions">
+                Terms of Use
+              </BlueLink>
+            </li>
 
-          <div className="mt-2">
-            <BlueLink href="/help" ariaLabel="View help information">
-              Help
-            </BlueLink>
-          </div>
+            <li>
+              <BlueLink href="/contact" ariaLabel="Contact us">
+                Contact
+              </BlueLink>
+            </li>
+          </ul>
         </section>
-
-        {/* <section>
-          <h2 className="mt-4 font-medium">Departments</h2>
-          {FOOTER_LINKS_2.map((link: any, i: number) => {
-            return (
-              <div className="mt-2" key={i}>
-                <BlueLink ariaLabel={`Goto ${link.name}`} href={link.url}>
-                  {link.name}
-                </BlueLink>
-              </div>
-            )
-          })}
-        </section> */}
       </div>
     </ContentLayout>
   )

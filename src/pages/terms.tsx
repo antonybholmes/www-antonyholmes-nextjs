@@ -1,6 +1,6 @@
 import MarkdownLayout from "../layouts/markdown-layout"
-import { getPageBySlug } from "../lib/api"
-import markdownToHtml from "../lib/markdownToHtml"
+import { getPageBySlug } from "../lib/api/page"
+import markdownToHtml from "../lib/markdown-html"
 
 interface IProps {
   html: string
@@ -11,9 +11,9 @@ export default function Page({ html }: IProps) {
 }
 
 export async function getStaticProps() {
-  const post = getPageBySlug("terms.md")
+  const post = getPageBySlug("terms")
 
-  const html = await markdownToHtml(post.content || "")
+  const html = await markdownToHtml(post.frontmatter.rawContent || "")
 
   return {
     props: { html },

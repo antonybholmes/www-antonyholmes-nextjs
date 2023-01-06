@@ -1,4 +1,4 @@
-import CircleInfoIcon from "../icons/circle-infoo"
+import CircleInfoIcon from "../icons/circle-info"
 
 interface IProps {
   text: string

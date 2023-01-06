@@ -9,12 +9,12 @@ interface IProps extends ILayoutProps {
 
 export default function MarkdownLayout({
   title,
-  supertitle,
+  superTitle,
   html,
   tab,
 }: IProps) {
   return (
-    <SideLayout title={title} supertitle={supertitle} tab={tab} crumbs={[]}>
+    <SideLayout title={title} superTitle={superTitle} tab={tab}>
       <div>
         <MarkdownBody html={html} className="text-justify" />
       </div>

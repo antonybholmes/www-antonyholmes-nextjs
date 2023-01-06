@@ -70,9 +70,7 @@ If you are using a framework such as Astro/Next/Gatsby, you will probably have a
 @tailwind components;
 @tailwind utilities;
 
-...
-
-.transition-ani {
+... .transition-ani {
   @apply duration-300 ease-in-out;
 }
 ```

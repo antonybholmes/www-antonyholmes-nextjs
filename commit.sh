@@ -1,8 +1,8 @@
 # format code
-yarn update-version
-yarn format
+pnpm update-version
+pnpm format
 
-# yarn run resize
+pnpm image-optimize
 
 # commit
 git add -A .

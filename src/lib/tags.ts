@@ -1,7 +1,12 @@
 import { capitalize } from "lodash"
 
 export const getUrlFriendlyTag = (tag: string) => {
-  return tag.trim().toLowerCase().replaceAll(" ", "-").replaceAll("&", "and")
+  return tag
+    .trim()
+    .toLowerCase()
+    .replaceAll("&", "and")
+    .replaceAll("-", "--")
+    .replaceAll(" ", "-")
 }
 
 export const getFormattedTag = (tag: string) => {

@@ -18,8 +18,6 @@ Using a class based approach for css, such as Tailwind can often mean long strin
 this simple function to concatenate and deal with conditional renderings. Instead of writing strings such as `${x ? "y" : "z"}`
 you can supply a list of strings or an array beginning with a boolean expression which can deal with conditionals.
 
-
-
 ```typescript
 // class-names.ts
 
@@ -79,13 +77,11 @@ export default function cn(...args: CSSClass[]): string {
 
   // join all the pieces into one then split on space
   // and remove duplicates
-  return clean(
-    classes.filter(x => x !== "").join(" ")
-  )
+  return clean(classes.filter(x => x !== "").join(" "))
 }
 ```
 
-In the example the arrays containing 3 elements where the first element is a boolean. such as ```[show2, "p4", "p5"]``` will conditionally add class ```p4``` or ```p5``` depending on whether ```show2``` is ```true```. You can nest these expressions to create more complex one line conditional expressions that do not require cumbersome string interpolations, for example ```[show, [show2, "p4", "p5"], "p6"]```, if ```show``` is ```true```, then add class ```p4``` or ```p5``` depending on whether ```show2``` is ```true```.
+In the example the arrays containing 3 elements where the first element is a boolean. such as `[show2, "p4", "p5"]` will conditionally add class `p4` or `p5` depending on whether `show2` is `true`. You can nest these expressions to create more complex one line conditional expressions that do not require cumbersome string interpolations, for example `[show, [show2, "p4", "p5"], "p6"]`, if `show` is `true`, then add class `p4` or `p5` depending on whether `show2` is `true`.
 
 ```typescript
 // component.tsx
@@ -100,4 +96,3 @@ const show3 = true
 
 return(<div className={cn("p1 p2", "p3", [show, [show2, "p4", "p5"], "p6"], [show3, "p7"])}>)
 ```
-

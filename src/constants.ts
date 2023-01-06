@@ -31,8 +31,6 @@ export const CLS_TEXT_GRAY_HOVER = env.CLS_TEXT_GRAY_HOVER
 
 export const DEFAULT_SECTION = env.DEFAULT_SECTION
 
-export const GENERIC_PERSON_IMAGE = env.GENERIC_PERSON_IMAGE
-
 export const YEAR = new Date().getFullYear()
 
 export const SECTIONS = env.SECTIONS
