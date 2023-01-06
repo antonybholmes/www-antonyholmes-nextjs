@@ -1,0 +1,3710 @@
+PMID- 35794478
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220729
+LR  - 20220803
+IS  - 1476-4687 (Electronic)
+IS  - 0028-0836 (Linking)
+VI  - 607
+IP  - 7920
+DP  - 2022 Jul
+TI  - Super-enhancer hypermutation alters oncogene expression in B cell
+      lymphoma.
+PG  - 808-815
+LID - 10.1038/s41586-022-04906-8 [doi]
+AB  - Diffuse large B cell lymphoma (DLBCL) is the most common B cell non-
+      Hodgkin lymphoma and remains incurable in around 40% of patients. Efforts
+      to sequence the coding genome identified several genes and pathways that
+      are altered in this disease, including potential therapeutic
+      targets(1-5). However, the non-coding genome of DLBCL remains largely
+      unexplored. Here we show that active super-enhancers are highly and
+      specifically hypermutated in 92% of samples from individuals with DLBCL,
+      display signatures of activation-induced cytidine deaminase activity, and
+      are linked to genes that encode B cell developmental regulators and
+      oncogenes. As evidence of oncogenic relevance, we show that the
+      hypermutated super-enhancers linked to the BCL6, BCL2 and CXCR4 proto-
+      oncogenes prevent the binding and transcriptional downregulation of the
+      corresponding target gene by transcriptional repressors, including BLIMP1
+      (targeting BCL6) and the steroid receptor NR3C1 (targeting BCL2 and
+      CXCR4). Genetic correction of selected mutations restored repressor DNA
+      binding, downregulated target gene expression and led to the counter-
+      selection of cells containing corrected alleles, indicating an oncogenic
+      dependency on the super-enhancer mutations. This pervasive super-enhancer
+      mutational mechanism reveals a major set of genetic lesions deregulating
+      gene expression, which expands the involvement of known oncogenes in
+      DLBCL pathogenesis and identifies new deregulated gene targets of
+      therapeutic relevance.
+CI  - (c) 2022. The Author(s), under exclusive licence to Springer Nature
+      Limited.
+FAU - Bal, Elodie
+AU  - Bal E
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Kumar, Rahul
+AU  - Kumar R
+AUID- ORCID: http://orcid.org/0000-0002-6927-5390
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+AD  - Department of Biotechnology, Indian Institute of Technology Hyderabad,
+      Kandi, Telangana, India.
+FAU - Hadigol, Mohammad
+AU  - Hadigol M
+AD  - Center for Systems and Computational Biology, Rutgers Cancer Institute of
+      New Jersey, Rutgers University, New Brunswick, NJ, USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AUID- ORCID: http://orcid.org/0000-0001-7559-2678
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Hilton, Laura K
+AU  - Hilton LK
+AUID- ORCID: http://orcid.org/0000-0002-6413-6586
+AD  - Centre for Lymphoid Cancer, BC Cancer Research Centre, Vancouver, British
+      Columbia, Canada.
+FAU - Loh, Jui Wan
+AU  - Loh JW
+AD  - Center for Systems and Computational Biology, Rutgers Cancer Institute of
+      New Jersey, Rutgers University, New Brunswick, NJ, USA.
+FAU - Dreval, Kostiantyn
+AU  - Dreval K
+AD  - Department of Molecular Biology and Biochemistry, Simon Fraser
+      University, Burnaby, British Columbia, Canada.
+FAU - Wong, Jasper C H
+AU  - Wong JCH
+AD  - Centre for Lymphoid Cancer, BC Cancer Research Centre, Vancouver, British
+      Columbia, Canada.
+FAU - Vlasevska, Sofija
+AU  - Vlasevska S
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Corinaldesi, Clarissa
+AU  - Corinaldesi C
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Soni, Rajesh Kumar
+AU  - Soni RK
+AD  - Proteomics and Macromolecular Crystallography Shared Resource, Columbia
+      University, New York, NY, USA.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY, USA.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, USA.
+FAU - Morin, Ryan D
+AU  - Morin RD
+AUID- ORCID: http://orcid.org/0000-0003-2932-7800
+AD  - Department of Molecular Biology and Biochemistry, Simon Fraser
+      University, Burnaby, British Columbia, Canada.
+AD  - Genome Sciences Center, BC Cancer Research Institute, Vancouver, British
+      Columbia, Canada.
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+AD  - Center for Systems and Computational Biology, Rutgers Cancer Institute of
+      New Jersey, Rutgers University, New Brunswick, NJ, USA.
+AD  - Department of Pathology and Laboratory Medicine, Rutgers Robert Wood
+      Johnson Medical School, Rutgers University, New Brunswick, NJ, USA.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AUID- ORCID: http://orcid.org/0000-0001-6819-7370
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+      lp171@cumc.columbia.edu.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY, USA. lp171@cumc.columbia.edu.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, USA. lp171@cumc.columbia.edu.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AUID- ORCID: http://orcid.org/0000-0002-3502-8826
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+      rd10@cumc.columbia.edu.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY, USA. rd10@cumc.columbia.edu.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, USA. rd10@cumc.columbia.edu.
+AD  - Department of Genetics & Development, Columbia University, New York, NY,
+      USA. rd10@cumc.columbia.edu.
+AD  - Department of Microbiology & Immunology, Columbia University, New York,
+      NY, USA. rd10@cumc.columbia.edu.
+LA  - eng
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+GR  - R01 CA233662/CA/NCI NIH HHS/United States
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - P30 CA072720/CA/NCI NIH HHS/United States
+GR  - P01 CA229100/CA/NCI NIH HHS/United States
+PT  - Journal Article
+DEP - 20220706
+PL  - England
+TA  - Nature
+JT  - Nature
+JID - 0410462
+RN  - 0 (BCL2 protein, human)
+RN  - 0 (BCL6 protein, human)
+RN  - 0 (CXCR4 protein, human)
+RN  - 0 (NR3C1 protein, human)
+RN  - 0 (Proto-Oncogene Proteins c-bcl-2)
+RN  - 0 (Proto-Oncogene Proteins c-bcl-6)
+RN  - 0 (Receptors, CXCR4)
+RN  - 0 (Receptors, Glucocorticoid)
+RN  - 0 (Repressor Proteins)
+RN  - 138415-26-6 (PRDM1 protein, human)
+RN  - EC 2.1.1.- (Positive Regulatory Domain I-Binding Factor 1)
+SB  - IM
+MH  - Down-Regulation
+MH  - *Enhancer Elements, Genetic/genetics
+MH  - *Gene Expression Regulation, Neoplastic
+MH  - Humans
+MH  - *Lymphoma, Large B-Cell, Diffuse/genetics/metabolism
+MH  - *Mutation
+MH  - *Oncogenes/genetics
+MH  - Positive Regulatory Domain I-Binding Factor 1/metabolism
+MH  - Proto-Oncogene Proteins c-bcl-2/genetics
+MH  - Proto-Oncogene Proteins c-bcl-6/genetics
+MH  - Receptors, CXCR4/genetics
+MH  - Receptors, Glucocorticoid/metabolism
+MH  - Repressor Proteins/metabolism
+EDAT- 2022/07/07 06:00
+MHDA- 2022/07/30 06:00
+CRDT- 2022/07/06 23:39
+PHST- 2021/08/13 00:00 [received]
+PHST- 2022/05/25 00:00 [accepted]
+PHST- 2022/07/07 06:00 [pubmed]
+PHST- 2022/07/30 06:00 [medline]
+PHST- 2022/07/06 23:39 [entrez]
+AID - 10.1038/s41586-022-04906-8 [doi]
+AID - 10.1038/s41586-022-04906-8 [pii]
+PST - ppublish
+SO  - Nature. 2022 Jul;607(7920):808-815. doi: 10.1038/s41586-022-04906-8. Epub
+      2022 Jul 6.
+
+PMID- 35095922
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220307
+LR  - 20220716
+IS  - 1664-3224 (Electronic)
+IS  - 1664-3224 (Linking)
+VI  - 12
+DP  - 2021
+TI  - Tracking Immunoglobulin Repertoire and Transcriptomic Changes in Germinal
+      Center B Cells by Single-Cell Analysis.
+PG  - 818758
+LID - 10.3389/fimmu.2021.818758 [doi]
+AB  - In response to T-cell-dependent antigens, mature B cells in the secondary
+      lymphoid organs are stimulated to form germinal centers (GCs), which are
+      histological structures deputed to antibody affinity maturation, a
+      process associated with immunoglobulin gene editing by somatic
+      hypermutation (SHM) and class switch recombination (CSR). GC B cells are
+      heterogeneous and transition across multiple stages before being
+      eliminated by apoptosis or committing to post-GC differentiation as
+      memory B cells or plasma cells. In order to explore the dynamics of SHM
+      and CSR during the GC reaction, we identified GC subpopulations by
+      single-cell (sc) transcriptomics and analyzed the load of immunoglobulin
+      variable (V) region mutations as well as the isotype class distribution
+      in each subpopulation. The results showed that the large majority of GC B
+      cells display a quantitatively similar mutational load in the V regions
+      and analogous IGH isotype class distribution, except for the precursors
+      of memory B cells (PreM) and plasma cells (PBL). PreM showed a bimodal
+      pattern with about half of the cells displaying high V region germline
+      identity and enrichment for unswitched IGH, while the rest of the cells
+      carried a mutational load similar to the bulk of GC B cells and showed a
+      switched isotype. PBL displayed a bias toward expression of IGHG and
+      higher V region germline identity compared to the bulk of GC B cells.
+      Genes implicated in SHM and CSR were significantly induced in specific GC
+      subpopulations, consistent with the occurrence of SHM in dark zone cells
+      and suggesting that CSR can occur within the GC.
+CI  - Copyright (c) 2022 Corinaldesi, Holmes, Shen, Grunstein, Pasqualucci,
+      Dalla-Favera and Basso.
+FAU - Corinaldesi, Clarissa
+AU  - Corinaldesi C
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+FAU - Shen, Qiong
+AU  - Shen Q
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+FAU - Grunstein, Eli
+AU  - Grunstein E
+AD  - Department of Otolaringology Head and Neck Surgery, Columbia University,
+      New York, NY, United States.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, United States.
+AD  - The Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY, United States.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, United States.
+AD  - The Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY, United States.
+AD  - Department of Microbiology and Immunology, Columbia University, New York,
+      NY, United States.
+AD  - Department of Genetics and Development, Columbia University, New York,
+      NY, United States.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, United
+      States.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY, United States.
+LA  - eng
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20220112
+PL  - Switzerland
+TA  - Front Immunol
+JT  - Frontiers in immunology
+JID - 101560960
+RN  - 0 (Immunoglobulin Variable Region)
+RN  - 0 (Receptors, Antigen, B-Cell)
+SB  - IM
+MH  - B-Lymphocyte Subsets/immunology/metabolism
+MH  - B-Lymphocytes/*immunology/*metabolism
+MH  - Computational Biology/methods
+MH  - *Gene Expression Profiling/methods
+MH  - Germinal Center/cytology/*immunology
+MH  - Humans
+MH  - Immunoglobulin Class Switching
+MH  - Immunoglobulin Variable Region/genetics
+MH  - Immunologic Memory/genetics
+MH  - Plasma Cells/immunology/metabolism
+MH  - Receptors, Antigen, B-Cell/genetics/metabolism
+MH  - Signal Transduction
+MH  - *Single-Cell Analysis/methods
+MH  - *Somatic Hypermutation, Immunoglobulin
+MH  - *Transcriptome
+PMC - PMC8789751
+OTO - NOTNLM
+OT  - *B cell receptor
+OT  - *gene expression
+OT  - *germinal center
+OT  - *memory B cells
+OT  - *plasma cells
+OT  - *single-cell analysis
+COIS- The authors declare that the research was conducted in the absence of any
+      commercial or financial relationships that could be construed as a
+      potential conflict of interest.
+EDAT- 2022/02/01 06:00
+MHDA- 2022/03/08 06:00
+CRDT- 2022/01/31 05:56
+PHST- 2021/11/19 00:00 [received]
+PHST- 2021/12/21 00:00 [accepted]
+PHST- 2022/01/31 05:56 [entrez]
+PHST- 2022/02/01 06:00 [pubmed]
+PHST- 2022/03/08 06:00 [medline]
+AID - 10.3389/fimmu.2021.818758 [doi]
+PST - epublish
+SO  - Front Immunol. 2022 Jan 12;12:818758. doi: 10.3389/fimmu.2021.818758.
+      eCollection 2021.
+
+PMID- 34380064
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210923
+LR  - 20210929
+IS  - 1097-4180 (Electronic)
+IS  - 1074-7613 (Linking)
+VI  - 54
+IP  - 8
+DP  - 2021 Aug 10
+TI  - Mutations in the transcription factor FOXO1 mimic positive selection
+      signals to promote germinal center B cell expansion and lymphomagenesis.
+PG  - 1807-1824.e14
+LID - S1074-7613(21)00295-8 [pii]
+LID - 10.1016/j.immuni.2021.07.009 [doi]
+AB  - The transcription factor forkhead box O1 (FOXO1), which instructs the
+      dark zone program to direct germinal center (GC) polarity, is typically
+      inactivated by phosphatidylinositol 3-kinase (PI3K) signals. Here, we
+      investigated how FOXO1 mutations targeting this regulatory axis in GC-
+      derived B cell non-Hodgkin lymphomas (B-NHLs) contribute to
+      lymphomagenesis. Examination of primary B-NHL tissues revealed that FOXO1
+      mutations and PI3K pathway activity were not directly correlated. Human B
+      cell lines bearing FOXO1 mutations exhibited hyperactivation of PI3K and
+      Stress-activated protein kinase (SAPK)/Jun amino-terminal kinase (JNK)
+      signaling, and increased cell survival under stress conditions as a
+      result of alterations in FOXO1 transcriptional affinities and activation
+      of transcriptional programs characteristic of GC-positive selection. When
+      modeled in mice, FOXO1 mutations conferred competitive advantage to B
+      cells in response to key T-dependent immune signals, disrupting GC
+      homeostasis. FOXO1 mutant transcriptional signatures were prevalent in
+      human B-NHL and predicted poor clinical outcomes. Thus, rather than
+      enforcing FOXO1 constitutive activity, FOXO1 mutations enable co-option
+      of GC-positive selection programs during the pathogenesis of GC-derived
+      lymphomas.
+CI  - Copyright (c) 2021 Elsevier Inc. All rights reserved.
+FAU - Roberto, Mark P
+AU  - Roberto MP
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, NY 10029, USA; Graduate School of Biomedical Sciences,
+      Icahn School of Medicine at Mount Sinai, New York, NY 10029, USA.
+FAU - Varano, Gabriele
+AU  - Varano G
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, NY 10029, USA.
+FAU - Vinas-Castells, Rosa
+AU  - Vinas-Castells R
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, NY 10029, USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University Medical Center, New
+      York, NY 10032, USA.
+FAU - Kumar, Rahul
+AU  - Kumar R
+AD  - Institute for Cancer Genetics, Columbia University Medical Center, New
+      York, NY 10032, USA.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University Medical Center, New
+      York, NY 10032, USA; Department of Pathology, Columbia University Medical
+      Center, New York, NY 10032, USA; Herbert Irving Comprehensive Cancer
+      Center, Columbia University Medical Center, New York, NY 10032, USA.
+FAU - Farinha, Pedro
+AU  - Farinha P
+AD  - Center for Lymphoid Cancer, British Columbia Cancer, Vancouver, BC V5Z
+      1L3, Canada.
+FAU - Scott, David W
+AU  - Scott DW
+AD  - Center for Lymphoid Cancer, British Columbia Cancer, Vancouver, BC V5Z
+      1L3, Canada.
+FAU - Dominguez-Sola, David
+AU  - Dominguez-Sola D
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, NY 10029, USA; Department of Pathology, Icahn School of
+      Medicine at Mount Sinai, New York, NY 10029, USA; Tisch Cancer Institute,
+      Icahn School of Medicine at Mount Sinai, New York, NY 10029, USA;
+      Precision Immunology Institute, Icahn School of Medicine at Mount Sinai,
+      New York, NY 10029, USA; Graduate School of Biomedical Sciences, Icahn
+      School of Medicine at Mount Sinai, New York, NY 10029, USA. Electronic
+      address: david.dominguez-sola@mssm.edu.
+LA  - eng
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+GR  - T32 CA078207/CA/NCI NIH HHS/United States
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - P30 CA196521/CA/NCI NIH HHS/United States
+GR  - R01 CA207963/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PL  - United States
+TA  - Immunity
+JT  - Immunity
+JID - 9432918
+RN  - 0 (FOXO1 protein, human)
+RN  - 0 (Forkhead Box Protein O1)
+RN  - 0 (Foxo1 protein, mouse)
+RN  - EC 2.7.12.2 (MAP Kinase Kinase 4)
+SB  - IM
+MH  - Animals
+MH  - B-Lymphocytes/*cytology/immunology
+MH  - Cell Differentiation/genetics/immunology
+MH  - Cell Line
+MH  - Cell Proliferation/genetics
+MH  - Cell Survival/genetics
+MH  - Forkhead Box Protein O1/*genetics
+MH  - Gene Expression Regulation/genetics
+MH  - Germinal Center/*immunology
+MH  - HEK293 Cells
+MH  - Humans
+MH  - Lymphoma, B-Cell/genetics/*pathology
+MH  - MAP Kinase Kinase 4/metabolism
+MH  - Mice
+MH  - Mice, Inbred C57BL
+MH  - Phosphatidylinositol 3-Kinases/metabolism
+MH  - Signal Transduction/genetics/immunology
+PMC - PMC8475267
+MID - NIHMS1726942
+OTO - NOTNLM
+OT  - *B cell
+OT  - *CD40
+OT  - *FOXO1
+OT  - *JNK
+OT  - *PI3K
+OT  - *germinal center
+OT  - *mouse model
+OT  - *mutation
+OT  - *non-Hodgkin lymphoma
+OT  - *positive selection
+COIS- Declaration of interests The authors declare no competing interests.
+EDAT- 2021/08/12 06:00
+MHDA- 2021/09/24 06:00
+CRDT- 2021/08/11 20:06
+PMCR- 2022/08/10 00:00
+PHST- 2020/02/06 00:00 [received]
+PHST- 2021/03/26 00:00 [revised]
+PHST- 2021/07/13 00:00 [accepted]
+PHST- 2022/08/10 00:00 [pmc-release]
+PHST- 2021/08/11 20:06 [entrez]
+PHST- 2021/08/12 06:00 [pubmed]
+PHST- 2021/09/24 06:00 [medline]
+AID - S1074-7613(21)00295-8 [pii]
+AID - 10.1016/j.immuni.2021.07.009 [doi]
+PST - ppublish
+SO  - Immunity. 2021 Aug 10;54(8):1807-1824.e14. doi:
+      10.1016/j.immuni.2021.07.009.
+
+PMID- 32299901
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210527
+LR  - 20220531
+IS  - 1592-8721 (Electronic)
+IS  - 0390-6078 (Linking)
+VI  - 106
+IP  - 2
+DP  - 2021 Feb 1
+TI  - miR-939 acts as tumor suppressor by modulating JUNB transcriptional
+      activity in pediatric anaplastic large cell lymphoma.
+PG  - 610-613
+LID - 10.3324/haematol.2019.241307 [doi]
+FAU - Garbin, Anna
+AU  - Garbin A
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Lovisa, Federica
+AU  - Lovisa F
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Damanti, Carlotta C
+AU  - Damanti CC
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Gallingani, Ilaria
+AU  - Gallingani I
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Carraro, Elisa
+AU  - Carraro E
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Accordi, Benedetta
+AU  - Accordi B
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Veltri, Giulia
+AU  - Veltri G
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Pizzi, Marco
+AU  - Pizzi M
+AD  - Surgical Pathology and Cytopathology Unit, Department of Medicine,
+      University of Padova, Italy.
+FAU - d'Amore, Emanuele S G
+AU  - d'Amore ESG
+AD  - Department of Pathological Anatomy, San Bortolo Hospital, Vicenza, Italy.
+FAU - Pillon, Marta
+AU  - Pillon M
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Biffi, Alessandra
+AU  - Biffi A
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics and Dept of Pathology and Cell Biology,
+      Columbia University, New York, USA.
+FAU - Mussolin, Lara
+AU  - Mussolin L
+AD  - Dept Women's and Children's Health, Clinic of Pediatric Hemato-Oncology,
+      University of Padua, Italy.
+LA  - eng
+PT  - Letter
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20210201
+PL  - Italy
+TA  - Haematologica
+JT  - Haematologica
+JID - 0417435
+RN  - 0 (JunB protein, human)
+RN  - 0 (MIRN939 microRNA, human)
+RN  - 0 (MicroRNAs)
+RN  - 0 (Transcription Factors)
+RN  - EC 2.7.10.1 (Anaplastic Lymphoma Kinase)
+RN  - EC 2.7.10.1 (Receptor Protein-Tyrosine Kinases)
+SB  - IM
+MH  - Anaplastic Lymphoma Kinase
+MH  - Cell Line, Tumor
+MH  - Child
+MH  - Gene Expression Regulation, Neoplastic
+MH  - Humans
+MH  - *Lymphoma, Large-Cell, Anaplastic/genetics
+MH  - *MicroRNAs/genetics
+MH  - Receptor Protein-Tyrosine Kinases/genetics
+MH  - Transcription Factors/genetics
+PMC - PMC7849582
+EDAT- 2020/04/18 06:00
+MHDA- 2021/05/28 06:00
+CRDT- 2020/04/18 06:00
+PHST- 2019/10/31 00:00 [received]
+PHST- 2020/04/09 00:00 [accepted]
+PHST- 2020/04/18 06:00 [pubmed]
+PHST- 2021/05/28 06:00 [medline]
+PHST- 2020/04/18 06:00 [entrez]
+AID - haematol.2019.241307 [pii]
+AID - 10.3324/haematol.2019.241307 [doi]
+PST - epublish
+SO  - Haematologica. 2021 Feb 1;106(2):610-613. doi:
+      10.3324/haematol.2019.241307.
+
+PMID- 32603407
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210310
+LR  - 20210406
+IS  - 1540-9538 (Electronic)
+IS  - 0022-1007 (Linking)
+VI  - 217
+IP  - 10
+DP  - 2020 Oct 5
+TI  - Single-cell analysis of germinal-center B cells informs on lymphoma cell
+      of origin and outcome.
+LID - e20200483 [pii]
+LID - 10.1084/jem.20200483 [doi]
+AB  - In response to T cell-dependent antigens, mature B cells are stimulated
+      to form germinal centers (GCs), the sites of B cell affinity maturation
+      and the cell of origin (COO) of most B cell lymphomas. To explore the
+      dynamics of GC B cell development beyond the known dark zone and light
+      zone compartments, we performed single-cell (sc) transcriptomic analysis
+      on human GC B cells and identified multiple functionally linked
+      subpopulations, including the distinct precursors of memory B cells and
+      plasma cells. The gene expression signatures associated with these GC
+      subpopulations were effective in providing a sc-COO for approximately 80%
+      of diffuse large B cell lymphomas (DLBCLs) and identified novel
+      prognostic subgroups of DLBCL.
+CI  - (c) 2020 Holmes et al.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+FAU - Corinaldesi, Clarissa
+AU  - Corinaldesi C
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+FAU - Shen, Qiong
+AU  - Shen Q
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+FAU - Kumar, Rahul
+AU  - Kumar R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+FAU - Compagno, Nicolo
+AU  - Compagno N
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+FAU - Wang, Zhong
+AU  - Wang Z
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY.
+FAU - Nitzan, Mor
+AU  - Nitzan M
+AD  - Harvard University, Cambridge, MA.
+FAU - Grunstein, Eli
+AU  - Grunstein E
+AD  - Department of Otolaryngology Head and Neck Surgery, Columbia University,
+      New York, NY.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY.
+AD  - The Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY.
+AD  - Department of Microbiology and Immunology, Columbia University, New York,
+      NY.
+AD  - Department of Genetics and Development, Columbia University, New York,
+      NY.
+AD  - The Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY.
+LA  - eng
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PL  - United States
+TA  - J Exp Med
+JT  - The Journal of experimental medicine
+JID - 2985109R
+SB  - IM
+MH  - B-Lymphocytes/metabolism/*pathology
+MH  - Cell Lineage
+MH  - Fluorescent Antibody Technique
+MH  - Gene Expression Profiling
+MH  - Germinal Center/metabolism/*pathology
+MH  - Humans
+MH  - Lymphoma/metabolism/*pathology
+MH  - Single-Cell Analysis
+PMC - PMC7537389
+COIS- Disclosures: N. Compagno is currently employed at Novartis. No other
+      disclosures were reported.
+EDAT- 2020/07/01 06:00
+MHDA- 2021/03/11 06:00
+CRDT- 2020/07/01 06:00
+PHST- 2020/03/12 00:00 [received]
+PHST- 2020/05/12 00:00 [revised]
+PHST- 2020/05/15 00:00 [accepted]
+PHST- 2020/07/01 06:00 [entrez]
+PHST- 2020/07/01 06:00 [pubmed]
+PHST- 2021/03/11 06:00 [medline]
+AID - 151908 [pii]
+AID - 10.1084/jem.20200483 [doi]
+PST - ppublish
+SO  - J Exp Med. 2020 Oct 5;217(10). pii: 151908. doi: 10.1084/jem.20200483.
+
+PMID- 31519498
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20191216
+LR  - 20200917
+IS  - 1097-4180 (Electronic)
+IS  - 1074-7613 (Linking)
+VI  - 51
+IP  - 3
+DP  - 2019 Sep 17
+TI  - Unique and Shared Epigenetic Programs of the CREBBP and EP300
+      Acetyltransferases in Germinal Center B Cells Reveal Targetable
+      Dependencies in Lymphoma.
+PG  - 535-547.e9
+LID - S1074-7613(19)30332-2 [pii]
+LID - 10.1016/j.immuni.2019.08.006 [doi]
+AB  - Inactivating mutations of the CREBBP and EP300 acetyltransferases are
+      among the most common genetic alterations in diffuse large B cell
+      lymphoma (DLBCL) and follicular lymphoma (FL). Here, we examined the
+      relationship between these two enzymes in germinal center (GC) B cells,
+      the normal counterpart of FL and DLBCL, and in lymphomagenesis by using
+      conditional GC-directed deletion mouse models targeting Crebbp or Ep300.
+      We found that CREBBP and EP300 modulate common as well as distinct
+      transcriptional programs implicated in separate anatomic and functional
+      GC compartments. Consistently, deletion of Ep300 but not Crebbp impaired
+      the fitness of GC B cells in vivo. Combined loss of Crebbp and Ep300
+      completely abrogated GC formation, suggesting that these proteins
+      partially compensate for each other through common transcriptional
+      targets. This synthetic lethal interaction was retained in CREBBP-mutant
+      DLBCL cells and could be pharmacologically targeted with selective small
+      molecule inhibitors of CREBBP and EP300 function. These data provide
+      proof-of-principle for the clinical development of EP300-specific
+      inhibitors in FL and DLBCL.
+CI  - Copyright (c) 2019 Elsevier Inc. All rights reserved.
+FAU - Meyer, Stefanie N
+AU  - Meyer SN
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Scuoppo, Claudio
+AU  - Scuoppo C
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA.
+FAU - Vlasevska, Sofija
+AU  - Vlasevska S
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Bal, Elodie
+AU  - Bal E
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Holloman, Mara
+AU  - Holloman M
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Garcia-Ibanez, Laura
+AU  - Garcia-Ibanez L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Nataraj, Sarah
+AU  - Nataraj S
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Duval, Romain
+AU  - Duval R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Vantrimpont, Thomas
+AU  - Vantrimpont T
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA.
+FAU - Brooks, Nigel
+AU  - Brooks N
+AD  - Cell Centric, Chesterford Research Park, Little Chesterford, Cambridge,
+      CB10 1XL, UK.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA; Department of Genetics & Development, Columbia
+      University, New York, NY 10032, USA; Department of Microbiology &
+      Immunology, Columbia University, New York, NY 10032, USA; Herbert Irving
+      Comprehensive Cancer Center, Columbia University, New York, NY 10032,
+      USA.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA; Herbert Irving Comprehensive Cancer Center, Columbia
+      University, New York, NY 10032, USA. Electronic address:
+      lp171@cumc.columbia.edu.
+LA  - eng
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - P50 CA192937/CA/NCI NIH HHS/United States
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20190910
+PL  - United States
+TA  - Immunity
+JT  - Immunity
+JID - 9432918
+RN  - EC 2.3.1.- (Acetyltransferases)
+RN  - EC 2.3.1.48 (CREB-Binding Protein)
+RN  - EC 2.3.1.48 (Crebbp protein, mouse)
+RN  - EC 2.3.1.48 (E1A-Associated p300 Protein)
+RN  - EC 2.3.1.48 (Ep300 protein, mouse)
+SB  - IM
+CIN - Immunity. 2019 Sep 17;51(3):420-423. PMID: 31533053
+MH  - Acetyltransferases/genetics
+MH  - Animals
+MH  - B-Lymphocytes/*physiology
+MH  - CREB-Binding Protein/*genetics
+MH  - Cell Line
+MH  - E1A-Associated p300 Protein/*genetics
+MH  - Epigenesis, Genetic/*genetics
+MH  - Germinal Center/*physiology
+MH  - HEK293 Cells
+MH  - Humans
+MH  - Lymphoma, Follicular/*etiology
+MH  - Lymphoma, Large B-Cell, Diffuse/*genetics
+MH  - Mice
+MH  - Mice, Inbred C57BL
+MH  - Sequence Deletion/genetics
+MH  - Transcription, Genetic/genetics
+PMC - PMC7362711
+MID - NIHMS1539075
+OTO - NOTNLM
+OT  - *CREBBP
+OT  - *EP300
+OT  - *acetyltransferase inhibitor
+OT  - *dark zone
+OT  - *diffuse large cell lymphoma
+OT  - *germinal center
+OT  - *light zone
+OT  - *synthetic lethality
+EDAT- 2019/09/15 06:00
+MHDA- 2019/12/18 06:00
+CRDT- 2019/09/15 06:00
+PHST- 2019/02/06 00:00 [received]
+PHST- 2019/06/03 00:00 [revised]
+PHST- 2019/08/06 00:00 [accepted]
+PHST- 2019/09/15 06:00 [pubmed]
+PHST- 2019/12/18 06:00 [medline]
+PHST- 2019/09/15 06:00 [entrez]
+AID - S1074-7613(19)30332-2 [pii]
+AID - 10.1016/j.immuni.2019.08.006 [doi]
+PST - ppublish
+SO  - Immunity. 2019 Sep 17;51(3):535-547.e9. doi:
+      10.1016/j.immuni.2019.08.006. Epub 2019 Sep 10.
+
+PMID- 30205047
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20190624
+LR  - 20190910
+IS  - 1878-3686 (Electronic)
+IS  - 1535-6108 (Linking)
+VI  - 34
+IP  - 3
+DP  - 2018 Sep 10
+TI  - MEF2B Instructs Germinal Center Development and Acts as an Oncogene in B
+      Cell Lymphomagenesis.
+PG  - 453-465.e9
+LID - S1535-6108(18)30366-0 [pii]
+LID - 10.1016/j.ccell.2018.08.006 [doi]
+AB  - The gene encoding the MEF2B transcription factor is mutated in germinal
+      center (GC)-derived B cell lymphomas, but its role in GC development and
+      lymphomagenesis is unknown. We demonstrate that Mef2b deletion reduces GC
+      formation in mice and identify MEF2B transcriptional targets in GC, with
+      roles in cell proliferation, apoptosis, GC confinement, and
+      differentiation. The most common lymphoma-associated MEF2B mutant
+      (MEF2B(D83V)) is hypomorphic, yet escapes binding and negative regulation
+      by components of the HUCA complex and class IIa HDACs. Mef2b(D83V)
+      expression in mice leads to GC enlargement and lymphoma development, a
+      phenotype that becomes fully penetrant in combination with BCL2 de-
+      regulation, an event associated with human MEF2B mutations. These results
+      identify MEF2B as a critical GC regulator and a driver oncogene in
+      lymphomagenesis.
+CI  - Copyright (c) 2018 Elsevier Inc. All rights reserved.
+FAU - Brescia, Paola
+AU  - Brescia P
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Schneider, Christof
+AU  - Schneider C
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Shen, Qiong
+AU  - Shen Q
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Hussein, Shafinaz
+AU  - Hussein S
+AD  - Department of Pathology, Icahn School of Medicine at Mount Sinai, New
+      York, NY 10029, USA.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA; The Herbert Irving Comprehensive Cancer Center,
+      Columbia University, New York, NY 10032, USA.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA. Electronic address: kb451@cumc.columbia.edu.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA; Department of Microbiology and Immunology, Columbia
+      University, New York, NY 10032, USA; Department of Genetics and
+      Development, Columbia University, New York, NY 10032, USA; The Herbert
+      Irving Comprehensive Cancer Center, Columbia University, New York, NY
+      10032, USA. Electronic address: rd10@cumc.columbia.edu.
+LA  - eng
+GR  - P30 CA013696/CA/NCI NIH HHS/United States
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PL  - United States
+TA  - Cancer Cell
+JT  - Cancer cell
+JID - 101130617
+RN  - 0 (MEF2 Transcription Factors)
+RN  - 0 (MEF2B protein, human)
+RN  - 0 (Mef2b protein, mouse)
+SB  - IM
+MH  - Animals
+MH  - Apoptosis/genetics
+MH  - B-Lymphocytes/immunology/pathology
+MH  - Carcinogenesis/*genetics/immunology/pathology
+MH  - Cell Differentiation/genetics
+MH  - Cell Proliferation/genetics
+MH  - Disease Models, Animal
+MH  - Female
+MH  - Gene Expression Regulation, Neoplastic
+MH  - Germinal Center/immunology/*pathology
+MH  - Humans
+MH  - Lymphoma, B-Cell/*genetics/immunology/pathology
+MH  - MEF2 Transcription Factors/genetics/metabolism
+MH  - Male
+MH  - Mice
+MH  - Mice, Inbred C57BL
+MH  - Mice, Knockout
+MH  - Mutation
+MH  - Oncogenes/genetics
+PMC - PMC6223119
+MID - NIHMS1503587
+OTO - NOTNLM
+OT  - *B cell
+OT  - *MEF2B
+OT  - *germinal center
+OT  - *lymphoma
+OT  - *mouse model
+EDAT- 2018/09/12 06:00
+MHDA- 2019/06/25 06:00
+CRDT- 2018/09/12 06:00
+PHST- 2018/02/26 00:00 [received]
+PHST- 2018/05/15 00:00 [revised]
+PHST- 2018/08/08 00:00 [accepted]
+PHST- 2018/09/12 06:00 [entrez]
+PHST- 2018/09/12 06:00 [pubmed]
+PHST- 2019/06/25 06:00 [medline]
+AID - S1535-6108(18)30366-0 [pii]
+AID - 10.1016/j.ccell.2018.08.006 [doi]
+PST - ppublish
+SO  - Cancer Cell. 2018 Sep 10;34(3):453-465.e9. doi:
+      10.1016/j.ccell.2018.08.006.
+
+PMID- 28314854
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20180515
+LR  - 20181113
+IS  - 1091-6490 (Electronic)
+IS  - 0027-8424 (Linking)
+VI  - 114
+IP  - 14
+DP  - 2017 Apr 4
+TI  - Common nonmutational NOTCH1 activation in chronic lymphocytic leukemia.
+PG  - E2911-E2919
+LID - 10.1073/pnas.1702564114 [doi]
+AB  - Activating mutations of NOTCH1 (a well-known oncogene in T-cell acute
+      lymphoblastic leukemia) are present in approximately 4-13% of chronic
+      lymphocytic leukemia (CLL) cases, where they are associated with disease
+      progression and chemorefractoriness. However, the specific role of NOTCH1
+      in leukemogenesis remains to be established. Here, we report that the
+      active intracellular portion of NOTCH1 (ICN1) is detectable in
+      approximately 50% of peripheral blood CLL cases lacking gene mutations.
+      We identify a "NOTCH1 gene-expression signature" in CLL cells, and show
+      that this signature is significantly enriched in primary CLL cases
+      expressing ICN1, independent of NOTCH1 mutation. NOTCH1 target genes
+      include key regulators of B-cell proliferation, survival, and signal
+      transduction. In particular, we show that NOTCH1 transactivates MYC via
+      binding to B-cell-specific regulatory elements, thus implicating this
+      oncogene in CLL development. These results significantly extend the role
+      of NOTCH1 in CLL pathogenesis, and have direct implications for specific
+      therapeutic targeting.
+FAU - Fabbri, Giulia
+AU  - Fabbri G
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Viganotti, Mara
+AU  - Viganotti M
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Scuoppo, Claudio
+AU  - Scuoppo C
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Belver, Laura
+AU  - Belver L
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Herranz, Daniel
+AU  - Herranz D
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+FAU - Yan, Xiao-Jie
+AU  - Yan XJ
+AD  - The Feinstein Institute for Medical Research, Northwell Health,
+      Manhasset, New York, NY 11030.
+FAU - Kieso, Yasmine
+AU  - Kieso Y
+AD  - The Feinstein Institute for Medical Research, Northwell Health,
+      Manhasset, New York, NY 11030.
+FAU - Rossi, Davide
+AU  - Rossi D
+AD  - Division of Hematology, Oncology Institute of Southern Switzerland, 6500
+      Bellinzona, Switzerland.
+AD  - Lymphoma and Genomics Research Program, Institute of Oncology Research,
+      6500 Bellinzona, Switzerland.
+FAU - Gaidano, Gianluca
+AU  - Gaidano G
+AD  - Division of Haematology, Department of Translational Medicine, Universita
+      del Piemonte Orientale, 28100 Novara, Italy.
+FAU - Chiorazzi, Nicholas
+AU  - Chiorazzi N
+AD  - The Feinstein Institute for Medical Research, Northwell Health,
+      Manhasset, New York, NY 11030.
+FAU - Ferrando, Adolfo A
+AU  - Ferrando AA
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY 10032.
+AD  - Department of Pediatrics, Columbia University, New York, NY 10032.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY 10032; rd10@columbia.edu.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      NY 10032.
+AD  - Department of Genetics & Development, Columbia University, New York, NY
+      10032.
+AD  - Department of Microbiology & Immunology, Columbia University, New York,
+      NY 10032.
+LA  - eng
+GR  - K99 CA197869/CA/NCI NIH HHS/United States
+GR  - R00 CA197869/CA/NCI NIH HHS/United States
+GR  - R01 CA177319/CA/NCI NIH HHS/United States
+GR  - R35 CA210065/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20170317
+PL  - United States
+TA  - Proc Natl Acad Sci U S A
+JT  - Proceedings of the National Academy of Sciences of the United States of
+      America
+JID - 7505876
+RN  - 0 (NOTCH1 protein, human)
+RN  - 0 (Receptor, Notch1)
+SB  - IM
+MH  - B-Lymphocytes/pathology/*physiology
+MH  - Cell Proliferation/genetics
+MH  - Gene Expression Regulation, Leukemic
+MH  - Genes, myc
+MH  - Humans
+MH  - Leukemia, Lymphocytic, Chronic, B-Cell/*genetics
+MH  - Mutation
+MH  - Receptor, Notch1/blood/*genetics
+PMC - PMC5389283
+OTO - NOTNLM
+OT  - *NOTCH1
+OT  - *chronic lymphocytic leukemia
+OT  - *transcriptional network
+EDAT- 2017/03/21 06:00
+MHDA- 2018/05/16 06:00
+CRDT- 2017/03/19 06:00
+PHST- 2017/03/21 06:00 [pubmed]
+PHST- 2018/05/16 06:00 [medline]
+PHST- 2017/03/19 06:00 [entrez]
+AID - 1702564114 [pii]
+AID - 10.1073/pnas.1702564114 [doi]
+PST - ppublish
+SO  - Proc Natl Acad Sci U S A. 2017 Apr 4;114(14):E2911-E2919. doi:
+      10.1073/pnas.1702564114. Epub 2017 Mar 17.
+
+PMID- 28069569
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20171219
+LR  - 20181113
+IS  - 2159-8290 (Electronic)
+IS  - 2159-8274 (Linking)
+VI  - 7
+IP  - 3
+DP  - 2017 Mar
+TI  - The CREBBP Acetyltransferase Is a Haploinsufficient Tumor Suppressor in
+      B-cell Lymphoma.
+PG  - 322-337
+LID - 10.1158/2159-8290.CD-16-1417 [doi]
+AB  - Inactivating mutations of the CREBBP acetyltransferase are highly
+      frequent in diffuse large B-cell lymphoma (DLBCL) and follicular lymphoma
+      (FL), the two most common germinal center (GC)-derived cancers. However,
+      the role of CREBBP inactivation in lymphomagenesis remains unclear. Here,
+      we show that CREBBP regulates enhancer/super-enhancer networks with
+      central roles in GC/post-GC cell fate decisions, including genes involved
+      in signal transduction by the B-cell receptor and CD40 receptor,
+      transcriptional control of GC and plasma cell development, and antigen
+      presentation. Consistently, Crebbp-deficient B cells exhibit enhanced
+      response to mitogenic stimuli and perturbed plasma cell differentiation.
+      Although GC-specific loss of Crebbp was insufficient to initiate
+      malignant transformation, compound Crebbp-
+      haploinsufficient/BCL2-transgenic mice, mimicking the genetics of FL and
+      DLBCL, develop clonal lymphomas recapitulating the features of the human
+      diseases. These findings establish CREBBP as a haploinsufficient tumor-
+      suppressor gene in GC B cells and provide insights into the mechanisms by
+      which its loss contributes to lymphomagenesis.Significance: Loss-of-
+      function mutations of CREBBP are common and early lesions in FL and
+      DLBCL, suggesting a prominent role in lymphoma initiation. Our studies
+      identify the cellular program by which reduced CREBBP dosage facilitates
+      malignant transformation, and have direct implications for targeted
+      lymphoma therapy based on drugs affecting CREBBP-mediated chromatin
+      acetylation. Cancer Discov; 7(3); 322-37. (c)2017 AACR.This article is
+      highlighted in the In This Issue feature, p. 235.
+CI  - (c)2017 American Association for Cancer Research.
+FAU - Zhang, Jiyuan
+AU  - Zhang J
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Vlasevska, Sofija
+AU  - Vlasevska S
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Wells, Victoria A
+AU  - Wells VA
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Nataraj, Sarah
+AU  - Nataraj S
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Duval, Romain
+AU  - Duval R
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Meyer, Stefanie N
+AU  - Meyer SN
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Mo, Tongwei
+AU  - Mo T
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York.
+FAU - Brindle, Paul K
+AU  - Brindle PK
+AD  - Department of Biochemistry, St. Jude Children's Research Hospital,
+      Memphis, Tennessee.
+FAU - Hussein, Shafinaz
+AU  - Hussein S
+AD  - Department of Pathology and Laboratory Medicine, NorthWell Health, Staten
+      Island University Hospital, Staten Island, New York.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York.
+AD  - Department of Genetics and Development, Columbia University, New York,
+      New York.
+AD  - Department of Microbiology and Immunology, Columbia University, New York,
+      New York.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, New York.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York.
+      lp171@cumc.columbia.edu.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, New York.
+LA  - eng
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+GR  - P50 CA192937/CA/NCI NIH HHS/United States
+GR  - R35 CA210105/CA/NCI NIH HHS/United States
+GR  - R01 CA164152/CA/NCI NIH HHS/United States
+GR  - R21 CA192854/CA/NCI NIH HHS/United States
+PT  - Journal Article
+DEP - 20170109
+PL  - United States
+TA  - Cancer Discov
+JT  - Cancer discovery
+JID - 101561693
+RN  - 0 (BCL6 protein, human)
+RN  - 0 (Chromatin)
+RN  - 0 (Proto-Oncogene Proteins c-bcl-6)
+RN  - EC 2.3.1.48 (CREB-Binding Protein)
+RN  - EC 2.3.1.48 (CREBBP protein, human)
+RN  - EC 2.3.1.48 (Crebbp protein, mouse)
+SB  - IM
+MH  - Animals
+MH  - B-Lymphocytes/metabolism/*pathology
+MH  - CREB-Binding Protein/*genetics/metabolism
+MH  - Cell Differentiation/genetics
+MH  - Chromatin/metabolism
+MH  - Enhancer Elements, Genetic
+MH  - Epigenesis, Genetic
+MH  - Gene Expression Regulation, Neoplastic
+MH  - *Genes, Tumor Suppressor
+MH  - Germinal Center/pathology
+MH  - Haploinsufficiency
+MH  - Humans
+MH  - Lymphoma, Follicular/genetics/pathology
+MH  - Lymphoma, Large B-Cell, Diffuse/*genetics/pathology
+MH  - Mice, Inbred C57BL
+MH  - Mice, Knockout
+MH  - Plasma Cells/drug effects/pathology
+MH  - Proto-Oncogene Proteins c-bcl-6/genetics/metabolism
+PMC - PMC5386396
+MID - NIHMS843524
+EDAT- 2017/01/11 06:00
+MHDA- 2017/12/20 06:00
+CRDT- 2017/01/11 06:00
+PHST- 2016/12/17 00:00 [received]
+PHST- 2017/01/05 00:00 [revised]
+PHST- 2017/01/06 00:00 [accepted]
+PHST- 2017/01/11 06:00 [pubmed]
+PHST- 2017/12/20 06:00 [medline]
+PHST- 2017/01/11 06:00 [entrez]
+AID - 2159-8290.CD-16-1417 [pii]
+AID - 10.1158/2159-8290.CD-16-1417 [doi]
+PST - ppublish
+SO  - Cancer Discov. 2017 Mar;7(3):322-337. doi: 10.1158/2159-8290.CD-16-1417.
+      Epub 2017 Jan 9.
+
+PMID- 27335277
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20170807
+LR  - 20210202
+IS  - 1528-0020 (Electronic)
+IS  - 0006-4971 (Linking)
+VI  - 128
+IP  - 10
+DP  - 2016 Sep 8
+TI  - The genetics of nodal marginal zone lymphoma.
+PG  - 1362-73
+LID - 10.1182/blood-2016-02-696757 [doi]
+AB  - Nodal marginal zone lymphoma (NMZL) is a rare, indolent B-cell tumor that
+      is distinguished from splenic marginal zone lymphoma (SMZL) by the
+      different pattern of dissemination. NMZL still lacks distinct markers and
+      remains orphan of specific cancer gene lesions. By combining whole-exome
+      sequencing, targeted sequencing of tumor-related genes, whole-
+      transcriptome sequencing, and high-resolution single nucleotide
+      polymorphism array analysis, we aimed at disclosing the pathways that are
+      molecularly deregulated in NMZL and we compare the molecular profile of
+      NMZL with that of SMZL. These analyses identified a distinctive pattern
+      of nonsilent somatic lesions in NMZL. In 35 NMZL patients, 41 genes were
+      found recurrently affected in >/=3 (9%) cases, including highly prevalent
+      molecular lesions of MLL2 (also known as KMT2D; 34%), PTPRD (20%), NOTCH2
+      (20%), and KLF2 (17%). Mutations of PTPRD, a receptor-type protein
+      tyrosine phosphatase regulating cell growth, were enriched in NMZL across
+      mature B-cell tumors, functionally caused the loss of the phosphatase
+      activity of PTPRD, and were associated with cell-cycle transcriptional
+      program deregulation and increased proliferation index in NMZL. Although
+      NMZL shared with SMZL a common mutation profile, NMZL harbored PTPRD
+      lesions that were otherwise absent in SMZL. Collectively, these findings
+      provide new insights into the genetics of NMZL, identify PTPRD lesions as
+      a novel marker for this lymphoma across mature B-cell tumors, and support
+      the distinction of NMZL as an independent clinicopathologic entity within
+      the current lymphoma classification.
+CI  - (c) 2016 by The American Society of Hematology.
+FAU - Spina, Valeria
+AU  - Spina V
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+AD  - Department of Biomedical Informatics and Systems Biology, Columbia
+      University, New York, NY;
+FAU - Messina, Monica
+AU  - Messina M
+AD  - Division of Hematology, Department of Cellular Biotechnologies and
+      Hematology, Sapienza University, Rome, Italy;
+FAU - Monti, Sara
+AU  - Monti S
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Cascione, Luciano
+AU  - Cascione L
+AD  - Institute of Oncology Research and Oncology Institute of Southern
+      Switzerland, Bellinzona, Switzerland;
+FAU - Bruscaggin, Alessio
+AU  - Bruscaggin A
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Spaccarotella, Elisa
+AU  - Spaccarotella E
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY;
+FAU - Arcaini, Luca
+AU  - Arcaini L
+AD  - Department of Hematology-Oncology, Fondazione IRCCS Policlinico San
+      Matteo and Department of Molecular Medicine, University of Pavia, Pavia,
+      Italy;
+FAU - Lucioni, Marco
+AU  - Lucioni M
+AD  - Division of Pathology, Fondazione IRCCS Policlinico San Matteo,
+      University of Pavia, Pavia, Italy;
+FAU - Tabbo, Fabrizio
+AU  - Tabbo F
+AD  - Department of Pathology and Laboratory Medicine, Weill Cornell Medical
+      College, New York, NY;
+FAU - Zairis, Sakellarios
+AU  - Zairis S
+AD  - Department of Biomedical Informatics and Systems Biology, Columbia
+      University, New York, NY;
+FAU - Diop, Fary
+AU  - Diop F
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Cerri, Michaela
+AU  - Cerri M
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Chiaretti, Sabina
+AU  - Chiaretti S
+AD  - Division of Hematology, Department of Cellular Biotechnologies and
+      Hematology, Sapienza University, Rome, Italy;
+FAU - Marasca, Roberto
+AU  - Marasca R
+AD  - Division of Hematology, Department of Oncology and Hematology, University
+      of Modena and Reggio Emilia, Modena, Italy;
+FAU - Ponzoni, Maurilio
+AU  - Ponzoni M
+AD  - Ateneo Vita-Salute and Unit of Lymphoid Malignancies, San Raffaele H.
+      Scientific Institute, Milan, Italy;
+FAU - Deaglio, Silvia
+AU  - Deaglio S
+AD  - Department of Medical Sciences, University of Torino and Immunogenetics
+      Unit, Human Genetics Foundation, Torino, Italy;
+FAU - Ramponi, Antonio
+AU  - Ramponi A
+AD  - Division of Pathology, Department of Health Sciences, Amedeo Avogadro
+      University of Eastern Piedmont and Maggiore Hospital, Novara, Italy;
+FAU - Tiacci, Enrico
+AU  - Tiacci E
+AD  - Institute of Hematology, Ospedale S. Maria della Misericordia, University
+      of Perugia, Perugia, Italy;
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics and the Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY;
+FAU - Paulli, Marco
+AU  - Paulli M
+AD  - Division of Pathology, Fondazione IRCCS Policlinico San Matteo,
+      University of Pavia, Pavia, Italy;
+FAU - Falini, Brunangelo
+AU  - Falini B
+AD  - Institute of Hematology, Ospedale S. Maria della Misericordia, University
+      of Perugia, Perugia, Italy;
+FAU - Inghirami, Giorgio
+AU  - Inghirami G
+AD  - Department of Pathology and Laboratory Medicine, Weill Cornell Medical
+      College, New York, NY; Department of Molecular Biotechnology and Health
+      Science and Center for Experimental Research and Medical Studies,
+      University of Torino, Torino, Italy; and Department of Pathology, NYU
+      Cancer Center, New York University School of Medicine, New York, NY.
+FAU - Bertoni, Francesco
+AU  - Bertoni F
+AD  - Institute of Oncology Research and Oncology Institute of Southern
+      Switzerland, Bellinzona, Switzerland;
+FAU - Foa, Robin
+AU  - Foa R
+AD  - Division of Hematology, Department of Cellular Biotechnologies and
+      Hematology, Sapienza University, Rome, Italy;
+FAU - Rabadan, Raul
+AU  - Rabadan R
+AD  - Department of Biomedical Informatics and Systems Biology, Columbia
+      University, New York, NY;
+FAU - Gaidano, Gianluca
+AU  - Gaidano G
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy;
+FAU - Rossi, Davide
+AU  - Rossi D
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara, Italy; Institute of
+      Oncology Research and Oncology Institute of Southern Switzerland,
+      Bellinzona, Switzerland;
+LA  - eng
+GR  - U54 CA193313/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20160622
+PL  - United States
+TA  - Blood
+JT  - Blood
+JID - 7603509
+RN  - 0 (Biomarkers, Tumor)
+RN  - 0 (NOTCH2 protein, human)
+RN  - 0 (Receptor, Notch2)
+RN  - EC 3.1.3.48 (PTPRD protein, human)
+RN  - EC 3.1.3.48 (Receptor-Like Protein Tyrosine Phosphatases, Class 2)
+SB  - IM
+CIN - Blood. 2016 Sep 8;128(10):1315-6. PMID: 27609538
+MH  - Biomarkers, Tumor/*genetics
+MH  - Exome/*genetics
+MH  - High-Throughput Nucleotide Sequencing/methods
+MH  - Humans
+MH  - Lymphoma, B-Cell, Marginal Zone/*genetics/pathology
+MH  - Mutation/*genetics
+MH  - Receptor, Notch2/*genetics
+MH  - Receptor-Like Protein Tyrosine Phosphatases, Class 2/*genetics
+MH  - Splenic Neoplasms/*genetics/pathology
+PMC - PMC5016706
+EDAT- 2016/06/24 06:00
+MHDA- 2017/08/08 06:00
+CRDT- 2016/06/24 06:00
+PHST- 2016/02/03 00:00 [received]
+PHST- 2016/06/15 00:00 [accepted]
+PHST- 2016/06/24 06:00 [entrez]
+PHST- 2016/06/24 06:00 [pubmed]
+PHST- 2017/08/08 06:00 [medline]
+AID - S0006-4971(20)34156-2 [pii]
+AID - 10.1182/blood-2016-02-696757 [doi]
+PST - ppublish
+SO  - Blood. 2016 Sep 8;128(10):1362-73. doi: 10.1182/blood-2016-02-696757.
+      Epub 2016 Jun 22.
+
+PMID- 26883104
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20171215
+LR  - 20181113
+IS  - 1949-2553 (Electronic)
+IS  - 1949-2553 (Linking)
+VI  - 7
+IP  - 12
+DP  - 2016 Mar 22
+TI  - Prognostic and therapeutic role of targetable lesions in B-lineage acute
+      lymphoblastic leukemia without recurrent fusion genes.
+PG  - 13886-901
+LID - 10.18632/oncotarget.7356 [doi]
+AB  - To shed light into the molecular bases of B-lineage acute lymphoblastic
+      leukemia lacking known fusion transcripts, i.e. BCR-ABL1, ETV6-RUNX1,
+      E2A-PBX1, and MLL rearrangements (B-NEG ALL) and the differences between
+      children, adolescents/young adults (AYA) and adults, we analyzed 168
+      B-NEG ALLs by genome-wide technologies. This approach showed that B-NEG
+      cases carry 10.5 mutations and 9.1 copy-number aberrations/sample. The
+      most frequently mutated druggable pathways were those pertaining to
+      RAS/RTK (26.8%) and JAK/STAT (12.5%) signaling. In particular, FLT3 and
+      JAK/STAT mutations were detected mainly in AYA and adults, while KRAS and
+      NRAS mutations were more frequent in children. RAS/RTK mutations
+      negatively affected the outcome of AYA and adults, but not that of
+      children. Furthermore, adult B-NEG ALL carrying JAK/STAT mutations had a
+      shorter survival. In vitro experiments showed that FLT3 inhibitors
+      reduced significantly the proliferation of FLT3-mutated primary B-NEG ALL
+      cells. Likewise, PI3K/mTOR inhibitors reduced the proliferation of
+      primary cells harboring RAS and IL7R mutations. These results refine the
+      genetic landscape of B-NEG ALL and suggest that the different
+      distribution of lesions and their prognostic impact might sustain the
+      diverse outcome between children, adults and partly AYA - whose genomic
+      scenario is similar to adults - and open the way to targeted therapeutic
+      strategies.
+FAU - Messina, Monica
+AU  - Messina M
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Chiaretti, Sabina
+AU  - Chiaretti S
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Wang, Jiguang
+AU  - Wang J
+AD  - Department of Systems Biology, Biomedical Informatics and Center for
+      Computational Biology and Bioinformatics, Columbia University, New York,
+      NY, USA.
+FAU - Fedullo, Anna Lucia
+AU  - Fedullo AL
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Peragine, Nadia
+AU  - Peragine N
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Gianfelici, Valentina
+AU  - Gianfelici V
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Piciocchi, Alfonso
+AU  - Piciocchi A
+AD  - GIMEMA Data Center, Rome, Italy.
+FAU - Brugnoletti, Fulvia
+AU  - Brugnoletti F
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Di Giacomo, Filomena
+AU  - Di Giacomo F
+AD  - Department of Molecular Biotechnology and Health Science, and Center for
+      Experimental Research and Medical Studies (CeRMS), University of Torino,
+      Torino, Italy.
+FAU - Pauselli, Simona
+AU  - Pauselli S
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics and The Herbert Irving Comprehensive Cancer
+      Center, Columbia University, New York, NY, USA.
+FAU - Puzzolo, Maria Cristina
+AU  - Puzzolo MC
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Ceglie, Giulia
+AU  - Ceglie G
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Apicella, Valerio
+AU  - Apicella V
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Mancini, Marco
+AU  - Mancini M
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Te Kronnie, Geertruy
+AU  - Te Kronnie G
+AD  - Department of Women's and Children's Health, University of Padova,
+      Padova, Italy.
+FAU - Testi, Anna Maria
+AU  - Testi AM
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Vitale, Antonella
+AU  - Vitale A
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Vignetti, Marco
+AU  - Vignetti M
+AD  - GIMEMA Data Center, Rome, Italy.
+FAU - Guarini, Anna
+AU  - Guarini A
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+FAU - Rabadan, Raul
+AU  - Rabadan R
+AD  - Department of Systems Biology, Biomedical Informatics and Center for
+      Computational Biology and Bioinformatics, Columbia University, New York,
+      NY, USA.
+FAU - Foa, Robin
+AU  - Foa R
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy.
+LA  - eng
+GR  - U54 CA193313/CA/NCI NIH HHS/United States
+GR  - UL1 TR000040/TR/NCATS NIH HHS/United States
+PT  - Journal Article
+PL  - United States
+TA  - Oncotarget
+JT  - Oncotarget
+JID - 101532965
+RN  - 0 (Biomarkers, Tumor)
+RN  - 0 (Oncogene Proteins, Fusion)
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Aged
+MH  - Biomarkers, Tumor/*genetics
+MH  - Cell Lineage
+MH  - Child
+MH  - Child, Preschool
+MH  - Female
+MH  - Follow-Up Studies
+MH  - Gene Expression Profiling
+MH  - Gene Expression Regulation, Leukemic
+MH  - Humans
+MH  - Infant
+MH  - Male
+MH  - Middle Aged
+MH  - *Mutation
+MH  - Neoplasm Staging
+MH  - Oncogene Proteins, Fusion/*genetics
+MH  - *Polymorphism, Single Nucleotide
+MH  - Precursor B-Cell Lymphoblastic Leukemia-
+      Lymphoma/genetics/*mortality/therapy
+MH  - Prognosis
+MH  - Survival Rate
+MH  - Young Adult
+PMC - PMC4924686
+OTO - NOTNLM
+OT  - acute lymphoblastic leukemia
+OT  - copy number aberrations
+OT  - genetic-driven targeted therapy
+OT  - next generation sequencing
+OT  - novel prognostic markers
+EDAT- 2016/02/18 06:00
+MHDA- 2017/12/16 06:00
+CRDT- 2016/02/18 06:00
+PHST- 2015/10/23 00:00 [received]
+PHST- 2016/01/28 00:00 [accepted]
+PHST- 2016/02/18 06:00 [entrez]
+PHST- 2016/02/18 06:00 [pubmed]
+PHST- 2017/12/16 06:00 [medline]
+AID - 7356 [pii]
+AID - 10.18632/oncotarget.7356 [doi]
+PST - ppublish
+SO  - Oncotarget. 2016 Mar 22;7(12):13886-901. doi: 10.18632/oncotarget.7356.
+
+PMID- 26620759
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20160506
+LR  - 20210103
+IS  - 1097-4180 (Electronic)
+IS  - 1074-7613 (Linking)
+VI  - 43
+IP  - 6
+DP  - 2015 Dec 15
+TI  - The FOXO1 Transcription Factor Instructs the Germinal Center Dark Zone
+      Program.
+PG  - 1064-74
+LID - 10.1016/j.immuni.2015.10.015 [doi]
+LID - S1074-7613(15)00440-9 [pii]
+AB  - The pathways regulating formation of the germinal center (GC) dark zone
+      (DZ) and light zone (LZ) are unknown. In this study we show that FOXO1
+      transcription factor expression was restricted to the GC DZ and was
+      required for DZ formation, since its absence in mice led to the loss of
+      DZ gene programs and the formation of LZ-only GCs. FOXO1-negative GC B
+      cells displayed normal somatic hypermutation but defective affinity
+      maturation and class switch recombination. The function of FOXO1 in
+      sustaining the DZ program involved the trans-activation of the chemokine
+      receptor CXCR4, and cooperation with the BCL6 transcription factor in the
+      trans-repression of genes involved in immune activation, DNA repair, and
+      plasma cell differentiation. These results also have implications for the
+      role of FOXO1 in lymphomagenesis because they suggest that constitutive
+      FOXO1 activity might be required for the oncogenic activity of
+      deregulated BCL6 expression.
+CI  - Copyright (c) 2015 Elsevier Inc. All rights reserved.
+FAU - Dominguez-Sola, David
+AU  - Dominguez-Sola D
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Oncological Sciences, Icahn School of Medicine at
+      Mount Sinai, New York, NY 10029, USA; Department of Pathology, Icahn
+      School of Medicine at Mount Sinai, New York, NY 10029, USA; The Tisch
+      Cancer Institute, Icahn School of Medicine at Mount Sinai, New York, NY
+      10029, USA. Electronic address: david.dominguez-sola@mssm.edu.
+FAU - Kung, Jennifer
+AU  - Kung J
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, NY 10029, USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Wells, Victoria A
+AU  - Wells VA
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Mo, Tongwei
+AU  - Mo T
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Department of Pathology and Cell Biology, Columbia University, New
+      York, NY 10032, USA; Department of Genetics and Development, Columbia
+      University, New York, NY 10032, USA; Department of Microbiology and
+      Immunology, Columbia University, New York, NY 10032, USA; Herbert Irving
+      Comprehensive Cancer Center, Columbia University, New York, NY 10032,
+      USA. Electronic address: rd10@cumc.columbia.edu.
+LA  - eng
+SI  - GEO/GSE68349
+SI  - GEO/GSE69216
+GR  - R00 CA151827/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20151124
+PL  - United States
+TA  - Immunity
+JT  - Immunity
+JID - 9432918
+RN  - 0 (FOXO1 protein, human)
+RN  - 0 (Forkhead Box Protein O1)
+RN  - 0 (Forkhead Transcription Factors)
+RN  - 0 (Foxo1 protein, mouse)
+SB  - IM
+MH  - Animals
+MH  - B-Lymphocytes/cytology/*immunology
+MH  - Cell Differentiation/*immunology
+MH  - Chromatin Immunoprecipitation
+MH  - Flow Cytometry
+MH  - Fluorescent Antibody Technique
+MH  - Forkhead Box Protein O1
+MH  - Forkhead Transcription Factors/*immunology
+MH  - Germinal Center/cytology/*immunology
+MH  - Humans
+MH  - Immunoglobulin Class Switching/immunology
+MH  - Mice
+MH  - Mice, Inbred C57BL
+MH  - Mice, Knockout
+MH  - Polymerase Chain Reaction
+MH  - Somatic Hypermutation, Immunoglobulin/immunology
+EDAT- 2015/12/02 06:00
+MHDA- 2016/05/07 06:00
+CRDT- 2015/12/02 06:00
+PHST- 2015/06/02 00:00 [received]
+PHST- 2015/08/30 00:00 [revised]
+PHST- 2015/10/22 00:00 [accepted]
+PHST- 2015/12/02 06:00 [entrez]
+PHST- 2015/12/02 06:00 [pubmed]
+PHST- 2016/05/07 06:00 [medline]
+AID - S1074-7613(15)00440-9 [pii]
+AID - 10.1016/j.immuni.2015.10.015 [doi]
+PST - ppublish
+SO  - Immunity. 2015 Dec 15;43(6):1064-74. doi: 10.1016/j.immuni.2015.10.015.
+      Epub 2015 Nov 24.
+
+PMID- 26366712
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20160119
+LR  - 20190816
+IS  - 1546-170X (Electronic)
+IS  - 1078-8956 (Linking)
+VI  - 21
+IP  - 10
+DP  - 2015 Oct
+TI  - Disruption of KMT2D perturbs germinal center B cell development and
+      promotes lymphomagenesis.
+PG  - 1190-8
+LID - 10.1038/nm.3940 [doi]
+AB  - Mutations in the gene encoding the KMT2D (or MLL2) methyltransferase are
+      highly recurrent and occur early during tumorigenesis in diffuse large B
+      cell lymphoma (DLBCL) and follicular lymphoma (FL). However, the
+      functional consequences of these mutations and their role in
+      lymphomagenesis are unknown. Here we show that FL- and DLBCL-associated
+      KMT2D mutations impair KMT2D enzymatic activity, leading to diminished
+      global H3K4 methylation in germinal-center (GC) B cells and DLBCL cells.
+      Conditional deletion of Kmt2d early during B cell development, but not
+      after initiation of the GC reaction, results in an increase in GC B cells
+      and enhances B cell proliferation in mice. Moreover, genetic ablation of
+      Kmt2d in mice overexpressing Bcl2 increases the incidence of GC-derived
+      lymphomas resembling human tumors. These findings suggest that KMT2D acts
+      as a tumor suppressor gene whose early loss facilitates lymphomagenesis
+      by remodeling the epigenetic landscape of the cancer precursor cells.
+      Eradication of KMT2D-deficient cells may thus represent a rational
+      therapeutic approach for targeting early tumorigenic events.
+FAU - Zhang, Jiyuan
+AU  - Zhang J
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Dominguez-Sola, David
+AU  - Dominguez-Sola D
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+AD  - Department of Oncological Sciences, Icahn School of Medicine at Mount
+      Sinai, New York, New York, USA.
+AD  - Department of Pathology, Icahn School of Medicine at Mount Sinai, New
+      York, New York, USA.
+FAU - Hussein, Shafinaz
+AU  - Hussein S
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Lee, Ji-Eun
+AU  - Lee JE
+AD  - Laboratory of Endocrinology and Receptor Biology, National Institute of
+      Diabetes and Digestive and Kidney Diseases, National Institutes of
+      Health, Bethesda, Maryland, USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Bansal, Mukesh
+AU  - Bansal M
+AD  - Department of Systems Biology, Columbia University, New York, New York,
+      USA.
+FAU - Vlasevska, Sofija
+AU  - Vlasevska S
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Mo, Tongwei
+AU  - Mo T
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Tang, Hongyan
+AU  - Tang H
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York, USA.
+FAU - Ge, Kai
+AU  - Ge K
+AD  - Laboratory of Endocrinology and Receptor Biology, National Institute of
+      Diabetes and Digestive and Kidney Diseases, National Institutes of
+      Health, Bethesda, Maryland, USA.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York, USA.
+AD  - Department of Genetics &Development, Columbia University, New York, New
+      York, USA.
+AD  - Department of Microbiology &Immunology, Columbia University, New York,
+      New York, USA.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, New York, USA.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, New York,
+      USA.
+AD  - Department of Pathology and Cell Biology, Columbia University, New York,
+      New York, USA.
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, New York, USA.
+LA  - eng
+SI  - GEO/GSE67388
+SI  - GEO/GSE67494
+GR  - R01 CA037295/CA/NCI NIH HHS/United States
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+GR  - R0-CA37295/CA/NCI NIH HHS/United States
+GR  - R01 CA164152/CA/NCI NIH HHS/United States
+GR  - R0-CA172492/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20150914
+PL  - United States
+TA  - Nat Med
+JT  - Nature medicine
+JID - 9502015
+RN  - 0 (DNA-Binding Proteins)
+RN  - 0 (KMT2D protein, human)
+RN  - 0 (Neoplasm Proteins)
+SB  - IM
+MH  - Animals
+MH  - B-Lymphocytes/pathology
+MH  - Cell Proliferation
+MH  - DNA Methylation
+MH  - DNA-Binding Proteins/*genetics
+MH  - Epigenesis, Genetic
+MH  - Gene Silencing
+MH  - Germinal Center/*cytology
+MH  - Humans
+MH  - Lymphoma, Large B-Cell, Diffuse/etiology/*genetics
+MH  - Mice
+MH  - Mutation, Missense
+MH  - Neoplasm Proteins/*genetics
+MH  - Transcription, Genetic
+PMC - PMC5145002
+MID - NIHMS715100
+EDAT- 2015/09/15 06:00
+MHDA- 2016/01/20 06:00
+CRDT- 2015/09/15 06:00
+PHST- 2015/04/01 00:00 [received]
+PHST- 2015/08/11 00:00 [accepted]
+PHST- 2015/09/15 06:00 [entrez]
+PHST- 2015/09/15 06:00 [pubmed]
+PHST- 2016/01/20 06:00 [medline]
+AID - nm.3940 [pii]
+AID - 10.1038/nm.3940 [doi]
+PST - ppublish
+SO  - Nat Med. 2015 Oct;21(10):1190-8. doi: 10.1038/nm.3940. Epub 2015 Sep 14.
+
+PMID- 24727675
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20141031
+LR  - 20211021
+IS  - 1476-5551 (Electronic)
+IS  - 0887-6924 (Linking)
+VI  - 28
+IP  - 9
+DP  - 2014 Sep
+TI  - An aberrant microRNA signature in childhood T-cell lymphoblastic lymphoma
+      affecting CDKN1B expression, NOTCH1 and growth factor signaling pathways.
+PG  - 1909-12
+LID - 10.1038/leu.2014.134 [doi]
+FAU - Mussolin, L
+AU  - Mussolin L
+AD  - 1] Istituto di Ricerca Pediatrico Fondazione Citta' della Speranza,
+      Padova, Italy [2] Clinica di Oncoematologia Pediatrica, Azienda
+      Ospedaliera-Universita' di Padova, Padova, Italy.
+FAU - Holmes, A B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY, USA.
+FAU - Romualdi, C
+AU  - Romualdi C
+AD  - Department of Biology, University of Padova, Padova, Italy.
+FAU - Sales, G
+AU  - Sales G
+AD  - Department of Biology, University of Padova, Padova, Italy.
+FAU - D'Amore, E S G
+AU  - D'Amore ES
+AD  - Department of Pathology, San Bortolo Hospital, Vicenza, Italy.
+FAU - Ghisi, M
+AU  - Ghisi M
+AD  - Department of Oncology and Surgical Sciences, University of Padova,
+      Padova, Italy.
+FAU - Pillon, M
+AU  - Pillon M
+AD  - Clinica di Oncoematologia Pediatrica, Azienda Ospedaliera-Universita' di
+      Padova, Padova, Italy.
+FAU - Rosolen, A
+AU  - Rosolen A
+AD  - 1] Istituto di Ricerca Pediatrico Fondazione Citta' della Speranza,
+      Padova, Italy [2] Clinica di Oncoematologia Pediatrica, Azienda
+      Ospedaliera-Universita' di Padova, Padova, Italy.
+FAU - Basso, K
+AU  - Basso K
+AD  - 1] Institute for Cancer Genetics, Columbia University, New York, NY, USA
+      [2] Department of Pathology and Cell Biology, Columbia University, New
+      York, NY, USA.
+LA  - eng
+PT  - Letter
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20140414
+PL  - England
+TA  - Leukemia
+JT  - Leukemia
+JID - 8704895
+RN  - 0 (CDKN1B protein, human)
+RN  - 0 (MicroRNAs)
+RN  - 0 (Platelet-Derived Growth Factor)
+RN  - 0 (RNA, Messenger)
+RN  - 0 (Receptor, Notch1)
+RN  - 147604-94-2 (Cyclin-Dependent Kinase Inhibitor p27)
+SB  - IM
+MH  - Cyclin-Dependent Kinase Inhibitor p27/*genetics
+MH  - Humans
+MH  - MicroRNAs/*physiology
+MH  - Platelet-Derived Growth Factor/physiology
+MH  - Precursor T-Cell Lymphoblastic Leukemia-Lymphoma/*genetics/pathology
+MH  - RNA, Messenger/analysis
+MH  - Receptor, Notch1/*physiology
+MH  - Signal Transduction/*physiology
+EDAT- 2014/04/15 06:00
+MHDA- 2014/11/02 06:00
+CRDT- 2014/04/15 06:00
+PHST- 2014/04/15 06:00 [entrez]
+PHST- 2014/04/15 06:00 [pubmed]
+PHST- 2014/11/02 06:00 [medline]
+AID - leu2014134 [pii]
+AID - 10.1038/leu.2014.134 [doi]
+PST - ppublish
+SO  - Leukemia. 2014 Sep;28(9):1909-12. doi: 10.1038/leu.2014.134. Epub 2014
+      Apr 14.
+
+PMID- 24843176
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20140820
+LR  - 20211021
+IS  - 1091-6490 (Electronic)
+IS  - 0027-8424 (Linking)
+VI  - 111
+IP  - 22
+DP  - 2014 Jun 3
+TI  - MicroRNA 28 controls cell proliferation and is down-regulated in B-cell
+      lymphomas.
+PG  - 8185-90
+LID - 10.1073/pnas.1322466111 [doi]
+AB  - Burkitt lymphoma (BL) is a highly aggressive B-cell non-Hodgkin lymphoma
+      (B-NHL), which originates from germinal center (GC) B cells and harbors
+      translocations deregulating v-myc avian myelocytomatosis viral oncogene
+      homolog (MYC). A comparative analysis of microRNAs expressed in normal
+      and malignant GC B cells identified microRNA 28 (miR-28) as significantly
+      down-regulated in BL, as well as in other GC-derived B-NHL. We show that
+      reexpression of miR-28 impairs cell proliferation and clonogenic
+      properties of BL cells by modulating several targets including MAD2
+      mitotic arrest deficient-like 1, MAD2L1, a component of the spindle
+      checkpoint whose down-regulation is essential in mediating miR-28-induced
+      proliferation arrest, and BCL2-associated athanogene, BAG1, an activator
+      of the ERK pathway. We identify the oncogene MYC as a negative regulator
+      of miR-28 expression, suggesting that its deregulation by chromosomal
+      translocation in BL leads to miR-28 suppression. In addition, we show
+      that miR-28 can inhibit MYC-induced transformation by directly targeting
+      genes up-regulated by MYC. Overall, our data suggest that miR-28 acts as
+      a tumor suppressor in BL and that its repression by MYC contributes to
+      B-cell lymphomagenesis.
+FAU - Schneider, Christof
+AU  - Schneider C
+AD  - Institute for Cancer Genetics.
+FAU - Setty, Manu
+AU  - Setty M
+AD  - Computational Biology Program, Memorial Sloan Kettering Cancer Center,
+      New York, NY 10065;
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics.
+FAU - Maute, Roy L
+AU  - Maute RL
+AD  - Institute for Cancer Genetics.
+FAU - Leslie, Christina S
+AU  - Leslie CS
+AD  - Computational Biology Program, Memorial Sloan Kettering Cancer Center,
+      New York, NY 10065;
+FAU - Mussolin, Lara
+AU  - Mussolin L
+AD  - Clinica di Oncoematologia Pediatrica, Azienda Ospedaliera-Universita di
+      Padova, 35128 Padua, Italy; andIstituto di Ricerca Pediatrico Fondazione
+      Citta della Speranza, 35127 Padua, Italy.
+FAU - Rosolen, Angelo
+AU  - Rosolen A
+AD  - Clinica di Oncoematologia Pediatrica, Azienda Ospedaliera-Universita di
+      Padova, 35128 Padua, Italy; and.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics,Herbert Irving Comprehensive Cancer Center,
+      andDepartments of Pathology and Cell Biology,Genetics and Development,
+      andMicrobiology and Immunology, Columbia University, New York, NY 10032;
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics,Departments of Pathology and Cell Biology,
+      kb451@columbia.edu.
+LA  - eng
+SI  - GEO/GSE56268
+SI  - GEO/GSE56354
+GR  - T32 GM007088/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20140519
+PL  - United States
+TA  - Proc Natl Acad Sci U S A
+JT  - Proceedings of the National Academy of Sciences of the United States of
+      America
+JID - 7505876
+RN  - 0 (Adaptor Proteins, Signal Transducing)
+RN  - 0 (BCL2-associated athanogene 1 protein)
+RN  - 0 (Cell Cycle Proteins)
+RN  - 0 (DNA-Binding Proteins)
+RN  - 0 (MAD2L1BP protein, human)
+RN  - 0 (MIRN28 microRNA, human)
+RN  - 0 (MicroRNAs)
+RN  - 0 (Nuclear Proteins)
+RN  - 0 (Transcription Factors)
+SB  - IM
+MH  - Adaptor Proteins, Signal Transducing/metabolism
+MH  - B-Lymphocytes/physiology
+MH  - Burkitt Lymphoma/genetics/pathology/physiopathology
+MH  - Carcinogenesis
+MH  - Cell Cycle Proteins/metabolism
+MH  - Cell Line, Tumor
+MH  - *Cell Proliferation
+MH  - Cell Transformation, Neoplastic/genetics
+MH  - DNA-Binding Proteins/metabolism
+MH  - Down-Regulation/physiology
+MH  - Gene Expression Regulation, Neoplastic/physiology
+MH  - Genes, myc/physiology
+MH  - Germinal Center
+MH  - Humans
+MH  - Lymphoma, B-Cell/*genetics/*pathology/physiopathology
+MH  - MAP Kinase Signaling System/physiology
+MH  - MicroRNAs/*physiology
+MH  - Nuclear Proteins/metabolism
+MH  - RNA Processing, Post-Transcriptional/physiology
+MH  - Transcription Factors/metabolism
+MH  - Transcriptome
+PMC - PMC4050621
+EDAT- 2014/05/21 06:00
+MHDA- 2014/08/21 06:00
+CRDT- 2014/05/21 06:00
+PHST- 2014/05/21 06:00 [entrez]
+PHST- 2014/05/21 06:00 [pubmed]
+PHST- 2014/08/21 06:00 [medline]
+AID - 1322466111 [pii]
+AID - 10.1073/pnas.1322466111 [doi]
+PST - ppublish
+SO  - Proc Natl Acad Sci U S A. 2014 Jun 3;111(22):8185-90. doi:
+      10.1073/pnas.1322466111. Epub 2014 May 19.
+
+PMID- 24550227
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20140604
+LR  - 20211021
+IS  - 1528-0020 (Electronic)
+IS  - 0006-4971 (Linking)
+VI  - 123
+IP  - 15
+DP  - 2014 Apr 10
+TI  - Genetic lesions associated with chronic lymphocytic leukemia chemo-
+      refractoriness.
+PG  - 2378-88
+LID - 10.1182/blood-2013-10-534271 [doi]
+AB  - Fludarabine refractoriness (FR) represents an unsolved clinical problem
+      of chronic lymphocytic leukemia (CLL) management. Although next-
+      generation sequencing studies have led to the identification of a number
+      of genes frequently mutated in FR-CLL, a comprehensive evaluation of the
+      FR-CLL genome has not been reported. Toward this end, we studied 10 FR-
+      CLLs by combining whole-exome sequencing and copy number aberration (CNA)
+      analysis, which showed an average of 16.3 somatic mutations and 4 CNAs
+      per sample. Screening of recurrently mutated genes in 48 additional FR-
+      CLLs revealed that ~70% of FR-CLLs carry >/=1 mutation in genes
+      previously associated with CLL clinical course, including TP53 (27.5%),
+      NOTCH1 (24.1%), SF3B1 (18.9%), and BIRC3 (15.5%). In addition, this
+      analysis showed that 10.3% of FR-CLL cases display mutations of the FAT1
+      gene, which encodes for a cadherin-like protein that negatively regulates
+      Wnt signaling, consistent with a tumor suppressor role. The frequency of
+      FAT1-mutated cases was significantly higher in FR-CLL than in unselected
+      CLLs at diagnosis (10.3% vs 1.1%, P = .004), suggesting a role in the
+      development of a high-risk phenotype. These findings have general
+      implications for the mechanisms leading to FR and point to Wnt signaling
+      as a potential therapeutic target in FR-CLL.
+FAU - Messina, Monica
+AU  - Messina M
+AD  - Hematology, Department of Cellular Biotechnologies and Hematology,
+      Sapienza University, Rome, Italy;
+FAU - Del Giudice, Ilaria
+AU  - Del Giudice I
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+FAU - Rossi, Davide
+AU  - Rossi D
+FAU - Chiaretti, Sabina
+AU  - Chiaretti S
+FAU - Rasi, Silvia
+AU  - Rasi S
+FAU - Spina, Valeria
+AU  - Spina V
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Marinelli, Marilisa
+AU  - Marinelli M
+FAU - Fabbri, Giulia
+AU  - Fabbri G
+FAU - Piciocchi, Alfonso
+AU  - Piciocchi A
+FAU - Mauro, Francesca R
+AU  - Mauro FR
+FAU - Guarini, Anna
+AU  - Guarini A
+FAU - Gaidano, Gianluca
+AU  - Gaidano G
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+FAU - Rabadan, Raul
+AU  - Rabadan R
+FAU - Foa, Robin
+AU  - Foa R
+LA  - eng
+GR  - R01 CA177319/CA/NCI NIH HHS/United States
+GR  - U54 CA121852/CA/NCI NIH HHS/United States
+GR  - U54 CA121852-05/CA/NCI NIH HHS/United States
+GR  - R01-CA177319/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20140218
+PL  - United States
+TA  - Blood
+JT  - Blood
+JID - 7603509
+RN  - 0 (Cadherins)
+RN  - 0 (FAT1 protein, human)
+SB  - IM
+MH  - Aged
+MH  - Cadherins/*genetics
+MH  - DNA Mutational Analysis
+MH  - Drug Resistance, Neoplasm/*genetics
+MH  - Female
+MH  - Genotype
+MH  - Humans
+MH  - Leukemia, Lymphocytic, Chronic, B-Cell/drug therapy/*genetics
+MH  - Male
+MH  - Middle Aged
+MH  - Mutation
+MH  - Transcriptome
+PMC - PMC3983613
+EDAT- 2014/02/20 06:00
+MHDA- 2014/06/05 06:00
+CRDT- 2014/02/20 06:00
+PHST- 2014/02/20 06:00 [entrez]
+PHST- 2014/02/20 06:00 [pubmed]
+PHST- 2014/06/05 06:00 [medline]
+AID - S0006-4971(20)35773-6 [pii]
+AID - 10.1182/blood-2013-10-534271 [doi]
+PST - ppublish
+SO  - Blood. 2014 Apr 10;123(15):2378-88. doi: 10.1182/blood-2013-10-534271.
+      Epub 2014 Feb 18.
+
+PMID- 24388756
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20140925
+LR  - 20211021
+IS  - 2211-1247 (Electronic)
+VI  - 6
+IP  - 1
+DP  - 2014 Jan 16
+TI  - Genetics of follicular lymphoma transformation.
+PG  - 130-40
+LID - 10.1016/j.celrep.2013.12.027 [doi]
+LID - S2211-1247(13)00785-7 [pii]
+AB  - Follicular lymphoma (FL) is an indolent disease, but 30%-40% of cases
+      undergo histologic transformation to an aggressive malignancy, typically
+      represented by diffuse large B cell lymphoma (DLBCL). The pathogenesis of
+      this process remains largely unknown. Using whole-exome sequencing and
+      copy-number analysis, we show here that the dominant clone of FL and
+      transformed FL (tFL) arise by divergent evolution from a common mutated
+      precursor through the acquisition of distinct genetic events. Mutations
+      in epigenetic modifiers and antiapoptotic genes are introduced early in
+      the common precursor, whereas tFL is specifically associated with
+      alterations deregulating cell-cycle progression and DNA damage responses
+      (CDKN2A/B, MYC, and TP53) as well as aberrant somatic hypermutation. The
+      genomic profile of tFL shares similarities with that of germinal center B
+      cell-type de novo DLBCL but also displays unique combinations of altered
+      genes with diagnostic and therapeutic implications.
+CI  - Copyright (c) 2014 The Authors. Published by Elsevier Inc. All rights
+      reserved.
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY 10032, USA; Department of Pathology & Cell Biology, Columbia
+      University, New York, NY 10032, USA. Electronic address:
+      lp171@columbia.edu.
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+AD  - Department of Biomedical Informatics and Center for Computational Biology
+      and Bioinformatics, Columbia University, New York, NY 10032, USA.
+FAU - Fangazio, Marco
+AU  - Fangazio M
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Vasishtha, Mansi
+AU  - Vasishtha M
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Messina, Monica
+AU  - Messina M
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Ouillette, Peter
+AU  - Ouillette P
+AD  - Department of Internal Medicine, Division of Hematology and Oncology,
+      University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Trifonov, Vladimir
+AU  - Trifonov V
+AD  - Department of Biomedical Informatics and Center for Computational Biology
+      and Bioinformatics, Columbia University, New York, NY 10032, USA.
+FAU - Rossi, Davide
+AU  - Rossi D
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara 28100, Italy.
+FAU - Tabbo, Fabrizio
+AU  - Tabbo F
+AD  - Department of Molecular Biotechnology and Health Science, Center for
+      Experimental Research and Medical Studies (CeRMS), University of Torino,
+      Torino 10126, Italy.
+FAU - Ponzoni, Maurilio
+AU  - Ponzoni M
+AD  - Pathology and Lymphoid Malignancies Units, San Raffaele Scientific
+      Institute, Milan 20132, Italy.
+FAU - Chadburn, Amy
+AU  - Chadburn A
+AD  - Department of Pathology, Feinberg School of Medicine, Northwestern
+      University, Chicago, IL 60611, USA.
+FAU - Murty, Vundavalli V
+AU  - Murty VV
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY 10032, USA; Department of Pathology & Cell Biology, Columbia
+      University, New York, NY 10032, USA.
+FAU - Bhagat, Govind
+AU  - Bhagat G
+AD  - Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY 10032, USA; Department of Pathology & Cell Biology, Columbia
+      University, New York, NY 10032, USA.
+FAU - Gaidano, Gianluca
+AU  - Gaidano G
+AD  - Division of Hematology, Department of Translational Medicine, Amedeo
+      Avogadro University of Eastern Piedmont, Novara 28100, Italy.
+FAU - Inghirami, Giorgio
+AU  - Inghirami G
+AD  - Department of Molecular Biotechnology and Health Science, Center for
+      Experimental Research and Medical Studies (CeRMS), University of Torino,
+      Torino 10126, Italy.
+FAU - Malek, Sami N
+AU  - Malek SN
+AD  - Department of Internal Medicine, Division of Hematology and Oncology,
+      University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Rabadan, Raul
+AU  - Rabadan R
+AD  - Department of Biomedical Informatics and Center for Computational Biology
+      and Bioinformatics, Columbia University, New York, NY 10032, USA.
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA; Herbert Irving Comprehensive Cancer Center, Columbia University, New
+      York, NY 10032, USA; Department of Pathology & Cell Biology, Columbia
+      University, New York, NY 10032, USA; Department of Genetics &
+      Development, Columbia University, New York, NY 10032, USA; Department of
+      Microbiology & Immunology, Columbia University, New York, NY 10032, USA.
+      Electronic address: rd10@columbia.edu.
+LA  - eng
+GR  - U54-AI057158/AI/NIAID NIH HHS/United States
+GR  - R01 CA037295/CA/NCI NIH HHS/United States
+GR  - R01 CA172492/CA/NCI NIH HHS/United States
+GR  - P01 CA092625/CA/NCI NIH HHS/United States
+GR  - R01 CA171972/CA/NCI NIH HHS/United States
+GR  - 1R01LM010140-01/LM/NLM NIH HHS/United States
+GR  - R01 CA164152/CA/NCI NIH HHS/United States
+GR  - R01 LM010140/LM/NLM NIH HHS/United States
+GR  - R01 CA136537/CA/NCI NIH HHS/United States
+GR  - R01-CA172492-01/CA/NCI NIH HHS/United States
+GR  - R01-CA37295/CA/NCI NIH HHS/United States
+GR  - R01-CA136537/CA/NCI NIH HHS/United States
+GR  - U54 AI057158/AI/NIAID NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20140102
+PL  - United States
+TA  - Cell Rep
+JT  - Cell reports
+JID - 101573691
+SB  - IM
+MH  - Apoptosis/genetics
+MH  - Carcinogenesis/genetics
+MH  - Epigenesis, Genetic
+MH  - Evolution, Molecular
+MH  - *Genes, myc
+MH  - *Genes, p16
+MH  - *Genes, p53
+MH  - Humans
+MH  - Lymphoma, Follicular/*genetics
+MH  - Mutation
+PMC - PMC4100800
+MID - NIHMS552004
+EDAT- 2014/01/07 06:00
+MHDA- 2014/09/26 06:00
+CRDT- 2014/01/07 06:00
+PHST- 2013/08/11 00:00 [received]
+PHST- 2013/11/27 00:00 [revised]
+PHST- 2013/12/16 00:00 [accepted]
+PHST- 2014/01/07 06:00 [entrez]
+PHST- 2014/01/07 06:00 [pubmed]
+PHST- 2014/09/26 06:00 [medline]
+AID - S2211-1247(13)00785-7 [pii]
+AID - 10.1016/j.celrep.2013.12.027 [doi]
+PST - ppublish
+SO  - Cell Rep. 2014 Jan 16;6(1):130-40. doi: 10.1016/j.celrep.2013.12.027.
+      Epub 2014 Jan 2.
+
+PMID- 24127483
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20131218
+LR  - 20211021
+IS  - 1540-9538 (Electronic)
+IS  - 0022-1007 (Linking)
+VI  - 210
+IP  - 11
+DP  - 2013 Oct 21
+TI  - Genetic lesions associated with chronic lymphocytic leukemia
+      transformation to Richter syndrome.
+PG  - 2273-88
+LID - 10.1084/jem.20131448 [doi]
+AB  - Richter syndrome (RS) derives from the rare transformation of chronic
+      lymphocytic leukemia (CLL) into an aggressive lymphoma, most commonly of
+      the diffuse large B cell lymphoma (DLBCL) type. The molecular
+      pathogenesis of RS is only partially understood. By combining whole-exome
+      sequencing and copy-number analysis of 9 CLL-RS pairs and of an extended
+      panel of 43 RS cases, we show that this aggressive disease typically
+      arises from the predominant CLL clone by acquiring an average of
+      approximately 20 genetic lesions/case. RS lesions are heterogeneous in
+      terms of load and spectrum among patients, and include those involved in
+      CLL progression and chemorefractoriness (TP53 disruption and NOTCH1
+      activation) as well as some not previously implicated in CLL or RS
+      pathogenesis. In particular, disruption of the CDKN2A/B cell cycle
+      regulator is associated with approximately 30% of RS cases. Finally, we
+      report that the genomic landscape of RS is significantly different from
+      that of de novo DLBCL, suggesting that they represent distinct disease
+      entities. These results provide insights into RS pathogenesis, and
+      identify dysregulated pathways of potential diagnostic and therapeutic
+      relevance.
+FAU - Fabbri, Giulia
+AU  - Fabbri G
+AD  - Institute for Cancer Genetics, Herbert Irving Comprehensive Cancer
+      Center, 2 Department of Pathology and Cell Biology, 3 Departments of
+      Genetics and Development and of Microbiology and Immunology and 4
+      Department of Biomedical Informatics and Center for Computational Biology
+      and Bioinformatics, Columbia University, New York, NY 10032.
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Wang, Jiguang
+AU  - Wang J
+FAU - Messina, Monica
+AU  - Messina M
+FAU - Mullighan, Charles G
+AU  - Mullighan CG
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+FAU - Rabadan, Raul
+AU  - Rabadan R
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+LA  - eng
+GR  - P30 CA021765/CA/NCI NIH HHS/United States
+GR  - R01 CA177319/CA/NCI NIH HHS/United States
+GR  - 1R01CA177319-01/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20131014
+PL  - United States
+TA  - J Exp Med
+JT  - The Journal of experimental medicine
+JID - 2985109R
+RN  - 0 (Apoptosis Regulatory Proteins)
+RN  - 0 (CDKN2AIP protein, human)
+RN  - 0 (CDKN2B protein, human)
+RN  - 0 (Cyclin-Dependent Kinase Inhibitor p15)
+RN  - 0 (RNA-Binding Proteins)
+RN  - 0 (Tumor Suppressor Protein p53)
+SB  - IM
+MH  - Apoptosis Regulatory Proteins/genetics
+MH  - Cell Transformation, Neoplastic/*genetics/pathology
+MH  - Chromosome Deletion
+MH  - Clone Cells
+MH  - Cyclin-Dependent Kinase Inhibitor p15/genetics
+MH  - DNA Copy Number Variations/genetics
+MH  - Disease Progression
+MH  - *Genetic Predisposition to Disease
+MH  - Genome, Human/genetics
+MH  - Humans
+MH  - Leukemia, Lymphocytic, Chronic, B-Cell/*genetics/*pathology
+MH  - Lymphoma, Large B-Cell, Diffuse/*genetics/pathology
+MH  - Mutation/*genetics
+MH  - Open Reading Frames/genetics
+MH  - Point Mutation/genetics
+MH  - RNA-Binding Proteins/genetics
+MH  - Syndrome
+MH  - Tumor Suppressor Protein p53/genetics
+PMC - PMC3804949
+EDAT- 2013/10/16 06:00
+MHDA- 2013/12/19 06:00
+CRDT- 2013/10/16 06:00
+PHST- 2013/10/16 06:00 [entrez]
+PHST- 2013/10/16 06:00 [pubmed]
+PHST- 2013/12/19 06:00 [medline]
+AID - jem.20131448 [pii]
+AID - 10.1084/jem.20131448 [doi]
+PST - ppublish
+SO  - J Exp Med. 2013 Oct 21;210(11):2273-88. doi: 10.1084/jem.20131448. Epub
+      2013 Oct 14.
+
+PMID- 23297232
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20130321
+LR  - 20220410
+IS  - 1091-6490 (Electronic)
+IS  - 0027-8424 (Linking)
+VI  - 110
+IP  - 4
+DP  - 2013 Jan 22
+TI  - tRNA-derived microRNA modulates proliferation and the DNA damage response
+      and is down-regulated in B cell lymphoma.
+PG  - 1404-9
+LID - 10.1073/pnas.1206761110 [doi]
+AB  - Sequencing studies from several model systems have suggested that diverse
+      and abundant small RNAs may be derived from tRNA, but the function of
+      these molecules remains undefined. Here, we demonstrate that one such
+      tRNA-derived fragment, cloned from human mature B cells and designated
+      CU1276, in fact possesses the functional characteristics of a microRNA,
+      including a DICER1-dependent biogenesis, physical association with
+      Argonaute proteins, and the ability to repress mRNA transcripts in a
+      sequence-specific manner. Expression of CU1276 is abundant in normal
+      germinal center B cells but absent in germinal center-derived lymphomas,
+      suggesting a role in the pathogenesis of this disease. Furthermore,
+      CU1276 represses endogenous RPA1, an essential gene involved in many
+      aspects of DNA dynamics, and consequently, expression of this tRNA-
+      derived microRNA in a lymphoma cell line suppresses proliferation and
+      modulates the molecular response to DNA damage. These results establish
+      that functionally active microRNAs can be derived from tRNA, thus
+      defining a class of genetic entities with potentially important
+      biological roles.
+FAU - Maute, Roy L
+AU  - Maute RL
+AD  - Institute for Cancer Genetics and Herbert Irving Comprehensive Cancer
+      Center, Department of Genetics and Development, Columbia University, New
+      York, NY 10032, USA.
+FAU - Schneider, Christof
+AU  - Schneider C
+FAU - Sumazin, Pavel
+AU  - Sumazin P
+FAU - Holmes, Antony
+AU  - Holmes A
+FAU - Califano, Andrea
+AU  - Califano A
+FAU - Basso, Katia
+AU  - Basso K
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+LA  - eng
+GR  - T32 GM007088/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+DEP - 20130107
+PL  - United States
+TA  - Proc Natl Acad Sci U S A
+JT  - Proceedings of the National Academy of Sciences of the United States of
+      America
+JID - 7505876
+RN  - 0 (Argonaute Proteins)
+RN  - 0 (MicroRNAs)
+RN  - 0 (RNA, Neoplasm)
+RN  - 0 (RPA1 protein, human)
+RN  - 0 (Replication Protein A)
+RN  - 9014-25-9 (RNA, Transfer)
+RN  - EC 3.1.26.3 (DICER1 protein, human)
+RN  - EC 3.1.26.3 (Ribonuclease III)
+RN  - EC 3.6.4.13 (DEAD-box RNA Helicases)
+SB  - IM
+MH  - Argonaute Proteins/genetics/metabolism
+MH  - B-Lymphocytes/metabolism/pathology
+MH  - Base Sequence
+MH  - Cell Proliferation
+MH  - DEAD-box RNA Helicases/genetics/metabolism
+MH  - DNA Damage/genetics
+MH  - Down-Regulation
+MH  - Germinal Center/metabolism/pathology
+MH  - HEK293 Cells
+MH  - Humans
+MH  - Lymphoma, B-Cell/*genetics/*metabolism/pathology
+MH  - MicroRNAs/*genetics/*metabolism
+MH  - Molecular Sequence Data
+MH  - RNA, Neoplasm/*genetics/*metabolism
+MH  - RNA, Transfer/*genetics/*metabolism
+MH  - Replication Protein A/genetics/metabolism
+MH  - Ribonuclease III/genetics/metabolism
+PMC - PMC3557069
+EDAT- 2013/01/09 06:00
+MHDA- 2013/03/22 06:00
+CRDT- 2013/01/09 06:00
+PHST- 2013/01/09 06:00 [entrez]
+PHST- 2013/01/09 06:00 [pubmed]
+PHST- 2013/03/22 06:00 [medline]
+AID - 1206761110 [pii]
+AID - 10.1073/pnas.1206761110 [doi]
+PST - ppublish
+SO  - Proc Natl Acad Sci U S A. 2013 Jan 22;110(4):1404-9. doi:
+      10.1073/pnas.1206761110. Epub 2013 Jan 7.
+
+PMID- 23166356
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20130225
+LR  - 20211203
+IS  - 1540-9538 (Electronic)
+IS  - 0022-1007 (Linking)
+VI  - 209
+IP  - 13
+DP  - 2012 Dec 17
+TI  - BCL6 positively regulates AID and germinal center gene expression via
+      repression of miR-155.
+PG  - 2455-65
+LID - 10.1084/jem.20121387 [doi]
+AB  - The BCL6 proto-oncogene encodes a transcriptional repressor that is
+      required for germinal center (GC) formation and whose de-regulation is
+      involved in lymphomagenesis. Although substantial evidence indicates that
+      BCL6 exerts its function by repressing the transcription of hundreds of
+      protein-coding genes, its potential role in regulating gene expression
+      via microRNAs (miRNAs) is not known. We have identified a core of 15
+      miRNAs that show binding of BCL6 in their genomic loci and are down-
+      regulated in GC B cells. Among BCL6 validated targets, miR-155 and
+      miR-361 directly modulate AID expression, indicating that via repression
+      of these miRNAs, BCL6 up-regulates AID. Similarly, the expression of
+      additional genes relevant for the GC phenotype, including SPI1, IRF8, and
+      MYB, appears to be sustained via BCL6-mediated repression of miR-155.
+      These findings identify a novel mechanism by which BCL6, in addition to
+      repressing protein coding genes, promotes the expression of important GC
+      functions by repressing specific miRNAs.
+FAU - Basso, Katia
+AU  - Basso K
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10027,
+      USA. kb451@columbia.edu
+FAU - Schneider, Christof
+AU  - Schneider C
+FAU - Shen, Qiong
+AU  - Shen Q
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Setty, Manu
+AU  - Setty M
+FAU - Leslie, Christina
+AU  - Leslie C
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20121119
+PL  - United States
+TA  - J Exp Med
+JT  - The Journal of experimental medicine
+JID - 2985109R
+RN  - 0 (3' Untranslated Regions)
+RN  - 0 (BCL6 protein, human)
+RN  - 0 (Bcl6 protein, mouse)
+RN  - 0 (DNA-Binding Proteins)
+RN  - 0 (MAS1 protein, human)
+RN  - 0 (MIRN155 microRNA, human)
+RN  - 0 (MIRN361 microRNA, human)
+RN  - 0 (MicroRNAs)
+RN  - 0 (Mirn155 microRNA, mouse)
+RN  - 0 (Proto-Oncogene Mas)
+RN  - 0 (Proto-Oncogene Proteins c-bcl-6)
+RN  - EC 3.5.4.- (AICDA (activation-induced cytidine deaminase))
+RN  - EC 3.5.4.5 (Cytidine Deaminase)
+SB  - IM
+MH  - 3' Untranslated Regions
+MH  - Animals
+MH  - B-Lymphocytes/metabolism
+MH  - Base Sequence
+MH  - Binding Sites/genetics
+MH  - Cell Line
+MH  - Cytidine Deaminase/genetics/*metabolism
+MH  - DNA-Binding Proteins/genetics/*metabolism
+MH  - Gene Expression Regulation
+MH  - Germinal Center/cytology/*metabolism
+MH  - HEK293 Cells
+MH  - Humans
+MH  - Mice
+MH  - MicroRNAs/*genetics/*metabolism
+MH  - Proto-Oncogene Mas
+MH  - Proto-Oncogene Proteins c-bcl-6
+PMC - PMC3526356
+EDAT- 2012/11/21 06:00
+MHDA- 2013/02/26 06:00
+CRDT- 2012/11/21 06:00
+PHST- 2012/11/21 06:00 [entrez]
+PHST- 2012/11/21 06:00 [pubmed]
+PHST- 2013/02/26 06:00 [medline]
+AID - jem.20121387 [pii]
+AID - 10.1084/jem.20121387 [doi]
+PST - ppublish
+SO  - J Exp Med. 2012 Dec 17;209(13):2455-65. doi: 10.1084/jem.20121387. Epub
+      2012 Nov 19.
+
+PMID- 22740445
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20121203
+LR  - 20211021
+IS  - 1528-0020 (Electronic)
+IS  - 0006-4971 (Linking)
+VI  - 120
+IP  - 11
+DP  - 2012 Sep 13
+TI  - Identification of human germinal center light and dark zone cells and
+      their relationship to human B-cell lymphomas.
+PG  - 2240-8
+LID - 10.1182/blood-2012-03-415380 [doi]
+AB  - Germinal centers (GCs) are sites of B-cell clonal expansion,
+      hypermutation, and selection. GCs are polarized into dark (DZ) and light
+      zones (LZ), a distinction that is of key importance to GC selection.
+      However, the difference between the B cells in each of these zones in
+      humans remains unclear. We show that, as in mice, CXCR4 and CD83 can be
+      used to distinguish human LZ and DZ cells. Using these markers, we show
+      that LZ and DZ cells in mice and humans differ only in the expression of
+      characteristic "activation" and "proliferation" programs, suggesting that
+      these populations represent alternating states of a single-cell type
+      rather than distinct differentiation stages. In addition, LZ/DZ
+      transcriptional profiling shows that, with the exception of "molecular"
+      Burkitt lymphomas, nearly all human B-cell malignancies closely resemble
+      LZ cells, which has important implications for our understanding of the
+      molecular programs of lymphomagenesis.
+FAU - Victora, Gabriel D
+AU  - Victora GD
+AD  - Laboratory of Molecular Immunology, Rockefeller University, New York, NY,
+      USA. victora@wi.mit.edu
+FAU - Dominguez-Sola, David
+AU  - Dominguez-Sola D
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Deroubaix, Stephanie
+AU  - Deroubaix S
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+FAU - Nussenzweig, Michel C
+AU  - Nussenzweig MC
+LA  - eng
+SI  - GEO/GSE38696
+SI  - GEO/GSE38697
+GR  - R01 AI037526/AI/NIAID NIH HHS/United States
+GR  - HHMI/Howard Hughes Medical Institute/United States
+GR  - R00 CA151827/CA/NCI NIH HHS/United States
+GR  - R01 AI072529/AI/NIAID NIH HHS/United States
+GR  - K99 CA151827/CA/NCI NIH HHS/United States
+GR  - K99/R00 CA151827/CA/NCI NIH HHS/United States
+PT  - Comparative Study
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20120626
+PL  - United States
+TA  - Blood
+JT  - Blood
+JID - 7603509
+RN  - 0 (Antigens, CD)
+RN  - 0 (CD83 antigen)
+RN  - 0 (Immunoglobulins)
+RN  - 0 (Membrane Glycoproteins)
+RN  - 0 (Receptors, CXCR4)
+SB  - IM
+CIN - Blood. 2012 Sep 13;120(11):2158-9. PMID: 22977079
+EIN - Blood. 2015 Sep 3;126(10):1262
+MH  - Animals
+MH  - Antigens, CD/genetics/metabolism
+MH  - Burkitt Lymphoma/immunology/metabolism/pathology
+MH  - Cells, Cultured
+MH  - Child
+MH  - Female
+MH  - Gene Expression Profiling
+MH  - Gene Expression Regulation, Neoplastic
+MH  - Germinal Center/immunology/metabolism/*pathology
+MH  - Humans
+MH  - Immunoglobulins/genetics/metabolism
+MH  - Leukocytes, Mononuclear/cytology/immunology/metabolism/pathology
+MH  - Lymph Nodes/cytology/immunology/metabolism
+MH  - Lymphoma, B-Cell/immunology/metabolism/*pathology
+MH  - Male
+MH  - Membrane Glycoproteins/genetics/metabolism
+MH  - Mice
+MH  - Mice, Inbred C57BL
+MH  - Oligonucleotide Array Sequence Analysis
+MH  - Palatine Tonsil/immunology/metabolism/pathology
+MH  - Receptors, CXCR4/genetics/metabolism
+MH  - Species Specificity
+PMC - PMC3447782
+EDAT- 2012/06/29 06:00
+MHDA- 2012/12/10 06:00
+CRDT- 2012/06/29 06:00
+PHST- 2012/06/29 06:00 [entrez]
+PHST- 2012/06/29 06:00 [pubmed]
+PHST- 2012/12/10 06:00 [medline]
+AID - S0006-4971(20)46405-5 [pii]
+AID - 10.1182/blood-2012-03-415380 [doi]
+PST - ppublish
+SO  - Blood. 2012 Sep 13;120(11):2240-8. doi: 10.1182/blood-2012-03-415380.
+      Epub 2012 Jun 26.
+
+PMID- 22137796
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20120206
+LR  - 20220316
+IS  - 1878-3686 (Electronic)
+IS  - 1535-6108 (Linking)
+VI  - 20
+IP  - 6
+DP  - 2011 Dec 13
+TI  - Combined genetic inactivation of beta2-Microglobulin and CD58 reveals
+      frequent escape from immune recognition in diffuse large B cell lymphoma.
+PG  - 728-40
+LID - 10.1016/j.ccr.2011.11.006 [doi]
+AB  - We report that diffuse large B cell lymphoma (DLBCL) commonly fails to
+      express cell-surface molecules necessary for the recognition of tumor
+      cells by immune-effector cells. In 29% of cases, mutations and deletions
+      inactivate the beta2-Microglobulin gene, thus preventing the cell-surface
+      expression of the HLA class-I (HLA-I) complex that is necessary for
+      recognition by CD8(+) cytotoxic T cells. In 21% of cases, analogous
+      lesions involve the CD58 gene, which encodes a molecule involved in T and
+      natural killer cell-mediated responses. In addition to gene inactivation,
+      alternative mechanisms lead to aberrant expression of HLA-I and CD58 in
+      >60% of DLBCL. These two events are significantly associated in this
+      disease, suggesting that they are coselected during lymphomagenesis for
+      their combined role in escape from immune-surveillance.
+CI  - Copyright (c) 2011 Elsevier Inc. All rights reserved.
+FAU - Challa-Malladi, Madhavi
+AU  - Challa-Malladi M
+AD  - Institute for Cancer Genetics, Columbia University, New York, NY 10032,
+      USA.
+FAU - Lieu, Yen K
+AU  - Lieu YK
+FAU - Califano, Olivia
+AU  - Califano O
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Bhagat, Govind
+AU  - Bhagat G
+FAU - Murty, Vundavalli V
+AU  - Murty VV
+FAU - Dominguez-Sola, David
+AU  - Dominguez-Sola D
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+FAU - Dalla-Favera, Riccardo
+AU  - Dalla-Favera R
+LA  - eng
+SI  - GEO/GSE12195
+GR  - R01-CA37295/CA/NCI NIH HHS/United States
+GR  - R37 CA037295-28/CA/NCI NIH HHS/United States
+GR  - R01 CA037295/CA/NCI NIH HHS/United States
+GR  - P01-CA092625/CA/NCI NIH HHS/United States
+GR  - P01 CA092625-05/CA/NCI NIH HHS/United States
+GR  - R37 CA037295/CA/NCI NIH HHS/United States
+GR  - P01 CA092625/CA/NCI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20111201
+PL  - United States
+TA  - Cancer Cell
+JT  - Cancer cell
+JID - 101130617
+RN  - 0 (CD58 Antigens)
+RN  - 0 (Histocompatibility Antigens Class I)
+RN  - 0 (beta 2-Microglobulin)
+SB  - IM
+MH  - CD58 Antigens/*genetics/immunology/metabolism
+MH  - Cell Line, Tumor
+MH  - Coculture Techniques
+MH  - Cytotoxicity, Immunologic
+MH  - DNA Copy Number Variations
+MH  - DNA Mutational Analysis
+MH  - Genetic Association Studies
+MH  - Genotype
+MH  - Histocompatibility Antigens Class I/genetics/metabolism
+MH  - Humans
+MH  - Killer Cells, Natural/physiology
+MH  - Lymphoma, Large B-Cell, Diffuse/genetics/*immunology
+MH  - *Mutation
+MH  - Polymorphism, Single Nucleotide
+MH  - Protein Stability
+MH  - Transcription, Genetic
+MH  - beta 2-Microglobulin/*genetics/metabolism
+PMC - PMC3660995
+MID - NIHMS338691
+EDAT- 2011/12/06 06:00
+MHDA- 2012/02/07 06:00
+CRDT- 2011/12/06 06:00
+PHST- 2011/08/12 00:00 [received]
+PHST- 2011/10/21 00:00 [revised]
+PHST- 2011/11/09 00:00 [accepted]
+PHST- 2011/12/06 06:00 [entrez]
+PHST- 2011/12/06 06:00 [pubmed]
+PHST- 2012/02/07 06:00 [medline]
+AID - S1535-6108(11)00437-5 [pii]
+AID - 10.1016/j.ccr.2011.11.006 [doi]
+PST - ppublish
+SO  - Cancer Cell. 2011 Dec 13;20(6):728-40. doi: 10.1016/j.ccr.2011.11.006.
+      Epub 2011 Dec 1.
+
+PMID- 22012066
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20120124
+LR  - 20211203
+IS  - 1528-0020 (Electronic)
+IS  - 0006-4971 (Linking)
+VI  - 118
+IP  - 23
+DP  - 2011 Dec 1
+TI  - Whole-exome sequencing identifies somatic mutations of BCOR in acute
+      myeloid leukemia with normal karyotype.
+PG  - 6153-63
+LID - 10.1182/blood-2011-07-365320 [doi]
+AB  - Among acute myeloid leukemia (AML) patients with a normal karyotype (CN-
+      AML), NPM1 and CEBPA mutations define World Health Organization 2008
+      provisional entities accounting for approximately 60% of patients, but
+      the remaining 40% are molecularly poorly characterized. Using whole-exome
+      sequencing of one CN-AML patient lacking mutations in NPM1, CEBPA,
+      FLT3-ITD, IDH1, and MLL-PTD, we newly identified a clonal somatic
+      mutation in BCOR (BCL6 corepressor), a gene located on chromosome Xp11.4.
+      Further analyses of 553 AML patients showed that BCOR mutations occurred
+      in 3.8% of unselected CN-AML patients and represented a substantial
+      fraction (17.1%) of CN-AML patients showing the same genotype as the AML
+      index patient subjected to whole-exome sequencing. BCOR somatic mutations
+      were: (1) disruptive events similar to the germline BCOR mutations
+      causing the oculo-facio-cardio-dental genetic syndrome; (2) associated
+      with decreased BCOR mRNA levels, absence of full-length BCOR, and absent
+      or low expression of a truncated BCOR protein; (3) virtually mutually
+      exclusive with NPM1 mutations; and (4) frequently associated with DNMT3A
+      mutations, suggesting cooperativity among these genetic alterations.
+      Finally, BCOR mutations tended to be associated with an inferior outcome
+      in a cohort of 422 CN-AML patients (25.6% vs 56.7% overall survival at 2
+      years; P = .032). Our results for the first time implicate BCOR in CN-AML
+      pathogenesis.
+FAU - Grossmann, Vera
+AU  - Grossmann V
+AD  - MLL Munich Leukemia Laboratory, Munich, Germany.
+FAU - Tiacci, Enrico
+AU  - Tiacci E
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Kohlmann, Alexander
+AU  - Kohlmann A
+FAU - Martelli, Maria Paola
+AU  - Martelli MP
+FAU - Kern, Wolfgang
+AU  - Kern W
+FAU - Spanhol-Rosseto, Ariele
+AU  - Spanhol-Rosseto A
+FAU - Klein, Hans-Ulrich
+AU  - Klein HU
+FAU - Dugas, Martin
+AU  - Dugas M
+FAU - Schindela, Sonja
+AU  - Schindela S
+FAU - Trifonov, Vladimir
+AU  - Trifonov V
+FAU - Schnittger, Susanne
+AU  - Schnittger S
+FAU - Haferlach, Claudia
+AU  - Haferlach C
+FAU - Bassan, Renato
+AU  - Bassan R
+FAU - Wells, Victoria A
+AU  - Wells VA
+FAU - Spinelli, Orietta
+AU  - Spinelli O
+FAU - Chan, Joseph
+AU  - Chan J
+FAU - Rossi, Roberta
+AU  - Rossi R
+FAU - Baldoni, Stefano
+AU  - Baldoni S
+FAU - De Carolis, Luca
+AU  - De Carolis L
+FAU - Goetze, Katharina
+AU  - Goetze K
+FAU - Serve, Hubert
+AU  - Serve H
+FAU - Peceny, Rudolf
+AU  - Peceny R
+FAU - Kreuzer, Karl-Anton
+AU  - Kreuzer KA
+FAU - Oruzio, Daniel
+AU  - Oruzio D
+FAU - Specchia, Giorgina
+AU  - Specchia G
+FAU - Di Raimondo, Francesco
+AU  - Di Raimondo F
+FAU - Fabbiano, Francesco
+AU  - Fabbiano F
+FAU - Sborgia, Marco
+AU  - Sborgia M
+FAU - Liso, Arcangelo
+AU  - Liso A
+FAU - Farinelli, Laurent
+AU  - Farinelli L
+FAU - Rambaldi, Alessandro
+AU  - Rambaldi A
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+FAU - Rabadan, Raul
+AU  - Rabadan R
+FAU - Haferlach, Torsten
+AU  - Haferlach T
+FAU - Falini, Brunangelo
+AU  - Falini B
+LA  - eng
+PT  - Case Reports
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20111019
+PL  - United States
+TA  - Blood
+JT  - Blood
+JID - 7603509
+RN  - 0 (BCOR protein, human)
+RN  - 0 (Core Binding Factor Alpha 2 Subunit)
+RN  - 0 (DNMT3A protein, human)
+RN  - 0 (NPM1 protein, human)
+RN  - 0 (Nuclear Proteins)
+RN  - 0 (Proto-Oncogene Proteins)
+RN  - 0 (RUNX1 protein, human)
+RN  - 0 (Repressor Proteins)
+RN  - 117896-08-9 (Nucleophosmin)
+RN  - EC 2.1.1.37 (DNA (Cytosine-5-)-Methyltransferases)
+RN  - EC 2.1.1.37 (DNA Methyltransferase 3A)
+RN  - EC 2.7.10.1 (FLT3 protein, human)
+RN  - EC 2.7.10.1 (fms-Like Tyrosine Kinase 3)
+SB  - IM
+MH  - Aged
+MH  - Antineoplastic Combined Chemotherapy Protocols/therapeutic use
+MH  - Cohort Studies
+MH  - Core Binding Factor Alpha 2 Subunit/genetics
+MH  - DNA (Cytosine-5-)-Methyltransferases/genetics
+MH  - DNA Methyltransferase 3A
+MH  - Exome/*genetics
+MH  - Fatal Outcome
+MH  - Female
+MH  - Gene Expression Regulation, Leukemic/*genetics
+MH  - Genetic Testing/*methods
+MH  - Humans
+MH  - Karyotyping
+MH  - Leukemia, Myeloid, Acute/drug therapy/*genetics/mortality
+MH  - Male
+MH  - Nuclear Proteins/genetics
+MH  - Nucleophosmin
+MH  - Proto-Oncogene Proteins/*genetics/metabolism
+MH  - Repressor Proteins/*genetics/metabolism
+MH  - Survival Analysis
+MH  - fms-Like Tyrosine Kinase 3/genetics
+EDAT- 2011/10/21 06:00
+MHDA- 2012/01/25 06:00
+CRDT- 2011/10/21 06:00
+PHST- 2011/10/21 06:00 [entrez]
+PHST- 2011/10/21 06:00 [pubmed]
+PHST- 2012/01/25 06:00 [medline]
+AID - S0006-4971(20)40547-6 [pii]
+AID - 10.1182/blood-2011-07-365320 [doi]
+PST - ppublish
+SO  - Blood. 2011 Dec 1;118(23):6153-63. doi: 10.1182/blood-2011-07-365320.
+      Epub 2011 Oct 19.
+
+PMID- 21335340
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20111219
+LR  - 20110728
+IS  - 1537-1719 (Electronic)
+IS  - 0737-4038 (Linking)
+VI  - 28
+IP  - 8
+DP  - 2011 Aug
+TI  - Discovery of cyanophage genomes which contain mitochondrial DNA
+      polymerase.
+PG  - 2269-74
+LID - 10.1093/molbev/msr041 [doi]
+AB  - DNA polymerase gamma is a family A DNA polymerase responsible for the
+      replication of mitochondrial DNA in eukaryotes. The origins of DNA
+      polymerase gamma have remained elusive because it is not present in any
+      known bacterium, though it has been hypothesized that mitochondria may
+      have inherited the enzyme by phage-mediated nonorthologous displacement.
+      Here, we present an analysis of two full-length homologues of this gene,
+      which were found in the genomes of two bacteriophages, which infect the
+      chlorophyll-d containing cyanobacterium Acaryochloris marina.
+      Phylogenetic analyses of these phage DNA polymerase gamma proteins show
+      that they branch deeply within the DNA polymerase gamma clade and
+      therefore share a common origin with their eukaryotic homologues. We also
+      found homologues of these phage polymerases in the environmental
+      Community Cyberinfrastructure for Advanced Microbial Ecology Research and
+      Analysis (CAMERA) database, which fell in the same clade. An analysis of
+      the CAMERA assemblies containing the environmental homologues together
+      with the filter fraction metadata indicated some of these assemblies may
+      be of bacterial origin. We also show that the phage-encoded DNA
+      polymerase gamma is highly transcribed as the phage genomes are
+      replicated. These findings provide data that may assist in reconstructing
+      the evolution of mitochondria.
+FAU - Chan, Yi-Wah
+AU  - Chan YW
+AD  - Reproductive Health, Clinical Sciences Research Institute, University
+      Hospital, Coventry, UK.
+FAU - Mohr, Remus
+AU  - Mohr R
+FAU - Millard, Andrew D
+AU  - Millard AD
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Larkum, Anthony W
+AU  - Larkum AW
+FAU - Whitworth, Anna L
+AU  - Whitworth AL
+FAU - Mann, Nicholas H
+AU  - Mann NH
+FAU - Scanlan, David J
+AU  - Scanlan DJ
+FAU - Hess, Wolfgang R
+AU  - Hess WR
+FAU - Clokie, Martha R J
+AU  - Clokie MR
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20110218
+PL  - United States
+TA  - Mol Biol Evol
+JT  - Molecular biology and evolution
+JID - 8501455
+RN  - 0 (DNA, Mitochondrial)
+RN  - EC 2.7.7.7 (DNA-Directed DNA Polymerase)
+SB  - IM
+MH  - Bacteriophages/classification/*enzymology/*genetics
+MH  - Cyanobacteria/virology
+MH  - DNA, Mitochondrial/*genetics
+MH  - DNA-Directed DNA Polymerase/*genetics/metabolism
+MH  - Evolution, Molecular
+MH  - Gene Expression Regulation, Viral
+MH  - Genome, Viral
+MH  - Phylogeny
+EDAT- 2011/02/22 06:00
+MHDA- 2011/12/20 06:00
+CRDT- 2011/02/22 06:00
+PHST- 2011/02/22 06:00 [entrez]
+PHST- 2011/02/22 06:00 [pubmed]
+PHST- 2011/12/20 06:00 [medline]
+AID - msr041 [pii]
+AID - 10.1093/molbev/msr041 [doi]
+PST - ppublish
+SO  - Mol Biol Evol. 2011 Aug;28(8):2269-74. doi: 10.1093/molbev/msr041. Epub
+      2011 Feb 18.
+
+PMID- 21731656
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20111102
+LR  - 20211020
+IS  - 1932-6203 (Electronic)
+IS  - 1932-6203 (Linking)
+VI  - 6
+IP  - 6
+DP  - 2011
+TI  - Discovering disease associations by integrating electronic clinical data
+      and medical literature.
+PG  - e21132
+LID - 10.1371/journal.pone.0021132 [doi]
+AB  - Electronic health record (EHR) systems offer an exceptional opportunity
+      for studying many diseases and their associated medical conditions within
+      a population. The increasing number of clinical record entries that have
+      become available electronically provides access to rich, large sets of
+      patients' longitudinal medical information. By integrating and comparing
+      relations found in the EHRs with those already reported in the
+      literature, we are able to verify existing and to identify rare or novel
+      associations. Of particular interest is the identification of rare
+      disease co-morbidities, where the small numbers of diagnosed patients
+      make robust statistical analysis difficult. Here, we introduce ADAMS, an
+      Application for Discovering Disease Associations using Multiple Sources,
+      which contains various statistical and language processing operations. We
+      apply ADAMS to the New York-Presbyterian Hospital's EHR to combine the
+      information from the relational diagnosis tables and textual discharge
+      summaries with those from PubMed and Wikipedia in order to investigate
+      the co-morbidities of the rare diseases Kaposi sarcoma, toxoplasmosis,
+      and Kawasaki disease. In addition to finding well-known characteristics
+      of diseases, ADAMS can identify rare or previously unreported
+      associations. In particular, we report a statistically significant
+      association between Kawasaki disease and diagnosis of autistic disorder.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - Department of Biomedical Informatics, Columbia University College of
+      Physicians and Surgeons, New York, New York, United States of America.
+FAU - Hawson, Alexander
+AU  - Hawson A
+FAU - Liu, Feng
+AU  - Liu F
+FAU - Friedman, Carol
+AU  - Friedman C
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+FAU - Rabadan, Raul
+AU  - Rabadan R
+LA  - eng
+GR  - U54-AI057158/AI/NIAID NIH HHS/United States
+GR  - R01 LM010016/LM/NLM NIH HHS/United States
+GR  - U54 AI057158/AI/NIAID NIH HHS/United States
+GR  - LM008635/LM/NLM NIH HHS/United States
+GR  - R01 LM008635/LM/NLM NIH HHS/United States
+GR  - 1R01LM010140-01/LM/NLM NIH HHS/United States
+GR  - R01 LM010140/LM/NLM NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20110623
+PL  - United States
+TA  - PLoS One
+JT  - PloS one
+JID - 101285081
+SB  - IM
+MH  - *Comorbidity
+MH  - Databases as Topic
+MH  - *Disease
+MH  - *Electronic Health Records
+MH  - Humans
+MH  - New York
+MH  - *PubMed
+PMC - PMC3121722
+EDAT- 2011/07/07 06:00
+MHDA- 2011/11/04 06:00
+CRDT- 2011/07/07 06:00
+PHST- 2011/02/01 00:00 [received]
+PHST- 2011/05/20 00:00 [accepted]
+PHST- 2011/07/07 06:00 [entrez]
+PHST- 2011/07/07 06:00 [pubmed]
+PHST- 2011/11/04 06:00 [medline]
+AID - 10.1371/journal.pone.0021132 [doi]
+AID - PONE-D-11-02532 [pii]
+PST - ppublish
+SO  - PLoS One. 2011;6(6):e21132. doi: 10.1371/journal.pone.0021132. Epub 2011
+      Jun 23.
+
+PMID- 21663470
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20110624
+LR  - 20220321
+IS  - 1533-4406 (Electronic)
+IS  - 0028-4793 (Linking)
+VI  - 364
+IP  - 24
+DP  - 2011 Jun 16
+TI  - BRAF mutations in hairy-cell leukemia.
+PG  - 2305-15
+LID - 10.1056/NEJMoa1014209 [doi]
+AB  - BACKGROUND: Hairy-cell leukemia (HCL) is a well-defined
+      clinicopathological entity whose underlying genetic lesion is still
+      obscure. METHODS: We searched for HCL-associated mutations by performing
+      massively parallel sequencing of the whole exome of leukemic and matched
+      normal cells purified from the peripheral blood of an index patient with
+      HCL. Findings were validated by Sanger sequencing in 47 additional
+      patients with HCL. RESULTS: Whole-exome sequencing identified five
+      missense somatic clonal mutations that were confirmed on Sanger
+      sequencing, including a heterozygous mutation in BRAF that results in the
+      BRAF V600E variant protein. Since BRAF V600E is oncogenic in other
+      tumors, further analyses were focused on this genetic lesion. The same
+      BRAF mutation was noted in all the other 47 patients with HCL who were
+      evaluated by means of Sanger sequencing. None of the 195 patients with
+      other peripheral B-cell lymphomas or leukemias who were evaluated carried
+      the BRAF V600E variant, including 38 patients with splenic marginal-zone
+      lymphomas or unclassifiable splenic lymphomas or leukemias. In
+      immunohistologic and Western blot studies, HCL cells expressed
+      phosphorylated MEK and ERK (the downstream targets of the BRAF kinase),
+      indicating a constitutive activation of the RAF-MEK-ERK mitogen-activated
+      protein kinase pathway in HCL. In vitro incubation of BRAF-mutated
+      primary leukemic hairy cells from 5 patients with PLX-4720, a specific
+      inhibitor of active BRAF, led to a marked decrease in phosphorylated ERK
+      and MEK. CONCLUSIONS; The BRAF V600E mutation was present in all patients
+      with HCL who were evaluated. This finding may have implications for the
+      pathogenesis, diagnosis, and targeted therapy of HCL. (Funded by
+      Associazione Italiana per la Ricerca sul Cancro and others.).
+FAU - Tiacci, Enrico
+AU  - Tiacci E
+AD  - Institute of Hematology, University of Perugia, Perugia, Italy.
+FAU - Trifonov, Vladimir
+AU  - Trifonov V
+FAU - Schiavoni, Gianluca
+AU  - Schiavoni G
+FAU - Holmes, Antony
+AU  - Holmes A
+FAU - Kern, Wolfgang
+AU  - Kern W
+FAU - Martelli, Maria Paola
+AU  - Martelli MP
+FAU - Pucciarini, Alessandra
+AU  - Pucciarini A
+FAU - Bigerna, Barbara
+AU  - Bigerna B
+FAU - Pacini, Roberta
+AU  - Pacini R
+FAU - Wells, Victoria A
+AU  - Wells VA
+FAU - Sportoletti, Paolo
+AU  - Sportoletti P
+FAU - Pettirossi, Valentina
+AU  - Pettirossi V
+FAU - Mannucci, Roberta
+AU  - Mannucci R
+FAU - Elliott, Oliver
+AU  - Elliott O
+FAU - Liso, Arcangelo
+AU  - Liso A
+FAU - Ambrosetti, Achille
+AU  - Ambrosetti A
+FAU - Pulsoni, Alessandro
+AU  - Pulsoni A
+FAU - Forconi, Francesco
+AU  - Forconi F
+FAU - Trentin, Livio
+AU  - Trentin L
+FAU - Semenzato, Gianpietro
+AU  - Semenzato G
+FAU - Inghirami, Giorgio
+AU  - Inghirami G
+FAU - Capponi, Monia
+AU  - Capponi M
+FAU - Di Raimondo, Francesco
+AU  - Di Raimondo F
+FAU - Patti, Caterina
+AU  - Patti C
+FAU - Arcaini, Luca
+AU  - Arcaini L
+FAU - Musto, Pellegrino
+AU  - Musto P
+FAU - Pileri, Stefano
+AU  - Pileri S
+FAU - Haferlach, Claudia
+AU  - Haferlach C
+FAU - Schnittger, Susanne
+AU  - Schnittger S
+FAU - Pizzolo, Giovanni
+AU  - Pizzolo G
+FAU - Foa, Robin
+AU  - Foa R
+FAU - Farinelli, Laurent
+AU  - Farinelli L
+FAU - Haferlach, Torsten
+AU  - Haferlach T
+FAU - Pasqualucci, Laura
+AU  - Pasqualucci L
+FAU - Rabadan, Raul
+AU  - Rabadan R
+FAU - Falini, Brunangelo
+AU  - Falini B
+LA  - eng
+GR  - U54-AI057158/AI/NIAID NIH HHS/United States
+GR  - U54-CA121852-05/CA/NCI NIH HHS/United States
+GR  - U54 CA121852/CA/NCI NIH HHS/United States
+GR  - U54 AI057158/AI/NIAID NIH HHS/United States
+GR  - 1R01LM010140-01/LM/NLM NIH HHS/United States
+GR  - R01 LM010140/LM/NLM NIH HHS/United States
+PT  - Case Reports
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20110611
+PL  - United States
+TA  - N Engl J Med
+JT  - The New England journal of medicine
+JID - 0255562
+RN  - EC 2.7.11.1 (BRAF protein, human)
+RN  - EC 2.7.11.1 (Proto-Oncogene Proteins B-raf)
+RN  - EC 2.7.11.24 (Extracellular Signal-Regulated MAP Kinases)
+RN  - EC 2.7.11.25 (MAP Kinase Kinase Kinases)
+SB  - IM
+CIN - N Engl J Med. 2011 Sep 8;365(10):961; author reply 961-2. PMID: 21899462
+CIN - N Engl J Med. 2011 Sep 8;365(10):960-1; author reply 961-2. PMID:
+      21899463
+MH  - Adult
+MH  - Aged
+MH  - Extracellular Signal-Regulated MAP Kinases/metabolism
+MH  - Female
+MH  - Humans
+MH  - Leukemia, Hairy Cell/*genetics/metabolism/pathology
+MH  - Lymphoma, B-Cell/genetics/pathology
+MH  - MAP Kinase Kinase Kinases/metabolism
+MH  - Male
+MH  - Middle Aged
+MH  - *Mutation
+MH  - Proto-Oncogene Proteins B-raf/*genetics
+MH  - Sequence Analysis, DNA
+PMC - PMC3689585
+MID - NIHMS477937
+EDAT- 2011/06/15 06:00
+MHDA- 2011/06/28 06:00
+CRDT- 2011/06/14 06:00
+PHST- 2011/06/14 06:00 [entrez]
+PHST- 2011/06/15 06:00 [pubmed]
+PHST- 2011/06/28 06:00 [medline]
+AID - 10.1056/NEJMoa1014209 [doi]
+PST - ppublish
+SO  - N Engl J Med. 2011 Jun 16;364(24):2305-15. doi: 10.1056/NEJMoa1014209.
+      Epub 2011 Jun 11.
+
+PMID- 21124942
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20110329
+LR  - 20211020
+IS  - 1553-7358 (Electronic)
+IS  - 1553-734X (Linking)
+VI  - 6
+IP  - 11
+DP  - 2010 Nov 18
+TI  - Network analysis of global influenza spread.
+PG  - e1001005
+LID - 10.1371/journal.pcbi.1001005 [doi]
+AB  - Although vaccines pose the best means of preventing influenza infection,
+      strain selection and optimal implementation remain difficult due to
+      antigenic drift and a lack of understanding global spread. Detecting
+      viral movement by sequence analysis is complicated by skewed geographic
+      and seasonal distributions in viral isolates. We propose a probabilistic
+      method that accounts for sampling bias through spatiotemporal clustering
+      and modeling regional and seasonal transmission as a binomial process.
+      Analysis of H3N2 not only confirmed East-Southeast Asia as a source of
+      new seasonal variants, but also increased the resolution of observed
+      transmission to a country level. H1N1 data revealed similar viral spread
+      from the tropics. Network analysis suggested China and Hong Kong as the
+      origins of new seasonal H3N2 strains and the United States as a region
+      where increased vaccination would maximally disrupt global spread of the
+      virus. These techniques provide a promising methodology for the analysis
+      of any seasonal virus, as well as for the continued surveillance of
+      influenza.
+FAU - Chan, Joseph
+AU  - Chan J
+AD  - Department of Biomedical Informatics and Center for Computational Biology
+      and Bioinformatics, Columbia University College of Physicians and
+      Surgeons, New York, New York, United States of America.
+FAU - Holmes, Antony
+AU  - Holmes A
+FAU - Rabadan, Raul
+AU  - Rabadan R
+LA  - eng
+GR  - R01 LM010140/LM/NLM NIH HHS/United States
+PT  - Journal Article
+DEP - 20101118
+PL  - United States
+TA  - PLoS Comput Biol
+JT  - PLoS computational biology
+JID - 101238922
+RN  - 0 (Hemagglutinin Glycoproteins, Influenza Virus)
+RN  - EC 3.2.1.18 (Neuraminidase)
+SB  - IM
+MH  - Antigenic Variation
+MH  - China/epidemiology
+MH  - Cluster Analysis
+MH  - Computational Biology/*methods
+MH  - Genetic Drift
+MH  - Geography
+MH  - Hemagglutinin Glycoproteins, Influenza Virus/genetics
+MH  - Hong Kong/epidemiology
+MH  - Humans
+MH  - Influenza A Virus, H1N1 Subtype/genetics
+MH  - Influenza A Virus, H3N2 Subtype/genetics
+MH  - Influenza, Human/*epidemiology/transmission/virology
+MH  - *Models, Statistical
+MH  - Neuraminidase/genetics
+MH  - Pandemics/*statistics & numerical data
+MH  - Population Surveillance
+MH  - Seasons
+MH  - United States/epidemiology
+PMC - PMC2987833
+EDAT- 2010/12/03 06:00
+MHDA- 2011/03/30 06:00
+CRDT- 2010/12/03 06:00
+PHST- 2010/06/22 00:00 [received]
+PHST- 2010/10/21 00:00 [accepted]
+PHST- 2010/12/03 06:00 [entrez]
+PHST- 2010/12/03 06:00 [pubmed]
+PHST- 2011/03/30 06:00 [medline]
+AID - 10.1371/journal.pcbi.1001005 [doi]
+PST - epublish
+SO  - PLoS Comput Biol. 2010 Nov 18;6(11):e1001005. doi:
+      10.1371/journal.pcbi.1001005.
+
+PMID- 20844592
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20110218
+LR  - 20211020
+IS  - 1932-6203 (Electronic)
+IS  - 1932-6203 (Linking)
+VI  - 5
+IP  - 9
+DP  - 2010 Sep 9
+TI  - Signs of the 2009 influenza pandemic in the New York-Presbyterian
+      Hospital electronic health records.
+LID - 10.1371/journal.pone.0012658 [doi]
+LID - e12658 [pii]
+AB  - BACKGROUND: In June of 2009, the World Health Organization declared the
+      first influenza pandemic of the 21(st) century, and by July, New York
+      City's New York-Presbyterian Hospital (NYPH) experienced a heavy burden
+      of cases, attributable to a novel strain of the virus (H1N1pdm). METHODS
+      AND RESULTS: We present the signs in the NYPH electronic health records
+      (EHR) that distinguished the 2009 pandemic from previous seasonal
+      influenza outbreaks via various statistical analyses. These signs include
+      (1) an increase in the number of patients diagnosed with influenza, (2) a
+      preponderance of influenza diagnoses outside of the normal flu season,
+      and (3) marked vaccine failure. The NYPH EHR also reveals distinct age
+      distributions of patients affected by seasonal influenza and the pandemic
+      strain, and via available longitudinal data, suggests that the two may be
+      associated with distinct sets of comorbid conditions as well. In
+      particular, we find significantly more pandemic flu patients with
+      diagnoses associated with asthma and underlying lung disease. We further
+      observe that the NYPH EHR is capable of tracking diseases at a resolution
+      as high as particular zip codes in New York City. CONCLUSION: The NYPH
+      EHR permits early detection of pandemic influenza and hypothesis
+      generation via identification of those significantly associated
+      illnesses. As data standards develop and databases expand, EHRs will
+      contribute more and more to disease detection and the discovery of novel
+      disease associations.
+FAU - Khiabanian, Hossein
+AU  - Khiabanian H
+AD  - Department of Biomedical Informatics, Columbia University College of
+      Physicians and Surgeons, New York, New York, United States of America.
+      hossein@c2b2.columbia.edu
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Kelly, Brendan J
+AU  - Kelly BJ
+FAU - Gururaj, Mrinalini
+AU  - Gururaj M
+FAU - Hripcsak, George
+AU  - Hripcsak G
+FAU - Rabadan, Raul
+AU  - Rabadan R
+LA  - eng
+GR  - R01LM006910/LM/NLM NIH HHS/United States
+GR  - R01 LM006910/LM/NLM NIH HHS/United States
+GR  - P01 HK000029/HK/PHITPO CDC HHS/United States
+GR  - U54 AI057158/AI/NIAID NIH HHS/United States
+GR  - 1R01LM010140-01/LM/NLM NIH HHS/United States
+GR  - R01 LM010140/LM/NLM NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+PT  - Research Support, U.S. Gov't, P.H.S.
+DEP - 20100909
+PL  - United States
+TA  - PLoS One
+JT  - PloS one
+JID - 101285081
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Age Distribution
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Child
+MH  - Child, Preschool
+MH  - Electronic Health Records/*statistics & numerical data
+MH  - Female
+MH  - Hospitals/*statistics & numerical data
+MH  - Humans
+MH  - Infant
+MH  - Influenza, Human/*epidemiology
+MH  - Male
+MH  - Middle Aged
+MH  - New York City/epidemiology
+MH  - Pandemics/*statistics & numerical data
+MH  - Seasons
+MH  - Young Adult
+PMC - PMC2936568
+EDAT- 2010/09/17 06:00
+MHDA- 2011/02/22 06:00
+CRDT- 2010/09/17 06:00
+PHST- 2010/02/09 00:00 [received]
+PHST- 2010/08/17 00:00 [accepted]
+PHST- 2010/09/17 06:00 [entrez]
+PHST- 2010/09/17 06:00 [pubmed]
+PHST- 2011/02/22 06:00 [medline]
+AID - 10.1371/journal.pone.0012658 [doi]
+PST - epublish
+SO  - PLoS One. 2010 Sep 9;5(9). doi: 10.1371/journal.pone.0012658.
+
+PMID- 20195493
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20100510
+LR  - 20181113
+IS  - 1553-7358 (Electronic)
+IS  - 1553-734X (Linking)
+VI  - 6
+IP  - 2
+DP  - 2010 Feb 26
+TI  - Spatial simulations of myxobacterial development.
+PG  - e1000686
+LID - 10.1371/journal.pcbi.1000686 [doi]
+AB  - Many bacteria exhibit multicellular behaviour, with individuals within a
+      colony coordinating their actions for communal benefit. One example of
+      complex multicellular phenotypes is myxobacterial fruiting body
+      formation, where thousands of cells aggregate into large three-
+      dimensional structures, within which sporulation occurs. Here we describe
+      a novel theoretical model, which uses Monte Carlo dynamics to simulate
+      and explain multicellular development. The model captures multiple
+      behaviours observed during fruiting, including the spontaneous formation
+      of aggregation centres and the formation and dissolution of fruiting
+      bodies. We show that a small number of physical properties in the model
+      is sufficient to explain the most frequently documented population-level
+      behaviours observed during development in Myxococcus xanthus.
+FAU - Holmes, Antony B
+AU  - Holmes AB
+AD  - MOAC Doctoral Training Centre, University of Warwick, Coventry, United
+      Kingdom. antony.holmes@dbmi.columbia.edu
+FAU - Kalvala, Sara
+AU  - Kalvala S
+FAU - Whitworth, David E
+AU  - Whitworth DE
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20100226
+PL  - United States
+TA  - PLoS Comput Biol
+JT  - PLoS computational biology
+JID - 101238922
+SB  - IM
+MH  - Algorithms
+MH  - Cell Physiological Phenomena/*physiology
+MH  - Computational Biology/methods
+MH  - Computer Simulation
+MH  - Gravitation
+MH  - *Models, Biological
+MH  - Monte Carlo Method
+MH  - Myxococcus xanthus/*physiology
+MH  - Signal Transduction
+MH  - Spores, Bacterial/*growth & development
+MH  - Thermodynamics
+PMC - PMC2829040
+EDAT- 2010/03/03 06:00
+MHDA- 2010/05/11 06:00
+CRDT- 2010/03/03 06:00
+PHST- 2009/07/13 00:00 [received]
+PHST- 2010/01/25 00:00 [accepted]
+PHST- 2010/03/03 06:00 [entrez]
+PHST- 2010/03/03 06:00 [pubmed]
+PHST- 2010/05/11 06:00 [medline]
+AID - 10.1371/journal.pcbi.1000686 [doi]
+PST - epublish
+SO  - PLoS Comput Biol. 2010 Feb 26;6(2):e1000686. doi:
+      10.1371/journal.pcbi.1000686.
+
+PMID- 18178740
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20080701
+LR  - 20181113
+IS  - 1098-5530 (Electronic)
+IS  - 0021-9193 (Linking)
+VI  - 190
+IP  - 6
+DP  - 2008 Mar
+TI  - Phosphate acquisition components of the Myxococcus xanthus Pho regulon
+      are regulated by both phosphate availability and development.
+PG  - 1997-2003
+LID - 10.1128/JB.01781-07 [doi]
+AB  - In many organisms, phosphatase expression and phosphate (P) uptake are
+      coordinately regulated by the Pho regulon. In Myxococcus xanthus P
+      limitation initiates multicellular development, a process associated with
+      changes in phosphatase expression. We sought here to characterize the
+      link between P acquisition and development in this bacterium, an organism
+      capable of preying upon other microorganisms as a sole nutrient source.
+      M. xanthus seems to possess no significant internal P stores, as reducing
+      the P concentration to less than 10 microM retarded growth within one
+      doubling time. Pyrophosphate, polyphosphate, and
+      glyceraldehyde-3-phosphate could support growth as sole P sources,
+      although many other P-containing biomolecules could not (including
+      nucleic acids and phospholipids). Several Pho regulon promoters were
+      found to be highly active during vegetative growth, and P limitation
+      specifically induced pstSCAB, AcPA1, and pho3 promoter activity and
+      repressed pit expression. Enhanced pstSCAB and pho3 promoter activities
+      in a phoP4 mutant (in the presence of high and low concentrations of P)
+      suggested that PhoP4 acts as a repressor of these genes. However, in a
+      phoP4 background, the activities of pstSCAB remained P regulated,
+      suggesting that there is additional regulation by a P-sensitive factor.
+      Initiation of multicellular development caused immediate down-regulation
+      of Pho regulon genes and caused pstSCAB and pho3 promoter activities to
+      become P insensitive. Hence, P acquisition components of the M. xanthus
+      Pho regulon are regulated by both P availability and development, with
+      developmental down-regulation overriding up-regulation by P limitation.
+      These observations suggest that when development is initiated, subsequent
+      changes in P availability become irrelevant to the population, which
+      presumably has sufficient intrinsic P to ensure completion of the
+      developmental program.
+FAU - Whitworth, David E
+AU  - Whitworth DE
+AD  - Institute of Biological Sciences, Cledwyn Building, Aberystwyth
+      University, Ceredigion SY23 3DD, United Kingdom. dew@aber.ac.uk
+FAU - Holmes, Antony B
+AU  - Holmes AB
+FAU - Irvine, Alistair G
+AU  - Irvine AG
+FAU - Hodgson, David A
+AU  - Hodgson DA
+FAU - Scanlan, David J
+AU  - Scanlan DJ
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20080104
+PL  - United States
+TA  - J Bacteriol
+JT  - Journal of bacteriology
+JID - 2985120R
+RN  - 0 (Phosphates)
+SB  - IM
+MH  - Gene Expression Regulation, Bacterial/drug effects
+MH  - Kinetics
+MH  - Myxococcus xanthus/*genetics/growth & development/metabolism
+MH  - Phosphates/*metabolism/pharmacology
+MH  - Plasmids/genetics
+MH  - Promoter Regions, Genetic/genetics
+MH  - Regulon/*genetics
+PMC - PMC2258891
+EDAT- 2008/01/08 09:00
+MHDA- 2008/07/02 09:00
+CRDT- 2008/01/08 09:00
+PHST- 2008/01/08 09:00 [pubmed]
+PHST- 2008/07/02 09:00 [medline]
+PHST- 2008/01/08 09:00 [entrez]
+AID - JB.01781-07 [pii]
+AID - 10.1128/JB.01781-07 [doi]
+PST - ppublish
+SO  - J Bacteriol. 2008 Mar;190(6):1997-2003. doi: 10.1128/JB.01781-07. Epub
+      2008 Jan 4.
+

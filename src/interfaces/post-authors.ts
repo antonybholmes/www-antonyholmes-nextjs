@@ -1,5 +1,5 @@
-import IPostPerson from "./post-person"
+import IPostAuthor from "./post-author"
 
 export default interface IPostAuthors {
-  authors: IPostPerson[]
+  authors: IPostAuthor[]
 }

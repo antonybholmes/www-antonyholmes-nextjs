@@ -1,25 +1,26 @@
+import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
-import cn from "../lib/class-names"
 import BaseRow from "./base-row"
 
 interface IProps extends IChildrenProps, IMouseProps {
+  tag?: string
   tabIndex?: number
 }
 
-export default function HCenterRow({
+const HCenterRow = ({
+  tag = "div",
   className,
-  style,
   tabIndex,
   onClick,
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) {
+}: IProps) => {
   return (
     <BaseRow
+      tag={tag}
       className={cn("justify-center", className)}
-      style={style}
       tabIndex={tabIndex}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
@@ -29,3 +30,5 @@ export default function HCenterRow({
     </BaseRow>
   )
 }
+
+export default HCenterRow

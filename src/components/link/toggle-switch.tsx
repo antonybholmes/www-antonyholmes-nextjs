@@ -1,65 +1,48 @@
-import { gsap } from "gsap"
-import { useEffect, useRef, useState } from "react"
 import cn from "../../lib/class-names"
-import VCenterRow from "../v-center-row"
-import { ICheckBoxProps } from "./check-box"
-
-const ORB_SIZE = "20px"
+import type { ICheckBoxProps } from "./check-box"
 
 export default function ToggleSwitch({
+  index = -1,
   isSelected,
   onClick,
-  children,
   className,
+  children,
 }: ICheckBoxProps) {
-  const [hover, setHover] = useState(false)
-
-  const ref = useRef(null)
-
-  function onMouseEnter() {
-    setHover(true)
-  }
-
-  function onMouseLeave() {
-    setHover(false)
-  }
-
-  useEffect(() => {
-    gsap.timeline().to(ref.current, {
-      duration: 0.3,
-      transform: isSelected ? `translateX(12px)` : `translateX(0)`,
-      ease: "power3.out",
-    })
-  }, [isSelected])
-
   return (
-    <VCenterRow
-      onClick={() => onClick(!isSelected)}
-      className={cn(`w-full cursor-pointer justify-between`, className)}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+    <button
+      onClick={() => onClick(index, !isSelected)}
+      className={cn(
+        "group flex cursor-pointer flex-row items-center justify-between gap-x-4",
+        className
+      )}
     >
-      {children}
+      <div>{children}</div>
 
-      <VCenterRow
-        className={cn(`relative rounded-full`, [
-          isSelected,
-          "bg-blue-500",
-          cn("color-ani", [hover, "bg-gray-300", "bg-gray-200"]),
-        ])}
-        style={{ width: "34px", height: "22px" }}
+      <svg
+        viewBox="0 0 24 16"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-9"
       >
-        <div
-          ref={ref}
-          className="absolute rounded-full bg-white"
-          style={{
-            left: "1px",
-            width: ORB_SIZE,
-            minWidth: ORB_SIZE,
-            height: ORB_SIZE,
-          }}
-        ></div>
-      </VCenterRow>
-    </VCenterRow>
+        <rect
+          width="24"
+          height="16"
+          rx="8"
+          className={cn("transition-ani transition-colors", [
+            isSelected,
+            "fill-blue-600",
+            "fill-slate-200 group-hover:fill-slate-300",
+          ])}
+        />
+        <circle
+          cx="8"
+          cy="8"
+          r="7"
+          className={cn("transition-ani fill-white transition-transform", [
+            isSelected,
+            "translate-x-toggle",
+          ])}
+        />
+      </svg>
+    </button>
   )
 }

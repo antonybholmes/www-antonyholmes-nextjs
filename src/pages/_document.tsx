@@ -18,6 +18,8 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+
+        <script src="/themes/prism.js" />
       </body>
     </Html>
   )

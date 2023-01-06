@@ -9,17 +9,11 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: [
-        "Plus Jakarta Sans",
-        "Noto Sans",
-        "Figtree",
-        "Inter",
-        "Helvetica",
-        "Arial",
-      ],
+      sans: ["Plus Jakarta Sans", "Helvetica", "Arial"],
     },
     extend: {
       width: {
+        4.5: "1.125rem",
         "1/20": "5%",
         "9/20": "45%",
         "5/100": "5%",
@@ -44,6 +38,8 @@ module.exports = {
         15: "3.75rem",
         100: "25rem",
         120: "30rem",
+        140: "35rem",
+        150: "37.5rem",
         160: "40rem",
       },
       minWidth: {
@@ -72,6 +68,7 @@ module.exports = {
         14: "3.5rem",
         15: "3.75rem",
         16: "4rem",
+        64: "16rem",
         "1/4": "25%",
         "1/2": "50%",
         "2/3": "66.666667%",
@@ -144,7 +141,8 @@ module.exports = {
         "apple-gray": "#f5f5f7",
       },
       boxShadow: {
-        box: "0 15px 25px -5px rgb(0 0 0 / 0.5)",
+        box: "0 0 16px 4px rgba(0, 0, 0, 0.1)",
+        box2: "0 0 16px 4px rgba(0, 0, 0, 0.15)",
       },
       borderWidth: {
         3: "3px",
@@ -155,14 +153,37 @@ module.exports = {
       },
       gridTemplateColumns: {
         // Simple 20 column grid
+        16: "repeat(16, minmax(0, 1fr))",
         20: "repeat(20, minmax(0, 1fr))",
       },
       gridColumn: {
+        "span-13": "span 13 / span 13",
+        "span-14": "span 14 / span 14",
+        "span-15": "span 14 / span 15",
         "span-18": "span 18 / span 18",
       },
       strokeWidth: {
         2: "2px",
+        3: "3px",
         4: "4px",
+      },
+      transitionProperty: {
+        filter: "filter",
+      },
+      margin: {
+        18: "4.5rem",
+      },
+      translate: {
+        toggle: "8px",
+      },
+      keyframes: {
+        "header-link": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1, width: "calc(100% - 2rem)" },
+        },
+      },
+      animation: {
+        "header-link": "header-link 200ms ease-in-out 200ms forwards",
       },
     },
   },

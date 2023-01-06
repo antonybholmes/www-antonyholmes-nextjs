@@ -1,8 +1,9 @@
-import IAriaProps from "../../interfaces/aria-props"
-import IChildrenProps from "../../interfaces/children-props"
-import IMouseProps from "../../interfaces/mouse-props"
+import useMouseUpListener from "../../hooks/use-mouseup-listener"
+import type IAriaProps from "../../interfaces/aria-props"
+import type IChildrenProps from "../../interfaces/children-props"
+import type IMouseProps from "../../interfaces/mouse-props"
 import cn from "../../lib/class-names"
-import { BUTTON_CLASSES } from "./button-link"
+import { BUTTON_CLS } from "./button-link"
 
 export interface IButtonProps extends IChildrenProps, IAriaProps, IMouseProps {}
 
@@ -17,15 +18,16 @@ export default function Button({
   style,
   children,
 }: IButtonProps) {
+  useMouseUpListener(onMouseUp)
+
   return (
     <button
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
       aria-label={ariaLabel}
-      className={cn(BUTTON_CLASSES, className)}
+      className={cn(BUTTON_CLS, className)}
       style={style}
     >
       {children}

@@ -1,7 +1,4 @@
-import IBasePost from "./base-post"
+import IPostHtml from "./post-html"
+import IPreviewPost from "./preview-post"
 
-interface IPost extends IBasePost {
-  html: string
-}
-
-export default IPost
+export default interface IPost extends IPreviewPost, IPostHtml {}

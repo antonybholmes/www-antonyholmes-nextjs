@@ -1,43 +1,43 @@
 import { useState } from "react"
 import RadioButton from "./radio-button"
-import * as React from "react"
 
-type RadioButtonGroupProps = {
+interface RadioButtonGroupProps {
   items: string[]
   selected: string
-  onChange: any
+  onClick: (index: number) => void
   className?: string
 }
 
-function RadioButtonGroup({
+export default function RadioButtonGroup({
   items,
   selected,
-  onChange,
+  onClick,
   className,
 }: RadioButtonGroupProps) {
   const [index, setIndex] = useState(selected)
 
-  function handleChange(text: string, index: number) {
-    setIndex(text)
+  function _onClick(index: number) {
+    setIndex(items[index])
 
-    onChange(index)
+    onClick(index)
   }
 
   return (
     <ul className={className}>
       {items.map((item: string, index: number) => {
         return (
-          <RadioButton
-            key={index}
-            text={item}
-            index={index}
-            selected={item === selected}
-            onChange={handleChange}
-          />
+          <li key={index}>
+            <RadioButton
+              key={index}
+              index={index}
+              selected={item === selected}
+              onClick={_onClick}
+            >
+              {item}
+            </RadioButton>
+          </li>
         )
       })}
     </ul>
   )
 }
-
-export default RadioButtonGroup

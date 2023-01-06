@@ -1,5 +1,5 @@
 import cn from "../../lib/class-names"
-import IUnderlineLinkProps from "../../interfaces/underline-link-props"
+import type IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import BaseLink from "./base-link"
 
 export default function ToBlackLink({
@@ -12,7 +12,10 @@ export default function ToBlackLink({
     <BaseLink
       href={href}
       ariaLabel={ariaLabel}
-      className={cn(`color-ani text-blue-600 hover:text-gray-900`, className)}
+      className={cn(
+        `transition-ani fill-blue-600 text-blue-600 transition-colors hover:fill-slate-900 hover:text-slate-900`,
+        className
+      )}
     >
       {children}
     </BaseLink>

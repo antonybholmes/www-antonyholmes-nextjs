@@ -1,22 +1,26 @@
-import IUnderlineLinkProps from "../../interfaces/underline-link-props"
+import type IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import cn from "../../lib/class-names"
-import IndexLink from "./index-link"
+import ArrowLink from "./arrow-link"
 
-export default function BlueIndexLink({
+export interface IIndexLinkProps extends IUnderlineLinkProps {
+  text: string
+}
+
+export default function BlueArrowLink({
+  text,
   href,
   ariaLabel,
   underline = false,
   className,
-  children,
-}: IUnderlineLinkProps) {
+}: IIndexLinkProps) {
   return (
-    <IndexLink
+    <ArrowLink
       href={href}
       ariaLabel={ariaLabel}
       underline={underline}
-      className={cn("stroke-blue-500 text-blue-600", className)}
+      className={cn("stroke-blue-600 text-blue-600", className)}
     >
-      {children}
-    </IndexLink>
+      {text}
+    </ArrowLink>
   )
 }

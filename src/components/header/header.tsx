@@ -1,26 +1,22 @@
-import { useEffect, useState } from "react"
+//import Search from '../search/search'
+import { useState } from "react"
+import useScrollListener from "../../hooks/use-scroll-listener"
 import useWindowResize from "../../hooks/use-window-resize"
-import IHeaderProps from "../../interfaces/header-props"
 import cn from "../../lib/class-names"
+import IHeaderProps from "./header-props"
 import LargeHeader from "./large-header"
 import MenuOverlay from "./menu-overlay"
 import SmallHeader from "./small-header"
 
-function Header({ title, tab, className, children }: IHeaderProps) {
+function Header({ title, tab, headerMode = "light", className }: IHeaderProps) {
   const [scrollY, setScrollY] = useState(0)
   const [showMenu, setShowMenu] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = (event: any) => {
-      setScrollY(window.scrollY)
-    }
+  const handleScroll = () => {
+    setScrollY(window.scrollY)
+  }
 
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  useScrollListener(handleScroll)
 
   useWindowResize(({ width, height }) => {
     // If larger than medium, auto close menu
@@ -42,30 +38,35 @@ function Header({ title, tab, className, children }: IHeaderProps) {
           showMenu={showMenu}
           onClick={onClick}
         />
-        // <div>working</div>
       )}
 
       <header
         className={cn(
-          "transition-color sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur duration-300",
-          [scrollY > 10, "border-gray-200", "border-transparent"],
+          "transition-color fixed top-0 z-50 w-full border-b backdrop-blur duration-300",
+          [headerMode === "light", "bg-white/80", "bg-slate-800/80"],
+          [
+            scrollY > 10,
+            [headerMode === "light", "border-slate-200", "border-white/20"],
+            "border-transparent",
+          ],
           className
         )}
       >
         <SmallHeader
           title={title}
           tab={tab}
-          onClick={onClick}
           showMenu={showMenu}
-        >
-          {children}
-        </SmallHeader>
+          headerMode={headerMode}
+          onClick={onClick}
+        />
 
-        <LargeHeader title={title} tab={tab}>
-          {children}
-        </LargeHeader>
-
-        {/* {children && <div>{children}</div>} */}
+        <LargeHeader
+          title={title}
+          tab={tab}
+          showMenu={showMenu}
+          headerMode={headerMode}
+          scrollY={scrollY}
+        />
       </header>
     </>
   )

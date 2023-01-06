@@ -8,7 +8,7 @@ let dir = "./public/assets/images/people"
 
 let files = fs.readdirSync(dir)
 
-fs.ensureDir(path.join(dir, "imgopt"))
+fs.ensureDir(path.join(dir, "opt"))
 
 // files object contains all files names
 // log them on console
@@ -22,22 +22,24 @@ files
     const name = path.parse(file).name
 
     sizes.forEach(size => {
-      out = `${dir}/imgopt/${name}-${size}.webp`
+      out = `${dir}/opt/${name}-${size}.webp`
 
-      console.log(out)
-      sharp(f)
-        .resize((width = size))
-        .toFile(out)
+      if (!fs.existsSync(out)) {
+        console.log(out)
+        sharp(f)
+          .resize((width = size))
+          .toFile(out)
+      }
     })
   })
 
 sizes = [128, 256, 512, 1024, 2048]
 
-dir = "./public/assets/images/header"
+dir = "./public/assets/images/posts"
 
 files = fs.readdirSync(dir)
 
-fs.ensureDir(path.join(dir, "imgopt"))
+fs.ensureDir(path.join(dir, "opt"))
 
 // files object contains all files names
 // log them on console
@@ -51,38 +53,13 @@ files
     const name = path.parse(file).name
 
     sizes.forEach(size => {
-      out = `${dir}/imgopt/${name}-${size}.webp`
+      out = `${dir}/opt/${name}-${size}.webp`
 
-      console.log(out)
-      sharp(f)
-        .resize((width = size))
-        .toFile(out)
-    })
-  })
-
-dir = "./public/assets/images"
-
-files = fs.readdirSync(dir)
-
-fs.ensureDir(path.join(dir, "imgopt"))
-
-// files object contains all files names
-// log them on console
-files
-  .filter(file => {
-    return file.includes("webp")
-  })
-  .forEach(file => {
-    const f = `${dir}/${file}`
-
-    const name = path.parse(file).name
-
-    sizes.forEach(size => {
-      out = `${dir}/imgopt/${name}-${size}.webp`
-
-      console.log(out)
-      sharp(f)
-        .resize((width = size))
-        .toFile(out)
+      if (!fs.existsSync(out)) {
+        console.log(out)
+        sharp(f)
+          .resize((width = size))
+          .toFile(out)
+      }
     })
   })

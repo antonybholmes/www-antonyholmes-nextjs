@@ -1,4 +1,4 @@
-import ILinkProps from "../../interfaces/link-props"
+import type ILinkProps from "../../interfaces/link-props"
 import BaseLink from "./base-link"
 
 interface IProps extends ILinkProps {

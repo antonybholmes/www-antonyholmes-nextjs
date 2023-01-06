@@ -1,5 +1,5 @@
 import cn from "../../lib/class-names"
-import { ROUNDED_BUTTON_CLASSES } from "./rounded-button-link"
+import { ROUNDED_BUTTON_CLS } from "./rounded-button-link"
 import Button, { IButtonProps } from "./button"
 
 export default function RoundedButton({
@@ -21,7 +21,7 @@ export default function RoundedButton({
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
       ariaLabel={ariaLabel}
-      className={cn(ROUNDED_BUTTON_CLASSES, className)}
+      className={cn(ROUNDED_BUTTON_CLS, className)}
       style={style}
     >
       {children}
@@ -29,4 +29,4 @@ export default function RoundedButton({
   )
 }
 
-//font-medium bg-blue-600 hover:bg-blue-500 text-white shadow-md rounded px-5 py-3 trans-ani"
+//font-bold bg-blue-600 hover:bg-blue-600 text-white shadow-md rounded px-5 py-3 trans-ani"

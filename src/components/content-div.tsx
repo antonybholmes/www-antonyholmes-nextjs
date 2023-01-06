@@ -1,5 +1,6 @@
-import IChildProps from "../interfaces/child-props"
+import type IChildProps from "../interfaces/child-props"
 import cn from "../lib/class-names"
+import HCenterRow from "./h-center-row"
 
 export default function ContentDiv({
   className,
@@ -7,13 +8,10 @@ export default function ContentDiv({
   children,
 }: IChildProps) {
   return (
-    <div
-      className={cn("grid w-full grid-cols-12 lg:grid-cols-8", className)}
-      style={style}
-    >
+    <HCenterRow className={cn("px-4", className)} style={style}>
       <div>{children[0]}</div>
-      <div className="col-span-10 lg:col-span-6">{children[1]}</div>
+      <div className="w-full lg:w-80/100 2xl:w-70/100">{children[1]}</div>
       <div>{children[2]}</div>
-    </div>
+    </HCenterRow>
   )
 }

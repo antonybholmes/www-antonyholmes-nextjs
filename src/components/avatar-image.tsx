@@ -1,11 +1,12 @@
-import IClassProps from "../interfaces/class-props"
-import IPerson from "../interfaces/person"
 import cn from "../lib/class-names"
 import { getUrlFriendlyTag } from "../lib/tags"
+import IClassProps from "../interfaces/class-props"
+import IPostAuthor from "../interfaces/post-author"
 import BaseImage from "./base-image"
 
 export interface IAvatarProps extends IClassProps {
-  author: IPerson
+  author: IPostAuthor
+  lazy?: boolean
 }
 
 interface IProps extends IAvatarProps {
@@ -15,25 +16,16 @@ interface IProps extends IAvatarProps {
   root?: string
 }
 
-const AvatarImage = ({
-  author,
-  src,
-  size = [640, 640],
-  root = "/authors",
-  className,
-}: IProps) => {
+const AvatarImage = ({ author, src, size = [320, 320], className }: IProps) => {
   if (src === undefined) {
-    src = `/assets/images/people/${getUrlFriendlyTag(
-      author.frontmatter.name
-    )}.webp`
+    src = getUrlFriendlyTag(author.frontmatter.name)
   }
 
   return (
     <BaseImage
-      src={src}
+      src={`/assets/images/people/${src}.webp`}
       alt={`Picture of ${author.frontmatter.name}`}
       size={size}
-      root={root}
       className={cn("rounded-full", className)}
     />
   )

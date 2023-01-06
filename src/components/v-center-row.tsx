@@ -1,28 +1,28 @@
-import { KeyboardEventHandler } from "react"
+import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
-import cn from "../lib/class-names"
 import BaseRow from "./base-row"
 
 interface IProps extends IChildrenProps, IMouseProps {
+  tag?: string
   tabIndex?: number
-  onKeyDown?: KeyboardEventHandler
+  onKeyDown?: any
 }
 
-export default function VCenterRow({
+const VCenterRow = ({
+  tag = "div",
+  className = "",
   tabIndex,
   onClick,
   onKeyDown,
   onMouseEnter,
   onMouseLeave,
-  className,
-  style,
   children,
-}: IProps) {
+}: IProps) => {
   return (
     <BaseRow
+      tag={tag}
       className={cn("items-center", className)}
-      style={style}
       tabIndex={tabIndex}
       onClick={onClick}
       onKeyDown={onKeyDown}
@@ -33,3 +33,5 @@ export default function VCenterRow({
     </BaseRow>
   )
 }
+
+export default VCenterRow

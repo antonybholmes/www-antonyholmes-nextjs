@@ -1,7 +1,5 @@
 import IBasePost from "./base-post"
 
-interface IPostMap {
+export default interface IPostMap {
   [key: string]: IBasePost
 }
-
-export default IPostMap

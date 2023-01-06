@@ -1,5 +1,5 @@
-import { MouseEventHandler, useState } from "react"
-import ILink from "../../interfaces/link"
+import { useState } from "react"
+import type ILink from "../../interfaces/link"
 import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
 
@@ -22,7 +22,7 @@ interface IProps {
   link: ILink
   headerMode?: string
   selected: boolean
-  onClick: MouseEventHandler
+  onClick: any
 }
 
 export default function MenuLink({
@@ -61,17 +61,21 @@ export default function MenuLink({
         href={link.url}
         ariaLabel={`Visit ${link.name}`}
         className={cn(
-          "color-ani flex flex-row items-center gap-x-2 overflow-hidden rounded-lg px-4 py-3 outline-none",
+          "transition-ani flex flex-row items-center gap-x-2 overflow-hidden rounded-lg px-4 py-3 outline-none transition-colors",
           [
             selected,
             "bg-blue-100/80 text-blue-600",
-            [hover || hasFocus, "bg-gray-100 text-gray-900", "text-gray-600"],
+            [
+              hover || hasFocus,
+              "bg-slate-100 text-slate-900",
+              "text-slate-600",
+            ],
           ]
         )}
       >
         {/* <HCenterRow
           className={cn(
-            `h-8 min-w-8 items-center overflow-hidden rounded-md border border-gray-200 bg-white transition-all duration-300`
+            `h-8 min-w-8 items-center overflow-hidden rounded-md border border-slate-200 bg-white transition-all duration-300`
           )}
         >
           {getIcon(link.name)}

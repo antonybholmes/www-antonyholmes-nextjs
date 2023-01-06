@@ -1,14 +1,13 @@
-import IHoverProps from "../../interfaces/hover-props"
+import cn from "../../lib/class-names"
 import ILinkProps from "../../interfaces/link-props"
 import IMouseProps from "../../interfaces/mouse-props"
-import cn from "../../lib/class-names"
 
-interface IProps extends ILinkProps, IMouseProps, IHoverProps {
+interface IProps extends ILinkProps, IMouseProps {
   target?: string
   underline?: boolean
 }
 
-export default function ExtLink({
+const ExtLink = ({
   href,
   ariaLabel,
   target = "_blank",
@@ -18,8 +17,8 @@ export default function ExtLink({
   onMouseLeave,
   className,
   children,
-}: IProps) {
-  if (!children) {
+}: IProps) => {
+  if (children === undefined || children === null) {
     children = <>{href}</>
   }
 
@@ -37,3 +36,5 @@ export default function ExtLink({
     </a>
   )
 }
+
+export default ExtLink

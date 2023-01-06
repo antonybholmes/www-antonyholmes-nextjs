@@ -1,22 +1,22 @@
-import IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import cn from "../../lib/class-names"
+import IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import BaseLink from "./base-link"
 
-export default function WhiteLink({
+const WhiteLink = ({
   href,
   ariaLabel,
   className,
-  underline = true,
+  underline,
   children,
-}: IUnderlineLinkProps) {
-  return (
-    <BaseLink
-      href={href}
-      ariaLabel={ariaLabel}
-      className={cn("text-white", className)}
-      underline={underline}
-    >
-      {children}
-    </BaseLink>
-  )
-}
+}: IUnderlineLinkProps) => (
+  <BaseLink
+    href={href}
+    ariaLabel={ariaLabel}
+    className={cn("hover-link hover-link-white", className)}
+    underline={underline}
+  >
+    {children}
+  </BaseLink>
+)
+
+export default WhiteLink

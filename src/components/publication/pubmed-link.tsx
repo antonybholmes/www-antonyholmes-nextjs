@@ -1,7 +1,8 @@
 import { useState } from "react"
 import cn from "../../lib/class-names"
-import IPerson from "../../interfaces/person"
+import type IPerson from "../../interfaces/person"
 import BaseLink from "../link/base-link"
+import PubMedIcon from "../../icons/pubmed"
 //import SecondaryButtonLink from "../link/secondary-button-link"
 
 // `https://pubmed.ncbi.nlm.nih.gov/?term=${person.lastName}+${person.firstName}%5BAuthor%5D&sort=pubdate`
@@ -36,21 +37,11 @@ export default function PubMedLink({ person }: IPubMedLinkProps) {
   return (
     <BaseLink
       href={url}
-      className={cn("flex flex-row items-center gap-x-3")}
+      className="transition-ani flex flex-row items-center gap-x-3 opacity-80 transition-opacity hover:opacity-100"
       ariaLabel="View PubMed article"
       onHover={onHover}
     >
-      <img
-        src="/assets/svg/pubmed-logo-blue.svg"
-        alt="View publications on PubMed"
-        className={cn("w-40 transition-opacity duration-200", [
-          _hover,
-          "opacity-100",
-          "opacity-80",
-        ])}
-        width="249"
-        height="69"
-      />
+      <PubMedIcon className="w-40" />
     </BaseLink>
   )
 }

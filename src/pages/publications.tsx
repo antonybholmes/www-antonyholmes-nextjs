@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 
-import SearchBar from "../components/search/searchbar"
 import getBooleanSearch from "../lib/boolean-search"
-import getJournalPublications from "../lib/journal-publications"
-import sortPublications from "../lib/sort-publications"
+import getJournalPublications from "../lib/pub/journal-publications"
+import sortPublications from "../lib/pub/sort-publications"
 import getTopAuthors from "../lib/top-authors"
 import getTopJournals from "../lib/top-journals"
+import SearchBar from "../components/search/searchbar"
 
-//import BlueButton from "../components/link/blue-button"
+//import BlueButton from "../link/blue-button"
 import JournalFilter from "../components/publication/journal-filter"
 import Publications from "../components/publication/publications"
 import SortOrder from "../components/publication/sortby"
@@ -17,29 +17,27 @@ import BaseRow from "../components/base-row"
 
 import VCenterRow from "../components/v-center-row"
 
-import ContentDiv from "../components/content-div"
+import getAuthorPublications from "../lib/pub/author-publications"
 import HCenterRow from "../components/h-center-row"
 import Pagination from "../components/pagination"
 import AuthorFilter from "../components/publication/author-filter"
-import BaseLayout from "../layouts/base-layout"
-import getAuthorPublications from "../lib/author-publications"
 
-import axios from "axios"
-import BaseCol from "../components/base-col"
-import OutlinePillButton from "../components/link/outline-pill-button"
-import PubRangeSlider from "../components/publication/pub-range-slider"
+import { RECORDS_PER_PAGE, TEXT_SHOW_MORE } from "../constants"
 import SortIcon from "../icons/sort"
 import ThreeQuarterLayout from "../layouts/three-quarter-layout"
-import cn from "../lib/class-names"
-import pubYearCount from "../lib/pub-year-count"
+import pubYearCount from "../lib/pub/pub-year-count"
+import { getShortName } from "../lib/text"
+import BaseCol from "../components/base-col"
+import BlueRoundedButton from "../components/link/blue-rounded-button"
+import ToggleSwitch from "../components/link/toggle-switch"
+import PubRangeSlider from "../components/publication/pub-range-slider"
+import { getSelectedPublications } from "../lib/api"
 
 const EMPTY_QUERY = ""
 
-const RECORDS_PER_PAGE = 25
-
 //const RECORDS_PER_PAGE = [25, 50, 100, 200, 500, 1000]
 
-export const PUB_API_URL = "/api/publications/antony-holmes.json"
+export const PUB_API_URL = "/api/publications/lab.json"
 
 function searchAuthors(q: string, publication: any) {
   for (let author of publication.authorList) {
@@ -78,10 +76,10 @@ export function search(query: any, publications: any[]): any[] {
       default:
         found = publication.pmid.toLowerCase().includes(ql)
 
-        // if (!found) {
-        //   // try pmcid
-        //   found = publication.pmcid.toLowerCase().includes(ql)
-        // }
+        if (!found) {
+          // try pmcid
+          found = publication.pmcid.toLowerCase().includes(ql)
+        }
 
         if (!found) {
           // try journal
@@ -190,7 +188,11 @@ function booleanSearchOr(s1: any, s2: any): any {
   return ret
 }
 
-function results(page: number, filteredPublications: any[]) {
+function results(search: string, page: number, filteredPublications: any[]) {
+  if (filteredPublications.length === 0) {
+    return `Your search for ${getShortName(search)} retrieved no results`
+  }
+
   const x = page + 1
   const y = filteredPublications.length
   const suffix = filteredPublications.length !== 1 ? "results" : "result"
@@ -202,12 +204,12 @@ function results(page: number, filteredPublications: any[]) {
   }
 }
 
-// interface IProps {
-//   allPublications: any[]
-// }
+interface IProps {
+  publications: any[]
+}
 
-export default function Page() {
-  const [publications, setPublications] = useState<any[]>([])
+export default function Page({ publications }: IProps) {
+  //const [publications, setPublications] = useState<any[]>([])
 
   const [journals, setJournals] = useState<any[]>([])
 
@@ -224,7 +226,7 @@ export default function Page() {
     new Set<string>()
   )
 
-  const [showAbstract, setShowAbstracts] = useState(false)
+  const [showAbstract, setShowAbstract] = useState(false)
   const [expandAll, setExpandAll] = useState(false)
   //const [instituteOnly, setInstituteOnly] = useState(true)
   const [firstAuthorOnly, setFirstAuthorOnly] = useState(true) //id === "all")
@@ -242,7 +244,8 @@ export default function Page() {
 
   const [pagePublications, setPagePublications] = useState<any[]>([])
 
-  const [page, setPage] = useState(-1)
+  const [pageStart, setPageStart] = useState(-1)
+  const [pageEnd, setPageEnd] = useState(-1)
   const [pages, setPages] = useState(-1)
 
   const [yearData, setYearData] = useState<any[]>([])
@@ -251,26 +254,28 @@ export default function Page() {
 
   const [recordsPerPage, setRecordsPerPage] = useState(RECORDS_PER_PAGE)
 
-  function fetchData() {
-    axios
-      .get(PUB_API_URL)
-      .then(res => {
-        setPublications(res.data)
-      })
-      .catch(err => {
-        // do nothing console.log(err)
-      })
-  }
+  const [showAll, setShowAll] = useState(false)
 
-  useEffect(() => {
-    fetchData()
-    //setPublications(allPublications)
-  }, [])
+  // function fetchData() {
+  //   axios
+  //     .get(PUB_API_URL)
+  //     .then(res => {
+  //       setPublications(res.data)
+  //     })
+  //     .catch(err => {
+  //       // do nothing console.log(err)
+  //     })
+  // }
+
+  // useEffect(() => {
+  //   fetchData()
+  //   //setPublications(allPublications)
+  // }, [])
 
   useEffect(() => {
     setAuthors(getTopAuthors(publications))
     setJournals(getTopJournals(publications))
-  }, [publications])
+  }, [])
 
   useEffect(() => {
     //setPage(0)
@@ -300,9 +305,12 @@ export default function Page() {
           )
         })
       )
+    } else {
+      setYearFilteredPublications([])
     }
 
-    setPage(0)
+    setPageStart(0)
+    setPageEnd(0)
   }, [year1, year2])
 
   useEffect(() => {
@@ -323,11 +331,12 @@ export default function Page() {
 
   useEffect(() => {
     updatePagePublications()
-  }, [page])
+  }, [pageStart, pageEnd])
 
   const updatePagePublications = () => {
-    const s = page * recordsPerPage
-    setPagePublications(sortedPublications.slice(s, s + recordsPerPage))
+    const s1 = pageStart * recordsPerPage
+    const s2 = pageEnd * recordsPerPage
+    setPagePublications(sortedPublications.slice(s1, s2 + recordsPerPage))
   }
 
   // useEffect(() => {
@@ -349,22 +358,6 @@ export default function Page() {
       updateFilteredPublications(publications)
     }
   }, [query, firstAuthorOnly, selectedJournals, selectedAuthors, publications])
-
-  useEffect(() => {
-    if (query !== "") {
-      updateFilteredPublications(
-        getBooleanSearch(
-          query,
-          publications,
-          search,
-          booleanSearchAnd,
-          booleanSearchOr
-        )
-      )
-    } else {
-      updateFilteredPublications(publications)
-    }
-  }, [sortOrder, descending])
 
   // // If pubs are populated or user applies a filter, update
   // useEffect(() => {
@@ -409,8 +402,8 @@ export default function Page() {
     setSortOrder(value)
   }
 
-  function onShowAbstractsChange(selected: boolean) {
-    setShowAbstracts(selected)
+  function onShowAbstractChange(selected: boolean) {
+    setShowAbstract(selected)
   }
 
   function onFirstAuthorOnlyChange(selected: boolean) {
@@ -418,7 +411,12 @@ export default function Page() {
   }
 
   function onPageChanged(page: number) {
-    setPage(page - 1)
+    setPageStart(page - 1)
+    setPageEnd(page - 1)
+  }
+
+  function showMoreOnClick() {
+    setPageEnd(Math.min(pageEnd + 1, pages - 1))
   }
 
   function onJournalClick(journal: string, selected: boolean) {
@@ -472,124 +470,126 @@ export default function Page() {
   // )
 
   return (
-    <BaseLayout
+    <ThreeQuarterLayout
       title="Publications"
-      showTitle={false}
       headerChildren={
         <SearchBar
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="grow"
+          className="hidden grow lg:flex"
         />
       }
+      crumbs={[["Publications", "/publications"]]}
+      className="mb-32 gap-x-16"
     >
-      <ContentDiv>
-        <></>
-        <>
-          {/* <SearchBar
-            onSearch={onSearch}
-            placeholder="Search publications..."
-            text={query}
-            className="mx-auto mt-4 w-full md:w-80/100 lg:w-1/2"
-          /> */}
+      <div>
+        <VCenterRow className="justify-between">
+          <span className="text-sm text-slate-500">
+            {results(query, pageStart, yearFilteredPublications)}
+          </span>
+          <ToggleSwitch
+            onClick={() => setShowAbstract(!showAbstract)}
+            isSelected={showAbstract}
+            className="text-sm"
+          >
+            Show Abstracts
+          </ToggleSwitch>
+        </VCenterRow>
 
-          <ThreeQuarterLayout className="mt-8 gap-x-16">
+        <Publications
+          publications={pagePublications}
+          showAbstract={showAbstract}
+          showCount={true}
+          className="mt-8"
+          page={pageStart}
+          pageBreak={recordsPerPage}
+        />
+
+        {pageStart < pages - 1 && (
+          <HCenterRow className="mt-8">
             <div>
-              <p className="text-sm text-gray-700">
-                {results(page, yearFilteredPublications)}
-              </p>
-
-              <Publications
-                publications={pagePublications}
-                showAbstract={showAbstract}
-                showCount={true}
-                showMoreButton={false}
-              />
-
-              {yearFilteredPublications.length > recordsPerPage && (
-                <HCenterRow className="mt-16">
-                  <Pagination
-                    page={page + 1}
-                    pages={pages}
-                    onClick={onPageChanged}
-                  />
-                </HCenterRow>
-              )}
+              <BlueRoundedButton
+                ariaLabel={TEXT_SHOW_MORE}
+                onClick={showMoreOnClick}
+                className="px-4 py-2"
+              >
+                {TEXT_SHOW_MORE}
+              </BlueRoundedButton>
             </div>
+          </HCenterRow>
+        )}
 
-            <BaseCol className="gap-y-8 text-sm">
-              {/* <ToggleSwitch
+        {yearFilteredPublications.length > recordsPerPage && (
+          <HCenterRow className="mt-16">
+            <Pagination
+              page={pageEnd + 1}
+              pages={pages}
+              onClick={onPageChanged}
+            />
+          </HCenterRow>
+        )}
+      </div>
+
+      <BaseCol className="gap-y-6 text-sm">
+        {/* <ToggleSwitch
                 isSelected={showAbstract}
                 onClick={onShowAbstractsChange}
               >
                 Show Abstracts
               </ToggleSwitch> */}
 
-              <PubRangeSlider
-                data={yearData}
-                r1={year1}
-                setYear1={setYear1}
-                r2={year2}
-                setYear2={setYear2}
-              />
+        {yearData.length > 0 && (
+          <PubRangeSlider
+            data={yearData}
+            r1={year1}
+            setYear1={setYear1}
+            r2={year2}
+            setYear2={setYear2}
+          />
+        )}
 
-              <div className="border-t border-gray-300 pt-4">
-                <VCenterRow className="justify-between">
-                  <h2 className="font-medium">Sort</h2>
-                  <BaseRow className="overflow-hidden">
-                    <OutlinePillButton
-                      ariaLabel="Sort ascending"
-                      onClick={() => setDescending(!descending)}
-                      className="color-ani flex h-6 w-6 flex-row items-center justify-center border-transparent text-gray-900 hover:border-gray-200"
-                    >
-                      <SortIcon
-                        className={cn("rotate-ani w-4", [
-                          descending,
-                          "rotate-180",
-                        ])}
-                      />
-                    </OutlinePillButton>
-                  </BaseRow>
-                </VCenterRow>
+        <div>
+          <VCenterRow className="justify-between">
+            <h2>Sort</h2>
+            <BaseRow className="overflow-hidden">
+              <button
+                aria-label="Sort ascending"
+                onClick={() => setDescending(!descending)}
+                className="flex h-6 w-6 flex-row items-center justify-center  transition-colors "
+              >
+                <SortIcon className="w-4" descending={descending} />
+              </button>
+            </BaseRow>
+          </VCenterRow>
 
-                <SortOrder onChange={onSortChange} selected={sortOrder} />
-              </div>
+          <SortOrder onChange={onSortChange} selected={sortOrder} />
+        </div>
 
-              <JournalFilter
-                journals={journals}
-                selected={selectedJournals}
-                onClick={onJournalClick}
-                max={8}
-              />
+        <JournalFilter
+          journals={journals}
+          selected={selectedJournals}
+          onClick={onJournalClick}
+          max={8}
+        />
 
-              <AuthorFilter
-                authors={authors.slice(0, 20)}
-                selected={selectedAuthors}
-                onClick={onAuthorClick}
-                max={8}
-              />
-            </BaseCol>
-          </ThreeQuarterLayout>
-        </>
-        <></>
-      </ContentDiv>
-    </BaseLayout>
+        <AuthorFilter
+          authors={authors.slice(0, 20)}
+          selected={selectedAuthors}
+          onClick={onAuthorClick}
+          max={8}
+        />
+      </BaseCol>
+    </ThreeQuarterLayout>
   )
 }
 
-// export async function getStaticProps() {
-//   const file = join(PUBLICATIONS_DIR, `lab.json`)
+export async function getStaticProps() {
+  const publications = getSelectedPublications("antony-holmes")
 
-//   let allPublications = []
-
-//   if (existsSync(file)) {
-//     allPublications = readJsonSync(file)
-//   }
-
-//   return {
-//     props: {
-//       allPublications,
-//     },
-//   }
-// }
+  return {
+    props: {
+      publications,
+    },
+  }
+}

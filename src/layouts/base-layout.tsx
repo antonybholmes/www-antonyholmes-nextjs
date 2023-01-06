@@ -1,8 +1,9 @@
 import { ReactNode } from "react"
-import Footer from "../components/footer/footer"
+import Footer from "../components/footer"
 import Header from "../components/header/header"
 import Meta from "../components/meta"
 import Seo from "../components/seo"
+
 import ILayoutProps from "../interfaces/layout-props"
 import cn from "../lib/class-names"
 
@@ -16,6 +17,7 @@ export default function BaseLayout({
   tab,
   className,
   footerClassName,
+  headerMode,
   headerChildren,
   children,
 }: IProps) {
@@ -23,12 +25,12 @@ export default function BaseLayout({
     <>
       <Meta />
       <Seo title={title} />
-      <Header title={title} tab={tab}>
+      <Header title={title} tab={tab} headerMode={headerMode}>
         {headerChildren}
       </Header>
 
       <main className={cn("min-h-screen w-full", className)}>{children}</main>
-      <Footer className={footerClassName} />
+      <Footer />
     </>
   )
 }

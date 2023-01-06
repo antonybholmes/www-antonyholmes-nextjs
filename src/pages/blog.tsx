@@ -1,19 +1,41 @@
-import INewsItem from "../interfaces/news-item"
-import PostsLayout from "../layouts/posts-layout"
-import { getAllPosts } from "../lib/api"
+import IPost from "../interfaces/post"
+import { getAuthorMap } from "../lib/api/author"
+import markdownHtml from "../lib/markdown-html"
+import { getPageCount, getPagePosts } from "../lib/paginate"
+import PostsPage from "../components/pages/posts-page"
+import ContentLayout from "../layouts/content-layout"
+import { getAllPosts } from "../lib/api/post"
 
 interface IProps {
-  allPosts: INewsItem[]
+  posts: IPost[]
+  pages: number
 }
 
-export default function Page({ allPosts }: IProps) {
-  return <PostsLayout title="Blog" posts={allPosts} />
+export default function Page({ posts, pages }: IProps) {
+  return (
+    <ContentLayout title="Blog" showTitle={false}>
+      <></>
+      <PostsPage posts={posts} page={0} pages={pages} />
+      <></>
+    </ContentLayout>
+  )
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts()
+  const allPosts = await Promise.all(
+    getAllPosts(getAuthorMap()).map(async post => {
+      return {
+        ...post,
+        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+        //html : await markdownHtml(post.frontmatter.content || ''),
+      }
+    })
+  )
+
+  const posts = getPagePosts(allPosts, 0, 10)
+  const pages = getPageCount(allPosts)
 
   return {
-    props: { allPosts },
+    props: { posts, pages },
   }
 }

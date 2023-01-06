@@ -1,9 +1,7 @@
 import { useState } from "react"
-import cn from "../../lib/class-names"
-import { BASE_BUTTON_CLASSES } from "../link/button-link"
+import ExpandIcon from "../../icons/expand"
+import ToggleSwitch from "../link/toggle-switch"
 
-import ChevronDownIcon from "../../icons/chevron-down"
-import Button from "../link/button"
 import { Journal } from "./journal-filter"
 
 interface AuthorFilterProps {
@@ -19,50 +17,56 @@ function AuthorFilter({
   onClick,
   max = 10,
 }: AuthorFilterProps) {
+  const [isExpanded, setIsExpanded] = useState(true)
   const [showAll, setShowAll] = useState(false)
-
-  function onShowAll() {
-    setShowAll(!showAll)
-  }
 
   if (max > -1 && !showAll) {
     authors = authors.slice(0, max)
   }
 
   return (
-    <div className="border-t border-gray-300 pt-4 text-sm">
+    <div className="text-sm">
       {/* <ToggleSwitch
         isSelected={showAll}
         onClick={onShowAll}
-        className="font-medium"
+        className="font-bold"
       >
         Authors
       </ToggleSwitch> */}
-      <button onClick={onShowAll} className="w-full text-left">
-        <h2 className="font-medium">Authors</h2>
-      </button>
-      <ul className="my-2 flex flex-col gap-y-1">
-        {authors.map((journal: any, index: number) => {
-          return (
-            <Journal
-              journal={journal}
-              isSelected={selected.has(journal[0])}
-              key={index}
-              onClick={onClick}
-            />
-          )
-        })}
-      </ul>
-      <Button
-        onClick={onShowAll}
-        ariaLabel="Show more items"
-        className={cn(BASE_BUTTON_CLASSES, "rotate-ani w-full", [
-          showAll,
-          "rotate-180",
-        ])}
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="flex w-full flex-row items-center gap-x-1 stroke-slate-900"
       >
-        <ChevronDownIcon className="w-3 stroke-gray-500 stroke-2" />
-      </Button>
+        <ExpandIcon expanded={isExpanded} className="w-3 stroke-2" />
+
+        <h2>Authors</h2>
+
+        {/* <PlusIcon isPlus={!showAll} className="w-4 stroke-2" /> */}
+      </button>
+      {isExpanded && (
+        <>
+          <ToggleSwitch
+            className="mt-2 w-full"
+            onClick={() => setShowAll(!showAll)}
+            isSelected={showAll}
+          >
+            Show All
+          </ToggleSwitch>
+          <ul className="mt-2 flex flex-col gap-y-1">
+            {authors.map((journal: any, index: number) => {
+              return (
+                <Journal
+                  index={index}
+                  journal={journal}
+                  isSelected={selected.has(journal[0])}
+                  key={index}
+                  onClick={onClick}
+                />
+              )
+            })}
+          </ul>
+        </>
+      )}
     </div>
   )
 }

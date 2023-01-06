@@ -1,13 +1,13 @@
 import { useState } from "react"
 import useWindowResize from "./use-window-resize"
 
-export default function useWindowSize() {
+const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: -1,
     height: -1,
   })
 
-  function handleResize(e: { width: number; height: number }) {
+  const handleResize = (e: { width: number; height: number }) => {
     setWindowSize({
       width: e.width,
       height: e.height,
@@ -18,3 +18,5 @@ export default function useWindowSize() {
 
   return windowSize
 }
+
+export default useWindowSize

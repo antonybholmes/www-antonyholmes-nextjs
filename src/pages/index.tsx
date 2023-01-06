@@ -1,39 +1,49 @@
-//import axios from "axios"
 import AvatarImageLarge from "../components/avatar-image-large"
 import BaseCol from "../components/base-col"
 import HCenterCol from "../components/h-center-col"
-import BlueButtonLink from "../components/link/blue-button-link"
+import BaseLink from "../components/link/base-link"
+import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
 import BlueLink from "../components/link/blue-link"
 import ToBlueLink from "../components/link/to-blue-link"
+import PostsPage from "../components/pages/posts-page"
 import VCenterRow from "../components/v-center-row"
 import { EMAIL } from "../constants"
+import EnvelopeIcon from "../icons/envelope"
 import LinkIcon from "../icons/link"
-import MailIcon from "../icons/mail"
 import ContentLayout from "../layouts/content-layout"
-import { getAllPosts, getPeopleMap } from "../lib/api"
-import markdownToHtml from "../lib/markdownToHtml"
+import { getAuthorMap } from "../lib/api/author"
+import markdownToHtml from "../lib/markdown-html"
+import { getAllPosts } from "../lib/api/post"
 
-export default function Page({ author, allPosts }) {
+export default function Page({ author, posts }) {
   return (
-    <ContentLayout title="Home" showTitle={false}>
+    <ContentLayout title="Home" showCrumbs={false}>
       <></>
-      <div className="grid grid-cols-1 gap-y-8 xl:grid-cols-4 xl:gap-x-8">
+      <div
+        className="mb-32 grid grid-cols-1 gap-y-8 xl:grid-cols-4 xl:gap-x-16"
+        slot="main"
+      >
         <article className="rounded-xl bg-white p-8 xl:bg-transparent xl:p-0">
           <BaseCol className="items-center gap-y-8">
-            <AvatarImageLarge author={author} />
-
+            <BaseLink href="/author/antony-holmes" ariaLabel="View profile">
+              <AvatarImageLarge
+                author={author}
+                lazy={false}
+                className="max-w-64"
+              />
+            </BaseLink>
             <BaseCol className="gap-y-2 text-sm ">
-              <VCenterRow className="justify-center gap-x-2 xl:justify-start">
-                <MailIcon className="hidden w-4 fill-gray-400 xl:block" />
-                <ToBlueLink href={`mailto:${EMAIL}`} ariaLabel={""}>
+              <VCenterRow className="group justify-center gap-x-2 xl:justify-start">
+                <EnvelopeIcon className="transition-ani hidden w-4 fill-slate-400 transition-transform group-hover:-translate-x-0.5 xl:block" />
+                <ToBlueLink href={`mailto:${EMAIL}`} underline={true}>
                   {EMAIL}
                 </ToBlueLink>
               </VCenterRow>
-              <VCenterRow className="justify-center gap-x-2 xl:justify-start">
-                <LinkIcon className="hidden w-4 fill-gray-400 xl:block" />
+              <VCenterRow className="group justify-center gap-x-2 xl:justify-start">
+                <LinkIcon className="transition-ani hidden w-4 fill-slate-400 transition-transform group-hover:-translate-x-0.5 xl:block" />
                 <ToBlueLink
                   href="https://github.com/antonybholmes"
-                  ariaLabel={""}
+                  underline={true}
                 >
                   github.com/antonybholmes
                 </ToBlueLink>
@@ -43,49 +53,46 @@ export default function Page({ author, allPosts }) {
         </article>
         <section className="col-span-3">
           <section>
-            <HCenterCol className="rounded-xl bg-white p-8 text-center xl:p-16">
+            <HCenterCol>
               <h1 className="inline-block text-5xl font-bold">Hi There.</h1>
 
               <p className="mt-4 text-lg">
-                I&apos;m Antony Holmes. Welcome to my personal web site.
+                I'm Antony Holmes. Welcome to my personal web site.
               </p>
 
               <p className="mt-4 text-lg">
-                I&apos;m a full stack developer with experience using Java,
-                Python, React, Astro, Svelte and other tech, some of which was
-                used to make this very site.
+                I'm a researcher and full stack developer with experience using
+                Java, Python, React, Next.js, Astro and other tech, some of
+                which was used to make this very site.
               </p>
 
               <p className="mt-4 text-lg">
-                I have an aptly named publication page where you can view all of
-                the scientific literature I have written, primarily focused on
-                cancer genetics.
+                I have an aptly named publications page where you can view all
+                of the scientific literature I have written, primarily focused
+                on cancer genetics.
               </p>
             </HCenterCol>
 
             <VCenterRow className="mt-8 justify-center">
               <div className="flex flex-row gap-6">
-                <BlueButtonLink
+                <BlueButtonArrowLink
                   href="/resume"
-                  className="px-4 py-2 text-sm font-medium"
-                  ariaLabel={""}
-                >
-                  Resume
-                </BlueButtonLink>
+                  className="px-4 py-2 text-sm font-bold"
+                  text="Resume"
+                />
+
                 <BlueLink
                   href="/publications"
                   className="flex flex-row items-center text-sm"
-                  ariaLabel="View my publications"
-                  underline={true}
                 >
                   Publications
                 </BlueLink>
               </div>
             </VCenterRow>
           </section>
-          {/* <section className="mt-16 pt-16 border-t border-gray-200">
-        <PostsPage posts={allPosts} page={1} pages={1} showLatestPosts={true} />
-      </section> */}
+          <section className="mt-16 border-t border-slate-200 pt-16">
+            <PostsPage posts={posts} page={1} pages={1} />
+          </section>
         </section>
       </div>
     </ContentLayout>
@@ -93,15 +100,15 @@ export default function Page({ author, allPosts }) {
 }
 
 export async function getStaticProps() {
-  const authorMap = getPeopleMap()
+  const authorMap = getAuthorMap()
 
-  let allPosts = await Promise.all(
-    getAllPosts()
+  let posts = await Promise.all(
+    getAllPosts(authorMap)
       .slice(0, 5)
       .map(async post => {
         return {
           ...post,
-          excerpt: await markdownToHtml(post.excerpt || ""),
+          excerpt: await markdownToHtml(post.frontmatter.rawExcerpt || ""),
           //html : await markdownHtml(post.frontmatter.content || ''),
         }
       })
@@ -112,7 +119,7 @@ export async function getStaticProps() {
   return {
     props: {
       author,
-      allPosts,
+      posts,
     },
   }
 }

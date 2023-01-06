@@ -1,4 +1,4 @@
-import IClassProps from "../../interfaces/class-props"
+import type IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
 import RadioButtonGroup from "../link/radio-button-group"
 
@@ -6,8 +6,8 @@ const ITEMS = [
   "Publication Date",
   "Title",
   "Journal",
-  "First author",
-  "Last author",
+  "First Author",
+  "Last Author",
 ]
 
 interface SortProps extends IClassProps {
@@ -18,7 +18,7 @@ interface SortProps extends IClassProps {
 function SortBy({ selected, onChange, className }: SortProps) {
   //const [selectedIndex, setSelectedIndex] = useState(0)
 
-  function handleChange(index: number) {
+  function onClick(index: number) {
     onChange(ITEMS[index])
   }
 
@@ -26,8 +26,8 @@ function SortBy({ selected, onChange, className }: SortProps) {
     <RadioButtonGroup
       items={ITEMS}
       selected={selected}
-      onChange={handleChange}
-      className={cn("mt-2 flex flex-col gap-y-1", className)}
+      onClick={onClick}
+      className={cn("mt-4 flex flex-col gap-y-1", className)}
     />
 
     // <ul>

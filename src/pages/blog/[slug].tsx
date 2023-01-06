@@ -1,21 +1,26 @@
-import { format, parseISO } from "date-fns"
-import INewsItem from "../../interfaces/news-item"
-import MarkdownLayout from "../../layouts/markdown-layout"
-import { getAllPosts, getPostBySlug, POSTS_DIR } from "../../lib/api"
-import markdownToHtml from "../../lib/markdownToHtml"
-
+import PostPage from "../../components/pages/post-page"
+import IPost from "../../interfaces/post"
+import IPreviewPost from "../../interfaces/preview-post"
+import BaseLayout from "../../layouts/base-layout"
+import { getAuthorMap } from "../../lib/api/author"
+import {
+  findPostBySlug,
+  getAllPosts,
+  getPostByPath,
+  getPostBySlug,
+  getTagMap,
+} from "../../lib/api/post"
+import markdownHtml from "../../lib/markdown-html"
+import markdownToHtml from "../../lib/markdown-html"
 interface IProps {
-  newsItem: INewsItem
+  post: IPost
 }
 
-export default function Page({ newsItem }: IProps) {
+export default function Page({ post }: IProps) {
   return (
-    <MarkdownLayout
-      title={newsItem.frontmatter.title}
-      supertitle={format(parseISO(newsItem.date), "LLLL d, yyyy")}
-      tab="Blog"
-      html={newsItem.html}
-    />
+    <BaseLayout title={post.frontmatter.title} tab="Blog" headerMode="dark">
+      <PostPage post={post} />
+    </BaseLayout>
   )
 }
 
@@ -26,9 +31,27 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const newsItem = getPostBySlug(`${params.slug}.md`, POSTS_DIR)
+  const authorMap = getAuthorMap()
 
-  newsItem.html = await markdownToHtml(newsItem.content || "")
+  const allPosts = await Promise.all(
+    getAllPosts(authorMap).map(async post => {
+      return {
+        ...post,
+        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+        //html: await markdownHtml(post.frontmatter.rawContent || ""),
+      }
+    })
+  )
+
+  const tagMap = getTagMap(allPosts)
+
+  const p = getPostByPath(findPostBySlug(params.slug))
+
+  const post = {
+    ...p,
+    html: await markdownToHtml(p.frontmatter.rawContent || ""),
+    authors: p.frontmatter.authors.map(a => authorMap[a]),
+  }
 
   // const file = join(
   //   PUBLICATIONS_DIR,
@@ -43,19 +66,19 @@ export async function getStaticProps({ params }: Params) {
 
   return {
     props: {
-      newsItem,
+      post,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const allNewsItems = getAllPosts()
+  const posts = getAllPosts(getAuthorMap())
 
   return {
-    paths: allNewsItems.map(newsItem => {
+    paths: posts.map((post: IPreviewPost) => {
       return {
         params: {
-          slug: newsItem.slug,
+          slug: post.fields.slug,
         },
       }
     }),

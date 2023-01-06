@@ -1,0 +1,59 @@
+import IPostProps from "../../interfaces/post-props"
+import cn from "../../lib/class-names"
+import BaseCol from "../base-col"
+import HTML from "../html"
+import PostAuthor from "./post-author"
+import PostImage from "./post-image"
+import PostSectionLink from "./post-section-link"
+import PostTitleLink from "./post-title-link"
+
+interface IProps extends IPostProps {
+  imageClassName?: string
+  headerClassName?: string
+  innerClassName?: string
+  contentClassName?: string
+  showImage?: boolean
+  showSection?: boolean
+  showDescription?: boolean
+  showAvatar?: boolean
+  showAvatarImage?: boolean
+  lazy?: boolean
+}
+
+export default function PreviewPost({
+  post,
+  className,
+  imageClassName = "h-64 md:h-72 ",
+  headerClassName = "text-4xl",
+  innerClassName,
+  contentClassName = "text-base",
+  showImage = true,
+  showSection = true,
+  showDescription = true,
+  showAvatar = true,
+  showAvatarImage = true,
+  lazy = false,
+}: IProps) {
+  return (
+    <article className={cn("flex flex-col gap-y-4", className)}>
+      {showImage && (
+        <PostImage post={post} lazy={lazy} className={imageClassName} />
+      )}
+
+      <BaseCol className={cn("gap-y-2", innerClassName)}>
+        <BaseCol className="gap-y-1">
+          {showSection && <PostSectionLink post={post} />}
+          <PostTitleLink post={post} className={headerClassName} />
+        </BaseCol>
+        {showDescription && (
+          <HTML
+            html={post.excerpt}
+            className={cn("text-slate-600", contentClassName)}
+          />
+        )}
+
+        <PostAuthor post={post} showAvatar={showAvatar} />
+      </BaseCol>
+    </article>
+  )
+}

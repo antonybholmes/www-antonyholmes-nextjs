@@ -1,24 +1,19 @@
-import { MouseEventHandler } from "react"
-import IClassProps from "../../interfaces/class-props"
-import ILink from "../../interfaces/link"
-import cn from "../../lib/class-names"
 import { HEADER_LINKS } from "../../menus"
+import ILink from "../../interfaces/link"
 import HeaderLink from "./header-link"
+import IHeaderProps from "./header-props"
+import IMenuProps from "./menu-props"
 
-interface IProps extends IClassProps {
-  title: string
-  tab?: string
-  headerMode?: string
-  onClick?: MouseEventHandler
+interface IProps extends IHeaderProps, IMenuProps {
+  scrollY: number
 }
 
-function HeaderLinks({
+const HeaderLinks = ({
   title,
   tab = "",
   headerMode = "light",
-  onClick,
-  className,
-}: IProps) {
+  scrollY,
+}: IProps) => {
   if (!tab) {
     tab = title
   }
@@ -27,10 +22,7 @@ function HeaderLinks({
 
   return (
     <ul
-      className={cn(
-        "flex flex-row flex-nowrap items-center text-sm font-semibold",
-        className
-      )}
+      className="col-span-6 flex flex-row flex-nowrap items-center justify-center gap-8"
       style={{ marginBottom: "-1px" }}
     >
       {HEADER_LINKS.map((link: ILink, index: number) => {
@@ -38,7 +30,12 @@ function HeaderLinks({
 
         return (
           <li key={index} className="inline">
-            <HeaderLink link={link} selected={selected} onClick={onClick} />
+            <HeaderLink
+              link={link}
+              selected={selected}
+              headerMode={headerMode}
+              scrollY={scrollY}
+            />
           </li>
         )
       })}

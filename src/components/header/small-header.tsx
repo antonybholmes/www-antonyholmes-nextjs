@@ -1,15 +1,23 @@
 import BaseLink from "../link/base-link"
 import MenuOpenButton from "./menu-button-open"
 //import Search from '../search/search'
-import IHeaderProps from "../../interfaces/header-props"
-import IMenuProps from "../../interfaces/menu-props"
-import HCenterRow from "../h-center-row"
+import type IChildrenProps from "../../interfaces/children-props"
 import ContentDiv from "../content-div"
-import LogoIcon from "../../icons/logo"
+import HCenterRow from "../h-center-row"
+import type { IMenuOverlayProps } from "./menu-overlay"
+import LogoIcon from "../../icons/logo-icon"
 
-interface IProps extends IMenuProps, IHeaderProps {}
+export interface ISmallHeaderProps extends IMenuOverlayProps, IChildrenProps {
+  showMenu: boolean
+  onClick: any
+}
 
-function SmallHeader({ title, tab, showMenu, onClick, children }: IProps) {
+function SmallHeader({
+  showMenu,
+  onClick,
+  headerMode,
+  children,
+}: ISmallHeaderProps) {
   //const isFirstRun = useRef(true)
 
   // useEffect(() => {
@@ -42,15 +50,19 @@ function SmallHeader({ title, tab, showMenu, onClick, children }: IProps) {
   // }, [showMenu])
 
   return (
-    <nav className="w-full lg:hidden">
+    <nav className="w-full md:hidden">
       <div className="grid h-16 w-full grid-cols-5 items-center">
         <div>
-          <MenuOpenButton onClick={onClick} showMenu={showMenu} />
+          <MenuOpenButton
+            onClick={onClick}
+            showMenu={showMenu}
+            headerMode={headerMode}
+          />
         </div>
 
         <HCenterRow className="col-span-3 items-center">
           <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon />
+            <LogoIcon headerMode={headerMode} />
           </BaseLink>
         </HCenterRow>
         <div></div>

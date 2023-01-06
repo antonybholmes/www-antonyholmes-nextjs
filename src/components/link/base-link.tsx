@@ -1,14 +1,14 @@
-import Link from "next/link"
-import { useEffect } from "react"
-import IHoverProps from "../../interfaces/hover-props"
+import cn from "../../lib/class-names"
 import ILinkProps from "../../interfaces/link-props"
 import IMouseProps from "../../interfaces/mouse-props"
-import cn from "../../lib/class-names"
 import ExtLink from "./ext-link"
+import Link from "next/link"
 
-interface IProps extends ILinkProps, IMouseProps, IHoverProps {}
+interface IProps extends ILinkProps, IMouseProps {
+  underline?: boolean
+}
 
-function BaseLink({
+const BaseLink = ({
   href,
   target = "_blank",
   ariaLabel,
@@ -17,18 +17,8 @@ function BaseLink({
   onClick,
   onMouseEnter,
   onMouseLeave,
-  onMouseUp,
-  onMouseDown,
   children,
-}: IProps) {
-  useEffect(() => {
-    window.addEventListener("mouseup", onMouseUp)
-
-    return () => {
-      window.removeEventListener("mouseup", onMouseUp)
-    }
-  }, [])
-
+}: IProps) => {
   if (!ariaLabel) {
     ariaLabel = `Click to visit ${href}`
   }
@@ -49,8 +39,6 @@ function BaseLink({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-        onMouseDown={onMouseDown}
       >
         {children}
       </ExtLink>
@@ -64,12 +52,10 @@ function BaseLink({
       <Link
         href={href}
         aria-label={ariaLabel}
-        className={cn([underline, `hover:underline`], className)}
+        className={cn("m-0 p-0", [underline, `hover:underline`], className)}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-        onMouseDown={onMouseDown}
       >
         {children}
       </Link>

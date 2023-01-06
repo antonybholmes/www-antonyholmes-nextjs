@@ -1,5 +1,3 @@
-interface IFieldMap {
+export default interface IFieldMap {
   [key: string]: any
 }
-
-export default IFieldMap

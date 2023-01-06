@@ -8,25 +8,53 @@ interface IProps extends IChildrenProps, IMouseProps {
   tag?: string
 }
 
-export default function BaseCol({
+const BaseCol = ({
+  tag = "div",
   className = "",
-  style,
   onClick,
   onMouseEnter,
   onMouseLeave,
   tabIndex,
   children,
-}: IProps) {
-  return (
-    <div
-      className={cn("flex flex-col", className)}
-      style={style}
-      onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      tabIndex={tabIndex}
-    >
-      {children}
-    </div>
-  )
+}: IProps) => {
+  switch (tag) {
+    case "section":
+      return (
+        <section
+          className={cn("flex flex-col", className)}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          tabIndex={tabIndex}
+        >
+          {children}
+        </section>
+      )
+    case "ul":
+      return (
+        <ul
+          className={cn("flex flex-col", className)}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          tabIndex={tabIndex}
+        >
+          {children}
+        </ul>
+      )
+    default:
+      return (
+        <div
+          className={cn("flex flex-col", className)}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          tabIndex={tabIndex}
+        >
+          {children}
+        </div>
+      )
+  }
 }
+
+export default BaseCol

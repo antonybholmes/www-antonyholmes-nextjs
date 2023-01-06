@@ -55,16 +55,14 @@ export default function cn(...args: CSSClass[]): string {
   // join all the pieces into one then split on space
   // and remove duplicates
   return clean(
-    classes
-      .filter(x => x !== "")
-      .join(" ")
-      .split(" ")
-      .filter(c => {
-        // keep track of tokens already seen
-        const ret = !used.has(c)
-        used.add(c)
-        return ret
-      })
-      .join(" ")
+    classes.filter(x => x !== "").join(" ")
+    // .split(" ")
+    // .filter(c => {
+    //   // keep track of tokens already seen
+    //   const ret = !used.has(c)
+    //   used.add(c)
+    //   return ret
+    // })
+    // .join(" ")
   )
 }

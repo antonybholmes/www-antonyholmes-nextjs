@@ -33,7 +33,7 @@ import "@fontsource/plus-jakarta-sans/700.css"
 // import "@fontsource/poppins/600.css"
 // import "@fontsource/poppins/700.css"
 
-import "../styles/index.scss"
+import "../styles/main.scss"
 
 import { AppProps } from "next/app"
 

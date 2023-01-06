@@ -1,14 +1,13 @@
 import { range } from "lodash"
+import cn from "../lib/class-names"
+import type IChildrenProps from "../interfaces/children-props"
+import type IAriaProps from "../interfaces/aria-props"
+import RoundedButton from "./link/rounded-button"
 import ChevronLeftIcon from "../icons/chevron-left"
 import ChevronRightIcon from "../icons/chevron-right"
-import IAriaProps from "../interfaces/aria-props"
-import IChildrenProps from "../interfaces/children-props"
-import cn from "../lib/class-names"
-import PillButton from "./link/pill-button"
-import RoundedButton from "./link/rounded-button"
 
 const BTN_CLS =
-  "flex flex-row justify-center items-center w-8 h-8 border border-transparent"
+  "flex flex-row justify-center items-center min-w-8 h-8 border border-transparent"
 
 interface IClickProps {
   page: number
@@ -26,11 +25,15 @@ function LinkButton({
 }: INavButtonProps) {
   return (
     <RoundedButton
-      onClick={e => {
+      onClick={() => {
         onClick(page)
       }}
       ariaLabel={ariaLabel}
-      className={cn(BTN_CLS, " hover:border-gray-300", className)}
+      className={cn(
+        BTN_CLS,
+        "transition duration-300 hover:border-slate-300",
+        className
+      )}
     >
       {children}
     </RoundedButton>
@@ -51,7 +54,7 @@ function NavButton({
       ariaLabel={ariaLabel}
       className={cn(
         BTN_CLS,
-        "gap-x-2 stroke-blue-500 px-2 text-blue-600",
+        "gap-x-2 stroke-blue-600 px-2 text-blue-600",
         className
       )}
     >
@@ -63,7 +66,7 @@ function NavButton({
 function PrevButton({ page, onClick }: IClickProps) {
   return (
     <NavButton page={page} onClick={onClick} ariaLabel="Previous page">
-      <ChevronLeftIcon className="w-4  stroke-2" />
+      <ChevronLeftIcon className="w-4" /> Prev
     </NavButton>
   )
 }
@@ -71,7 +74,7 @@ function PrevButton({ page, onClick }: IClickProps) {
 function NextButton({ page, onClick }: IClickProps) {
   return (
     <NavButton page={page} onClick={onClick} ariaLabel="Next page">
-      <ChevronRightIcon className="w-4 stroke-2" />
+      Next <ChevronRightIcon className="w-4" />
     </NavButton>
   )
 }
@@ -91,7 +94,7 @@ function BasePageButton({
 }: ISelectedPageButtonProps) {
   return (
     <RoundedButton
-      onClick={e => {
+      onClick={() => {
         onClick(page)
       }}
       ariaLabel={`Goto page ${page}`}
@@ -107,7 +110,7 @@ function SelectedPageButton({ page, onClick }: ISelectedPageButtonProps) {
     <BasePageButton
       page={page}
       onClick={onClick}
-      className="bg-blue-500 text-white"
+      className="bg-blue-600 text-white"
     >
       {page}
     </BasePageButton>
@@ -121,7 +124,7 @@ function PageButton({ page, currentPage, onClick }: IPageButtonProps) {
     <BasePageButton
       page={page}
       onClick={onClick}
-      className=" hover:border-gray-300"
+      className="transition duration-300 hover:border-slate-300"
     >
       {page}
     </BasePageButton>
@@ -144,8 +147,8 @@ export default function Pagination({ page, pages, onClick }: IProps) {
   const nextPage = Math.min(pages, page + 1)
 
   return (
-    <ul className="flex flex-row items-center gap-x-1 text-sm">
-      <li className={cn([page > 1, "visible", "invisible"])}>
+    <ul className="flex flex-row items-center gap-x-1">
+      <li>
         <PrevButton onClick={onClick} page={prevPage} />
       </li>
 
@@ -167,7 +170,7 @@ export default function Pagination({ page, pages, onClick }: IProps) {
         <PageButton page={pages} currentPage={page} onClick={onClick} />
       </li>
 
-      <li className={cn([page < pages, "visible", "invisible"])}>
+      <li>
         <NextButton onClick={onClick} page={nextPage} />
       </li>
     </ul>

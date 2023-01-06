@@ -1,12 +1,6 @@
-interface IPostAuthor {
-  slug: string
-  fields: {
-    id: string
-    name: string
-    title: string
-    picture: string
-    content: string
-  }
-}
+import IAuthorFields from "./author-fields"
 
-export default IPostAuthor
+export default interface IPostAuthor {
+  slug: string
+  frontmatter: IAuthorFields
+}

@@ -1,4 +1,4 @@
-import IChildrenProps from "./children-props"
+import type IChildrenProps from "./children-props"
 
 export default interface IBaseLinkProps extends IChildrenProps {
   href: string

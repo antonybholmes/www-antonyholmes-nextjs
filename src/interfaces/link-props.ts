@@ -1,7 +1,7 @@
-import IAriaProps from "./aria-props"
-import IBaseLinkProps from "./base-link-props"
-import IHoverProps from "./hover-props"
-import IMouseProps from "./mouse-props"
+import type IAriaProps from "./aria-props"
+import type IBaseLinkProps from "./base-link-props"
+import type IHoverProps from "./hover-props"
+import type IMouseProps from "./mouse-props"
 
 export default interface ILinkProps
   extends IBaseLinkProps,

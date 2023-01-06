@@ -1,6 +1,6 @@
 import { SITE_NAME } from "../constants"
 
-function getCopyright() {
+const getCopyright = () => {
   return `\u00a9 ${new Date().getFullYear()} ${SITE_NAME}`
 }
 

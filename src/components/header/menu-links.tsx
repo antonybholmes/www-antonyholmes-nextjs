@@ -1,20 +1,19 @@
-import { MouseEventHandler } from "react"
-import ILink from "../../interfaces/link"
+import type ILink from "../../interfaces/link"
 import cn from "../../lib/class-names"
-import { FOOTER_LINKS } from "../../menus"
+import { HEADER_LINKS } from "../../menus"
 import MenuLink from "./menu-link"
 
 interface IProps {
   title: string
   headerMode?: string
   tab?: string
-  onClick: MouseEventHandler
+  onClick: any
 }
 
 function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
-  // // const ref = useRef(null)
-  // // const tMenuLinkF = useRef(null)
-  // // const tMenuLinkR = useRef(null)
+  // // let ref
+  // // const tMenuLinkF
+  // // const tMenuLinkR
   // const isFirstRun = useRef(0)
 
   // useEffect(() => {
@@ -64,12 +63,12 @@ function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
 
   return (
     <ul
-      className={cn("flex flex-col text-sm font-medium", [
+      className={cn("flex flex-col text-sm font-bold", [
         headerMode === "dark",
-        "bg-gray-800",
+        "bg-slate-800",
       ])}
     >
-      {FOOTER_LINKS.map((link: ILink, index: number) => {
+      {HEADER_LINKS.map((link: ILink, index: number) => {
         const selected = title == link.name || tab == link.name
 
         return (

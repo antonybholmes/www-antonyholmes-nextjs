@@ -1,41 +1,46 @@
-import ContentDiv from "../content-div"
 import BaseLink from "../link/base-link"
+//import Search from '../search/search'
+import LogoIcon from "../../icons/logo-icon"
+import ContentDiv from "../content-div"
 import HeaderLinks from "./header-links"
+import IHeaderProps from "./header-props"
+import IMenuProps from "./menu-props"
 
-import IChildrenProps from "../../interfaces/children-props"
-import HCenterCol from "../h-center-col"
-import VCenterRow from "../v-center-row"
-import HCenterRow from "../h-center-row"
-import LogoIcon from "../../icons/logo"
-
-interface IProps extends IChildrenProps {
-  title: string
-  tab?: string
+interface IProps extends IHeaderProps, IMenuProps {
+  scrollY: number
 }
 
-export default function LargeHeader({ title, tab, children }: IProps) {
+function LargeHeader({
+  title,
+  tab,
+  headerMode = "light",
+  showMenu = false,
+  scrollY,
+}: IProps) {
   return (
-    <nav className="hidden lg:block">
-      <ContentDiv>
-        <></>
+    <ContentDiv className="hidden md:flex">
+      <></>
+      <nav className="grid grid-cols-12 items-center gap-8">
+        <BaseLink
+          href="/"
+          ariaLabel="Goto Homepage"
+          className="col-span-3 block"
+        >
+          <LogoIcon headerMode={headerMode} />
+        </BaseLink>
 
-        <div className="flex h-16 flex-row  items-center gap-x-8 xl:gap-x-16">
-          <div className="grow-0">
-            <BaseLink href="/" ariaLabel="Goto Homepage">
-              <LogoIcon />
-            </BaseLink>
-          </div>
-          <div>
-            <HeaderLinks title={title} tab={tab} />
-          </div>
-          <div className="grow">{children && children}</div>
-        </div>
-        {/* <span className="h-6 border-l-2 border-gray-900" /> */}
-
-        {/* {children && <span className="h-6 border-l-2 border-gray-900" />} */}
-
-        <></>
-      </ContentDiv>
-    </nav>
+        <HeaderLinks
+          title={title}
+          tab={tab}
+          headerMode={headerMode}
+          showMenu={showMenu}
+          scrollY={scrollY}
+        />
+        <div className="col-span-3" />
+      </nav>
+      <></>
+    </ContentDiv>
   )
 }
+
+export default LargeHeader

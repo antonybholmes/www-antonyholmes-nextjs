@@ -1,4 +1,6 @@
-import IBaseMarkdown from "./base-markdown"
+import IMarkdownBase from "./markdown-base"
 import IPostFields from "./post-fields"
 
-export default interface IBasePost extends IBaseMarkdown, IPostFields {}
+export default interface IBasePost extends IMarkdownBase {
+  frontmatter: IPostFields
+}

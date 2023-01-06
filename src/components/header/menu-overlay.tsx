@@ -1,28 +1,32 @@
-import { MouseEventHandler, useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { useEffect } from "react"
 import cn from "../../lib/class-names"
+import IHeaderProps from "./header-props"
 import MenuOpenButton from "./menu-button-open"
 import MenuLinks from "./menu-links"
-import { gsap } from "gsap"
 
 const DURATION = 0.3
 
-interface IProps {
-  title: string
-  tab?: string
+export interface IMenuOverlayProps extends IHeaderProps {
   showMenu: boolean
-  onClick: MouseEventHandler
+  onClick: any
 }
 
-function MenuOverlay({ title, tab, showMenu, onClick }: IProps) {
-  const ref1 = useRef(null)
-  const ref2 = useRef(null)
+export default function MenuOverlay({
+  title,
+  tab,
+  showMenu,
+  onClick,
+}: IMenuOverlayProps) {
+  let ref1: any
+  let ref2: any
 
   useEffect(() => {
     // @ts-ignore
     gsap
       .timeline()
       .from(
-        ref1.current,
+        ref1,
         {
           duration: DURATION,
           opacity: 0,
@@ -30,14 +34,14 @@ function MenuOverlay({ title, tab, showMenu, onClick }: IProps) {
         0
       )
       .from(
-        ref1.current,
+        ref1,
         {
           x: "-1rem",
           duration: DURATION,
         },
         0
       )
-  }, [showMenu])
+  }, [])
 
   // useEffect(() => {
   //   if (!isFirstRun.current) {
@@ -60,7 +64,7 @@ function MenuOverlay({ title, tab, showMenu, onClick }: IProps) {
   return (
     <div
       className={cn(
-        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/20 font-medium backdrop-blur-sm"
+        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/20 font-bold backdrop-blur-sm"
       )}
     >
       <div ref={ref1} className="flex h-full min-w-2/3 flex-row  bg-white">
@@ -74,5 +78,3 @@ function MenuOverlay({ title, tab, showMenu, onClick }: IProps) {
     </div>
   )
 }
-
-export default MenuOverlay

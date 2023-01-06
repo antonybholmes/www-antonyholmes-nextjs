@@ -18,6 +18,8 @@ function getSearchStack(q: string): any[] {
   let op: any
 
   for (let c of q) {
+    //console.log("c", c, outputStack)
+
     switch (c) {
       case '"':
         quoteMode = !quoteMode

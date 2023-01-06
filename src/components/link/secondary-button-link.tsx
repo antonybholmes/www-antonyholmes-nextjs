@@ -1,22 +1,21 @@
-import ILinkProps from "../../interfaces/link-props"
+import type ILinkProps from "../../interfaces/link-props"
 import cn from "../../lib/class-names"
 import OutlineRoundedButtonLink from "./outline-rounded-button-link"
 
-export const SECONDARY_BUTTON_CLASSES = "px-4 py-2 lg:text-sm border-gray-300"
+export const SECONDARY_BUTTON_CLS =
+  "px-3 py-1.5 text-xs font-bold border-slate-200"
 
 export default function SecondaryButtonLink({
   href,
   ariaLabel,
   className,
-  onHover,
   children,
 }: ILinkProps) {
   return (
     <OutlineRoundedButtonLink
       href={href}
       ariaLabel={ariaLabel}
-      onHover={onHover}
-      className={cn(SECONDARY_BUTTON_CLASSES, className)}
+      className={cn(SECONDARY_BUTTON_CLS, className)}
     >
       {children}
     </OutlineRoundedButtonLink>

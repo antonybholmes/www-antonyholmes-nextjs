@@ -1,28 +1,26 @@
-import { KeyboardEventHandler } from "react"
+import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
-import cn from "../lib/class-names"
 import BaseCol from "./base-col"
 
 interface IProps extends IChildrenProps, IMouseProps {
+  center?: boolean
   tabIndex?: number
-  onKeyDown?: KeyboardEventHandler
 }
 
-export default function VCenterCol({
-  className,
-  style,
+const VCenterCol = ({
+  center = false,
+  className = "",
   tabIndex,
   onClick,
-  onKeyDown,
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) {
+}: IProps) => {
   return (
     <BaseCol
+      center={center}
       className={cn("justify-center", className)}
-      style={style}
       tabIndex={tabIndex}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
@@ -32,3 +30,5 @@ export default function VCenterCol({
     </BaseCol>
   )
 }
+
+export default VCenterCol

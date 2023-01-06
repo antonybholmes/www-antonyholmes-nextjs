@@ -1,7 +1,7 @@
-import { ChangeEvent, KeyboardEvent, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import CloseIcon from "../../icons/close"
 import SearchIcon from "../../icons/search"
-import IClassProps from "../../interfaces/class-props"
+import type IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
 import VCenterRow from "../v-center-row"
 
@@ -13,27 +13,11 @@ interface ISearchButtonProps {
 }
 
 function SearchButton({ globalHover, onClick }: ISearchButtonProps) {
-  const [hover, setHover] = useState(false)
-
-  function onMouseEnter() {
-    setHover(true)
-  }
-
-  function onMouseLeave() {
-    setHover(false)
-  }
-
   return (
     <button
       onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
       aria-label="Search"
-      className={cn(
-        "color-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full",
-        [hover || globalHover, "fill-gray-900", "fill-gray-500"],
-        [hover, " bg-gray-300"]
-      )}
+      className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full fill-slate-400 transition-colors hover:fill-slate-900"
     >
       <SearchIcon className="w-4" />
     </button>
@@ -46,23 +30,10 @@ interface ClearButtonProps {
 }
 
 function ClearButton({ onClick, visible }: ClearButtonProps) {
-  const [hover, setHover] = useState(false)
-
-  function onMouseEnter() {
-    setHover(true)
-  }
-
-  function onMouseLeave() {
-    setHover(false)
-  }
-
   return (
     <button
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
       className={cn(
-        `color-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full`,
-        [hover, "bg-gray-300 stroke-gray-900", "stroke-gray-500"],
+        "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full stroke-slate-400 transition-colors hover:stroke-slate-900",
         [visible, "visible", "invisible"]
       )}
       style={{ strokeWidth: "3px" }}
@@ -104,15 +75,16 @@ export default function SearchBar({
     setHover(false)
   }
 
-  function onKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+  function onKeyDown(e: any) {
     if (e.key === "Enter") {
       if (onSearch) {
-        onSearch(value, true)
+        console.group("ssss0", e.target.value)
+        onSearch(e.target.value, true)
       }
     }
   }
 
-  function onChange(e: ChangeEvent<HTMLInputElement>) {
+  function onChange(e: any) {
     setValue(e.target.value)
 
     if (onSearch) {
@@ -137,13 +109,12 @@ export default function SearchBar({
   return (
     <VCenterRow
       className={cn(
-        `m-0 gap-x-2 overflow-hidden rounded-xl bg-gray-100 p-2`,
+        "transition-ani m-0 gap-x-2 overflow-hidden rounded-lg border border-slate-100 bg-slate-100 py-1.5 pl-3 pr-2 transition hover:border-slate-200 hover:bg-white",
         className
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <SearchButton globalHover={value !== ""} onClick={onClick} />
       <input
         type="text"
         aria-label="Search"
@@ -151,17 +122,19 @@ export default function SearchBar({
         value={value}
         onChange={onChange}
         onKeyDown={onKeyDown}
-        className=" w-0 grow bg-transparent text-sm outline-none"
+        className="grow bg-transparent text-sm outline-none"
       />
 
       <ClearButton onClick={onClear} visible={value !== ""} />
-      {/* <span
-        className={cn("h-6 border-l border-gray-300", [
+      <span
+        className={cn("h-6 border-l border-slate-300", [
           value !== "",
           "visible",
           "invisible",
         ])}
-      /> */}
+      />
+
+      <SearchButton globalHover={value !== ""} onClick={onClick} />
     </VCenterRow>
   )
 }

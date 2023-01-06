@@ -2,14 +2,19 @@ import { range } from "lodash"
 import { RECORDS_PER_PAGE } from "../constants"
 import IFieldMap from "../interfaces/field-map"
 
-export function paginate(
+export const paginate = (
   data: any[],
   slug: string = "",
   globalProps: IFieldMap = {}
-) {
+) => {
   const paths = []
 
   const pages = getPageCount(data)
+
+  // add slash to end of slug
+  if (slug.endsWith("/")) {
+    slug = slug.slice(0, slug.length - 2)
+  }
 
   if (slug !== "") {
     paths.push({
@@ -17,7 +22,7 @@ export function paginate(
         slug,
       },
       props: {
-        currentPage: 1,
+        page: 0,
         pages,
         data: getPagePosts(data, 0),
         ...globalProps,
@@ -25,15 +30,21 @@ export function paginate(
     })
   }
 
+  // add page to slug since we are going to generate an array of
+  // slugs one for each page of results
+  if (slug !== "") {
+    slug = `${slug}/page/`
+  }
+
   range(0, pages).forEach((page: number) => {
     const currentPage = page + 1
 
     paths.push({
       params: {
-        slug: `${slug !== "" ? `${slug}/` : ""}page/${currentPage.toString()}`,
+        slug: `${slug}${currentPage}`,
       },
       props: {
-        currentPage,
+        page,
         pages,
         data: getPagePosts(data, page),
         ...globalProps,
@@ -44,11 +55,18 @@ export function paginate(
   return paths
 }
 
-export function getPageCount(posts: any[]): number {
-  return Math.floor((posts.length + RECORDS_PER_PAGE - 1) / RECORDS_PER_PAGE)
+export const getPageCount = (
+  posts: any[],
+  pageSize: number = RECORDS_PER_PAGE
+): number => {
+  return Math.floor((posts.length + pageSize - 1) / pageSize)
 }
 
-export function getPagePosts(posts: any[], page: number = 0): any[] {
-  const start = page * RECORDS_PER_PAGE
-  return posts.slice(start, start + RECORDS_PER_PAGE)
+export const getPagePosts = (
+  posts: any[],
+  page: number = 0,
+  pageSize: number = RECORDS_PER_PAGE
+): any[] => {
+  const start = page * pageSize
+  return posts.slice(start, start + pageSize)
 }

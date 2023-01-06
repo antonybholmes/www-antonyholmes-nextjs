@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import HCenterCol from "../h-center-col"
 import SecondaryButton from "../link/secondary-button"
+import VCenterRow from "../v-center-row"
 
 function Bar({ x, y, height, width, isColored, isHighlighted }) {
   return (
@@ -24,7 +25,7 @@ const YearSelector = ({ x, y, r = 8, onMouseUp, onMouseDown }) => {
       r={r}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
-      className="cursor-pointer fill-white stroke-sky-400 stroke-2"
+      className="cursor-pointer fill-white stroke-emerald-400 stroke-2"
     />
   )
 }
@@ -67,14 +68,14 @@ export default function PubRangeSlider({
 
   const onMouseDownYear1 = (e: any) => {
     // @ts-ignore
-    ref.current.addEventListener("mousemove", onMouseMoveYear1)
-    document.addEventListener("mouseup", onMouseUpYear1)
+    window.addEventListener("mousemove", onMouseMoveYear1)
+    window.addEventListener("mouseup", onMouseUpYear1)
   }
 
   const onMouseUpYear1 = () => {
     // @ts-ignore
-    ref.current.removeEventListener("mousemove", onMouseMoveYear1)
-    document.removeEventListener("mouseup", onMouseUpYear1)
+    window.removeEventListener("mousemove", onMouseMoveYear1)
+    window.removeEventListener("mouseup", onMouseUpYear1)
   }
 
   function onMouseMoveYear2(e: any) {
@@ -85,14 +86,14 @@ export default function PubRangeSlider({
 
   const onMouseDownYear2 = (e: any) => {
     // @ts-ignore
-    ref.current.addEventListener("mousemove", onMouseMoveYear2)
-    document.addEventListener("mouseup", onMouseUpYear2)
+    window.addEventListener("mousemove", onMouseMoveYear2)
+    window.addEventListener("mouseup", onMouseUpYear2)
   }
 
   const onMouseUpYear2 = () => {
     // @ts-ignore
-    ref.current.removeEventListener("mousemove", onMouseMoveYear2)
-    document.removeEventListener("mouseup", onMouseUpYear2)
+    window.removeEventListener("mousemove", onMouseMoveYear2)
+    window.removeEventListener("mouseup", onMouseUpYear2)
   }
 
   const onMouseEnter = (e: any) => {
@@ -101,16 +102,13 @@ export default function PubRangeSlider({
   }
 
   const onMouseMove = (e: any) => {
-    if (e.nativeEvent.offsetY < height) {
+    if (e.offsetY < height) {
       // @ts-ignore
       refHint.current.style.visibility = "visible"
 
       const idx = Math.max(
         0,
-        Math.min(
-          data.length - 1,
-          Math.floor((e.nativeEvent.offsetX - xMargin) / barW)
-        )
+        Math.min(data.length - 1, Math.floor((e.offsetX - xMargin) / barW))
       )
       const p = idx * barW + halfBarWidth + xMargin
 
@@ -136,10 +134,7 @@ export default function PubRangeSlider({
   function onClick(e: any) {
     const idx = Math.max(
       0,
-      Math.min(
-        data.length - 1,
-        Math.floor((e.nativeEvent.offsetX - xMargin) / barW)
-      )
+      Math.min(data.length - 1, Math.floor((e.offsetX - xMargin) / barW))
     )
 
     setYear1(idx)
@@ -190,15 +185,13 @@ export default function PubRangeSlider({
 
   return (
     <div className="w-full">
-      <h2 className="font-medium">Results By Year</h2>
+      <VCenterRow className="justify-between">
+        <h2>Years</h2>
 
-      <SecondaryButton
-        onClick={onResetClick}
-        ariaLabel="Reset year range"
-        className="mt-4"
-      >
-        Reset
-      </SecondaryButton>
+        <SecondaryButton onClick={onResetClick} ariaLabel="Reset year range">
+          Reset
+        </SecondaryButton>
+      </VCenterRow>
       <HCenterCol>
         <div className="relative pb-8">
           <svg
@@ -213,13 +206,13 @@ export default function PubRangeSlider({
           >
             <defs>
               <linearGradient id="g1" gradientTransform="rotate(90)">
-                <stop offset="5%" stopColor="#0ea5e9" />
-                <stop offset="95%" stopColor="#38bdf8" />
+                <stop offset="5%" stop-color="#10b981" />
+                <stop offset="95%" stop-color="#34d399" />
               </linearGradient>
 
               <linearGradient id="g2" gradientTransform="rotate(90)">
-                <stop offset="5%" stopColor="#0369a1" />
-                <stop offset="95%" stopColor="#0ea5e9" />
+                <stop offset="5%" stop-color="#059669" />
+                <stop offset="95%" stop-color="#10b981" />
               </linearGradient>
             </defs>
 
@@ -244,7 +237,7 @@ export default function PubRangeSlider({
               x2={xMargin + plotWidth}
               y1={y}
               y2={y}
-              className="stroke-gray-300 stroke-2"
+              className="stroke-slate-300 stroke-2"
             />
 
             {r1 > -1 && r2 >= r1 && (
@@ -253,7 +246,7 @@ export default function PubRangeSlider({
                 x2={x2}
                 y1={y}
                 y2={y}
-                className="stroke-sky-400 stroke-2"
+                className="stroke-emerald-400 stroke-2"
               />
             )}
 
@@ -281,12 +274,7 @@ export default function PubRangeSlider({
 
             {text2}
           </svg>
-          <div
-            ref={refHint}
-            className="hint invisible absolute left-0 bottom-0 -translate-x-1/2 whitespace-nowrap rounded-md bg-black/80 px-3 py-2 text-xs text-white"
-          >
-            Hint
-          </div>
+          <div ref={refHint} className="hint invisible" />
         </div>
       </HCenterCol>
     </div>

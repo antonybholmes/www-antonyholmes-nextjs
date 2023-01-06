@@ -1,60 +1,169 @@
-import { useEffect, useState } from "react"
-import IMenuProps from "../../interfaces/menu-props"
-import cn from "../../lib/class-names"
 import { gsap } from "gsap"
+import {
+  FocusEventHandler,
+  MouseEventHandler,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
+import cn from "../../lib/class-names"
+import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
+const OFFSET = "4px"
 
 const LINE_STYLE = {
   height: "1px",
 }
 
 export interface IMenuButtonProps extends IMenuProps {
+  showMenu: boolean
   headerMode?: string
 }
 
-function MenuOpenButton({
+const MenuOpenButton = ({
   showMenu,
   headerMode = "light",
   onClick,
-}: IMenuButtonProps) {
+}: IMenuButtonProps) => {
   const [focus, setFocus] = useState(false)
   const [hover, setHover] = useState(false)
-  //const [showMenu, setShowMenu] = useState(false)
-  //const isFirstRun = useRef(true)
+  const isFirstRun = useRef(true)
 
-  useEffect(() => {
-    animate()
-  }, [showMenu])
+  //const t1 = useRef(null)
+  //const t2 = useRef(null)
+
+  const refl1 = useRef(null)
+  const refl3 = useRef(null)
 
   // useEffect(() => {
-  //   gsap
-  //     .timeline()
+  //   // @ts-ignore
+  //   t1.current = gsap
+  //     .timeline({ paused: true })
   //     .to(
-  //       "#l1",
+  //       refl1.current,
   //       {
   //         duration: DURATION,
-  //         backgroundColor: hover || focus ? toColor : fromColor,
+  //         top: '2rem',
   //       },
   //       0
   //     )
   //     .to(
-  //       "#l3",
+  //       refl3.current,
   //       {
   //         duration: DURATION,
-  //         backgroundColor: hover || focus ? toColor : fromColor,
+  //         top: '2rem',
   //       },
   //       0
   //     )
-  // }, [hover, focus])
+  //     .to(
+  //       refl1.current,
+  //       {
+  //         duration: DURATION,
+  //         rotate: 45,
+  //         transformOrigin: '50% 50%',
+  //       },
+  //       DURATION
+  //     )
+  //     .to(
+  //       refl3.current,
+  //       {
+  //         duration: DURATION,
+  //         rotate: -45,
+  //         transformOrigin: '50% 50%',
+  //       },
+  //       DURATION
+  //     )
 
-  function animate() {
+  //   // @ts-ignore
+  //   t2.current = gsap
+  //     .timeline({ paused: true })
+  //     .to(
+  //       refl1.current,
+  //       {
+  //         duration: DURATION,
+  //         rotate: 0,
+  //         transformOrigin: '50% 50%',
+  //       },
+  //       DURATION
+  //     )
+  //     .to(
+  //       refl3.current,
+  //       {
+  //         duration: DURATION,
+  //         rotate: 0,
+  //         transformOrigin: '50% 50%',
+  //       },
+  //       DURATION
+  //     )
+  //     .to(
+  //       refl1.current,
+  //       {
+  //         duration: DURATION,
+  //         top: '1.75rem',
+  //       },
+  //       DURATION
+  //     )
+  //     .to(
+  //       refl3.current,
+  //       {
+  //         duration: 4,
+  //         top: '2.25rem',
+  //       },
+  //       DURATION
+  //     )
+  // }, [])
+
+  // useEffect(() => {
+
+  //   if (isFirstRun.current) {
+  //     isFirstRun.current = 2;
+  //   }
+  // }, [])
+
+  useEffect(() => {
+    //if (!isFirstRun.current) {
+    animate()
+    //}
+
+    // skip first render since we only
+    // want animations when user clicks,
+    // not when react first injects variable.
+    isFirstRun.current = false
+  }, [showMenu])
+
+  // useWindowResize(() => {
+  //   animate()
+  // })
+
+  useEffect(() => {
+    gsap
+      .timeline()
+      .to(
+        refl1.current,
+        {
+          duration: DURATION,
+          backgroundColor: hover || focus ? toColor : fromColor,
+        },
+        0
+      )
+      .to(
+        refl3.current,
+        {
+          duration: DURATION,
+          backgroundColor: hover || focus ? toColor : fromColor,
+        },
+        0
+      )
+  }, [hover, focus])
+
+  const animate = () => {
     if (showMenu) {
       // @ts-ignore
       gsap
         .timeline()
         .to(
-          "#l1",
+          refl1.current,
           {
             duration: DURATION,
             top: "2rem",
@@ -62,7 +171,7 @@ function MenuOpenButton({
           0
         )
         .to(
-          "#l3",
+          refl3.current,
           {
             duration: DURATION,
             top: "2rem",
@@ -70,7 +179,7 @@ function MenuOpenButton({
           0
         )
         .to(
-          "#l1",
+          refl1.current,
           {
             duration: DURATION,
             rotate: 45,
@@ -79,7 +188,7 @@ function MenuOpenButton({
           DURATION
         )
         .to(
-          "#l3",
+          refl3.current,
           {
             duration: DURATION,
             rotate: -45,
@@ -92,7 +201,7 @@ function MenuOpenButton({
       gsap
         .timeline()
         .to(
-          "#l1",
+          refl1.current,
           {
             duration: DURATION,
             rotate: 0,
@@ -101,7 +210,7 @@ function MenuOpenButton({
           0
         )
         .to(
-          "#l3",
+          refl3.current,
           {
             duration: DURATION,
             rotate: 0,
@@ -110,7 +219,7 @@ function MenuOpenButton({
           0
         )
         .to(
-          "#l1",
+          refl1.current,
           {
             duration: DURATION,
             top: "1.75rem",
@@ -118,7 +227,7 @@ function MenuOpenButton({
           DURATION
         )
         .to(
-          "#l3",
+          refl3.current,
           {
             duration: DURATION,
             top: "2.25rem",
@@ -133,23 +242,23 @@ function MenuOpenButton({
   const toColor =
     headerMode === "dark" ? "rgba(255, 255, 255, 1)" : "rgba(0, 0, 0, 0.8)"
 
-  function onMouseEnter() {
+  const onMouseEnter: MouseEventHandler = e => {
     setHover(true)
   }
 
-  function onMouseLeave() {
+  const onMouseLeave: MouseEventHandler = e => {
     setHover(false)
   }
 
-  function onFocus() {
+  const onFocus: FocusEventHandler = e => {
     setFocus(true)
   }
 
-  function onBlur() {
+  const onBlur: FocusEventHandler = e => {
     setFocus(false)
   }
 
-  const cls = "absolute left-5 w-5"
+  const cls = "absolute left-5 w-5 "
   const style = { ...LINE_STYLE, backgroundColor: fromColor }
 
   return (
@@ -162,7 +271,7 @@ function MenuOpenButton({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      <span id="l1" className={cn(cls, "top-7")} style={style} />
+      <span ref={refl1} className={cn(cls, "top-7")} style={style} />
       {/* <span
         id="line2"
         className="absolute"
@@ -172,7 +281,7 @@ function MenuOpenButton({
           transform: 'translate(-50%, 0)',
         }}
       /> */}
-      <span id="l3" className={cn(cls, "top-9")} style={style} />
+      <span ref={refl3} className={cn(cls, "top-9")} style={style} />
     </button>
   )
 }

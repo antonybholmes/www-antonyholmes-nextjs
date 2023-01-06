@@ -1,57 +1,61 @@
-import ContentDiv from "../components/content-div"
+import { useRouter } from "next/router"
 import Breadcrumb from "../components/breadcrumb"
+import ContentDiv from "../components/content-div"
 import PageTitle from "../components/page-title"
-import ICrumbProps from "../interfaces/crumb-props"
-import ILayoutProps from "../interfaces/layout-props"
-import IPageTitleProps from "../interfaces/page-title-props"
+import type ICrumbProps from "../interfaces/crumb-props"
+import type ILayoutProps from "../interfaces/layout-props"
+import type IPageTitleProps from "../interfaces/page-title-props"
+import createCrumbs from "../lib/create-crumbs"
 import BaseLayout from "./base-layout"
-import cn from "../lib/class-names"
+import LayoutTitles from "./layout-titles"
 
 export interface IProps extends ILayoutProps, ICrumbProps, IPageTitleProps {
   headerClassName?: string
-  footerClassName?: string
 }
 
 export default function ContentLayout({
   title = "",
-  description,
-  supertitle,
-  showTitle = true,
+  subTitle,
+  superTitle,
+  showTitle = false,
   tab,
   isIndexed,
-  headerClassName, //"text-white bg-card-blue lg:text-gray-900 lg:bg-white",
-  footerClassName,
+  headerClassName, //"text-white bg-card-blue lg:text-slate-900 lg:bg-white",
   crumbs,
+  showCrumbs,
   className,
+  headerChildren,
   children,
 }: IProps) {
+  if (!crumbs) {
+    crumbs = createCrumbs(useRouter().asPath)
+  }
+
   return (
     <BaseLayout
       title={title}
       tab={tab}
       isIndexed={isIndexed}
       className={className}
-      footerClassName={footerClassName}
+      headerChildren={headerChildren}
     >
-      <ContentDiv className={cn("mb-8", headerClassName)}>
+      <ContentDiv className={headerClassName}>
         <></>
-        <>
-          {crumbs && <Breadcrumb crumbs={crumbs} className="mt-8" />}
-
-          {showTitle && title !== "" && (
-            <PageTitle
-              title={title}
-              subtitle={description}
-              supertitle={supertitle}
-              className="mt-8"
-            />
-          )}
+        <div className="mt-28">
+          <LayoutTitles
+            title={title}
+            superTitle={superTitle}
+            subTitle={subTitle}
+            crumbs={crumbs}
+            showTitle={showTitle}
+            showCrumbs={showCrumbs}
+          />
 
           {
             // @ts-ignore
             children[0]
           }
-        </>
+        </div>
         <></>
       </ContentDiv>
       <ContentDiv>

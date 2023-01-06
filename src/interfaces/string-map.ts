@@ -1,5 +1,3 @@
-interface IStringMap {
+export default interface IStringMap {
   [key: string]: string
 }
-
-export default IStringMap

@@ -1,6 +1,6 @@
+import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
-import cn from "../lib/class-names"
 import BaseCol from "./base-col"
 
 interface IProps extends IChildrenProps, IMouseProps {
@@ -8,7 +8,7 @@ interface IProps extends IChildrenProps, IMouseProps {
   tabIndex?: number
 }
 
-export default function HCenterCol({
+const HCenterCol = ({
   center = false,
   className = "",
   tabIndex,
@@ -16,7 +16,7 @@ export default function HCenterCol({
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) {
+}: IProps) => {
   return (
     <BaseCol
       center={center}
@@ -30,3 +30,5 @@ export default function HCenterCol({
     </BaseCol>
   )
 }
+
+export default HCenterCol
