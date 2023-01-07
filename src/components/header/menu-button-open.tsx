@@ -10,10 +10,14 @@ import cn from "../../lib/class-names"
 import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
-const OFFSET = "4px"
+
+const X1 = 22
+const X2 = 42
+const Y1 = 28
+const Y2 = 36
 
 const LINE_STYLE = {
-  height: "1px",
+  strokeWidth: 2,
 }
 
 export interface IMenuButtonProps extends IMenuProps {
@@ -136,27 +140,6 @@ const MenuOpenButton = ({
   //   animate()
   // })
 
-  useEffect(() => {
-    gsap
-      .timeline()
-      .to(
-        refl1.current,
-        {
-          duration: DURATION,
-          backgroundColor: hover || focus ? toColor : fromColor,
-        },
-        0
-      )
-      .to(
-        refl3.current,
-        {
-          duration: DURATION,
-          backgroundColor: hover || focus ? toColor : fromColor,
-        },
-        0
-      )
-  }, [hover, focus])
-
   const animate = () => {
     if (showMenu) {
       // @ts-ignore
@@ -166,7 +149,7 @@ const MenuOpenButton = ({
           refl1.current,
           {
             duration: DURATION,
-            top: "2rem",
+            attr: { y1: 32, y2: 32 },
           },
           0
         )
@@ -174,7 +157,7 @@ const MenuOpenButton = ({
           refl3.current,
           {
             duration: DURATION,
-            top: "2rem",
+            attr: { y1: 32, y2: 32 },
           },
           0
         )
@@ -222,7 +205,7 @@ const MenuOpenButton = ({
           refl1.current,
           {
             duration: DURATION,
-            top: "1.75rem",
+            attr: { y1: Y1, y2: Y1 },
           },
           DURATION
         )
@@ -230,17 +213,12 @@ const MenuOpenButton = ({
           refl3.current,
           {
             duration: DURATION,
-            top: "2.25rem",
+            attr: { y1: Y2, y2: Y2 },
           },
           DURATION
         )
     }
   }
-
-  const fromColor =
-    headerMode === "dark" ? "rgba(255, 255, 255, 0.5)" : "rgba(0, 0, 0, 0.4)"
-  const toColor =
-    headerMode === "dark" ? "rgba(255, 255, 255, 1)" : "rgba(0, 0, 0, 0.8)"
 
   const onMouseEnter: MouseEventHandler = e => {
     setHover(true)
@@ -258,30 +236,29 @@ const MenuOpenButton = ({
     setFocus(false)
   }
 
-  const cls = "absolute left-5 w-5 "
-  const style = { ...LINE_STYLE, backgroundColor: fromColor }
+  const cls = cn([
+    headerMode === "dark",
+    "stroke-white/80 group-hover:stroke-white",
+    "stroke-slate-600 group-hover:stroke-slate-900",
+  ])
 
   return (
     <button
       onClick={onClick}
-      className="relative h-16 min-w-16 outline-none"
+      className="group relative h-16 min-w-16 outline-none"
       aria-label={showMenu ? "Close Menu" : "Open Menu"}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      <span ref={refl1} className={cn(cls, "top-7")} style={style} />
-      {/* <span
-        id="line2"
-        className="absolute"
-        style={{
-          ...LINE_STYLE,
-          backgroundColor: fromColor,
-          transform: 'translate(-50%, 0)',
-        }}
-      /> */}
-      <span ref={refl3} className={cn(cls, "top-9")} style={style} />
+      {/* <span ref={refl1} className={cn(cls, "top-7")} style={style} />
+      <span ref={refl3} className={cn(cls, "top-9")} style={style} /> */}
+
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <line ref={refl1} x1={X1} y1={Y1} x2={X2} y2={Y1} className={cls} />
+        <line ref={refl3} x1={X1} y1={Y2} x2={X2} y2={Y2} className={cls} />
+      </svg>
     </button>
   )
 }

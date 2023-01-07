@@ -9,10 +9,10 @@ const HeroPosts = ({ posts }: IPostsProps) => {
   const topPosts = posts.slice(1, 4)
 
   return (
-    <section className="grid grid-cols-1 gap-12 xl:grid-cols-2">
-      <PreviewPost post={topPost} className="col-span-1" />
+    <section className="grid grid-cols-1 gap-12 lg:grid-cols-2 ">
+      <PreviewPost post={topPost} />
 
-      <BaseCol className="col-span-1 gap-y-4">
+      <BaseCol className="gap-y-4">
         {topPosts.map((post, index) => {
           return (
             <HeroPostSmall

@@ -50,7 +50,7 @@ function SmallHeader({
   // }, [showMenu])
 
   return (
-    <nav className="w-full md:hidden">
+    <nav className="w-full px-2 md:hidden">
       <div className="grid h-16 w-full grid-cols-5 items-center">
         <div>
           <MenuOpenButton

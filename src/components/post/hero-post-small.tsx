@@ -23,8 +23,11 @@ const HeroPostSmall = ({
 }: IProps) => (
   <article
     className={cn(
-      "grid grid-cols-1 md:gap-6",
-      [post.frontmatter.hero !== "", "md:grid-cols-3"],
+      "grid grid-cols-1 md:gap-5",
+      [
+        post.frontmatter.hero !== "",
+        "md:grid-cols-5 lg:grid-cols-3 2xl:grid-cols-4",
+      ],
       className
     )}
   >
@@ -34,7 +37,7 @@ const HeroPostSmall = ({
       </div>
     )}
 
-    <BaseCol className="col-span-2 gap-y-2">
+    <BaseCol className="col-span-4 lg:col-span-2 2xl:col-span-3 gap-y-2">
       <BaseCol>
         <PostSectionLink post={post} textSize="text-normal" />
         <PostTitleLink post={post} className="text-2xl" />
