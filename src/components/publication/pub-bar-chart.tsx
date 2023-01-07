@@ -3,8 +3,8 @@ function Chart({ children, height, width }) {
     <svg width={width} height={height} className="border">
       <defs>
         <linearGradient id="tealGradient" gradientTransform="rotate(90)">
-          <stop offset="5%" stop-color="cornflowerblue" />
-          <stop offset="95%" stop-color="teal" />
+          <stop offset="5%" stopColor="cornflowerblue" />
+          <stop offset="95%" stopColor="teal" />
         </linearGradient>
       </defs>
       {children}

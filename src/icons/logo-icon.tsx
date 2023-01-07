@@ -51,8 +51,8 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
     // <svg width="150px" height="25px" viewBox="0 0 150 25" className={cn("w-64", className)}>
     //   <defs>
     //     <linearGradient id="rainbow" y1="0" y2="0">
-    //       <stop stop-color="#1D4ED8" offset="5%" />
-    //       <stop stop-color="#2DD4BF" offset="95%" />
+    //       <stop stopColor="#1D4ED8" offset="5%" />
+    //       <stop stopColor="#2DD4BF" offset="95%" />
     //     </linearGradient>
     //   </defs>
     //   <text>

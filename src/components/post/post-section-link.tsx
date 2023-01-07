@@ -12,7 +12,11 @@ import IPostProps from "../../interfaces/post-props"
 import BaseLink from "../link/base-link"
 import BaseRow from "../base-row"
 
-const PostSectionLink = ({ post, className }: IPostProps) => {
+interface IProps extends IPostProps {
+  textSize?: string
+}
+
+const PostSectionLink = ({ post, textSize = "text-lg", className }: IProps) => {
   let url: string
 
   switch (post.frontmatter.section) {
@@ -49,7 +53,8 @@ const PostSectionLink = ({ post, className }: IPostProps) => {
         ariaLabel={`Read more ${post.frontmatter.section}`}
         underline={true}
         className={cn(
-          "bg-gradient-to-r from-purple-500 to-red-500 bg-clip-text text-lg font-bold text-transparent",
+          "bg-gradient-to-r from-purple-500 to-red-500 bg-clip-text font-bold text-transparent",
+          textSize,
           className
         )}
       >

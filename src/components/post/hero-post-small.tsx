@@ -6,41 +6,46 @@ import PostAuthor from "./post-author"
 import PostImage from "./post-image"
 import PostSectionLink from "./post-section-link"
 import PostTitleLink from "./post-title-link"
+import DateFormatter from "./date-formatter"
 
 interface IProps extends IPostProps {
   showDescription?: boolean
   showAvatar?: boolean
+  showImages?: boolean
 }
 
 const HeroPostSmall = ({
   post,
   showDescription = true,
   showAvatar = true,
+  showImages = false,
   className,
 }: IProps) => (
   <article
     className={cn(
       "grid grid-cols-1 md:gap-6",
-      [post.frontmatter.hero !== "", "md:grid-cols-5"],
+      [post.frontmatter.hero !== "", "md:grid-cols-3"],
       className
     )}
   >
     {post.frontmatter.hero !== "" && (
-      <div className="col-span-2">
-        <PostImage post={post} className="mb-4 h-64 md:h-40" />
+      <div className="col-span-1">
+        <PostImage post={post} className="mb-4 h-32" />
       </div>
     )}
 
-    <BaseCol className="col-span-3 gap-y-2">
+    <BaseCol className="col-span-2 gap-y-2">
       <BaseCol>
-        <PostSectionLink post={post} />
-        <PostTitleLink post={post} className="text-3xl" />
+        <PostSectionLink post={post} textSize="text-normal" />
+        <PostTitleLink post={post} className="text-2xl" />
       </BaseCol>
       {showDescription && (
-        <HTML html={post.excerpt} className="text-slate-600" />
+        <HTML html={post.excerpt} className="text-slate-600 text-sm" />
       )}
 
-      <PostAuthor post={post} showAvatar={showAvatar} />
+      <PostAuthor post={post} showAvatar={showAvatar} showImages={showImages} />
+
+      <DateFormatter date={post.fields.date} />
     </BaseCol>
   </article>
 )

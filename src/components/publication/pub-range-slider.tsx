@@ -206,13 +206,13 @@ export default function PubRangeSlider({
           >
             <defs>
               <linearGradient id="g1" gradientTransform="rotate(90)">
-                <stop offset="5%" stop-color="#10b981" />
-                <stop offset="95%" stop-color="#34d399" />
+                <stop offset="5%" stopColor="#10b981" />
+                <stop offset="95%" stopColor="#34d399" />
               </linearGradient>
 
               <linearGradient id="g2" gradientTransform="rotate(90)">
-                <stop offset="5%" stop-color="#059669" />
-                <stop offset="95%" stop-color="#10b981" />
+                <stop offset="5%" stopColor="#059669" />
+                <stop offset="95%" stopColor="#10b981" />
               </linearGradient>
             </defs>
 

@@ -26,6 +26,7 @@ export default function Page() {
             {skillList.map((skill, index) => {
               return (
                 <li
+                  key={index}
                   className={cn(
                     "transition-ani transition-color rounded-lg bg-gradient-to-br px-4 py-8 text-white",
                     [
@@ -47,7 +48,7 @@ export default function Page() {
           <h2 className="text-center text-5xl font-bold">Experience</h2>
           <ul className="mt-16 flex flex-col gap-y-8">
             {jobs.map((job, jobIndex) => (
-              <li>
+              <li key={jobIndex}>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <header className="mt-4">
                     <h3 className="font-bold">{job.title}</h3>
@@ -62,7 +63,7 @@ export default function Page() {
                     <p>{job.overview}</p>
                     <ul className="ml-6 mt-4 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
-                        <li>{detail}</li>
+                        <li key={detailIndex}>{detail}</li>
                       ))}
                     </ul>
                   </div>
@@ -76,7 +77,7 @@ export default function Page() {
           <h2 className="text-center text-5xl font-bold">Volunteer Work</h2>
           <ul className="mt-16 flex flex-col gap-y-8">
             {volunteer.map((job, jobIndex) => (
-              <li>
+              <li key={jobIndex}>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <header className="mt-4">
                     <h3 className="font-bold">{job.title}</h3>
@@ -90,7 +91,7 @@ export default function Page() {
                   <div className="transition-ani transition-color col-span-3 rounded-2xl bg-slate-100 p-8  hover:bg-slate-200">
                     <ul className="ml-6 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
-                        <li>{detail}</li>
+                        <li key={detailIndex}>{detail}</li>
                       ))}
                     </ul>
                   </div>
@@ -105,7 +106,7 @@ export default function Page() {
 
           <ul className="mt-16 flex flex-col gap-y-4">
             {education.map((degree, degreeIndex) => (
-              <li>
+              <li key={degreeIndex}>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <div></div>
                   <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-slate-300">
@@ -119,7 +120,7 @@ export default function Page() {
 
                     <ul className="mt-2 text-sm text-slate-500">
                       {degree.details.map((detail, detailIndex) => (
-                        <li>{detail}</li>
+                        <li key={detailIndex}>{detail}</li>
                       ))}
                     </ul>
                   </div>

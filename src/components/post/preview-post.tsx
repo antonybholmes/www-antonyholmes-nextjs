@@ -2,6 +2,7 @@ import IPostProps from "../../interfaces/post-props"
 import cn from "../../lib/class-names"
 import BaseCol from "../base-col"
 import HTML from "../html"
+import DateFormatter from "./date-formatter"
 import PostAuthor from "./post-author"
 import PostImage from "./post-image"
 import PostSectionLink from "./post-section-link"
@@ -53,6 +54,8 @@ export default function PreviewPost({
         )}
 
         <PostAuthor post={post} showAvatar={showAvatar} />
+
+        <DateFormatter date={post.fields.date} />
       </BaseCol>
     </article>
   )
