@@ -1,5 +1,3 @@
-import HCenterRow from "../components/h-center-row"
-import VCenterRow from "../components/v-center-row"
 import IClassProps from "../interfaces/class-props"
 import cn from "../lib/class-names"
 
@@ -8,65 +6,54 @@ interface IProps extends IClassProps {
 }
 
 export default function LogoIcon({ headerMode = "light", className }: IProps) {
+  const textClass = cn("transition-ani transition-color", [
+    headerMode === "light",
+    "fill-sky-600 group-hover:fill-sky-500",
+    "fill-slate-200",
+  ])
+
   return (
-    <VCenterRow className={cn("group gap-x-1 text-lg font-bold", className)}>
-      {/* <BaseImage
-      src="/assets/images/people/antony-holmes.webp"
-      alt="Logo"
-      size={[160,160]}
-      className="rounded-full w-8"
-    /> */}
-      <HCenterRow
-        className={cn(
-          "transition-ani transition-color h-9 w-9 items-center bg-gradient-to-br",
-          [
-            headerMode === "light",
-            "  bg-sky-600 text-white group-hover:bg-sky-500",
-            "bg-slate-300 group-hover:bg-slate-200",
-          ]
-        )}
+    <svg
+      viewBox="0 0 72 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className={cn("group h-9 font-bold", className)}
+    >
+      <rect
+        width="24"
+        height="24"
+        className={cn("transition-ani transition-color", [
+          headerMode === "light",
+          "  fill-sky-600 text-white group-hover:fill-sky-500",
+          "fill-slate-300 group-hover:fill-slate-200",
+        ])}
+      />
+      <text
+        alignmentBaseline="middle"
+        textAnchor="middle"
+        x="12"
+        y="14"
+        className="fill-white"
       >
         ah
-      </HCenterRow>
-      <span
-        className={cn("transition-ani transition-color", [
-          headerMode === "light",
-          "text-sky-600 group-hover:text-sky-500",
-          "text-slate-200",
-        ])}
+      </text>
+      <text
+        alignmentBaseline="middle"
+        textAnchor="middle"
+        x="28"
+        y="14"
+        className={textClass}
       >
         .
-      </span>
-      <span
-        className={cn("transition-ani transition-color", [
-          headerMode === "light",
-          "text-sky-600 group-hover:text-sky-500",
-          "text-slate-200",
-        ])}
+      </text>
+      <text
+        alignmentBaseline="middle"
+        textAnchor="middle"
+        x="46"
+        y="14"
+        className={textClass}
       >
         dev
-      </span>
-    </VCenterRow>
-
-    // <svg width="150px" height="25px" viewBox="0 0 150 25" className={cn("w-64", className)}>
-    //   <defs>
-    //     <linearGradient id="rainbow" y1="0" y2="0">
-    //       <stop stopColor="#1D4ED8" offset="5%" />
-    //       <stop stopColor="#2DD4BF" offset="95%" />
-    //     </linearGradient>
-    //   </defs>
-    //   <text>
-    //     <tspan
-    //       x="0"
-    //       y="50%"
-    //       className="font-bold border"
-    //       fill={cn([headerMode==='light', "url(#rainbow)", "white"])}
-    //       dominant-baseline="middle"
-
-    //     >
-    //       {SITE_DOMAIN}
-    //     </tspan>
-    //   </text>
-    // </svg>
+      </text>
+    </svg>
   )
 }
