@@ -66,7 +66,7 @@ export const getPostFields = (path: string): IPostFields => {
     hero: "generic1",
     heroCaption: "",
     authors: [],
-    section: "",
+    categories: [],
     related: [],
     status: "draft",
     tags: [],

@@ -2,6 +2,7 @@ import { join } from "path"
 import IAuthorMap from "../../interfaces/author-map"
 import IAuthorPost from "../../interfaces/author-post"
 import IBasePost from "../../interfaces/base-post"
+import ICategory from "../../interfaces/category"
 import IFieldMap from "../../interfaces/field-map"
 import IPostAuthor from "../../interfaces/post-author"
 import IStringMap from "../../interfaces/string-map"
@@ -9,6 +10,7 @@ import { getCanonicalPostSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
 import { getPostFields } from "./markdown"
+import TagMap from "./tag-map"
 
 export const POSTS_DIR = join(process.cwd(), "_content", "posts")
 
@@ -47,7 +49,11 @@ export function getPostByPath(path: string): IBasePost {
     path,
     fields: { slug: canonicalSlug, date: date },
     frontmatter: getPostFields(path),
+    categories: [],
   }
+
+  // Convert categories to something more useful
+  post.categories = post.frontmatter.categories.map(c => parseCategory(c))
 
   // If user doesn't specify a hero, use a default
   if (post.frontmatter.hero === "") {
@@ -120,17 +126,28 @@ export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
   )
 }
 
-export function getSectionPosts(
-  section: string,
+export function parseCategory(category: string): ICategory {
+  const sections = category.split("/")
+
+  return {
+    name: sections[0],
+    section: sections.length > 1 ? sections[1] : "Default",
+  }
+}
+
+export function getCategoryPosts(
+  category: string,
   authorMap: IAuthorMap
 ): IAuthorPost[] {
-  section = getUrlFriendlyTag(section)
+  category = getUrlFriendlyTag(category)
 
   return sortPosts(
     getPostPaths()
       .map(path => getPostByPath(path))
       .filter(post => {
-        return getUrlFriendlyTag(post.frontmatter.section).includes(section)
+        return post.frontmatter.categories
+          .mapgetUrlFriendlyTag(post.frontmatter.categories)
+          .includes(category)
       }),
     authorMap
   )
@@ -181,7 +198,7 @@ export function getSectionMap(posts: IBasePost[], max: number = -1): IFieldMap {
   const sectionMap: IFieldMap = {}
 
   posts.forEach(post => {
-    const s = getUrlFriendlyTag(post.frontmatter.section)
+    const s = getUrlFriendlyTag(post.frontmatter.categories)
 
     if (!(s in sectionMap)) {
       sectionMap[s] = []
@@ -203,11 +220,22 @@ export function getSectionMap(posts: IBasePost[], max: number = -1): IFieldMap {
  *
  * @returns a map of tags -> posts
  */
-export function getTagMap(posts: IBasePost[], max: number = -1): IFieldMap {
-  const tagMap: IFieldMap = {}
+export function getTagMap(posts: IBasePost[], max: number = -1): TagMap {
+  const tagMap = new TagMap(posts, max)
 
   posts.forEach(post => {
     post.frontmatter.tags.forEach((tag: string) => {
+      // Add the tag as is
+      // if (!(tag in tagMap)) {
+      //   tagMap[tag] = []
+      // }
+
+      // if (max === -1 || tagMap[tag].length < max) {
+      //   tagMap[tag].push(post)
+      // }
+
+      // add a url friendly version to make it easier
+      // to find tags
       const t = getUrlFriendlyTag(tag)
 
       if (!(t in tagMap)) {

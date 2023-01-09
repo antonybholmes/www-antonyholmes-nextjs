@@ -6,7 +6,7 @@ import { getAuthorMap } from "../../../lib/api/author"
 import {
   getAllPosts,
   getSectionMap,
-  getSectionPosts,
+  getCategoryPosts,
 } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
@@ -45,7 +45,7 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = await Promise.all(
-    getSectionPosts(section, getAuthorMap()).map(async post => {
+    getCategoryPosts(section, getAuthorMap()).map(async post => {
       return {
         ...post,
         excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),

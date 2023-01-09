@@ -3,13 +3,8 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import {
-  getAllPosts,
-  getSectionMap,
-  getSectionPosts,
-  getTagMap,
-  getTagPosts,
-} from "../../../lib/api/post"
+import { getAllPosts, getTagMap, getTagPosts } from "../../../lib/api/post"
+import TagMap from "../../../lib/api/tag-map"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
@@ -46,7 +41,6 @@ export async function getStaticProps({ params }: Params) {
       ? parseInt(params.slug[params.slug.length - 1]) - 1
       : 0
 
-  console.log(tag)
   const allPosts = await Promise.all(
     getTagPosts(tag, getAuthorMap()).map(async post => {
       return {
@@ -68,12 +62,12 @@ export async function getStaticProps({ params }: Params) {
 export async function getStaticPaths() {
   const posts = getAllPosts(getAuthorMap())
 
-  const tagMap = getTagMap(posts)
+  const tagMap = new TagMap(posts)
 
   const paths = []
 
-  Object.keys(tagMap).forEach(tag => {
-    const tagPosts = tagMap[tag]
+  tagMap.getFriendlyTags().forEach(tag => {
+    const tagPosts = tagMap.getPosts(tag)
     const pages = getPageCount(tagPosts)
 
     const t = getUrlFriendlyTag(tag)

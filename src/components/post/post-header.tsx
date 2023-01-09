@@ -11,7 +11,7 @@ const PostHeader = ({ post }: IPostProps) => (
       <>
         <div className="flex flex-col gap-y-2 md:w-60/100">
           {/* <Breadcrumb  /> */}
-          {post.frontmatter.section && <PostSectionLink post={post} />}
+          <PostSectionLink post={post} />
           <PageTitle
             title={post.frontmatter.title}
             subTitle={post.frontmatter.description}

@@ -13,6 +13,7 @@ export const VERSION = env.VERSION
 export const UPDATED = env.UPDATED
 export const GENERIC_IMAGES = env.GENERIC_IMAGES
 
+export const CATEGORY_SLUG = env.CATEGORY_SLUG
 export const POST_SLUG = env.POST_SLUG
 export const AUTHOR_SLUG = env.AUTHOR_SLUG
 export const PEOPLE_SLUG = env.PEOPLE_SLUG

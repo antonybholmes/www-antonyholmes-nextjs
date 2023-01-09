@@ -1,7 +1,7 @@
 /**
  * A Simple stringbuffer implementation
  */
-class StringBuffer {
+export default class StringBuffer {
   buffer: string[]
   index: number
   length: number
@@ -50,5 +50,3 @@ class StringBuffer {
     return this.buffer.join("")
   }
 }
-
-export default StringBuffer

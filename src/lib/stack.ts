@@ -1,4 +1,4 @@
-class Stack {
+export default class Stack {
   data: any[]
   top: number
 
@@ -48,5 +48,3 @@ class Stack {
     return this.data.slice(0, index).reverse()
   }
 }
-
-export default Stack
