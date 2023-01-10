@@ -4,10 +4,9 @@ import IAuthorPost from "../../interfaces/author-post"
 import IBasePost from "../../interfaces/base-post"
 import ICategory from "../../interfaces/category"
 import IFieldMap from "../../interfaces/field-map"
-import IPostAuthor from "../../interfaces/post-author"
 import IStringMap from "../../interfaces/string-map"
 import { getCanonicalPostSlug } from "../slug"
-import { getUrlFriendlyTag } from "../tags"
+import { getUrlFriendlyTag, getUrlFriendlyTags } from "../tags"
 import { getAllMDFiles } from "./files"
 import { getPostFields } from "./markdown"
 import TagMap from "./tag-map"
@@ -145,9 +144,9 @@ export function getCategoryPosts(
     getPostPaths()
       .map(path => getPostByPath(path))
       .filter(post => {
-        return post.frontmatter.categories
-          .mapgetUrlFriendlyTag(post.frontmatter.categories)
-          .includes(category)
+        return getUrlFriendlyTags(post.frontmatter.categories).includes(
+          category
+        )
       }),
     authorMap
   )

@@ -18,7 +18,6 @@ interface IProps extends IPostProps {
   showDescription?: boolean
   showAvatar?: boolean
   showAvatarImage?: boolean
-  lazy?: boolean
 }
 
 export default function PreviewPost({
@@ -33,13 +32,10 @@ export default function PreviewPost({
   showDescription = true,
   showAvatar = true,
   showAvatarImage = true,
-  lazy = false,
 }: IProps) {
   return (
     <article className={cn("flex flex-col gap-y-4", className)}>
-      {showImage && (
-        <PostImage post={post} lazy={lazy} className={imageClassName} />
-      )}
+      {showImage && <PostImage post={post} className={imageClassName} />}
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
         <BaseCol className="gap-y-1">

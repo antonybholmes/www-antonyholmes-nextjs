@@ -1,17 +1,12 @@
 import cn from "../../lib/class-names"
 import IPostProps from "../../interfaces/post-props"
 import BaseImage from "../base-image"
+import IImageProps from "../../interfaces/image-props"
 
-interface IProps extends IPostProps {
-  root?: string
-  size?: number[]
-  sizes?: number[]
-  loading?: "lazy" | "eager"
-}
+interface IProps extends IPostProps, IImageProps {}
 
 const BasePostImage = ({
   post,
-  root = "/posts",
   size = [2048, 1024],
   loading = "lazy",
   className,
@@ -19,7 +14,6 @@ const BasePostImage = ({
   <BaseImage
     src={`/assets/images/posts/${post.frontmatter.hero}.webp`}
     alt={post.frontmatter.title}
-    root={root}
     size={size}
     loading={loading}
     className={cn("h-full w-full object-cover", className)}

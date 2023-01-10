@@ -26,5 +26,6 @@ export default async function markdownHtml(markdown: string) {
     .use(rehypeSlug)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdown)
+
   return result.toString()
 }

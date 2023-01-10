@@ -3,20 +3,17 @@ import IPostProps from "../../interfaces/post-props"
 import BaseLink from "../link/base-link"
 import BasePostImage from "./base-post-image"
 import { getPostRelativeUrl } from "../../lib/urls"
+import IImageProps from "../../interfaces/image-props"
 
-interface IProps extends IPostProps {
-  size?: number[]
-  sizes?: number[]
-  lazy?: boolean
-}
+interface IProps extends IPostProps, IImageProps {}
 
-const PostImage = ({ post, size = [512, 256], className }: IProps) => {
+const PostImage = ({ post, size = [800, 400], className }: IProps) => {
   const image = (
-    <div className={cn("relative overflow-hidden rounded-lg", className)}>
+    <div className={cn(" overflow-hidden rounded-lg", className)}>
       <BasePostImage
         post={post}
         size={size}
-        className="absolute transition-transform duration-300 hover:scale-104"
+        className="transition-ani transition-transform scale-102 hover:scale-105"
       />
     </div>
   )

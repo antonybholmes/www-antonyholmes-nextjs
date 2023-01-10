@@ -1,14 +1,10 @@
 import type IClassProps from "../interfaces/class-props"
+import IImageProps from "../interfaces/image-props"
 import { parse } from "../lib/path"
 
-export interface IImageProps extends IClassProps {
+export interface IProps extends IImageProps, IClassProps {
   src: string
   alt: string
-  size?: number[]
-  sizes?: number[]
-  decoding?: "sync" | "async" | "auto"
-  loading?: "lazy" | "eager"
-  root?: string
 }
 
 export default function BaseImage({
@@ -20,9 +16,13 @@ export default function BaseImage({
   decoding = "async",
   className,
   style,
-}: IImageProps) {
+}: IProps) {
   if (sizes.length === 0) {
-    sizes = [size[0] / 4, size[0] / 2, size[0]] // size[0] / 8,
+    sizes = [
+      [size[0] / 4, size[1] / 4],
+      [size[0] / 2, size[1] / 2],
+      [size[0], size[1]],
+    ] // size[0] / 8,
   }
 
   const p = parse(src)
@@ -31,7 +31,7 @@ export default function BaseImage({
   const ext = p.ext
 
   const srcset = sizes
-    .map(s => `${dir}/opt/${name}-${s}.${ext} ${s}w`)
+    .map(s => `${dir}/opt/${name}-${s[0]}x${s[1]}.${ext} ${s[0]}w`)
     .join(", ")
 
   //const _sizes = sizes.map(s => `(min-width: ${s}px) ${s}px`).join(", ") //+ `, ${sizes[sizes.length - 1]}px`
@@ -39,7 +39,7 @@ export default function BaseImage({
   return (
     <picture>
       <img
-        src={`${dir}/opt/${name}-${size[0]}.${ext}`}
+        src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
         srcSet={srcset}
         sizes={`(min-width: ${size[0]}px) ${size[0]}px, 100vw`}
         width={size[0]}
