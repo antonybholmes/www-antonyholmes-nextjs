@@ -2,21 +2,21 @@ import IFieldMap from "../../interfaces/field-map"
 import IPreviewPost from "../../interfaces/preview-post"
 import BaseCol from "../base-col"
 import PagePagination from "../page-pagination"
+import CategoryPosts from "../post/category-posts"
+import CategoryPostsVert from "../post/category-posts-vert"
 import HeadPosts from "../post/head-posts"
 import HeroPosts from "../post/hero-posts"
 import LatestPosts from "../post/latest-posts"
 import RestPosts from "../post/rest-posts"
-import SectionPosts from "../post/section-posts"
-import SectionPostsVert from "../post/section-posts-vert"
 
 interface IProps {
   posts: IPreviewPost[]
   page: number
   pages: number
-  sectionMap?: IFieldMap
+  categoryMap?: IFieldMap
 }
 
-const PostsPage = ({ posts, page = 0, pages = 1, sectionMap }: IProps) => {
+const PostsPage = ({ posts, page = 0, pages = 1, categoryMap }: IProps) => {
   const heroPosts = posts.slice(0, 4)
   const headPosts = posts.slice(4, 6)
   const restPosts = posts.slice(6)
@@ -37,24 +37,24 @@ const PostsPage = ({ posts, page = 0, pages = 1, sectionMap }: IProps) => {
 
       {pages === 0 && restPosts.length && <LatestPosts posts={restPosts} />}
 
-      {sectionMap && (
+      {categoryMap && (
         <>
-          <SectionPostsVert
-            section="Guides & Tutorials"
-            posts={sectionMap["Guides & Tutorials"]}
+          <CategoryPostsVert
+            category="Guides & Tutorials"
+            posts={categoryMap["Guides & Tutorials"]}
           />
-          <SectionPosts section="Opinions" posts={sectionMap["Opinions"]} />
+          <CategoryPosts category="Opinions" posts={categoryMap["Opinions"]} />
 
-          <SectionPostsVert
-            section="Retirement"
-            posts={sectionMap["Retirement"]}
+          <CategoryPostsVert
+            category="Retirement"
+            posts={categoryMap["Retirement"]}
           />
 
           {/* <SectionPosts section="Reviews" posts={sectionMap['Reviews']} /> */}
 
-          <SectionPostsVert
-            section="News & Announcements"
-            posts={sectionMap["News & Announcements"]}
+          <CategoryPostsVert
+            category="News & Announcements"
+            posts={categoryMap["News & Announcements"]}
           />
         </>
       )}
