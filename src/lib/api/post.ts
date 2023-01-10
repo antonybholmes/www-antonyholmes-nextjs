@@ -2,7 +2,6 @@ import { join } from "path"
 import IAuthorMap from "../../interfaces/author-map"
 import IAuthorPost from "../../interfaces/author-post"
 import IBasePost from "../../interfaces/base-post"
-import ICategory from "../../interfaces/category"
 import IFieldMap from "../../interfaces/field-map"
 import IStringMap from "../../interfaces/string-map"
 import { getCanonicalPostSlug } from "../slug"
@@ -52,7 +51,7 @@ export function getPostByPath(path: string): IBasePost {
   }
 
   // Convert categories to something more useful
-  post.categories = post.frontmatter.categories.map(c => parseCategory(c))
+  post.categories = getCategories(post)
 
   // If user doesn't specify a hero, use a default
   if (post.frontmatter.hero === "") {
@@ -123,15 +122,6 @@ export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
     getPostPaths().map(path => getPostByPath(path)),
     authorMap
   )
-}
-
-export function parseCategory(category: string): ICategory {
-  const sections = category.split("/")
-
-  return {
-    name: sections[0],
-    section: sections.length > 1 ? sections[1] : "Default",
-  }
 }
 
 export function getCategoryPosts(
@@ -214,6 +204,30 @@ export function getCategoryMap(
   })
 
   return categoryMap
+}
+
+export function getCategories(post: IBasePost) {
+  const ret = []
+
+  post.frontmatter.categories.forEach(category => {
+    let path = category.split("/").concat(["All"])
+
+    let pathMap = {}
+    ret.push(pathMap)
+
+    pathMap[path[0]] = {}
+    pathMap[path[0]]["All"] = {}
+
+    path.forEach(p => {
+      if (!(p in pathMap)) {
+        pathMap[p] = {}
+      }
+
+      pathMap = pathMap[p]
+    })
+  })
+
+  return ret
 }
 
 /**
