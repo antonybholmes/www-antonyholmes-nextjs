@@ -1,10 +1,10 @@
 ---
 title: "New website design!"
-description: "I've redesigned my website using React."
+description: "I've redesigned my website using Gatsby."
 authors: ["Antony Holmes"]
 readtime: "1 min"
-section: "News"
-tags: ["Website"]
+categories: ["News", "Web Development"]
+tags: ["Website", "Gatsby", "React"]
 related: ""
 status: "published"
 hero: "generic1"
@@ -14,7 +14,7 @@ I have redesigned my website using React and Gatsby.
 
 <!-- end -->
 
-If you're a developer and you are interested in how the work is done, here are some details. The site is not open source but please feel free to get in touch at antony@antonyholmes.dev if you would like to view the code base.
+If you're a developer and you are interested in how the work is done, here are some details. The site is not open source but please feel free to get in touch at antony@antonyholmes.com if you would like to view the code base.
 
 The site is primarily developed using Gatsby, a framework for building websites in React. Gatsby is component based and takes care of the tiresome routing, transpiling, and hot-reloading that can make React annoying.
 

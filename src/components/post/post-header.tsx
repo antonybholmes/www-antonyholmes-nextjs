@@ -2,7 +2,7 @@ import IPostProps from "../../interfaces/post-props"
 import ContentDiv from "../content-div"
 import PageTitle from "../page-title"
 import HeroImage from "./hero-image"
-import PostSectionLink from "./post-section-link"
+import PostCategoryLink from "./post-category-link"
 
 const PostHeader = ({ post }: IPostProps) => (
   <section className="bg-slate-800">
@@ -11,7 +11,7 @@ const PostHeader = ({ post }: IPostProps) => (
       <>
         <div className="flex flex-col gap-y-2 md:w-60/100">
           {/* <Breadcrumb  /> */}
-          <PostSectionLink post={post} />
+          <PostCategoryLink post={post} />
           <PageTitle
             title={post.frontmatter.title}
             subTitle={post.frontmatter.description}

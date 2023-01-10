@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.antonyholmes.dev
+Host: https://www.antonyholmes.com
 
 # Sitemaps
-Sitemap: https://www.antonyholmes.dev/sitemap.xml
+Sitemap: https://www.antonyholmes.com/sitemap.xml

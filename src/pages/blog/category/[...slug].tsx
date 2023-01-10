@@ -5,7 +5,7 @@ import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
 import {
   getAllPosts,
-  getSectionMap,
+  getCategoryMap,
   getCategoryPosts,
 } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
@@ -37,7 +37,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const section = toCapitalCase(params.slug[0])
+  const category = toCapitalCase(params.slug[0])
 
   const page =
     params.slug.length > 1
@@ -45,7 +45,7 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = await Promise.all(
-    getCategoryPosts(section, getAuthorMap()).map(async post => {
+    getCategoryPosts(category, getAuthorMap()).map(async post => {
       return {
         ...post,
         excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
@@ -58,22 +58,22 @@ export async function getStaticProps({ params }: Params) {
   const pages = getPageCount(posts)
 
   return {
-    props: { title: section, posts, page, pages },
+    props: { title: category, posts, page, pages },
   }
 }
 
 export async function getStaticPaths() {
   const posts = getAllPosts(getAuthorMap())
 
-  const sectionMap = getSectionMap(posts)
+  const categoryMap = getCategoryMap(posts)
 
   const paths = []
 
-  Object.keys(sectionMap).forEach(section => {
-    const sectionPosts = sectionMap[section]
-    const pages = getPageCount(sectionPosts)
+  Object.keys(categoryMap).forEach(category => {
+    const categoryPosts = categoryMap[category]
+    const pages = getPageCount(categoryPosts)
 
-    const s = getUrlFriendlyTag(section)
+    const s = getUrlFriendlyTag(category)
     paths.push({
       params: {
         slug: [s],

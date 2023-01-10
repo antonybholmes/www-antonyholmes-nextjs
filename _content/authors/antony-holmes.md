@@ -1,7 +1,7 @@
 ---
 name: "Antony Holmes"
 title: "CEO, CTO, employee #1, all of the above"
-email: "antony@antonyholmes.dev"
+email: "antony@antonyholmes.com"
 pubmed: "https://www.ncbi.nlm.nih.gov/myncbi/1J71b9Dlf-hAd/bibliography/public/"
 ---
 

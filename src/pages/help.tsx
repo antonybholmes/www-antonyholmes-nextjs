@@ -3,7 +3,7 @@ import BaseRow from "../components/base-row"
 import BlueLink from "../components/link/blue-link"
 import { ROUNDED_BUTTON_CLS } from "../components/link/rounded-button-link"
 import { SITE_NAME, UPDATED, VERSION, YEAR } from "../constants"
-import LogoIcon from "../icons/logo-icon"
+import LogoIcon from "../icons/logo-icon-com"
 import SideLayout from "../layouts/side-layout"
 import cn from "../lib/class-names"
 
@@ -32,7 +32,7 @@ export default function Page() {
           <p>
             Developed by{" "}
             <BlueLink
-              href="https://www.antonyholmes.dev"
+              href="https://www.antonyholmes.com"
               ariaLabel="Email Antony Holmes"
             >
               Antony Holmes

@@ -194,22 +194,27 @@ export function allPostsBySlugMap(
   return ret
 }
 
-export function getSectionMap(posts: IBasePost[], max: number = -1): IFieldMap {
-  const sectionMap: IFieldMap = {}
+export function getCategoryMap(
+  posts: IBasePost[],
+  max: number = -1
+): IFieldMap {
+  const categoryMap: IFieldMap = {}
 
   posts.forEach(post => {
-    const s = getUrlFriendlyTag(post.frontmatter.categories)
+    post.frontmatter.categories.forEach((category: string) => {
+      const c = getUrlFriendlyTag(category)
 
-    if (!(s in sectionMap)) {
-      sectionMap[s] = []
-    }
+      if (!(c in categoryMap)) {
+        categoryMap[c] = []
+      }
 
-    if (max === -1 || sectionMap[s].length < max) {
-      sectionMap[s].push(post)
-    }
+      if (max === -1 || categoryMap[c].length < max) {
+        categoryMap[c].push(post)
+      }
+    })
   })
 
-  return sectionMap
+  return categoryMap
 }
 
 /**

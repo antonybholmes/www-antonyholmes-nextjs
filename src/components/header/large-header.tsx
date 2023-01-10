@@ -1,6 +1,6 @@
 import BaseLink from "../link/base-link"
 //import Search from '../search/search'
-import LogoIcon from "../../icons/logo-icon"
+import LogoIcon from "../../icons/logo-icon-com"
 import ContentDiv from "../content-div"
 import HeaderLinks from "./header-links"
 import IHeaderProps from "./header-props"

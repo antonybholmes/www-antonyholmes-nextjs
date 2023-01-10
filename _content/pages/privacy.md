@@ -8,7 +8,7 @@ layout: ../layouts/MarkdownLayout.astro
 
 By using this website, you hereby consent to the Privacy Policy and agree to its terms.
 
-This website attempts to collect as little information about you as possible. Such data that might be collected will not be sold, leased, exchanged, or otherwise shared with third parties in ways other than described in this Privacy Policy. If you have additional questions or require more information about the Privacy Policy, do not hesitate to contact us at [support@antonyholmes.dev](support@antonyholmes.dev).
+This website attempts to collect as little information about you as possible. Such data that might be collected will not be sold, leased, exchanged, or otherwise shared with third parties in ways other than described in this Privacy Policy. If you have additional questions or require more information about the Privacy Policy, do not hesitate to contact us at [support@antonyholmes.com](support@antonyholmes.com).
 
 ## Cookies
 

@@ -4,7 +4,7 @@ import BaseCol from "../base-col"
 import HTML from "../html"
 import PostAuthor from "./post-author"
 import PostImage from "./post-image"
-import PostSectionLink from "./post-section-link"
+import PostCategoryLink from "./post-category-link"
 import PostTitleLink from "./post-title-link"
 import DateFormatter from "./date-formatter"
 
@@ -39,7 +39,7 @@ const HeroPostSmall = ({
 
     <BaseCol className="col-span-4 lg:col-span-2 2xl:col-span-3 gap-y-2">
       <BaseCol>
-        <PostSectionLink post={post} textSize="text-normal" />
+        <PostCategoryLink post={post} textSize="text-normal" />
         <PostTitleLink post={post} className="text-2xl" />
       </BaseCol>
       {showDescription && (
