@@ -1,7 +1,7 @@
 import IPostsProps from "../../interfaces/posts-props"
 import { getCategoryBaseUrl } from "../../lib/urls"
 import BaseLink from "../link/base-link"
-import BaseSectionPostsVert from "./base-section-posts-vert"
+import BaseCategoryPostsVert from "./base-category-posts-vert"
 import PostsHeader from "./posts-header"
 
 interface IProps extends IPostsProps {
@@ -29,7 +29,7 @@ const CategoryPostsVert = ({
         </BaseLink>
       </PostsHeader>
 
-      <BaseSectionPostsVert posts={posts} rightMode={rightMode} />
+      <BaseCategoryPostsVert posts={posts} rightMode={rightMode} />
     </section>
   )
 }

@@ -7,7 +7,7 @@ interface IProps extends IPostsProps {
   rightMode?: boolean
 }
 
-const BaseSectionPosts = ({ posts, rightMode = false }: IProps) => {
+const BaseCategoryPosts = ({ posts, rightMode = false }: IProps) => {
   if (!posts) {
     return <></>
   }
@@ -47,4 +47,4 @@ const BaseSectionPosts = ({ posts, rightMode = false }: IProps) => {
   )
 }
 
-export default BaseSectionPosts
+export default BaseCategoryPosts
