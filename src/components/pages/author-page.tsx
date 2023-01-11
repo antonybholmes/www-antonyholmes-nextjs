@@ -1,6 +1,6 @@
 import IAuthor from "../../interfaces/author"
 import IPreviewPost from "../../interfaces/preview-post"
-import AvatarImageLarge from "../avatar-image-large"
+import AvatarImageLarge from "../person/avatar-image-large"
 import BaseRow from "../base-row"
 import HCenterRow from "../h-center-row"
 import PageTitle from "../page-title"

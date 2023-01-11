@@ -2,9 +2,9 @@ import cn from "../../lib/class-names"
 import IPostProps from "../../interfaces/post-props"
 import BasePostImage from "./base-post-image"
 import HeroImageCaption from "./hero-image-caption"
-import IImageProps from "../../interfaces/image-props"
+import IImageSizeProps from "../../interfaces/image-size-props"
 
-interface IProps extends IPostProps, IImageProps {}
+interface IProps extends IPostProps, IImageSizeProps {}
 
 const HeroImage = ({ post, size = [1600, 800], className }: IProps) => (
   <div className="relative overflow-hidden rounded-xl">

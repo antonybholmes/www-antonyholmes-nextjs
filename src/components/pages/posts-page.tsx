@@ -1,6 +1,7 @@
 import IFieldMap from "../../interfaces/field-map"
 import IPreviewPost from "../../interfaces/preview-post"
 import BaseCol from "../base-col"
+import HCenterRow from "../h-center-row"
 import PagePagination from "../page-pagination"
 import CategoryPosts from "../post/category-posts"
 import CategoryPostsVert from "../post/category-posts-vert"
@@ -33,8 +34,11 @@ const PostsPage = ({ posts, page = 0, pages = 1, categoryMap }: IProps) => {
       {pages > 1 && restPosts.length > 0 && <RestPosts posts={restPosts} />}
 
       {/* <Pagination page={page} pages={pages} /> */}
-      {pages > 1 && <PagePagination page={page} pages={pages} />}
-
+      {pages > 1 && (
+        <HCenterRow className="mt-16">
+          <PagePagination page={page} pages={pages} />
+        </HCenterRow>
+      )}
       {pages === 0 && restPosts.length && <LatestPosts posts={restPosts} />}
 
       {categoryMap && (

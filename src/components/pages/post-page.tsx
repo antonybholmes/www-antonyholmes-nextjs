@@ -1,5 +1,6 @@
 import IPost from "../../interfaces/post"
 import IPreviewPost from "../../interfaces/preview-post"
+import PostLayout from "../../layouts/post-layout"
 
 import BaseCol from "../base-col"
 import ContentDiv from "../content-div"
@@ -7,10 +8,10 @@ import MorePosts from "../post/more-posts"
 import PostBody from "../post/post-body"
 import PostDetailsHoz from "../post/post-details-hoz"
 import PostHeader from "../post/post-header"
-import PostLayout from "../post/post-layout"
 import PostSocialMedia from "../post/post-social-media"
 import PostSocialMediaVert from "../post/post-social-media-vert"
 import PostTags from "../post/post-tags"
+import ProsAndCons from "../post/pros-and-cons"
 import RelatedPosts from "../post/related-posts"
 
 interface IProps {
@@ -39,7 +40,9 @@ export default function PostPage({
             <PostLayout>
               <PostSocialMediaVert post={post} />
 
-              <BaseCol tag="section" className="gap-y-8">
+              <BaseCol className="gap-y-8">
+                {post.fields.type === "review" && <ProsAndCons post={post} />}
+
                 <PostBody html={post.html} className="text-justify" />
                 <PostTags post={post} />
               </BaseCol>

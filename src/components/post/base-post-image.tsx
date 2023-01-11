@@ -1,13 +1,13 @@
-import cn from "../../lib/class-names"
+import IImageSizeProps from "../../interfaces/image-size-props"
 import IPostProps from "../../interfaces/post-props"
+import cn from "../../lib/class-names"
 import BaseImage from "../base-image"
-import IImageProps from "../../interfaces/image-props"
 
-interface IProps extends IPostProps, IImageProps {}
+interface IProps extends IPostProps, IImageSizeProps {}
 
 const BasePostImage = ({
   post,
-  size = [2048, 1024],
+  size = [1600, 800],
   loading = "lazy",
   className,
 }: IProps) => (

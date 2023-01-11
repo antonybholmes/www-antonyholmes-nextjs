@@ -8,7 +8,13 @@ import LargeHeader from "./large-header"
 import MenuOverlay from "./menu-overlay"
 import SmallHeader from "./small-header"
 
-function Header({ title, tab, headerMode = "light", className }: IHeaderProps) {
+function Header({
+  title,
+  tab,
+  headerMode = "light",
+  className,
+  children,
+}: IHeaderProps) {
   const [scrollY, setScrollY] = useState(0)
   const [showMenu, setShowMenu] = useState(false)
 
@@ -63,10 +69,11 @@ function Header({ title, tab, headerMode = "light", className }: IHeaderProps) {
         <LargeHeader
           title={title}
           tab={tab}
-          showMenu={showMenu}
           headerMode={headerMode}
           scrollY={scrollY}
-        />
+        >
+          {children}
+        </LargeHeader>
       </header>
     </>
   )

@@ -3,7 +3,7 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import { getAllPosts, getTagMap, getTagPosts } from "../../../lib/api/post"
+import { getAllPostsAndReviews } from "../../../lib/api/post"
 import TagMap from "../../../lib/api/tag-map"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
@@ -42,13 +42,15 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = await Promise.all(
-    getTagPosts(tag, getAuthorMap()).map(async post => {
-      return {
-        ...post,
-        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
-        //html : await markdownHtml(post.frontmatter.content || ''),
-      }
-    })
+    getAllPostsAndReviews(getAuthorMap())
+      .filter(post => post.frontmatter.tags.includes(tag))
+      .map(async post => {
+        return {
+          ...post,
+          excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+          //html : await markdownHtml(post.frontmatter.content || ''),
+        }
+      })
   )
 
   const posts = getPagePosts(allPosts, page)
@@ -60,7 +62,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(getAuthorMap())
+  const posts = getAllPostsAndReviews(getAuthorMap())
 
   const tagMap = new TagMap(posts)
 

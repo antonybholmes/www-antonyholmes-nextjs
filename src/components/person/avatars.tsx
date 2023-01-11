@@ -1,8 +1,8 @@
-import cn from "../lib/class-names"
-import IClassProps from "../interfaces/class-props"
-import IPostAuthor from "../interfaces/post-author"
-import Avatar from "./avatar"
-import WrapRow from "./wrap-row"
+import cn from "../../lib/class-names"
+import IClassProps from "../../interfaces/class-props"
+import IPostAuthor from "../../interfaces/post-author"
+import Avatar from "../person/avatar"
+import WrapRow from "../wrap-row"
 
 interface IProps extends IClassProps {
   authors: IPostAuthor[]

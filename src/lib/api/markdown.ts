@@ -2,7 +2,6 @@ import fs from "fs"
 import matter from "gray-matter"
 import IAuthorFields from "../../interfaces/author-fields"
 import IFieldMap from "../../interfaces/field-map"
-import IPageFields from "../../interfaces/page-fields"
 import IPostFields from "../../interfaces/post-fields"
 
 export const getFields = (path: string, items: IFieldMap) => {
@@ -55,7 +54,7 @@ export const getFields = (path: string, items: IFieldMap) => {
   return items
 }
 
-export const getPostFields = (path: string): IPostFields => {
+export const getPostFrontmatter = (path: string): IPostFields => {
   const items: IPostFields = {
     id: "",
     index: -1,
@@ -63,13 +62,17 @@ export const getPostFields = (path: string): IPostFields => {
     description: "",
     rawContent: "",
     rawExcerpt: "",
-    hero: "generic1",
+    hero: "",
     heroCaption: "",
     authors: [],
     categories: [],
+    tags: [],
     related: [],
     status: "draft",
-    tags: [],
+    pros: [],
+    cons: [],
+    details: [],
+    rating: 0,
   }
 
   getFields(path, items)
@@ -83,23 +86,9 @@ export const getAuthorFields = (path: string): IAuthorFields => {
     name: "",
     title: "",
     email: "",
+    rawContent: "",
+    rawExcerpt: "",
     pubmed: "",
-    rawContent: "",
-    rawExcerpt: "",
-  }
-
-  getFields(path, items)
-
-  return items
-}
-
-export const getPageFields = (path: string): IPageFields => {
-  const items: IPageFields = {
-    id: "",
-    title: "",
-    authors: [],
-    rawContent: "",
-    rawExcerpt: "",
   }
 
   getFields(path, items)

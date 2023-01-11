@@ -11,4 +11,8 @@ export default interface IPostFields extends IBaseFields {
   related: string[]
   status: string
   tags: string[]
+  pros: string[]
+  cons: string[]
+  details: string[]
+  rating: number
 }

@@ -1,13 +1,26 @@
-import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
+import { useEffect, useRef, useState } from "react"
+import ILink from "../../interfaces/link"
 import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
-import ILink from "../../interfaces/link"
+import VCenterCol from "../v-center-col"
 
 const DURATION = 0.5
 const BAR_WIDTH = "3px"
-export const LINK_CLS =
-  "block relative font-bold text-sm  py-6 whitespace-nowrap overflow-hidden"
+
+export const LINK_CLS = cn(
+  "font-bold",
+  "text-sm",
+  "px-2",
+  "py-2",
+  "whitespace-nowrap",
+  "transition-ani",
+  "transition-colors",
+  "whitespace-nowrap",
+  "rounded-lg",
+  "border-2",
+  "border-transparent"
+)
 
 type IProps = {
   link: ILink
@@ -16,18 +29,31 @@ type IProps = {
   headerMode?: string
 }
 
-const HeaderLink2 = ({
+export default function HeaderLink({
   link,
   selected,
   scrollY,
   headerMode = "light",
-}: IProps) => {
+}: IProps) {
   const ref = useRef(null)
   const [hover, setHover] = useState(false)
+  const [down, setDown] = useState(false)
 
   const isFirstRun = useRef(true)
   const t1 = useRef(null)
   const t2 = useRef(null)
+
+  const onMouseEnter = () => {
+    if (!selected) {
+      setHover(true)
+    }
+  }
+
+  const onMouseLeave = () => {
+    if (!selected) {
+      setHover(false)
+    }
+  }
 
   useEffect(() => {
     // @ts-ignore
@@ -119,50 +145,50 @@ const HeaderLink2 = ({
     isFirstRun.current = false
   }, [hover])
 
-  const handleMouseEnter = () => {
-    if (!selected) {
-      setHover(true)
-    }
-  }
-
-  const handleMouseLeave = () => {
-    if (!selected) {
-      setHover(false)
-    }
-  }
-
   return (
     <BaseLink
       href={link.url}
       ariaLabel={`View ${link.name}`}
-      className={cn(LINK_CLS, [
-        selected,
-        [headerMode === "dark", "text-slate-50", "text-blue-600"],
-        [
-          headerMode === "dark",
-          "text-slate-400",
-          "transition-color text-slate-900 duration-300",
-        ],
-      ])}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onMouseDown={() => setDown(true)}
+      onMouseUp={() => setDown(false)}
     >
-      {link.name}
-      <div
-        ref={ref}
-        className={cn("transition-ani absolute bottom-0 transition-opacity", [
-          selected,
-          [
-            "w-full",
-            [scrollY > 10, "opacity-100", "opacity-0"],
+      <VCenterCol className="group relative h-16 justify-center overflow-hidden">
+        <div
+          className={cn(LINK_CLS, [
+            selected,
+            [headerMode === "dark", "text-slate-50", "text-blue-600"],
+            [
+              headerMode === "dark",
+              [[down, "bg-white/10"], "text-white/60 group-hover:text-white"],
+              [
+                [down, "border-blue-500 bg-gray-100"],
+                "text-slate-500 group-hover:text-slate-900",
+              ],
+            ],
+          ])}
+        >
+          {link.name}
+        </div>
+        <div
+          ref={ref}
+          className={cn(
+            "transition-ani absolute bottom-0 transition-opacity",
             [headerMode === "light", "bg-blue-600", "bg-white"],
-          ],
-          "w-0 bg-slate-400",
-        ])}
-        style={{ height: BAR_WIDTH }}
-      />
+            [
+              selected,
+              [
+                "w-full",
+                [headerMode === "light", "bg-blue-600", "bg-white"],
+                [scrollY > 10, "opacity-100", "opacity-0"],
+              ],
+              ["w-0", [headerMode === "light", "bg-slate-900", "bg-white"]],
+            ]
+          )}
+          style={{ height: BAR_WIDTH }}
+        />
+      </VCenterCol>
     </BaseLink>
   )
 }
-
-export default HeaderLink2

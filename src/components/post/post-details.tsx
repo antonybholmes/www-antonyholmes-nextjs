@@ -1,5 +1,5 @@
 import IPostProps from "../../interfaces/post-props"
-import Avatar from "../avatar"
+import Avatar from "../person/avatar"
 import DateFormatter from "./date-formatter"
 import PostSocialMedia from "./post-social-media"
 import PostTags from "./post-tags"

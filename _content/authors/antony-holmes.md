@@ -5,4 +5,6 @@ email: "antony@antonyholmes.com"
 pubmed: "https://www.ncbi.nlm.nih.gov/myncbi/1J71b9Dlf-hAd/bibliography/public/"
 ---
 
-Hello, I write most of the posts here because it is my site.
+I write most of the posts because this is my site.
+
+That's me posing by the Hudson River for no particular reason.

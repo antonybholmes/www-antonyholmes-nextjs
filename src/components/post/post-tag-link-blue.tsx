@@ -5,15 +5,14 @@ interface IProps {
   tag: string
 }
 
-const PostTagLinkBlue = ({ tag }: IProps) => (
-  <BlueLink
-    href={getTagBaseUrl(tag)}
-    ariaLabel={`View all articles related to ${tag}`}
-    underline={true}
-    className="font-bold"
-  >
-    {tag}
-  </BlueLink>
-)
-
-export default PostTagLinkBlue
+export default function PostTagLinkBlue({ tag }: IProps) {
+  return (
+    <BlueLink
+      href={getTagBaseUrl(tag)}
+      ariaLabel={`View posts related to ${tag}`}
+      underline={true}
+    >
+      {tag}
+    </BlueLink>
+  )
+}

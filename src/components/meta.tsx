@@ -40,8 +40,6 @@ export default function Meta() {
           gtag('config', 'G-X21MCY4FP3');
         `}
       </Script>
-
-      <link href="/themes/prism.css" rel="stylesheet" />
     </Head>
   )
 }

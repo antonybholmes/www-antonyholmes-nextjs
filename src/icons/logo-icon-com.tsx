@@ -14,7 +14,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
 
   return (
     <svg
-      viewBox="0 0 64 24"
+      viewBox="0 0 66 24"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("group h-9 font-bold", className)}
     >
@@ -49,13 +49,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
       >
         .
       </text>
-      <text
-        alignmentBaseline="middle"
-        textAnchor="middle"
-        x="46"
-        y="14"
-        className={textClass}
-      >
+      <text alignmentBaseline="middle" x="31" y="14" className={textClass}>
         com
       </text>
     </svg>

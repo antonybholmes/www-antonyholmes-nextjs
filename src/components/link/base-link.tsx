@@ -2,9 +2,10 @@ import cn from "../../lib/class-names"
 import ILinkProps from "../../interfaces/link-props"
 import IMouseProps from "../../interfaces/mouse-props"
 import ExtLink from "./ext-link"
+import IFocusProps from "../../interfaces/focus-props"
 import Link from "next/link"
 
-interface IProps extends ILinkProps, IMouseProps {
+interface IProps extends ILinkProps, IMouseProps, IFocusProps {
   underline?: boolean
 }
 
@@ -17,6 +18,10 @@ const BaseLink = ({
   onClick,
   onMouseEnter,
   onMouseLeave,
+  onMouseUp,
+  onMouseDown,
+  onFocus,
+  onBlur,
   children,
 }: IProps) => {
   if (!ariaLabel) {
@@ -39,6 +44,10 @@ const BaseLink = ({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+        onMouseDown={onMouseDown}
+        onFocus={onFocus}
+        onBlur={onBlur}
       >
         {children}
       </ExtLink>
@@ -56,6 +65,10 @@ const BaseLink = ({
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+        onMouseDown={onMouseDown}
+        onFocus={onFocus}
+        onBlur={onBlur}
       >
         {children}
       </Link>

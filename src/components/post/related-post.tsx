@@ -7,7 +7,7 @@ const RelatedPost = ({ post }: IPostProps) => (
     className="h-full rounded-lg bg-white shadow-box"
     innerClassName="p-5"
     headerClassName="text-3xl"
-    showImage={false}
+    showAvatarImage={false}
   />
 )
 

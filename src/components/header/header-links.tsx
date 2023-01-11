@@ -1,10 +1,9 @@
-import { HEADER_LINKS } from "../../menus"
 import ILink from "../../interfaces/link"
+import { HEADER_LINKS } from "../../menus"
 import HeaderLink from "./header-link"
 import IHeaderProps from "./header-props"
-import IMenuProps from "./menu-props"
 
-interface IProps extends IHeaderProps, IMenuProps {
+interface IProps extends IHeaderProps {
   scrollY: number
 }
 
@@ -22,7 +21,7 @@ const HeaderLinks = ({
 
   return (
     <ul
-      className="col-span-6 flex flex-row flex-nowrap items-center justify-center gap-8"
+      className="flex flex-row flex-nowrap items-center justify-center gap-4"
       style={{ marginBottom: "-1px" }}
     >
       {HEADER_LINKS.map((link: ILink, index: number) => {

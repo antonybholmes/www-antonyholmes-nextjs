@@ -1,6 +1,5 @@
-import StarIcon from "../icons/star"
 import HalfStarIcon from "../icons/half-star"
-import BaseRow from "./base-row"
+import StarIcon from "../icons/star"
 
 interface IProps {
   rating: number
@@ -14,7 +13,10 @@ const StarRating = ({ rating, stars = 5 }: IProps) => {
 
   for (let i = 0; i < n; ++i) {
     items.push(
-      <li key={i} className="transition-transform duration-300 hover:scale-110">
+      <li
+        key={i}
+        className="transition-ani transition-all  fill-amber-300 hover:fill-amber-400 hover:scale-110"
+      >
         <StarIcon className="w-5" />
       </li>
     )
@@ -24,7 +26,7 @@ const StarRating = ({ rating, stars = 5 }: IProps) => {
     items.push(
       <li
         key={items.length}
-        className="transition-transform duration-300 hover:scale-110"
+        className="transition-ani transition-all  fill-amber-300 hover:fill-amber-400 hover:scale-110"
       >
         <HalfStarIcon className="w-5" />
       </li>
@@ -36,14 +38,7 @@ const StarRating = ({ rating, stars = 5 }: IProps) => {
     items.push(<li key={items.length} className="block w-5" />)
   }
 
-  return (
-    <BaseRow
-      tag="ul"
-      className="transition-color gap-1 fill-amber-300 duration-300 hover:fill-amber-200"
-    >
-      {items}
-    </BaseRow>
-  )
+  return <ul className="flex flex-row gap-1">{items}</ul>
 }
 
 export default StarRating

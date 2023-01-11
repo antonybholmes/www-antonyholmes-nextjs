@@ -1,6 +1,6 @@
-export default interface IImageProps {
-  size?: number[]
-  sizes?: [number, number][]
-  decoding?: "sync" | "async" | "auto"
-  loading?: "lazy" | "eager"
+import IImageSizeProps from "./image-size-props"
+
+export default interface IImageProps extends IImageSizeProps {
+  src: string
+  alt: string
 }

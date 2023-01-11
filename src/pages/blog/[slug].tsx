@@ -3,15 +3,8 @@ import IPost from "../../interfaces/post"
 import IPreviewPost from "../../interfaces/preview-post"
 import BaseLayout from "../../layouts/base-layout"
 import { getAuthorMap } from "../../lib/api/author"
-import {
-  findPostBySlug,
-  getAllPosts,
-  getPostByPath,
-  getPostBySlug,
-  getTagMap,
-} from "../../lib/api/post"
+import { getAllPostsAndReviews, getTagMap } from "../../lib/api/post"
 import markdownHtml from "../../lib/markdown-html"
-import markdownToHtml from "../../lib/markdown-html"
 interface IProps {
   post: IPost
 }
@@ -34,7 +27,7 @@ export async function getStaticProps({ params }: Params) {
   const authorMap = getAuthorMap()
 
   const allPosts = await Promise.all(
-    getAllPosts(authorMap).map(async post => {
+    getAllPostsAndReviews(authorMap).map(async post => {
       return {
         ...post,
         excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
@@ -45,12 +38,11 @@ export async function getStaticProps({ params }: Params) {
 
   const tagMap = getTagMap(allPosts)
 
-  const p = getPostByPath(findPostBySlug(params.slug))
+  const post = allPosts.filter(post => post.fields.slug === params.slug)[0]
 
-  const post = {
-    ...p,
-    html: await markdownToHtml(p.frontmatter.rawContent || ""),
-    authors: p.frontmatter.authors.map(a => authorMap[a]),
+  const p = {
+    ...post,
+    html: await markdownHtml(post.frontmatter.rawContent || ""),
   }
 
   // const file = join(
@@ -66,16 +58,17 @@ export async function getStaticProps({ params }: Params) {
 
   return {
     props: {
-      post,
+      post: p,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(getAuthorMap())
+  const posts = getAllPostsAndReviews(getAuthorMap())
 
   return {
     paths: posts.map((post: IPreviewPost) => {
+      console.log(post.fields.slug)
       return {
         params: {
           slug: post.fields.slug,

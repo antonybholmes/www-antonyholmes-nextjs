@@ -4,7 +4,7 @@ import markdownHtml from "../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../lib/paginate"
 import PostsPage from "../components/pages/posts-page"
 import ContentLayout from "../layouts/content-layout"
-import { getAllPosts } from "../lib/api/post"
+import { getAllPostsAndReviews } from "../lib/api/post"
 
 interface IProps {
   posts: IPost[]
@@ -23,7 +23,7 @@ export default function Page({ posts, pages }: IProps) {
 
 export const getStaticProps = async () => {
   const allPosts = await Promise.all(
-    getAllPosts(getAuthorMap()).map(async post => {
+    getAllPostsAndReviews(getAuthorMap()).map(async post => {
       return {
         ...post,
         excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),

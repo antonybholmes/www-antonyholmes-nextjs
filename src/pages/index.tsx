@@ -1,4 +1,4 @@
-import AvatarImageLarge from "../components/avatar-image-large"
+import AvatarImageLarge from "../components/person/avatar-image-large"
 import BaseCol from "../components/base-col"
 import HCenterCol from "../components/h-center-col"
 import BaseLink from "../components/link/base-link"

@@ -63,7 +63,7 @@ function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
 
   return (
     <ul
-      className={cn("flex flex-col text-sm font-bold", [
+      className={cn("flex flex-col border-t border-slate-200 pt-2 text-sm", [
         headerMode === "dark",
         "bg-slate-800",
       ])}
@@ -72,12 +72,14 @@ function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
         const selected = title == link.name || tab == link.name
 
         return (
-          <MenuLink
-            link={link}
-            selected={selected}
-            onClick={onClick}
-            key={index}
-          />
+          <li key={index}>
+            <MenuLink
+              link={link}
+              selected={selected}
+              onClick={onClick}
+              key={index}
+            />
+          </li>
         )
       })}
     </ul>

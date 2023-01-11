@@ -26,7 +26,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
                   className={cn([index > 0, "border-t border-slate-200 pt-8"])}
                   headerClassName="text-3xl"
                   imageClassName="h-64 md:h-48"
-                  showImage={true}
+                  showAvatarImage={true}
                   key={index}
                 />
               )
@@ -42,7 +42,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
                   post={post}
                   className={cn([index > 0, "border-t border-slate-200 pt-8"])}
                   headerClassName="text-3xl"
-                  showImage={false}
+                  showAvatarImage={false}
                   key={index}
                 />
               )
@@ -59,7 +59,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
                   className={cn([index > 0, "border-t border-slate-200 pt-8"])}
                   headerClassName="text-3xl"
                   imageClassName="h-48"
-                  showImage={true}
+                  showAvatarImage={true}
                   key={index}
                 />
               )

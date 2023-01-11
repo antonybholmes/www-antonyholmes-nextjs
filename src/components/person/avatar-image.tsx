@@ -1,8 +1,8 @@
-import cn from "../lib/class-names"
-import { getUrlFriendlyTag } from "../lib/tags"
-import IClassProps from "../interfaces/class-props"
-import IPostAuthor from "../interfaces/post-author"
-import BaseImage from "./base-image"
+import cn from "../../lib/class-names"
+import { getUrlFriendlyTag } from "../../lib/tags"
+import IClassProps from "../../interfaces/class-props"
+import IPostAuthor from "../../interfaces/post-author"
+import BaseImage from "../base-image"
 
 export interface IAvatarProps extends IClassProps {
   author: IPostAuthor

@@ -1,7 +1,7 @@
 import cn from "../../lib/class-names"
 import IPostProps from "../../interfaces/post-props"
-import Avatars from "../avatars"
 import DateFormatter from "./date-formatter"
+import Avatars from "../person/avatars"
 
 const PostDetailsHoz = ({ post, className }: IPostProps) => (
   <section

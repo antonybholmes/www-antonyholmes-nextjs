@@ -2,10 +2,7 @@ import type IClassProps from "../interfaces/class-props"
 import IImageProps from "../interfaces/image-props"
 import { parse } from "../lib/path"
 
-export interface IProps extends IImageProps, IClassProps {
-  src: string
-  alt: string
-}
+export interface IProps extends IImageProps, IClassProps {}
 
 export default function BaseImage({
   src,

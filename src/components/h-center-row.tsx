@@ -4,12 +4,10 @@ import IMouseProps from "../interfaces/mouse-props"
 import BaseRow from "./base-row"
 
 interface IProps extends IChildrenProps, IMouseProps {
-  tag?: string
   tabIndex?: number
 }
 
 const HCenterRow = ({
-  tag = "div",
   className,
   tabIndex,
   onClick,
@@ -19,7 +17,6 @@ const HCenterRow = ({
 }: IProps) => {
   return (
     <BaseRow
-      tag={tag}
       className={cn("justify-center", className)}
       tabIndex={tabIndex}
       onClick={onClick}

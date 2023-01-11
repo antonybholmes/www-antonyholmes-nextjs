@@ -1,9 +1,7 @@
 ---
 title: "The Vanilla Investor"
 authors: ["Antony Holmes"]
-date: "2021-12-09"
 description: "You get what you don't pay for."
-readTime: "1 min"
 categories: ["Investing"]
 tags: ["Portfolio Design", "Guides"]
 hero: "vanilla"

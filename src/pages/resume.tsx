@@ -10,9 +10,13 @@ export default function Page() {
   const skillList: any[] = []
 
   skills.map((skillset: any, skillSetIndex: number) => {
-    skillset.skills.map((skill: any, skillIndex: number) => {
-      skillList.push(skill)
-    })
+    skillset.skills
+      .sort((a: { name: string }, b: { name: string }) =>
+        a.name.localeCompare(b.name)
+      )
+      .map((skill: any, skillIndex: number) => {
+        skillList.push(skill)
+      })
   })
 
   return (
@@ -37,7 +41,7 @@ export default function Page() {
                   )}
                 >
                   <h3 className="font-bold">{skill.name}</h3>
-                  <p>{skill.details}</p>
+                  <p>{skill.details.sort().join(", ")}</p>
                 </li>
               )
             })}
@@ -106,21 +110,21 @@ export default function Page() {
 
           <ul className="mt-16 flex flex-col gap-y-4">
             {education.map((degree, degreeIndex) => (
-              <li key={degreeIndex}>
+              <li>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
-                  <div></div>
-                  <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-slate-300">
+                  <div />
+                  <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-blue-400">
                     <header>
                       <h3 className="text-xl font-bold">{degree.title}</h3>
                       {/* {degree.date !== '' && (
-          <h3 class="degree-date">{degree.date}</h3>
-          )} */}
+      <h3 class="degree-date">{degree.date}</h3>
+      )} */}
                       <h4 className="font-light">{degree.school}</h4>
                     </header>
 
                     <ul className="mt-2 text-sm text-slate-500">
                       {degree.details.map((detail, detailIndex) => (
-                        <li key={detailIndex}>{detail}</li>
+                        <li>{detail}</li>
                       ))}
                     </ul>
                   </div>

@@ -2,9 +2,9 @@ import { useEffect, useState } from "react"
 
 import getBooleanSearch from "../lib/boolean-search"
 
+import SearchBar from "../components/search/searchbar"
 import getTopAuthors from "../lib/top-authors"
 import getTopJournals from "../lib/top-journals"
-import SearchBar from "../components/search/searchbar"
 
 //import BlueButton from "../link/blue-button"
 import JournalFilter from "../components/publication/journal-filter"
@@ -20,20 +20,20 @@ import HCenterRow from "../components/h-center-row"
 import Pagination from "../components/pagination"
 import AuthorFilter from "../components/publication/author-filter"
 
-import { RECORDS_PER_PAGE, TEXT_SHOW_MORE } from "../constants"
+import { SEARCH_RECORDS_PER_PAGE, TEXT_SHOW_MORE } from "../constants"
 import SortIcon from "../icons/sort"
 import ThreeQuarterLayout from "../layouts/three-quarter-layout"
 
-import { getShortName } from "../lib/text"
 import BaseCol from "../components/base-col"
 import BlueRoundedButton from "../components/link/blue-rounded-button"
 import ToggleSwitch from "../components/link/toggle-switch"
 import PubRangeSlider from "../components/publication/pub-range-slider"
 import { getSelectedPublications } from "../lib/api"
+import getAuthorPublications from "../lib/pub/author-publications"
+import getJournalPublications from "../lib/pub/journal-publications"
 import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
-import getJournalPublications from "../lib/pub/journal-publications"
-import getAuthorPublications from "../lib/pub/author-publications"
+import { getShortName } from "../lib/text"
 
 const EMPTY_QUERY = ""
 
@@ -78,7 +78,7 @@ export function search(query: any, publications: any[]): any[] {
       default:
         found = publication.pmid.toLowerCase().includes(ql)
 
-        if (!found) {
+        if (!found && publication.pmcid) {
           // try pmcid
           found = publication.pmcid.toLowerCase().includes(ql)
         }
@@ -254,7 +254,7 @@ export default function Page({ publications }: IProps) {
   const [year1, setYear1] = useState(-1)
   const [year2, setYear2] = useState(-1)
 
-  const [recordsPerPage, setRecordsPerPage] = useState(RECORDS_PER_PAGE)
+  const [recordsPerPage, setRecordsPerPage] = useState(SEARCH_RECORDS_PER_PAGE)
 
   const [showAll, setShowAll] = useState(false)
 
@@ -479,13 +479,20 @@ export default function Page({ publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="hidden grow lg:flex"
+          className="w-full lg:w-3/4"
         />
       }
       crumbs={[["Publications", "/publications"]]}
       className="mb-32 gap-x-16"
     >
       <div>
+        <SearchBar
+          onSearch={onSearch}
+          placeholder="Search publications..."
+          text={query}
+          className="mb-8 lg:hidden"
+        />
+
         <VCenterRow className="justify-between">
           <span className="text-sm text-slate-500">
             {results(query, pageStart, yearFilteredPublications)}

@@ -33,7 +33,7 @@ const BaseCategoryPosts = ({ posts, rightMode = false }: IProps) => {
                   "mb-4 border-b border-slate-200 pb-4",
                 ])}
                 headerClassName="text-4xl"
-                showImage={false}
+                showAvatarImage={false}
                 key={index}
               />
             )

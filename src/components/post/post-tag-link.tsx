@@ -1,4 +1,4 @@
-import { getTagUrl } from "../../lib/urls"
+import { getTagBaseUrl } from "../../lib/urls"
 import PillButtonLink from "../link/pill-button-link"
 
 interface IProps {
@@ -7,7 +7,7 @@ interface IProps {
 
 const PostTagLink = ({ tag }: IProps) => (
   <PillButtonLink
-    href={getTagUrl(tag)}
+    href={getTagBaseUrl(tag)}
     ariaLabel={`View all articles related to ${tag}`}
     className="my-1 mr-2 bg-slate-200 px-3 py-1 hover:bg-slate-300"
   >

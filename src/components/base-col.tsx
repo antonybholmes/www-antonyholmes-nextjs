@@ -1,5 +1,5 @@
-import IChildrenProps from "../interfaces/children-props"
-import IMouseProps from "../interfaces/mouse-props"
+import type IChildrenProps from "../interfaces/children-props"
+import type IMouseProps from "../interfaces/mouse-props"
 import cn from "../lib/class-names"
 
 interface IProps extends IChildrenProps, IMouseProps {
@@ -8,53 +8,25 @@ interface IProps extends IChildrenProps, IMouseProps {
   tag?: string
 }
 
-const BaseCol = ({
-  tag = "div",
+export default function BaseCol({
   className = "",
+  style,
   onClick,
   onMouseEnter,
   onMouseLeave,
   tabIndex,
   children,
-}: IProps) => {
-  switch (tag) {
-    case "section":
-      return (
-        <section
-          className={cn("flex flex-col", className)}
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          tabIndex={tabIndex}
-        >
-          {children}
-        </section>
-      )
-    case "ul":
-      return (
-        <ul
-          className={cn("flex flex-col", className)}
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          tabIndex={tabIndex}
-        >
-          {children}
-        </ul>
-      )
-    default:
-      return (
-        <div
-          className={cn("flex flex-col", className)}
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          tabIndex={tabIndex}
-        >
-          {children}
-        </div>
-      )
-  }
+}: IProps) {
+  return (
+    <div
+      className={cn("flex flex-col", className)}
+      style={style}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      tabIndex={tabIndex}
+    >
+      {children}
+    </div>
+  )
 }
-
-export default BaseCol

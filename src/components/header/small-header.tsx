@@ -1,23 +1,13 @@
 import BaseLink from "../link/base-link"
 import MenuOpenButton from "./menu-button-open"
 //import Search from '../search/search'
-import type IChildrenProps from "../../interfaces/children-props"
-import ContentDiv from "../content-div"
-import HCenterRow from "../h-center-row"
-import type { IMenuOverlayProps } from "./menu-overlay"
 import LogoIcon from "../../icons/logo-icon-com"
+import HCenterRow from "../h-center-row"
+import IHeaderProps from "./header-props"
+import MenuOverlay, { IMenuOverlayProps } from "./menu-overlay"
 
-export interface ISmallHeaderProps extends IMenuOverlayProps, IChildrenProps {
-  showMenu: boolean
-  onClick: any
-}
-
-function SmallHeader({
-  showMenu,
-  onClick,
-  headerMode,
-  children,
-}: ISmallHeaderProps) {
+interface IProps extends IHeaderProps, IMenuOverlayProps {}
+function SmallHeader({ title, tab, headerMode, showMenu, onClick }: IProps) {
   //const isFirstRun = useRef(true)
 
   // useEffect(() => {
@@ -50,31 +40,34 @@ function SmallHeader({
   // }, [showMenu])
 
   return (
-    <nav className="w-full px-2 md:hidden">
-      <div className="grid h-16 w-full grid-cols-5 items-center">
-        <div>
-          <MenuOpenButton
-            onClick={onClick}
-            showMenu={showMenu}
-            headerMode={headerMode}
-          />
-        </div>
-
-        <HCenterRow className="col-span-3 items-center">
-          <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon headerMode={headerMode} />
-          </BaseLink>
-        </HCenterRow>
-        <div></div>
-      </div>
-      {children && (
-        <ContentDiv>
-          <></>
-          <div className="mb-4">{children}</div>
-          <></>
-        </ContentDiv>
+    <>
+      {showMenu && (
+        <MenuOverlay
+          title={title}
+          tab={tab}
+          showMenu={showMenu}
+          onClick={onClick}
+        />
       )}
-    </nav>
+      <nav className="w-full md:hidden">
+        <div className="grid h-16 w-full grid-cols-5 items-center">
+          <div>
+            <MenuOpenButton
+              onClick={onClick}
+              showMenu={showMenu}
+              headerMode={headerMode}
+            />
+          </div>
+
+          <HCenterRow className="col-span-3 items-center">
+            <BaseLink href="/" ariaLabel="Goto Homepage">
+              <LogoIcon headerMode={headerMode} />
+            </BaseLink>
+          </HCenterRow>
+          <div></div>
+        </div>
+      </nav>
+    </>
   )
 }
 

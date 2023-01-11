@@ -9,9 +9,10 @@ const PostHeader = ({ post }: IPostProps) => (
     <ContentDiv className="pt-24">
       <></>
       <>
-        <div className="flex flex-col gap-y-2 md:w-60/100">
+        <div className="flex flex-col gap-y-2 md:w-70/100">
           {/* <Breadcrumb  /> */}
-          <PostCategoryLink post={post} />
+          <PostCategoryLink post={post} showSections={true} />
+
           <PageTitle
             title={post.frontmatter.title}
             subTitle={post.frontmatter.description}
@@ -22,7 +23,6 @@ const PostHeader = ({ post }: IPostProps) => (
 
         <div className="-mb-32 pt-8">
           <HeroImage post={post} className="h-72 lg:h-96 xl:h-140" />
-          {/* {post.frontmatter.heroCaption !== '' && <HeroImageCaption post={post} />} */}
         </div>
       </>
       <></>

@@ -4,32 +4,38 @@
     "skills": [
       {
         "name": "Java",
-        "details": "Tomcat, Spring Boot, Eclipse, Maven",
+        "details": ["Tomcat", "Spring Boot", "Eclipse", "Maven"],
         "notes": ""
       },
       {
         "name": "Python",
-        "details": "Django, Pandas, Scikit-learn, Matplotlib, Seaborn",
+        "details": [
+          "Django",
+          "Pandas",
+          "Scikit-learn",
+          "Matplotlib",
+          "Seaborn"
+        ],
         "notes": ""
       },
       {
-        "name": "Javascript",
-        "details": "React, Typescript, Gatsby, Electron, Astro",
+        "name": "Web Development",
+        "details": ["Javascript", "React", "Typescript", "Gatsby", "Astro"],
         "notes": ""
       },
       {
         "name": "C++",
-        "details": "STL, Boost",
+        "details": ["STL", "Boost"],
         "notes": ""
       },
       {
         "name": "Mathematical",
-        "details": "R, MATLAB",
+        "details": ["R", "MATLAB"],
         "notes": ""
       },
       {
         "name": "Scripting",
-        "details": "BASH",
+        "details": ["BASH"],
         "notes": ""
       }
     ]
@@ -39,11 +45,11 @@
     "skills": [
       {
         "name": "Amazon Web Services",
-        "details": "EC2, S3, Lambda, CloudFront, Route 53"
+        "details": ["EC2", "S3", "Lambda", "CloudFront", "Route 53"]
       },
       {
         "name": "Databases",
-        "details": "Postgresql, MySQL/MariaDB"
+        "details": ["Postgresql", "MySQL/MariaDB"]
       }
     ]
   }

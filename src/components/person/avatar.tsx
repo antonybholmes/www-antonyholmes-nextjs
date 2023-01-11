@@ -1,11 +1,11 @@
-import cn from "../lib/class-names"
-import { getAuthorUrl } from "../lib/urls"
-import IClassProps from "../interfaces/class-props"
-import IPostAuthor from "../interfaces/post-author"
+import cn from "../../lib/class-names"
+import { getAuthorUrl } from "../../lib/urls"
+import IClassProps from "../../interfaces/class-props"
+import IPostAuthor from "../../interfaces/post-author"
 import AvatarImage from "./avatar-image"
-import BaseCol from "./base-col"
-import BaseLink from "./link/base-link"
-import VCenterRow from "./v-center-row"
+import BaseCol from "../base-col"
+import BaseLink from "../link/base-link"
+import VCenterRow from "../v-center-row"
 
 interface IProps extends IClassProps {
   author: IPostAuthor
