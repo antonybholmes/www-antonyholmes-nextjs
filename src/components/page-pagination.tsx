@@ -1,13 +1,13 @@
 import { range } from "lodash"
-import cn from "../lib/class-names"
-import type IChildrenProps from "../interfaces/children-props"
-import type IAriaProps from "../interfaces/aria-props"
-import RoundedButton from "./link/rounded-button"
 import ChevronLeftIcon from "../icons/chevron-left"
 import ChevronRightIcon from "../icons/chevron-right"
-import BaseLink from "./link/base-link"
+import type IAriaProps from "../interfaces/aria-props"
+import type IChildrenProps from "../interfaces/children-props"
 import type IClassProps from "../interfaces/class-props"
+import cn from "../lib/class-names"
 import RoundedButtonLink from "./link/rounded-button-link"
+
+const INTERMEDIATE_BUTTONS = 3
 
 const BTN_CLS =
   "flex flex-row justify-center items-center min-w-8 h-8 border border-transparent"
@@ -105,7 +105,7 @@ function PageButton({ href, page, selected }: IPageButtonProps) {
       <BasePageButton
         href={href}
         page={page}
-        className="transition duration-300 hover:border-slate-300"
+        className="hover:border-slate-300"
       />
     )
   }
@@ -130,6 +130,16 @@ export default function PagePagination({
   pages,
   root = "/blog",
 }: IProps) {
+  // Sometimes page is -1 to indicate a special type of
+  // root page, however it still represents page 0 of
+  // blog results
+
+  // FOR TESTING ONLY
+  //pages = 50
+  //page = 45
+
+  page = Math.max(0, page)
+
   const pageStart = Math.max(page - 1, 1)
   const pageEnd = Math.min(page + 1, pages - 2)
 
@@ -143,16 +153,12 @@ export default function PagePagination({
       </li>
 
       <li>
-        <PageButton
-          page={page}
-          href={getPath(page, root)}
-          selected={page === 0}
-        />
+        <PageButton page={0} href={getPath(0, root)} selected={page === 0} />
       </li>
 
       {pageStart > 1 && <Ellipsis />}
 
-      {range(pageStart, pageEnd, 1).map((p: number, index: number) => (
+      {range(pageStart, pageEnd + 1).map((p: number, index: number) => (
         <li key={p}>
           <PageButton href={getPath(p, root)} page={p} selected={p === page} />
         </li>
@@ -160,15 +166,13 @@ export default function PagePagination({
 
       {pageEnd < pages - 2 && <Ellipsis />}
 
-      {pages > 1 && (
-        <li>
-          <PageButton
-            href={getPath(pages - 1, root)}
-            page={pages - 1}
-            selected={page === pages - 1}
-          />
-        </li>
-      )}
+      <li>
+        <PageButton
+          href={getPath(pages - 1, root)}
+          page={pages - 1}
+          selected={page === pages - 1}
+        />
+      </li>
 
       <li>
         <NextButton href={getPath(nextPage, root)} />

@@ -13,7 +13,7 @@ import LinkIcon from "../icons/link"
 import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
 import markdownToHtml from "../lib/markdown-html"
-import { getAllPosts } from "../lib/api/post"
+import { getAllPostsAndReviews } from "../lib/api/post"
 import { getAuthorUrl } from "../lib/urls"
 import { getUrlFriendlyTag } from "../lib/tags"
 
@@ -108,7 +108,7 @@ export async function getStaticProps() {
   const authorMap = getAuthorMap()
 
   let posts = await Promise.all(
-    getAllPosts(authorMap)
+    getAllPostsAndReviews(authorMap)
       .slice(0, 5)
       .map(async post => {
         return {

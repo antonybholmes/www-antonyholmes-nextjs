@@ -3,7 +3,7 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import { getAllPosts } from "../../../lib/api/post"
+import { getAllPostsAndReviews } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
 
@@ -33,7 +33,7 @@ export async function getStaticProps({ params }: Params) {
   const page = parseInt(params.slug) - 1
 
   const allPosts = await Promise.all(
-    getAllPosts(getAuthorMap()).map(async post => {
+    getAllPostsAndReviews(getAuthorMap()).map(async post => {
       return {
         ...post,
         excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
@@ -51,7 +51,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(getAuthorMap())
+  const posts = getAllPostsAndReviews(getAuthorMap())
 
   const pages = getPageCount(posts)
 
