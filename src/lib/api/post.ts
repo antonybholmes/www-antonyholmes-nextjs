@@ -69,12 +69,12 @@ export function sortPosts(
 ): IAuthorPost[] {
   return (
     posts
-      .filter(post => {
-        return (
-          process.env.NODE_ENV === "development" ||
-          post.frontmatter.status === "published"
-        )
-      })
+      // .filter(post => {
+      //   return (
+      //     process.env.NODE_ENV === "development" ||
+      //     post.frontmatter.status === "published"
+      //   )
+      // })
       // sort posts by date in descending order
       .sort((post1, post2) => {
         const d1 = new Date(post1.fields.date)
