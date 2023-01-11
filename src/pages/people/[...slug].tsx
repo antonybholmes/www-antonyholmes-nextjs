@@ -4,16 +4,9 @@ import IAuthor from "../../interfaces/author"
 import IPost from "../../interfaces/post"
 import ContentLayout from "../../layouts/content-layout"
 import { getAuthorMap } from "../../lib/api/author"
-import {
-  getAllPosts,
-  getTagMap,
-  getAuthorPosts,
-  getAuthorPostMap,
-} from "../../lib/api/post"
+import { getAllPostsAndReviews, getAuthorPostMap } from "../../lib/api/post"
 import markdownHtml from "../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../lib/paginate"
-import { getUrlFriendlyTag } from "../../lib/tags"
-import { toCapitalCase } from "../../lib/text"
 
 interface IProps {
   author: IAuthor
@@ -39,13 +32,11 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const name = toCapitalCase(params.slug[0])
-
-  console.log(name, params.slug)
+  const id = params.slug[0]
 
   const authorMap = getAuthorMap()
 
-  const author = authorMap[name]
+  const author = authorMap[id]
 
   const page =
     params.slug.length > 1
@@ -53,13 +44,17 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = await Promise.all(
-    getAuthorPosts(name, getAuthorMap()).map(async post => {
-      return {
-        ...post,
-        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
-        //html : await markdownHtml(post.frontmatter.content || ''),
-      }
-    })
+    getAllPostsAndReviews(authorMap)
+      .filter(post =>
+        post.frontmatter.authors.includes(author.frontmatter.name)
+      )
+      .map(async post => {
+        return {
+          ...post,
+          excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+          //html : await markdownHtml(post.frontmatter.content || ''),
+        }
+      })
   )
 
   const posts = getPagePosts(allPosts, page)
@@ -73,11 +68,9 @@ export async function getStaticProps({ params }: Params) {
 export async function getStaticPaths() {
   const authorMap = getAuthorMap()
 
-  const posts = getAllPosts(authorMap)
+  const posts = getAllPostsAndReviews(authorMap)
 
   const postMap = getAuthorPostMap(posts)
-
-  getAuthorMap
 
   const paths = []
 
@@ -85,17 +78,16 @@ export async function getStaticPaths() {
     const authorPosts = postMap[author]
     const pages = getPageCount(authorPosts)
 
-    const a = getUrlFriendlyTag(author)
     paths.push({
       params: {
-        slug: [a],
+        slug: [author],
       },
     })
 
     range(0, pages).forEach(page => {
       paths.push({
         params: {
-          slug: [a, "page", (page + 1).toString()],
+          slug: [author, "page", (page + 1).toString()],
         },
       })
     })

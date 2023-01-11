@@ -38,7 +38,7 @@ files
 maxSize = "2048x1024"
 sizes = [200, 400, 800, 800, 1600]
 
-dir = "./public/assets/assets/images/posts"
+dir = "./public/assets/images/posts"
 
 files = fs.readdirSync(dir)
 

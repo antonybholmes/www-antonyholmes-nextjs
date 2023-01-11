@@ -3,7 +3,10 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import { getAllPostsAndReviews, getCategoryMap } from "../../../lib/api/post"
+import {
+  getAllPostsAndReviews,
+  getCategoryPostMap,
+} from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
 import { toCapitalCase } from "../../../lib/text"
@@ -53,7 +56,7 @@ export async function getStaticProps({ params }: Params) {
 
   const allPosts = getAllPostsAndReviews(getAuthorMap())
 
-  const categoryMap = getCategoryMap(allPosts)
+  const categoryMap = getCategoryPostMap(allPosts)
 
   const catPosts = await Promise.all(
     categoryMap[category][section].map(async post => {
@@ -83,15 +86,13 @@ export async function getStaticProps({ params }: Params) {
 export async function getStaticPaths() {
   const posts = getAllPostsAndReviews(getAuthorMap())
 
-  const categoryMap = getCategoryMap(posts)
+  const categoryMap = getCategoryPostMap(posts)
 
   const paths = []
 
   Object.keys(categoryMap).forEach(category => {
     const categoryPosts = categoryMap[category]["all"]
     const pages = getPageCount(categoryPosts)
-
-    console.log(category)
 
     paths.push({
       params: {
@@ -131,8 +132,6 @@ export async function getStaticPaths() {
       }
     })
   })
-
-  console.log(paths)
 
   return {
     paths,

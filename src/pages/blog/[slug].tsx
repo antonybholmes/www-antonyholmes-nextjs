@@ -3,7 +3,7 @@ import IPost from "../../interfaces/post"
 import IPreviewPost from "../../interfaces/preview-post"
 import BaseLayout from "../../layouts/base-layout"
 import { getAuthorMap } from "../../lib/api/author"
-import { getAllPostsAndReviews, getTagMap } from "../../lib/api/post"
+import { getAllPostsAndReviews, getTagPostMap } from "../../lib/api/post"
 import markdownHtml from "../../lib/markdown-html"
 interface IProps {
   post: IPost
@@ -36,7 +36,7 @@ export async function getStaticProps({ params }: Params) {
     })
   )
 
-  const tagMap = getTagMap(allPosts)
+  const tagMap = getTagPostMap(allPosts)
 
   const post = allPosts.filter(post => post.fields.slug === params.slug)[0]
 
@@ -68,7 +68,6 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map((post: IPreviewPost) => {
-      console.log(post.fields.slug)
       return {
         params: {
           slug: post.fields.slug,

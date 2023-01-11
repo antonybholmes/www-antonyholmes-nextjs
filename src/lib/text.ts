@@ -33,3 +33,18 @@ export function getShortName(name: string, l: number = 20) {
 
   return name.substring(0, l) + "..."
 }
+
+/**
+ * Format certain words to appear consistently in
+ * strings. Mostly applies to words like SVG which
+ * may be capitalized to Svg.
+ *
+ * @param name
+ * @returns
+ */
+export function fixName(name: string) {
+  return name
+    .replaceAll("Svg", "SVG")
+    .replace("Faq", "FAQ")
+    .replaceAll("-", " ")
+}

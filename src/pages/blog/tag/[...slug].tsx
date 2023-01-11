@@ -3,12 +3,13 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import { getAllPostsAndReviews } from "../../../lib/api/post"
-import TagMap from "../../../lib/api/tag-map"
+import { getAllPostsAndReviews, getTagPostMap } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
-import { toCapitalCase } from "../../../lib/text"
+import { fixName, toCapitalCase } from "../../../lib/text"
+
+const TAG_REPLACE_MAP = { Svg: "SVG" }
 
 interface IProps {
   title: string
@@ -34,7 +35,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const tag = toCapitalCase(params.slug[0])
+  const tag = params.slug[0]
 
   const page =
     params.slug.length > 1
@@ -43,7 +44,9 @@ export async function getStaticProps({ params }: Params) {
 
   const allPosts = await Promise.all(
     getAllPostsAndReviews(getAuthorMap())
-      .filter(post => post.frontmatter.tags.includes(tag))
+      .filter(post =>
+        post.frontmatter.tags.map(tag => getUrlFriendlyTag(tag)).includes(tag)
+      )
       .map(async post => {
         return {
           ...post,
@@ -57,32 +60,31 @@ export async function getStaticProps({ params }: Params) {
   const pages = getPageCount(posts)
 
   return {
-    props: { title: tag, posts, page, pages },
+    props: { title: fixName(toCapitalCase(tag)), posts, page, pages },
   }
 }
 
 export async function getStaticPaths() {
   const posts = getAllPostsAndReviews(getAuthorMap())
 
-  const tagMap = new TagMap(posts)
+  const tagMap = getTagPostMap(posts)
 
   const paths = []
 
-  tagMap.getFriendlyTags().forEach(tag => {
-    const tagPosts = tagMap.getPosts(tag)
+  Object.keys(tagMap).forEach((tag: string) => {
+    const tagPosts = tagMap[tag]
     const pages = getPageCount(tagPosts)
 
-    const t = getUrlFriendlyTag(tag)
     paths.push({
       params: {
-        slug: [t],
+        slug: [tag],
       },
     })
 
     range(0, pages).forEach(page => {
       paths.push({
         params: {
-          slug: [t, "page", (page + 1).toString()],
+          slug: [tag, "page", (page + 1).toString()],
         },
       })
     })

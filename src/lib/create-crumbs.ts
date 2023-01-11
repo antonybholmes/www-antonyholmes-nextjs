@@ -1,12 +1,10 @@
 import type ICrumb from "../interfaces/crumb"
-import { toCapitalCase } from "./text"
+import { fixName, toCapitalCase } from "./text"
 
 const EXCLUDE = ["Tag", "Category", "Section", "Page"]
 
 function _formatName(name: string) {
-  return toCapitalCase(name.replace(/^\d{4}-\d{2}-\d{2}-/, ""))
-    .replaceAll("-", " ")
-    .replace("Faq", "FAQ")
+  return fixName(toCapitalCase(name.replace(/^\d{4}-\d{2}-\d{2}-/, "")))
 }
 
 export default function createCrumbs(url: string): ICrumb[] {

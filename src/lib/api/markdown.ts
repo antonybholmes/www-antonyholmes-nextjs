@@ -2,9 +2,25 @@ import fs from "fs"
 import matter from "gray-matter"
 import IAuthorFields from "../../interfaces/author-fields"
 import IFieldMap from "../../interfaces/field-map"
+import IPageFields from "../../interfaces/page-fields"
 import IPostFields from "../../interfaces/post-fields"
 
-export const getFields = (path: string, items: IFieldMap) => {
+function getDate(slug: string): string {
+  const match = slug.match(/(\d{4})-(\d{2})-(\d{2})/)
+
+  return match ? match.slice(1, 4).join("-") : "2022-01-01"
+}
+
+export function getFields(index: number, slug: string, type: string) {
+  return {
+    index,
+    type,
+    slug,
+    date: getDate(slug),
+  }
+}
+
+export const getFrontmatter = (path: string, items: IFieldMap) => {
   const fileContents = fs.readFileSync(path, "utf8")
   const { data, content, excerpt } = matter(fileContents, {
     excerpt: true,
@@ -54,6 +70,20 @@ export const getFields = (path: string, items: IFieldMap) => {
   return items
 }
 
+export const getPageFrontmatter = (path: string): IPageFields => {
+  const items: IPageFields = {
+    title: "",
+    authors: [],
+    id: "",
+    rawContent: "",
+    rawExcerpt: "",
+  }
+
+  getFrontmatter(path, items)
+
+  return items
+}
+
 export const getPostFrontmatter = (path: string): IPostFields => {
   const items: IPostFields = {
     id: "",
@@ -75,12 +105,12 @@ export const getPostFrontmatter = (path: string): IPostFields => {
     rating: 0,
   }
 
-  getFields(path, items)
+  getFrontmatter(path, items)
 
   return items
 }
 
-export const getAuthorFields = (path: string): IAuthorFields => {
+export const getAuthorFrontmatter = (path: string): IAuthorFields => {
   const items: IAuthorFields = {
     id: "",
     name: "",
@@ -91,7 +121,7 @@ export const getAuthorFields = (path: string): IAuthorFields => {
     pubmed: "",
   }
 
-  getFields(path, items)
+  getFrontmatter(path, items)
 
   return items
 }

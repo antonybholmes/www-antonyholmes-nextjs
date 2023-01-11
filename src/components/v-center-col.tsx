@@ -2,6 +2,7 @@ import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
 import BaseCol from "./base-col"
+import React from "react"
 
 interface IProps extends IChildrenProps, IMouseProps {
   center?: boolean

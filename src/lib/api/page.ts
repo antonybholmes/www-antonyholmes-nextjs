@@ -1,7 +1,7 @@
 import { join } from "path"
 import IBasePage from "../../interfaces/base-page"
 import { getAllFiles } from "./files"
-import { getPageFields } from "./markdown"
+import { getFields, getPageFrontmatter } from "./markdown"
 
 const PAGE_DIR = join(process.cwd(), "_content", "pages")
 
@@ -14,9 +14,8 @@ export const getPageBySlug = (slug: string): IBasePage => {
   const fullPath = join(PAGE_DIR, `${realPath}.md`)
 
   return {
-    path: fullPath,
-    fields: { slug, date: "" },
-    frontmatter: getPageFields(fullPath),
+    fields: getFields(-1, slug, "page"),
+    frontmatter: getPageFrontmatter(fullPath),
   }
 }
 

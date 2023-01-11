@@ -5,5 +5,4 @@ export default interface IMarkdownFields {
   slug: string
   date: string
   type: string
-  categories: IFieldMap
 }

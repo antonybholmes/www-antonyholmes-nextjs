@@ -15,6 +15,7 @@ import { getAuthorMap } from "../lib/api/author"
 import markdownToHtml from "../lib/markdown-html"
 import { getAllPosts } from "../lib/api/post"
 import { getAuthorUrl } from "../lib/urls"
+import { getUrlFriendlyTag } from "../lib/tags"
 
 export default function Page({ author, posts }) {
   return (
@@ -118,7 +119,7 @@ export async function getStaticProps() {
       })
   )
 
-  const author = authorMap["Antony Holmes"]
+  const author = authorMap[getUrlFriendlyTag("Antony Holmes")]
 
   return {
     props: {

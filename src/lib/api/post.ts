@@ -6,7 +6,7 @@ import IFieldMap from "../../interfaces/field-map"
 import { getCanonicalPostSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
-import { getPostFrontmatter } from "./markdown"
+import { getFields, getPostFrontmatter } from "./markdown"
 
 export const POSTS_DIR = join(process.cwd(), "_content", "posts")
 export const REVIEWS_DIR = join(process.cwd(), "_content", "reviews")
@@ -25,30 +25,12 @@ export function addAuthors(
 ): IAuthorPost {
   return {
     ...post,
-    authors: post.frontmatter.authors.map(a => authorMap[a]),
-  }
-}
-
-function getDate(slug: string): string {
-  const match = slug.match(/(\d{4})-(\d{2})-(\d{2})/)
-
-  return match ? match.slice(1, 4).join("-") : "2022-01-01"
-}
-
-function getFields(index: number, slug: string, type: string) {
-  return {
-    index,
-    type,
-    slug,
-    date: getDate(slug),
-    categories: {},
+    authors: post.frontmatter.authors.map(a => authorMap[getUrlFriendlyTag(a)]),
   }
 }
 
 export const getPostByPath = (path: string, index: number = -1): IBasePost => {
   const slug = getCanonicalPostSlug(path)
-
-  console.log(path, slug)
 
   // const fullPath = join(
   //   isPublished ? POSTS_DIR : DRAFTS_DIR,
@@ -170,7 +152,7 @@ export function getCategories(post: IBasePost) {
   return ret
 }
 
-export function getCategoryMap(
+export function getCategoryPostMap(
   posts: IBasePost[],
   max: number = -1
 ): IFieldMap {
@@ -210,7 +192,7 @@ export function getCategoryMap(
   return categoryMap
 }
 
-export function getTagMap(posts: IBasePost[], max: number = -1): IFieldMap {
+export function getTagPostMap(posts: IBasePost[], max: number = -1): IFieldMap {
   const tagMap: IFieldMap = {}
 
   posts.forEach(post => {
@@ -234,6 +216,29 @@ export function getTagMap(posts: IBasePost[], max: number = -1): IFieldMap {
 
       if (max === -1 || tagMap[t].length < max) {
         tagMap[t].push(post)
+      }
+    })
+  })
+
+  return tagMap
+}
+
+export function getAuthorPostMap(
+  posts: IBasePost[],
+  max: number = -1
+): IFieldMap {
+  const tagMap: IFieldMap = {}
+
+  posts.forEach(post => {
+    post.frontmatter.authors.forEach((author: string) => {
+      const a = getUrlFriendlyTag(author)
+
+      if (!(a in tagMap)) {
+        tagMap[a] = []
+      }
+
+      if (max === -1 || tagMap[a].length < max) {
+        tagMap[a].push(post)
       }
     })
   })
