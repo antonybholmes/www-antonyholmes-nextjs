@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ExpandIcon from "../../icons/expand"
 import { getShortName } from "../../lib/text"
+import AnchorButton from "../link/anchor-button"
 import CheckBox from "../link/check-box"
 import ToggleSwitch from "../link/toggle-switch"
 import VCenterRow from "../v-center-row"
@@ -63,7 +64,7 @@ function JournalFilter({
       >
         Journals
       </ToggleSwitch> */}
-      <button
+      <AnchorButton
         onClick={() => setIsExpanded(!isExpanded)}
         className="flex w-full flex-row items-center gap-x-1 stroke-gray-900"
       >
@@ -79,7 +80,7 @@ function JournalFilter({
         <h2>Journals</h2>
 
         {/* <PlusIcon isPlus={!showAll} className="w-4 stroke-2" /> */}
-      </button>
+      </AnchorButton>
       {isExpanded && (
         <>
           <ToggleSwitch

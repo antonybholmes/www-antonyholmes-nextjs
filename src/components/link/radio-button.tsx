@@ -1,5 +1,6 @@
 import type IChildrenProps from "../../interfaces/children-props"
 import cn from "../../lib/class-names"
+import AnchorButton from "./anchor-button"
 
 // export const RADIO_SIZE = "18px"
 // export const ORB_SIZE = "10px"
@@ -18,7 +19,7 @@ export default function RadioButton({
   children,
 }: IRadioButtonProps) {
   return (
-    <button
+    <AnchorButton
       onClick={() => onClick(index)}
       className="group flex w-full cursor-pointer flex-row items-center gap-x-2 text-left"
     >
@@ -66,6 +67,6 @@ export default function RadioButton({
       </svg>
 
       <span className="grow">{children}</span>
-    </button>
+    </AnchorButton>
   )
 }

@@ -3,6 +3,7 @@ import CloseIcon from "../../icons/close"
 import SearchIcon from "../../icons/search"
 import type IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
+import AnchorButton from "../link/anchor-button"
 import VCenterRow from "../v-center-row"
 
 const H = "h-12"
@@ -14,13 +15,13 @@ interface ISearchButtonProps {
 
 function SearchButton({ globalHover, onClick }: ISearchButtonProps) {
   return (
-    <button
+    <AnchorButton
       onClick={onClick}
       aria-label="Search"
-      className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full fill-gray-400 transition-colors hover:fill-gray-900"
+      className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded fill-gray-400 transition-colors hover:fill-gray-900"
     >
       <SearchIcon className="w-4" />
-    </button>
+    </AnchorButton>
   )
 }
 
@@ -31,16 +32,16 @@ interface ClearButtonProps {
 
 function ClearButton({ onClick, visible }: ClearButtonProps) {
   return (
-    <button
+    <AnchorButton
       className={cn(
-        "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded-full stroke-gray-400 transition-colors hover:stroke-gray-900",
+        "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded stroke-gray-400 transition-colors hover:stroke-gray-900",
         [visible, "visible", "invisible"]
       )}
       style={{ strokeWidth: "3px" }}
       onClick={onClick}
     >
-      <CloseIcon className="w-4 stroke-4" />
-    </button>
+      <CloseIcon className="w-4 stroke-2" />
+    </AnchorButton>
   )
 }
 

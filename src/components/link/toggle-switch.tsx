@@ -1,4 +1,5 @@
 import cn from "../../lib/class-names"
+import AnchorButton from "./anchor-button"
 import type { ICheckBoxProps } from "./check-box"
 
 export default function ToggleSwitch({
@@ -9,7 +10,7 @@ export default function ToggleSwitch({
   children,
 }: ICheckBoxProps) {
   return (
-    <button
+    <AnchorButton
       onClick={() => onClick(index, !isSelected)}
       className={cn(
         "group flex cursor-pointer flex-row items-center justify-between gap-x-4",
@@ -43,6 +44,6 @@ export default function ToggleSwitch({
           ])}
         />
       </svg>
-    </button>
+    </AnchorButton>
   )
 }

@@ -1,5 +1,6 @@
 import type IChildrenProps from "../../interfaces/children-props"
 import cn from "../../lib/class-names"
+import AnchorButton from "./anchor-button"
 
 export interface ICheckBoxProps extends IChildrenProps {
   index?: number
@@ -15,7 +16,7 @@ export default function CheckBox({
   children,
 }: ICheckBoxProps) {
   return (
-    <button
+    <AnchorButton
       onClick={() => onClick(index, !isSelected)}
       className={cn(
         `group flex cursor-pointer flex-row items-center justify-start gap-x-2`,
@@ -50,6 +51,6 @@ export default function CheckBox({
       </svg>
 
       <span className="grow text-left">{children}</span>
-    </button>
+    </AnchorButton>
   )
 }

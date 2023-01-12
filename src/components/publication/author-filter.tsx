@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ExpandIcon from "../../icons/expand"
+import AnchorButton from "../link/anchor-button"
 import ToggleSwitch from "../link/toggle-switch"
 
 import { Journal } from "./journal-filter"
@@ -33,7 +34,7 @@ function AuthorFilter({
       >
         Authors
       </ToggleSwitch> */}
-      <button
+      <AnchorButton
         onClick={() => setIsExpanded(!isExpanded)}
         className="flex w-full flex-row items-center gap-x-1 stroke-gray-900"
       >
@@ -42,7 +43,7 @@ function AuthorFilter({
         <h2>Authors</h2>
 
         {/* <PlusIcon isPlus={!showAll} className="w-4 stroke-2" /> */}
-      </button>
+      </AnchorButton>
       {isExpanded && (
         <>
           <ToggleSwitch

@@ -34,6 +34,7 @@ import getJournalPublications from "../lib/pub/journal-publications"
 import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
 import { getShortName } from "../lib/text"
+import AnchorButton from "../components/link/anchor-button"
 
 const EMPTY_QUERY = ""
 
@@ -562,13 +563,13 @@ export default function Page({ publications }: IProps) {
           <VCenterRow className="justify-between">
             <h2>Sort</h2>
             <BaseRow className="overflow-hidden">
-              <button
+              <AnchorButton
                 aria-label="Sort ascending"
                 onClick={() => setDescending(!descending)}
                 className="flex h-6 w-6 flex-row items-center justify-center  transition-colors "
               >
                 <SortIcon className="w-4" descending={descending} />
-              </button>
+              </AnchorButton>
             </BaseRow>
           </VCenterRow>
 

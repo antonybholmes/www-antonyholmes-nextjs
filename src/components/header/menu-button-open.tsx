@@ -8,6 +8,7 @@ import {
 } from "react"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
+import AnchorButton from "../link/anchor-button"
 import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
@@ -247,10 +248,10 @@ export default function MenuButtonOpen({
   ])
 
   return (
-    <button
+    <AnchorButton
       onClick={onClick}
       className={cn(
-        "group relative h-14 min-w-14 outline-none",
+        "group relative h-14 min-w-14",
         [
           headerMode !== "dark",
           "transition-ani transition-color hover:bg-gray-200",
@@ -287,6 +288,6 @@ export default function MenuButtonOpen({
           shapeRendering="crispEdges"
         />
       </svg>
-    </button>
+    </AnchorButton>
   )
 }

@@ -4,9 +4,9 @@ import type IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
 import BaseRow from "../base-row"
 import HCenterCol from "../h-center-col"
+import AnchorButton from "../link/anchor-button"
 import BlackLink from "../link/black-link"
 import BlueLink from "../link/blue-link"
-import Button from "../link/button"
 
 type AbstractProps = {
   publication: any
@@ -143,7 +143,7 @@ function BasePublication({
           <div className="text-center text-gray-500">{`${index + 1}`}</div>
         )}
 
-        <Button
+        <AnchorButton
           ariaLabel="Show abstract"
           className="rounded border border-gray-200  stroke-gray-400 hover:border-gray-400 hover:stroke-gray-900"
           onClick={() => setExpanded(!isExpanded)}
@@ -156,7 +156,7 @@ function BasePublication({
           /> */}
 
           <PlusIcon isPlus={!isExpanded} className="w-3 stroke-2" />
-        </Button>
+        </AnchorButton>
       </HCenterCol>
 
       <div className="grow">

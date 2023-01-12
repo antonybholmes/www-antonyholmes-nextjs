@@ -55,7 +55,7 @@ export default function MenuLink({ link, selected, onClick }: IProps) {
       onBlur={onBlur}
       onClick={onClick}
       className={cn(
-        "transition-ani flex flex-row items-center gap-x-2 overflow-hidden  px-8 py-3 outline-none transition-colors",
+        "transition-ani flex flex-row items-center gap-x-2 overflow-hidden  px-8 py-3  transition-colors",
         [selected, " text-blue-600", "text-gray-900"],
         [hover || hasFocus, "bg-gray-200"]
       )}
