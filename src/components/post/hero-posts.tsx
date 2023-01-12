@@ -9,10 +9,14 @@ const HeroPosts = ({ posts }: IPostsProps) => {
   const topPosts = posts.slice(1, 4)
 
   return (
-    <section className="grid grid-cols-1 gap-12 xl:grid-cols-10">
-      <PreviewPost post={topPost} className="xl:col-span-6" loading="eager" />
+    <section className="flex flex-col xl:flex-row gap-12">
+      <PreviewPost
+        post={topPost}
+        className="w-full xl:w-60/100"
+        loading="eager"
+      />
 
-      <ul className="flex flex-col gap-y-4 xl:col-span-4">
+      <ul className="flex flex-col gap-y-4 w-full xl:w-40/100">
         {topPosts.map((post, index) => {
           return (
             <li key={index}>
