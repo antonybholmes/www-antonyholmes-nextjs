@@ -1,4 +1,4 @@
-import IPostHtml from "./post-html"
-import IPreviewPost from "./preview-post"
+import IAuthorPost from "./author-post"
+import IHtml from "./html"
 
-export default interface IPost extends IPreviewPost, IPostHtml {}
+export default interface IPost extends IAuthorPost, IHtml {}

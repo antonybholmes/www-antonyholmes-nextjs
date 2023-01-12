@@ -53,7 +53,7 @@ const BaseLink = ({
   } else {
     return (
       <Link
-        href={"/c/" + href}
+        href={href}
         aria-label={ariaLabel}
         className={cn("m-0 p-0", [underline, `hover:underline`], className)}
         onClick={onClick}

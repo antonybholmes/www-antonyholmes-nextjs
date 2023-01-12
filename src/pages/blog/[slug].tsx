@@ -1,10 +1,14 @@
 import PostPage from "../../components/pages/post-page"
+import IBasePost from "../../interfaces/base-post"
 import IPost from "../../interfaces/post"
-import IPreviewPost from "../../interfaces/preview-post"
 import BaseLayout from "../../layouts/base-layout"
 import { getAuthorMap } from "../../lib/api/author"
-import { getAllPostsAndReviews, getTagPostMap } from "../../lib/api/post"
-import markdownHtml from "../../lib/markdown-html"
+import {
+  addAuthors,
+  addExcerpt,
+  addHtml,
+  getAllPostsAndReviews,
+} from "../../lib/api/post"
 interface IProps {
   post: IPost
 }
@@ -26,24 +30,18 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const authorMap = getAuthorMap()
 
-  const allPosts = await Promise.all(
-    getAllPostsAndReviews(authorMap).map(async post => {
-      return {
-        ...post,
-        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
-        //html: await markdownHtml(post.frontmatter.rawContent || ""),
-      }
-    })
+  const allPosts = getAllPostsAndReviews()
+
+  //const tagMap = getTagPostMap(allPosts)
+
+  const post = await addHtml(
+    addAuthors(
+      await addExcerpt(
+        allPosts.filter(post => post.fields.slug === params.slug)[0]
+      ),
+      authorMap
+    )
   )
-
-  const tagMap = getTagPostMap(allPosts)
-
-  const post = allPosts.filter(post => post.fields.slug === params.slug)[0]
-
-  const p = {
-    ...post,
-    html: await markdownHtml(post.frontmatter.rawContent || ""),
-  }
 
   // const file = join(
   //   PUBLICATIONS_DIR,
@@ -58,16 +56,16 @@ export async function getStaticProps({ params }: Params) {
 
   return {
     props: {
-      post: p,
+      post,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews(getAuthorMap())
+  const posts = getAllPostsAndReviews()
 
   return {
-    paths: posts.map((post: IPreviewPost) => {
+    paths: posts.map((post: IBasePost) => {
       return {
         params: {
           slug: post.fields.slug,

@@ -4,11 +4,15 @@ import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
 import {
+  addAuthorsToPosts,
+  addExcerpts,
   getAllPostsAndReviews,
   getCategoryPostMap,
+  sortPosts,
 } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
+import { getUrlFriendlyTag } from "../../../lib/tags"
 import { toCapitalCase } from "../../../lib/text"
 
 interface IProps {
@@ -54,29 +58,53 @@ export async function getStaticProps({ params }: Params) {
       ? parseInt(params.slug[params.slug.length - 1]) - 1
       : 0
 
-  const allPosts = getAllPostsAndReviews(getAuthorMap())
+  const allPosts = sortPosts(
+    getAllPostsAndReviews().filter(post => {
+      const categories = post.frontmatter.categories.map(category =>
+        getUrlFriendlyTag(category)
+      )
 
-  const categoryMap = getCategoryPostMap(allPosts)
-
-  const catPosts = await Promise.all(
-    categoryMap[category][section].map(async post => {
-      return {
-        ...post,
-        excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
-        //html : await markdownHtml(post.frontmatter.content || ''),
+      if (section === "all") {
+        // Only look for the category
+        return categories.filter(c => c.includes(category)).length > 0
+      } else {
+        return (
+          categories.filter(c => c.includes(category) && c.includes(section))
+            .length > 0
+        )
       }
     })
   )
+  const pages = getPageCount(allPosts)
 
-  const pagePosts = getPagePosts(catPosts, page)
-  const pages = getPageCount(catPosts)
+  const posts = addAuthorsToPosts(
+    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    getAuthorMap()
+  )
+
+  // const allPosts = getAllPostsAndReviews(getAuthorMap())
+
+  // const categoryMap = getCategoryPostMap(allPosts)
+
+  // const catPosts = await Promise.all(
+  //   categoryMap[category][section].map(async post => {
+  //     return {
+  //       ...post,
+  //       excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+  //       //html : await markdownHtml(post.frontmatter.content || ''),
+  //     }
+  //   })
+  // )
+
+  // const pagePosts = getPagePosts(catPosts, page)
+  // const pages = getPageCount(catPosts)
 
   return {
     props: {
       title:
         section === "all" ? toCapitalCase(category) : toCapitalCase(section),
       superTitle: section !== "all" ? "Category" : "Section",
-      posts: pagePosts,
+      posts,
       page,
       pages,
     },
@@ -84,7 +112,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews(getAuthorMap())
+  const posts = getAllPostsAndReviews()
 
   const categoryMap = getCategoryPostMap(posts)
 

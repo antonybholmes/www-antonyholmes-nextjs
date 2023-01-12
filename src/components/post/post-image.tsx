@@ -1,6 +1,7 @@
 import IImageSizeProps from "../../interfaces/image-size-props"
 import IPostProps from "../../interfaces/post-props"
 import cn from "../../lib/class-names"
+import { getPostBaseUrl } from "../../lib/urls"
 import BaseLink from "../link/base-link"
 import BasePostImage from "./base-post-image"
 
@@ -25,7 +26,10 @@ const PostImage = ({
 
   if (post.fields.slug) {
     return (
-      <BaseLink href={post.fields.slug} ariaLabel={post.frontmatter.title}>
+      <BaseLink
+        href={getPostBaseUrl(post.fields.slug)}
+        ariaLabel={post.frontmatter.title}
+      >
         {image}
       </BaseLink>
     )

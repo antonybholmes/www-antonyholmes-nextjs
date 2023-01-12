@@ -1,22 +1,26 @@
-import AvatarImageLarge from "../components/person/avatar-image-large"
 import BaseCol from "../components/base-col"
 import HCenterCol from "../components/h-center-col"
 import BaseLink from "../components/link/base-link"
 import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
 import BlueLink from "../components/link/blue-link"
-import ToBlueLink from "../components/link/to-blue-link"
 import PostsPage from "../components/pages/posts-page"
+import AvatarImageLarge from "../components/person/avatar-image-large"
+import VCenterCol from "../components/v-center-col"
 import VCenterRow from "../components/v-center-row"
 import { EMAIL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
 import LinkIcon from "../icons/link"
 import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
-import markdownToHtml from "../lib/markdown-html"
-import { getAllPostsAndReviews } from "../lib/api/post"
-import { getAuthorUrl } from "../lib/urls"
+import {
+  addAuthorsToPosts,
+  addExcerpts,
+  getAllPostsAndReviews,
+  sortPosts,
+} from "../lib/api/post"
+import { getPageCount, getPagePosts } from "../lib/paginate"
 import { getUrlFriendlyTag } from "../lib/tags"
-import VCenterCol from "../components/v-center-col"
+import { getAuthorUrl } from "../lib/urls"
 
 export default function Page({ author, posts }) {
   return (
@@ -109,16 +113,12 @@ export default function Page({ author, posts }) {
 export async function getStaticProps() {
   const authorMap = getAuthorMap()
 
-  let posts = await Promise.all(
-    getAllPostsAndReviews(authorMap)
-      .slice(0, 10)
-      .map(async post => {
-        return {
-          ...post,
-          excerpt: await markdownToHtml(post.frontmatter.rawExcerpt || ""),
-          //html : await markdownHtml(post.frontmatter.content || ''),
-        }
-      })
+  const allPosts = sortPosts(getAllPostsAndReviews())
+  const pages = getPageCount(allPosts)
+
+  const posts = addAuthorsToPosts(
+    await Promise.all(addExcerpts(getPagePosts(allPosts, 0, 10))),
+    authorMap
   )
 
   const author = authorMap[getUrlFriendlyTag("Antony Holmes")]

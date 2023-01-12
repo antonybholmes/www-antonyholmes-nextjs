@@ -3,6 +3,10 @@ import IAuthorMap from "../../interfaces/author-map"
 import IAuthorPost from "../../interfaces/author-post"
 import IBasePost from "../../interfaces/base-post"
 import IFieldMap from "../../interfaces/field-map"
+import IPost from "../../interfaces/post"
+import IPostAuthor from "../../interfaces/post-author"
+import IPreviewPost from "../../interfaces/preview-post"
+import markdownHtml from "../markdown-html"
 import { getCanonicalPostSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
@@ -19,14 +23,28 @@ export const getReviewPaths = () => {
   return getAllMDFiles(REVIEWS_DIR)
 }
 
-export function addAuthors(
+export function getAuthors(
   post: IBasePost,
+  authorMap: IAuthorMap
+): IPostAuthor[] {
+  return post.frontmatter.authors.map(a => authorMap[getUrlFriendlyTag(a)])
+}
+
+export function addAuthors(
+  post: IPreviewPost,
   authorMap: IAuthorMap
 ): IAuthorPost {
   return {
     ...post,
-    authors: post.frontmatter.authors.map(a => authorMap[getUrlFriendlyTag(a)]),
+    authors: getAuthors(post, authorMap),
   }
+}
+
+export function addAuthorsToPosts(
+  posts: IPreviewPost[],
+  authorMap: IAuthorMap
+): IAuthorPost[] {
+  return posts.map(post => addAuthors(post, authorMap))
 }
 
 export const getPostByPath = (path: string, index: number = -1): IBasePost => {
@@ -63,10 +81,7 @@ export const getReviewByPath = (
   return post
 }
 
-export function sortPosts(
-  posts: IBasePost[],
-  authorMap: IAuthorMap
-): IAuthorPost[] {
+export function sortPosts(posts: IBasePost[]): IBasePost[] {
   return (
     posts
       // .filter(post => {
@@ -94,26 +109,53 @@ export function sortPosts(
           fields: { ...post.fields, index },
         }
       })
-      .map(post => {
-        return addAuthors(post, authorMap)
-      })
   )
 }
 
-export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
-  return sortPosts(
-    getPostPaths().map(path => getPostByPath(path)),
-    authorMap
-  )
+// export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
+//   return sortPosts(
+//     getPostPaths().map(path => getPostByPath(path)),
+//     authorMap
+//   )
+// }
+
+// export function getAllPostsAndReviews(authorMap: IAuthorMap): IAuthorPost[] {
+//   return sortPosts(
+//     getPostPaths()
+//       .map(path => getPostByPath(path))
+//       .concat(getReviewPaths().map(path => getReviewByPath(path))),
+//     authorMap
+//   )
+// }
+
+export async function addHtml(post: IAuthorPost): Promise<IPost> {
+  return {
+    ...post,
+    html: await markdownHtml(post.frontmatter.rawContent || ""),
+  }
 }
 
-export function getAllPostsAndReviews(authorMap: IAuthorMap): IAuthorPost[] {
-  return sortPosts(
-    getPostPaths()
-      .map(path => getPostByPath(path))
-      .concat(getReviewPaths().map(path => getReviewByPath(path))),
-    authorMap
-  )
+export async function addExcerpt(post: IBasePost): Promise<IPreviewPost> {
+  return {
+    ...post,
+    excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
+  }
+}
+
+export function addExcerpts(posts: IBasePost[]): Promise<IPreviewPost>[] {
+  return posts.map(post => addExcerpt(post))
+}
+
+export function getAllPosts(): IBasePost[] {
+  return getPostPaths().map(path => getPostByPath(path))
+}
+
+export function getAllReviews(): IBasePost[] {
+  return getReviewPaths().map(path => getReviewByPath(path))
+}
+
+export function getAllPostsAndReviews(): IBasePost[] {
+  return getAllPosts().concat(getAllReviews())
 }
 
 export const allPostsBySlugMap = (

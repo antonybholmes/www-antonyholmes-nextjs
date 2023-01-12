@@ -1,4 +1,4 @@
-import IAuthorPost from "./author-post"
-import IPostExcerpt from "./post-excerpt"
+import IBasePost from "./base-post"
+import IExcerpt from "./excerpt"
 
-export default interface IPreviewPost extends IAuthorPost, IPostExcerpt {}
+export default interface IPreviewPost extends IBasePost, IExcerpt {}

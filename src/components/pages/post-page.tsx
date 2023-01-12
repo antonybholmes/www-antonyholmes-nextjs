@@ -1,5 +1,5 @@
+import IAuthorPost from "../../interfaces/author-post"
 import IPost from "../../interfaces/post"
-import IPreviewPost from "../../interfaces/preview-post"
 import PostLayout from "../../layouts/post-layout"
 
 import BaseCol from "../base-col"
@@ -16,8 +16,8 @@ import RelatedPosts from "../post/related-posts"
 
 interface IProps {
   post: IPost
-  morePosts?: IPreviewPost[]
-  readMorePosts?: IPreviewPost[]
+  morePosts?: IAuthorPost[]
+  readMorePosts?: IAuthorPost[]
 }
 
 export default function PostPage({

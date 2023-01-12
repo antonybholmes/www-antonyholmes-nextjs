@@ -21,14 +21,14 @@ const HeroPostSmall = ({
 }: IProps) => (
   <article
     className={cn(
-      "grid grid-cols-1 md:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-20",
+      "grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-3 md:gap-x-6",
       className
     )}
   >
-    <div className="col-span-1 xl:col-span-7">
+    <div className="col-span-1">
       <PostImage post={post} className="mb-4 h-48 md:h-32" />
     </div>
-    <BaseCol className="col-span-3 lg:col-span-4 gap-y-1 xl:col-span-13">
+    <BaseCol className="col-span-3 lg:col-span-3 xl:col-span-2 gap-y-1 ">
       <BaseCol>
         <PostCategoryLink post={post} textSize="text-2xl md:text-base" />
         <PostTitleLink post={post} className="text-2xl" />

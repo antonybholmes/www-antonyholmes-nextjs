@@ -49,7 +49,7 @@ export const getTagUrl = (tag: string) => {
   return getTagBaseUrl(tag)
 }
 
-export const getPostRelativeUrl = (slug: string): string => {
+export const getPostBaseUrl = (slug: string): string => {
   return `${POST_SLUG}/${slug}`
 }
 

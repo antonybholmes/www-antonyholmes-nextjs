@@ -1,15 +1,15 @@
 import IAuthor from "../../interfaces/author"
-import IPreviewPost from "../../interfaces/preview-post"
-import AvatarImageLarge from "../person/avatar-image-large"
+import IAuthorPost from "../../interfaces/author-post"
 import BaseRow from "../base-row"
 import HCenterRow from "../h-center-row"
 import PageTitle from "../page-title"
+import AvatarImageLarge from "../person/avatar-image-large"
 import PostBody from "../post/post-body"
 import PostsPage from "./posts-page"
 
 interface IProps {
   author: IAuthor
-  posts: IPreviewPost[]
+  posts: IAuthorPost[]
   page: number
   pages: number
 }

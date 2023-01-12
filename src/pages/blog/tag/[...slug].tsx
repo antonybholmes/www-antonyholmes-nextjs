@@ -3,7 +3,13 @@ import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
-import { getAllPostsAndReviews, getTagPostMap } from "../../../lib/api/post"
+import {
+  addAuthorsToPosts,
+  addExcerpts,
+  getAllPostsAndReviews,
+  getTagPostMap,
+  sortPosts,
+} from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
 import { getPageCount, getPagePosts } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
@@ -42,22 +48,17 @@ export async function getStaticProps({ params }: Params) {
       ? parseInt(params.slug[params.slug.length - 1]) - 1
       : 0
 
-  const allPosts = await Promise.all(
-    getAllPostsAndReviews(getAuthorMap())
-      .filter(post =>
-        post.frontmatter.tags.map(tag => getUrlFriendlyTag(tag)).includes(tag)
-      )
-      .map(async post => {
-        return {
-          ...post,
-          excerpt: await markdownHtml(post.frontmatter.rawExcerpt || ""),
-          //html : await markdownHtml(post.frontmatter.content || ''),
-        }
-      })
+  const allPosts = sortPosts(
+    getAllPostsAndReviews().filter(post =>
+      post.frontmatter.tags.map(tag => getUrlFriendlyTag(tag)).includes(tag)
+    )
   )
+  const pages = getPageCount(allPosts)
 
-  const posts = getPagePosts(allPosts, page)
-  const pages = getPageCount(posts)
+  const posts = addAuthorsToPosts(
+    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    getAuthorMap()
+  )
 
   return {
     props: { title: fixName(toCapitalCase(tag)), posts, page, pages },
@@ -65,7 +66,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews(getAuthorMap())
+  const posts = getAllPostsAndReviews()
 
   const tagMap = getTagPostMap(posts)
 

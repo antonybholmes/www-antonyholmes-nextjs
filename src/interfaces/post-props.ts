@@ -1,6 +1,6 @@
+import IAuthorPost from "./author-post"
 import IClassProps from "./class-props"
-import IPreviewPost from "./preview-post"
 
 export default interface IPostProps extends IClassProps {
-  post: IPreviewPost
+  post: IAuthorPost
 }
