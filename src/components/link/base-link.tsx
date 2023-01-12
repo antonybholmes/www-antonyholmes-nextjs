@@ -29,9 +29,7 @@ const BaseLink = ({
   }
 
   // Test if we use the NextJS router link or a regular a for external urls
-  const isExt =
-    href &&
-    (!href.startsWith("/") || href.startsWith("http") || href.startsWith("www"))
+  const isExt = href && (href.startsWith("http") || href.startsWith("www"))
 
   if (isExt) {
     return (
@@ -53,13 +51,9 @@ const BaseLink = ({
       </ExtLink>
     )
   } else {
-    if (!children) {
-      children = <>{href}</>
-    }
-
     return (
       <Link
-        href={href}
+        href={"/c/" + href}
         aria-label={ariaLabel}
         className={cn("m-0 p-0", [underline, `hover:underline`], className)}
         onClick={onClick}

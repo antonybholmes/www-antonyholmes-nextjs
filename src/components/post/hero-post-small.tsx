@@ -25,7 +25,7 @@ const HeroPostSmall = ({
       className
     )}
   >
-    <div className="col-span-1  xl:col-span-7">
+    <div className="col-span-1 xl:col-span-7">
       <PostImage post={post} className="mb-4 h-48 md:h-32" />
     </div>
     <BaseCol className="col-span-3 lg:col-span-4 gap-y-1 xl:col-span-13">
