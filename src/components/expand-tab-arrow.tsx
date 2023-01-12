@@ -12,7 +12,7 @@ export default function ExpandTabArrow({ expanded, hover = false }: IProps) {
       className={cn(
         `transition-ani w-4 stroke-2 transition-all`,
         [expanded, "rotate-180", "rotate-0"],
-        [hover, "stroke-gray-900", "stroke-gray-400"]
+        [hover, "stroke-slate-900", "stroke-slate-400"]
       )}
     />
   )

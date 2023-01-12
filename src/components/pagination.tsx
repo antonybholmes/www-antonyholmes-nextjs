@@ -31,7 +31,7 @@ function LinkButton({
       ariaLabel={ariaLabel}
       className={cn(
         BTN_CLS,
-        "transition duration-300 hover:border-gray-300",
+        "transition duration-300 hover:border-slate-300",
         className
       )}
     >
@@ -124,7 +124,7 @@ function PageButton({ page, currentPage, onClick }: IPageButtonProps) {
     <BasePageButton
       page={page}
       onClick={onClick}
-      className="transition duration-300 hover:border-gray-300"
+      className="transition duration-300 hover:border-slate-300"
     >
       {page}
     </BasePageButton>

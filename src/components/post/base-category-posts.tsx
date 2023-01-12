@@ -30,7 +30,7 @@ const BaseCategoryPosts = ({ posts, rightMode = false }: IProps) => {
                 post={post}
                 className={cn([
                   index < topPosts.length - 1,
-                  "mb-4 border-b border-gray-200 pb-4",
+                  "mb-4 border-b border-slate-200 pb-4",
                 ])}
                 headerClassName="text-4xl"
                 showAvatarImage={false}

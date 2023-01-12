@@ -44,7 +44,7 @@ export default function TextBox({
 
   return (
     <div
-      className="animate-button flex h-12 flex-row items-center rounded-md border border-gray-300 bg-white px-2 hover:border-gray-400"
+      className="animate-button flex h-12 flex-row items-center rounded-md border border-slate-300 bg-white px-2 hover:border-slate-400"
       onFocus={handleFocus}
       onBlur={handleBlur}
     >

@@ -9,9 +9,8 @@ const DURATION = 0.5
 const BAR_WIDTH = "3px"
 
 export const LINK_CLS = cn(
-  "font-bold",
-  "text-sm",
-  "px-2",
+  "font-semibold",
+  "px-3",
   "py-2",
   "whitespace-nowrap",
   "transition-ani",
@@ -158,20 +157,23 @@ export default function HeaderLink({
         <div
           className={cn(LINK_CLS, [
             selected,
-            [headerMode === "dark", "text-gray-50", "text-blue-600"],
+            [headerMode === "dark", "text-slate-50", "text-blue-600"],
             [
               headerMode === "dark",
-              [[down, "bg-white/10"], "text-white/60 group-hover:text-white"],
               [
-                [down, "border-blue-500 bg-gray-100"],
-                "text-gray-500 group-hover:text-gray-900",
+                [down, "bg-white/10"],
+                "text-white/60 group-hover:text-white group-hover:bg-slate-600",
+              ],
+              [
+                [down, "border-blue-500 bg-slate-200"],
+                "text-slate-500 group-hover:text-slate-900 group-hover:bg-slate-200",
               ],
             ],
           ])}
         >
           {link.name}
         </div>
-        <div
+        {/* <div
           ref={ref}
           className={cn(
             "transition-ani absolute bottom-0 transition-opacity",
@@ -183,11 +185,11 @@ export default function HeaderLink({
                 [headerMode === "light", "bg-blue-600", "bg-white"],
                 [scrollY > 10, "opacity-100", "opacity-0"],
               ],
-              ["w-0", [headerMode === "light", "bg-gray-900", "bg-white"]],
+              ["w-0", [headerMode === "light", "bg-slate-900", "bg-white"]],
             ]
           )}
           style={{ height: BAR_WIDTH }}
-        />
+        /> */}
       </VCenterCol>
     </BaseLink>
   )

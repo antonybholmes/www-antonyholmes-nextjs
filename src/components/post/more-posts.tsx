@@ -9,8 +9,8 @@ interface IProps extends IPostsProps {
 export default function MorePosts({ posts, title = "topic" }: IProps) {
   return (
     <section>
-      <h2 className="border-b-2 border-gray-200 pb-2">
-        <span className="text-gray-500">More on</span> {title}
+      <h2 className="border-b-2 border-slate-200 pb-2">
+        <span className="text-slate-500">More on</span> {title}
       </h2>
       <ul className="flex w-full flex-col gap-y-8 pt-8">
         {posts.map((post, index) => (
@@ -21,7 +21,7 @@ export default function MorePosts({ posts, title = "topic" }: IProps) {
               showAvatarImage={false}
               headerClassName="text-xl"
               dateBelow={true}
-              className={cn([index > 0, "border-t border-gray-200 pt-4"])}
+              className={cn([index > 0, "border-t border-slate-200 pt-4"])}
             />
           </li>
         ))}

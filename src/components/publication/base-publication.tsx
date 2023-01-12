@@ -16,7 +16,7 @@ type AbstractProps = {
 function Abstract({ publication, isExpanded = false }: AbstractProps) {
   return (
     <>
-      <div className="mt-2 text-sm text-gray-500">
+      <div className="mt-2 text-sm text-slate-500">
         <p className={cn("overflow-hidden", [!isExpanded, "h-0"])}>
           {publication.abstract}
         </p>
@@ -140,12 +140,12 @@ function BasePublication({
     >
       <HCenterCol className="mt-1 grow-0 gap-y-2">
         {showCount && (
-          <div className="text-center text-gray-500">{`${index + 1}`}</div>
+          <div className="text-center text-slate-500">{`${index + 1}`}</div>
         )}
 
         <AnchorButton
           ariaLabel="Show abstract"
-          className="rounded border border-gray-200  stroke-gray-400 hover:border-gray-400 hover:stroke-gray-900"
+          className="rounded border border-slate-200  stroke-slate-400 hover:border-slate-400 hover:stroke-slate-900"
           onClick={() => setExpanded(!isExpanded)}
         >
           {/* <ChevronRightIcon
@@ -162,7 +162,7 @@ function BasePublication({
       <div className="grow">
         <BaseRow className="gap-x-2">
           <div className="grow">
-            {/* <ul className="m-0 flex flex-row flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
+            {/* <ul className="m-0 flex flex-row flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
           {links.map(link => link)}
         </ul> */}
             <h2 className="text-lg font-semibold">
@@ -192,7 +192,7 @@ function BasePublication({
           {/* <VCenterRow>
             <PillButton
               ariaLabel="Show abstract"
-              className="h-7 w-7 min-w-7 stroke-gray-400 hover:bg-gray-200 hover:stroke-gray-900"
+              className="h-7 w-7 min-w-7 stroke-slate-400 hover:bg-slate-200 hover:stroke-slate-900"
               onClick={() => setExpanded(!isExpanded)}
             >
               <ChevronRightIcon

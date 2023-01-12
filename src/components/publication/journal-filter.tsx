@@ -66,7 +66,7 @@ function JournalFilter({
       </ToggleSwitch> */}
       <AnchorButton
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex w-full flex-row items-center gap-x-1 stroke-gray-900"
+        className="flex w-full flex-row items-center gap-x-1 stroke-slate-900"
       >
         {/* <ChevronRightIcon
           className={cn("transition-ani w-3 stroke-2 transition-transform", [
@@ -113,7 +113,7 @@ function JournalFilter({
           "rotate-180",
         ])}
       >
-        <ChevronDownIcon className="w-3 stroke-gray-500 stroke-2" />
+        <ChevronDownIcon className="w-3 stroke-slate-500 stroke-2" />
       </Button> */}
     </div>
   )

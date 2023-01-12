@@ -18,7 +18,7 @@ function SearchButton({ globalHover, onClick }: ISearchButtonProps) {
     <AnchorButton
       onClick={onClick}
       aria-label="Search"
-      className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded fill-gray-400 transition-colors hover:fill-gray-900"
+      className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded fill-slate-400 transition-colors hover:fill-slate-900"
     >
       <SearchIcon className="w-4" />
     </AnchorButton>
@@ -34,7 +34,7 @@ function ClearButton({ onClick, visible }: ClearButtonProps) {
   return (
     <AnchorButton
       className={cn(
-        "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded stroke-gray-400 transition-colors hover:stroke-gray-900",
+        "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded stroke-slate-400 transition-colors hover:stroke-slate-900",
         [visible, "visible", "invisible"]
       )}
       style={{ strokeWidth: "3px" }}
@@ -110,7 +110,7 @@ export default function SearchBar({
   return (
     <VCenterRow
       className={cn(
-        "transition-ani m-0 gap-x-2 overflow-hidden rounded-lg border border-gray-100 bg-gray-100 py-1.5 pl-3 pr-2 transition hover:border-gray-200 hover:bg-white",
+        "transition-ani m-0 gap-x-2 overflow-hidden rounded-lg border border-slate-100 bg-slate-100 py-1.5 pl-3 pr-2 transition hover:border-slate-200 hover:bg-white",
         className
       )}
       onMouseEnter={onMouseEnter}
@@ -128,7 +128,7 @@ export default function SearchBar({
 
       <ClearButton onClick={onClear} visible={value !== ""} />
       <span
-        className={cn("h-6 border-l border-gray-300", [
+        className={cn("h-6 border-l border-slate-300", [
           value !== "",
           "visible",
           "invisible",

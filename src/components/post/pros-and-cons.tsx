@@ -20,7 +20,7 @@ export default function ProsAndCons({ post }: IProps) {
 
       <ExpandTab title="Pros & Cons" isExpanded={true}>
         <div className="my-2 grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <ul className="flex flex-col gap-y-2 text-sm border border-gray-200 rounded-lg p-4">
+          <ul className="flex flex-col gap-y-2 text-sm border border-slate-200 rounded-lg p-4">
             {post.frontmatter.pros.map((pro: string, index: number) => {
               return (
                 <li className="flex flex-row items-center gap-x-2" key={index}>
@@ -34,7 +34,7 @@ export default function ProsAndCons({ post }: IProps) {
             })}
           </ul>
 
-          <ul className="flex flex-col gap-y-2 text-sm border border-gray-200 rounded-lg p-4">
+          <ul className="flex flex-col gap-y-2 text-sm border border-slate-200 rounded-lg p-4">
             {post.frontmatter.cons.map((con: string, index: number) => {
               return (
                 <li className="flex flex-row items-center gap-x-2" key={index}>

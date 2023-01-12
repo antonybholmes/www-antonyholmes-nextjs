@@ -18,12 +18,12 @@ const PostDetailsHoz = ({ post, stats, className }: IProps) => (
   >
     <Avatars authors={post.authors} />
 
-    <VCenterRow className="text-gray-500 gap-x-2 md:gap-x-3 text-sm">
+    <VCenterRow className="text-slate-500 gap-x-2 md:gap-x-3 text-sm">
       <DateFormatter
         date={post.fields.date}
-        className="border-l border-gray-300 py-1 pl-4 md:pl-6"
+        className="border-l border-slate-300 py-1 pl-4 md:pl-6"
       />
-      <span className="rounded-full bg-gray-400 w-1 h-1" />
+      <span className="rounded-full bg-slate-400 w-1 h-1" />
       <span>{stats.text}</span>
     </VCenterRow>
     {/* <PostTags post={post} /> */}

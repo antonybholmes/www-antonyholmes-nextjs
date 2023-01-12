@@ -12,7 +12,7 @@ const PostDetails = ({ post, className }: IPostProps) => (
       <PostTags post={post} />
     </div>
 
-    <div className="mt-6 border-t-2 border-gray-200 pt-6 text-sm tracking-wide text-gray-500">
+    <div className="mt-6 border-t-2 border-slate-200 pt-6 text-sm tracking-wide text-slate-500">
       <PostSocialMedia post={post} />
     </div>
   </section>

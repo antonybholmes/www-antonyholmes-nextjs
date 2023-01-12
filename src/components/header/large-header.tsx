@@ -20,8 +20,8 @@ export default function LargeHeader({
     <ContentDiv className="hidden md:flex">
       <></>
       <nav className="flex flex-row items-center gap-x-8 lg:gap-x-12 h-full">
-        <BaseLink href="/" ariaLabel="Goto Homepage" className="block">
-          <LogoIcon headerMode={headerMode} />
+        <BaseLink href="/" ariaLabel="Goto Homepage">
+          <LogoIcon headerMode={headerMode} style={{ marginBottom: "-1px" }} />
         </BaseLink>
 
         <HeaderLinks

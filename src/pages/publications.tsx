@@ -495,7 +495,7 @@ export default function Page({ publications }: IProps) {
         />
 
         <VCenterRow className="justify-between">
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-slate-500">
             {results(query, pageStart, yearFilteredPublications)}
           </span>
           <ToggleSwitch

@@ -17,6 +17,7 @@ function MenuLinks({
   tab = "",
   onClick,
   className,
+  style,
 }: IProps) {
   // // let ref
   // // const tMenuLinkF
@@ -71,10 +72,11 @@ function MenuLinks({
   return (
     <ul
       className={cn(
-        "flex flex-col border-t border-gray-200 pt-2 text-sm px-4",
-        [headerMode === "dark", "bg-gray-800"],
+        "flex flex-col border-t border-slate-200 pt-2  px-4 font-semibold",
+        [headerMode === "dark", "bg-slate-800"],
         className
       )}
+      style={style}
     >
       {HEADER_LINKS.map((link: ILink, index: number) => {
         const selected = title == link.name || tab == link.name

@@ -35,7 +35,7 @@ export default function HeroPostSmall({
           <PostTitleLink post={post} className="text-2xl" />
         </BaseCol>
         {showDescription && (
-          <HTML html={post.excerpt} className="text-sm text-gray-600" />
+          <HTML html={post.excerpt} className="text-sm text-slate-600" />
         )}
 
         {showAvatar && (

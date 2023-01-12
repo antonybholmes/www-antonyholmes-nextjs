@@ -37,7 +37,7 @@ export default function AuthorPage({ author, posts, page, pages }: IProps) {
         </div>
       </BaseRow>
 
-      <section className="mt-16 border-t border-gray-200 pt-16">
+      <section className="mt-16 border-t border-slate-200 pt-16">
         <PostsPage posts={posts} page={page} pages={pages} />
       </section>
     </>

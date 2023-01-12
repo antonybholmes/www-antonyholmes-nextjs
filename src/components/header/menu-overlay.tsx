@@ -73,7 +73,7 @@ export default function MenuOverlay({
       )}
     >
       <div ref={ref1} className=" h-full w-3/4 bg-white">
-        <BaseRow className="h-full">
+        <BaseRow>
           {/* <MenuOpenButton showMenu={showMenu} onClick={onClick} />
 
         <div className="mt-2 mr-2 w-full">
@@ -88,11 +88,11 @@ export default function MenuOverlay({
             title={title}
             tab={tab}
             onClick={onClick}
-            className="border-l border-gray-200 grow h-full"
+            className="grow"
           />
         </BaseRow>
       </div>
-      <div ref={ref2} onClick={onClick} className="h-full">
+      <div ref={ref2} onClick={onClick}>
         <HCenterRow>
           <MenuOpenButton
             showMenu={showMenu}

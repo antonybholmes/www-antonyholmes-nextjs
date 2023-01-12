@@ -5,7 +5,7 @@ import HeroImage from "./hero-image"
 import PostCategoryLink from "./post-category-link"
 
 const PostHeader = ({ post }: IPostProps) => (
-  <section className="bg-gray-800">
+  <section className="bg-slate-800">
     <ContentDiv className="pt-24">
       <></>
       <>
@@ -16,7 +16,7 @@ const PostHeader = ({ post }: IPostProps) => (
           <PageTitle
             title={post.frontmatter.title}
             subTitle={post.frontmatter.description}
-            className="text-gray-50"
+            className="text-slate-50"
           />
         </div>
         {/* <PostDetails post={post} className="block lg:hidden mb-8" /> */}

@@ -31,7 +31,7 @@ export default function ToggleSwitch({
           className={cn("transition-ani transition-colors", [
             isSelected,
             "fill-blue-600",
-            "fill-gray-200 group-hover:fill-gray-300",
+            "fill-slate-200 group-hover:fill-slate-300",
           ])}
         />
         <circle

@@ -244,7 +244,7 @@ export default function MenuButtonOpen({
   const cls = cn("stroke-1", [
     headerMode === "dark",
     "stroke-white",
-    "stroke-gray-900",
+    "stroke-slate-900",
   ])
 
   return (
@@ -254,7 +254,7 @@ export default function MenuButtonOpen({
         "group relative h-14 min-w-14",
         [
           headerMode !== "dark",
-          "transition-ani transition-color hover:bg-gray-200",
+          "transition-ani transition-color hover:bg-slate-200",
         ],
         className
       )}

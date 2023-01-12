@@ -12,7 +12,7 @@ export default function RelatedPosts({
 }: IProps) {
   return (
     <section>
-      <h2 className="border-b-2 border-gray-300 pb-4 text-xl font-bold lg:text-2xl">
+      <h2 className="border-b-2 border-slate-300 pb-4 text-xl font-bold lg:text-2xl">
         {title}
       </h2>
       <ul className="mt-8 grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">

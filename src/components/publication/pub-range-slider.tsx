@@ -237,7 +237,7 @@ export default function PubRangeSlider({
               x2={xMargin + plotWidth}
               y1={y}
               y2={y}
-              className="stroke-gray-300 stroke-2"
+              className="stroke-slate-300 stroke-2"
             />
 
             {r1 > -1 && r2 >= r1 && (
