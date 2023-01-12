@@ -7,14 +7,14 @@ interface IProps extends IChildrenProps, IMouseProps {
   tabIndex?: number
 }
 
-const HCenterRow = ({
+export default function HCenterRow({
   className,
   tabIndex,
   onClick,
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) => {
+}: IProps) {
   return (
     <BaseRow
       className={cn("justify-center", className)}
@@ -27,5 +27,3 @@ const HCenterRow = ({
     </BaseRow>
   )
 }
-
-export default HCenterRow

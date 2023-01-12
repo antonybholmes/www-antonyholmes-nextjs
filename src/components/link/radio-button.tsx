@@ -65,7 +65,7 @@ export default function RadioButton({
         {selected && <circle cx="8" cy="8" r="4" className="fill-blue-600" />}
       </svg>
 
-      <div className="grow">{children}</div>
+      <span className="grow">{children}</span>
     </button>
   )
 }

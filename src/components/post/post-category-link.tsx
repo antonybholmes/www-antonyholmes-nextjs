@@ -10,12 +10,12 @@ interface IProps extends IPostProps {
   showSections?: boolean
 }
 
-const PostCategoryLink = ({
+export default function PostCategoryLink({
   post,
   textSize = "text-2xl md:text-lg",
   showSections = false,
   className,
-}: IProps) => {
+}: IProps) {
   const items: any[] = []
 
   post.frontmatter.categories.sort().forEach((category, index) => {
@@ -74,5 +74,3 @@ const PostCategoryLink = ({
 
   return <ul className="flex flex-row items-center gap-x-2">{items}</ul>
 }
-
-export default PostCategoryLink

@@ -7,7 +7,11 @@ interface IProps extends IChildrenProps {
   isExpanded?: boolean
 }
 
-const Expand = ({ isExpanded = true, className, children }: IProps) => {
+export default function Expand({
+  isExpanded = true,
+  className,
+  children,
+}: IProps) {
   const [expanded, setExpanded] = useState(isExpanded)
 
   const handleClick: MouseEventHandler = e => {
@@ -30,5 +34,3 @@ const Expand = ({ isExpanded = true, className, children }: IProps) => {
     </div>
   )
 }
-
-export default Expand

@@ -1,15 +1,14 @@
-import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
+import cn from "../lib/class-names"
 import BaseCol from "./base-col"
-import React from "react"
 
 interface IProps extends IChildrenProps, IMouseProps {
   center?: boolean
   tabIndex?: number
 }
 
-const VCenterCol = ({
+export default function VCenterCol({
   center = false,
   className = "",
   tabIndex,
@@ -17,7 +16,7 @@ const VCenterCol = ({
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) => {
+}: IProps) {
   return (
     <BaseCol
       center={center}
@@ -31,5 +30,3 @@ const VCenterCol = ({
     </BaseCol>
   )
 }
-
-export default VCenterCol

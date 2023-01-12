@@ -4,6 +4,7 @@ import IAuthorFields from "../../interfaces/author-fields"
 import IFieldMap from "../../interfaces/field-map"
 import IPageFields from "../../interfaces/page-fields"
 import IPostFields from "../../interfaces/post-fields"
+import { getCanonicalPostSlug } from "../slug"
 
 function getDate(slug: string): string {
   const match = slug.match(/(\d{4})-(\d{2})-(\d{2})/)
@@ -15,7 +16,7 @@ export function getFields(index: number, slug: string, type: string) {
   return {
     index,
     type,
-    slug,
+    slug: getCanonicalPostSlug(slug),
     date: getDate(slug),
   }
 }

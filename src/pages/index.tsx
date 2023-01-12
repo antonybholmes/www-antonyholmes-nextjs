@@ -34,11 +34,7 @@ export default function Page({ author, posts }) {
               ariaLabel="View profile"
             >
               <div className="relative z-10 overflow-hidden rounded-full">
-                <AvatarImageLarge
-                  author={author}
-                  lazy={false}
-                  className="max-w-64"
-                />
+                <AvatarImageLarge author={author} className="max-w-64" />
               </div>
             </BaseLink>
             <BaseCol className="gap-y-2">

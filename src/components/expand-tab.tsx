@@ -9,13 +9,13 @@ interface IProps extends IChildrenProps {
   onClick?: MouseEventHandler
 }
 
-const ExpandTab = ({
+export default function ExpandTab({
   title,
   isExpanded = true,
   className,
   children,
   onClick,
-}: IProps) => {
+}: IProps) {
   const [expanded, setExpanded] = useState(isExpanded)
 
   const handleClick: MouseEventHandler = e => {
@@ -42,5 +42,3 @@ const ExpandTab = ({
     </div>
   )
 }
-
-export default ExpandTab

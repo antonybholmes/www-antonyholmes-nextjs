@@ -3,12 +3,15 @@ import cn from "../lib/class-names"
 
 interface IProps extends IChildrenProps {}
 
-const Title = ({ className, children }: IProps) => (
-  <h1
-    className={cn("text-4xl font-extrabold capitalize lg:text-5xl", className)}
-  >
-    {children}
-  </h1>
-)
-
-export default Title
+export default function Title({ className, children }: IProps) {
+  return (
+    <h1
+      className={cn(
+        "text-4xl font-extrabold capitalize lg:text-5xl",
+        className
+      )}
+    >
+      {children}
+    </h1>
+  )
+}

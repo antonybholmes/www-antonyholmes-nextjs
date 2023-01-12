@@ -13,12 +13,12 @@ interface IProps extends IClassProps {
   isSmall?: boolean
 }
 
-const Avatar = ({
+export default function Avatar({
   author,
   showTitle = false,
   isSmall = false,
   className,
-}: IProps) => {
+}: IProps) {
   const href = getAuthorUrl(author.frontmatter.name)
 
   return (
@@ -49,5 +49,3 @@ const Avatar = ({
     </VCenterRow>
   )
 }
-
-export default Avatar

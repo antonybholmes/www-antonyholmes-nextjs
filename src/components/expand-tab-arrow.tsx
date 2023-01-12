@@ -6,7 +6,7 @@ interface IProps {
   hover?: boolean
 }
 
-const ExpandTabArrow = ({ expanded, hover = false }: IProps) => {
+export default function ExpandTabArrow({ expanded, hover = false }: IProps) {
   return (
     <ChevronUpIcon //{isExpanded ? "chevron-up" : "chevron-down"}
       className={cn(
@@ -17,5 +17,3 @@ const ExpandTabArrow = ({ expanded, hover = false }: IProps) => {
     />
   )
 }
-
-export default ExpandTabArrow

@@ -2,13 +2,19 @@ import BaseLink from "../link/base-link"
 import MenuOpenButton from "./menu-button-open"
 //import Search from '../search/search'
 import LogoIcon from "../../icons/logo-icon"
-import HCenterRow from "../h-center-row"
+import VCenterRow from "../v-center-row"
 import IHeaderProps from "./header-props"
 import MenuOverlay, { IMenuOverlayProps } from "./menu-overlay"
-import VCenterRow from "../v-center-row"
 
 interface IProps extends IHeaderProps, IMenuOverlayProps {}
-function SmallHeader({ title, tab, headerMode, showMenu, onClick }: IProps) {
+
+export default function SmallHeader({
+  title,
+  tab,
+  headerMode,
+  showMenu,
+  onClick,
+}: IProps) {
   //const isFirstRun = useRef(true)
 
   // useEffect(() => {
@@ -66,5 +72,3 @@ function SmallHeader({ title, tab, headerMode, showMenu, onClick }: IProps) {
     </>
   )
 }
-
-export default SmallHeader

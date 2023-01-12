@@ -1,10 +1,9 @@
-import cn from "../../lib/class-names"
 import IPostsProps from "../../interfaces/posts-props"
-import BaseCol from "../base-col"
+import cn from "../../lib/class-names"
 import HeroPostSmall from "./hero-post-small"
 import PreviewPost from "./preview-post"
 
-const HeroPosts = ({ posts }: IPostsProps) => {
+export default function HeroPosts({ posts }: IPostsProps) {
   const topPost = posts[0]
   const topPosts = posts.slice(1, 4)
 
@@ -31,5 +30,3 @@ const HeroPosts = ({ posts }: IPostsProps) => {
     </section>
   )
 }
-
-export default HeroPosts

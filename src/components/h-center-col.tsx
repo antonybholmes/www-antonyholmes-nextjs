@@ -8,7 +8,7 @@ interface IProps extends IChildrenProps, IMouseProps {
   tabIndex?: number
 }
 
-const HCenterCol = ({
+export default function HCenterCol({
   center = false,
   className = "",
   tabIndex,
@@ -16,7 +16,7 @@ const HCenterCol = ({
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) => {
+}: IProps) {
   return (
     <BaseCol
       center={center}
@@ -30,5 +30,3 @@ const HCenterCol = ({
     </BaseCol>
   )
 }
-
-export default HCenterCol

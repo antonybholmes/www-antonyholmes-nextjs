@@ -5,7 +5,7 @@ interface IProps extends IPostsProps {
   title?: string
 }
 
-const RecentPosts = ({ posts, title = "Recent Posts" }: IProps) => {
+export default function RecentPosts({ posts, title = "Recent Posts" }: IProps) {
   return (
     <div className="mt-16 border-t border-solid border-gray-200 pt-16">
       <h2 className="text-3xl font-bold">{title}</h2>
@@ -17,5 +17,3 @@ const RecentPosts = ({ posts, title = "Recent Posts" }: IProps) => {
     </div>
   )
 }
-
-export default RecentPosts

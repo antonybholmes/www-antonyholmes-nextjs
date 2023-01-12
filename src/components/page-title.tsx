@@ -5,14 +5,19 @@ import Title from "./title"
 
 interface IProps extends IPageTitleProps, IClassProps {}
 
-const PageTitle = ({ title, superTitle, subTitle, className }: IProps) => (
-  <header className={cn("flex flex-col gap-y-1", className)}>
-    {superTitle && <h3 className="text-lg font-normal">{superTitle}</h3>}
+export default function PageTitle({
+  title,
+  superTitle,
+  subTitle,
+  className,
+}: IProps) {
+  return (
+    <header className={cn("flex flex-col gap-y-1", className)}>
+      {superTitle && <h3 className="text-lg font-normal">{superTitle}</h3>}
 
-    <Title>{title}</Title>
+      <Title>{title}</Title>
 
-    {subTitle && <h2 className="text-xl font-light">{subTitle}</h2>}
-  </header>
-)
-
-export default PageTitle
+      {subTitle && <h2 className="text-xl font-light">{subTitle}</h2>}
+    </header>
+  )
+}

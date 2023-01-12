@@ -49,7 +49,7 @@ export default function CheckBox({
         )}
       </svg>
 
-      <div className="grow text-left">{children}</div>
+      <span className="grow text-left">{children}</span>
     </button>
   )
 }

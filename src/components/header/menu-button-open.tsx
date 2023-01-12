@@ -27,12 +27,12 @@ export interface IMenuButtonProps extends IMenuProps, IClassProps {
   headerMode?: string
 }
 
-const MenuOpenButton = ({
+export default function MenuButtonOpen({
   showMenu,
   headerMode = "light",
   onClick,
   className,
-}: IMenuButtonProps) => {
+}: IMenuButtonProps) {
   const [focus, setFocus] = useState(false)
   const [hover, setHover] = useState(false)
 
@@ -224,19 +224,19 @@ const MenuOpenButton = ({
     }
   }, [showMenu])
 
-  const onMouseEnter: MouseEventHandler = e => {
+  const onMouseEnter: MouseEventHandler = () => {
     setHover(true)
   }
 
-  const onMouseLeave: MouseEventHandler = e => {
+  const onMouseLeave: MouseEventHandler = () => {
     setHover(false)
   }
 
-  const onFocus: FocusEventHandler = e => {
+  const onFocus: FocusEventHandler = () => {
     setFocus(true)
   }
 
-  const onBlur: FocusEventHandler = e => {
+  const onBlur: FocusEventHandler = () => {
     setFocus(false)
   }
 
@@ -290,5 +290,3 @@ const MenuOpenButton = ({
     </button>
   )
 }
-
-export default MenuOpenButton

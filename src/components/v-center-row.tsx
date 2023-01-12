@@ -1,15 +1,14 @@
-import cn from "../lib/class-names"
 import IChildrenProps from "../interfaces/children-props"
 import IMouseProps from "../interfaces/mouse-props"
+import cn from "../lib/class-names"
 import BaseRow from "./base-row"
-import React from "react"
 
 interface IProps extends IChildrenProps, IMouseProps {
   tabIndex?: number
   onKeyDown?: any
 }
 
-const VCenterRow = ({
+export default function VCenterRow({
   className = "",
   tabIndex,
   onClick,
@@ -17,7 +16,7 @@ const VCenterRow = ({
   onMouseEnter,
   onMouseLeave,
   children,
-}: IProps) => {
+}: IProps) {
   return (
     <BaseRow
       className={cn("items-center", className)}
@@ -31,5 +30,3 @@ const VCenterRow = ({
     </BaseRow>
   )
 }
-
-export default VCenterRow

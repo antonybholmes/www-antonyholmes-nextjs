@@ -8,13 +8,13 @@ interface IProps extends IClassProps {
 export default function LogoIcon({ headerMode = "light", className }: IProps) {
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("w-14 group font-bold", className)}
     >
       <rect
-        width="32"
-        height="32"
+        width="48"
+        height="48"
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "  fill-sky-600 text-white group-hover:fill-sky-500",
@@ -24,8 +24,8 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
       <text
         alignmentBaseline="middle"
         textAnchor="middle"
-        x="16"
-        y="17"
+        x="24"
+        y="26"
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "fill-white",

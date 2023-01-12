@@ -9,12 +9,12 @@ interface IProps extends IChildrenProps {
   onClick?: MouseEventHandler
 }
 
-const ExpandTabButton = ({
+export default function ExpandTabButton({
   expanded = false,
   onClick,
   className,
   children,
-}: IProps) => {
+}: IProps) {
   const [hover, setHover] = useState(false)
 
   const handleMouseEnter = () => {
@@ -51,5 +51,3 @@ const ExpandTabButton = ({
     </VCenterRow>
   )
 }
-
-export default ExpandTabButton

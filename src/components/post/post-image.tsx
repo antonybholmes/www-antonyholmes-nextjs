@@ -7,12 +7,12 @@ import BasePostImage from "./base-post-image"
 
 interface IProps extends IPostProps, IImageSizeProps {}
 
-const PostImage = ({
+export default function PostImage({
   post,
   size = [800, 400],
   loading = "lazy",
   className,
-}: IProps) => {
+}: IProps) {
   const image = (
     <div className={cn("relative overflow-hidden rounded-lg", className)}>
       <BasePostImage
@@ -37,5 +37,3 @@ const PostImage = ({
     return image
   }
 }
-
-export default PostImage

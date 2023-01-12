@@ -10,17 +10,17 @@ interface IProps extends IClassProps {
   isSmall?: boolean
 }
 
-const Avatars = ({
+export default function Avatars({
   authors,
   showTitle = false,
   isSmall = false,
   className,
-}: IProps) => (
-  <WrapRow className={cn("gap-4", className)}>
-    {authors.map((author, index) => (
-      <Avatar author={author} isSmall={isSmall} key={index} />
-    ))}
-  </WrapRow>
-)
-
-export default Avatars
+}: IProps) {
+  return (
+    <WrapRow className={cn("gap-4", className)}>
+      {authors.map((author, index) => (
+        <Avatar author={author} isSmall={isSmall} key={index} />
+      ))}
+    </WrapRow>
+  )
+}

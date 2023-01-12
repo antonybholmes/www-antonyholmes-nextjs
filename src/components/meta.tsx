@@ -1,6 +1,5 @@
 import Head from "next/head"
 import Script from "next/script"
-import { SITE_NAME } from "../constants"
 
 export default function Meta() {
   return (
@@ -28,7 +27,7 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https://www.googletagmanager.com/gtag/js?id=G-X21MCY4FP3"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">

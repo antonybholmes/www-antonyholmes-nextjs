@@ -2,13 +2,13 @@ import IconProps from "../interfaces/icon-props"
 
 const CloseIcon = ({ className }: IconProps) => (
   <svg
-    viewBox="0 0 32 32"
+    viewBox="0 0 16 16"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
   >
-    <path d="M 6,6 L 26,26" />
-    <path d="M 6,26 L 26,6" />
+    <path d="M 4,4 L 12,12" />
+    <path d="M 4,12 L 12,4" />
   </svg>
 )
 

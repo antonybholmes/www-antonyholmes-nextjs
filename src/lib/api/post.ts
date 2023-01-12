@@ -11,6 +11,7 @@ import { getCanonicalPostSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
 import { getFields, getPostFrontmatter } from "./markdown"
+import readingTime from "reading-time"
 
 export const POSTS_DIR = join(process.cwd(), "_content", "posts")
 export const REVIEWS_DIR = join(process.cwd(), "_content", "reviews")
@@ -47,36 +48,26 @@ export function addAuthorsToPosts(
   return posts.map(post => addAuthors(post, authorMap))
 }
 
-export const getPostByPath = (path: string, index: number = -1): IBasePost => {
-  const slug = getCanonicalPostSlug(path)
-
+export const getPostByPath = (
+  path: string,
+  type: string = "post",
+  index: number = -1
+): IBasePost => {
   // const fullPath = join(
   //   isPublished ? POSTS_DIR : DRAFTS_DIR,
   //   `${slug}.md`
   // )
 
+  const fm = getPostFrontmatter(path)
+
   const post = {
-    fields: getFields(index, slug, "post"),
-    frontmatter: getPostFrontmatter(path),
+    fields: getFields(index, path, type),
+    frontmatter: fm,
   }
 
   // if (post.frontmatter.hero === "") {
   //   post.frontmatter.hero = `generic${(index % GENERIC_IMAGES) + 1}`
   // }
-
-  return post
-}
-
-export const getReviewByPath = (
-  path: string,
-  index: number = -1
-): IBasePost => {
-  const slug = getCanonicalPostSlug(path)
-
-  const post = {
-    fields: getFields(index, slug, "review"),
-    frontmatter: getPostFrontmatter(path),
-  }
 
   return post
 }
@@ -151,7 +142,7 @@ export function getAllPosts(): IBasePost[] {
 }
 
 export function getAllReviews(): IBasePost[] {
-  return getReviewPaths().map(path => getReviewByPath(path))
+  return getReviewPaths().map(path => getPostByPath(path, "review"))
 }
 
 export function getAllPostsAndReviews(): IBasePost[] {

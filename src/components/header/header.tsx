@@ -8,7 +8,7 @@ import LargeHeader from "./large-header"
 import MenuOverlay from "./menu-overlay"
 import SmallHeader from "./small-header"
 
-function Header({
+export default function Header({
   title,
   tab,
   headerMode = "light",
@@ -78,5 +78,3 @@ function Header({
     </>
   )
 }
-
-export default Header

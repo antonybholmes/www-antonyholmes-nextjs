@@ -3,4 +3,5 @@ import IPostFields from "./post-fields"
 
 export default interface IBasePost extends IMarkdownBase {
   frontmatter: IPostFields
+  //stats: IReadingStats
 }

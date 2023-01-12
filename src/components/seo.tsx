@@ -5,14 +5,12 @@ import Head from "next/head"
 interface Props extends IChildrenProps {
   title: string
   description?: string
-  lang?: string
   isIndexed?: boolean
 }
 
 export default function Seo({
   title,
   description,
-  lang = "en",
   isIndexed = true,
   children,
 }: Props) {

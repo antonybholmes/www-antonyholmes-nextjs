@@ -9,7 +9,7 @@ interface IProps extends IHeaderProps {
   scrollY: number
 }
 
-function LargeHeader({
+export default function LargeHeader({
   title,
   tab,
   headerMode = "light",
@@ -36,5 +36,3 @@ function LargeHeader({
     </ContentDiv>
   )
 }
-
-export default LargeHeader

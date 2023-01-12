@@ -16,7 +16,7 @@ export default function ToggleSwitch({
         className
       )}
     >
-      <div>{children}</div>
+      <span>{children}</span>
 
       <svg
         viewBox="0 0 24 16"

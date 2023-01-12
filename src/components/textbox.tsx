@@ -9,13 +9,13 @@ interface IProps {
   alignLeft?: boolean
 }
 
-const TextBox = ({
+export default function TextBox({
   value = 10,
   onChange = null,
   prefix = "",
   prefixLeft = true,
   alignLeft = true,
-}: IProps) => {
+}: IProps) {
   const [_focus, setFocus] = useState(false)
   const textRef = useRef(null)
 
@@ -63,5 +63,3 @@ const TextBox = ({
     </div>
   )
 }
-
-export default TextBox
