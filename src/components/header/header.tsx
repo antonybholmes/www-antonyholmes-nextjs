@@ -49,10 +49,10 @@ function Header({
       <header
         className={cn(
           "transition-color fixed top-0 z-50 w-full border-b backdrop-blur duration-300",
-          [headerMode === "light", "bg-white/80", "bg-slate-800/80"],
+          [headerMode === "light", "bg-white/80", "bg-gray-800/80"],
           [
             scrollY > 10,
-            [headerMode === "light", "border-slate-200", "border-white/20"],
+            [headerMode === "light", "border-gray-200", "border-white/20"],
             "border-transparent",
           ],
           className

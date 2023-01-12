@@ -1,16 +1,23 @@
+import IClassProps from "../../interfaces/class-props"
 import type ILink from "../../interfaces/link"
 import cn from "../../lib/class-names"
 import { HEADER_LINKS } from "../../menus"
 import MenuLink from "./menu-link"
 
-interface IProps {
+interface IProps extends IClassProps {
   title: string
   headerMode?: string
   tab?: string
   onClick: any
 }
 
-function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
+function MenuLinks({
+  title,
+  headerMode = "light",
+  tab = "",
+  onClick,
+  className,
+}: IProps) {
   // // let ref
   // // const tMenuLinkF
   // // const tMenuLinkR
@@ -63,10 +70,11 @@ function MenuLinks({ title, headerMode = "light", tab = "", onClick }: IProps) {
 
   return (
     <ul
-      className={cn("flex flex-col border-t border-slate-200 pt-2 text-sm", [
-        headerMode === "dark",
-        "bg-slate-800",
-      ])}
+      className={cn(
+        "flex flex-col border-t border-gray-200 pt-2 text-sm px-4",
+        [headerMode === "dark", "bg-gray-800"],
+        className
+      )}
     >
       {HEADER_LINKS.map((link: ILink, index: number) => {
         const selected = title == link.name || tab == link.name

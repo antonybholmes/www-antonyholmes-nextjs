@@ -41,7 +41,7 @@ const Avatar = ({
         </BaseLink>
 
         {showTitle && (
-          <div className="text-sm font-light text-slate-500">
+          <div className="text-sm font-light text-gray-500">
             {author.frontmatter.title.split(",")[0].trim()}
           </div>
         )}

@@ -28,7 +28,7 @@ export default function RadioButton({
             [
               selected,
               "border-blue-600",
-              cn("transition-ani transition-colors", [hover, "!border-blue-400", "!border-slate-300"]),
+              cn("transition-ani transition-colors", [hover, "!border-blue-400", "!border-gray-300"]),
             ]
           )}
           style={{ width: RADIO_SIZE, height: RADIO_SIZE }}
@@ -58,7 +58,7 @@ export default function RadioButton({
           className={cn("transition-ani transition-color fill-white", [
             selected,
             "stroke-blue-600",
-            "stroke-slate-300 group-hover:stroke-slate-500",
+            "stroke-gray-300 group-hover:stroke-gray-500",
           ])}
         />
 

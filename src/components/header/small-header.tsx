@@ -1,10 +1,11 @@
 import BaseLink from "../link/base-link"
 import MenuOpenButton from "./menu-button-open"
 //import Search from '../search/search'
-import LogoIcon from "../../icons/logo-icon-com"
+import LogoIcon from "../../icons/logo-icon"
 import HCenterRow from "../h-center-row"
 import IHeaderProps from "./header-props"
 import MenuOverlay, { IMenuOverlayProps } from "./menu-overlay"
+import VCenterRow from "../v-center-row"
 
 interface IProps extends IHeaderProps, IMenuOverlayProps {}
 function SmallHeader({ title, tab, headerMode, showMenu, onClick }: IProps) {
@@ -50,22 +51,17 @@ function SmallHeader({ title, tab, headerMode, showMenu, onClick }: IProps) {
         />
       )}
       <nav className="w-full md:hidden">
-        <div className="grid h-16 w-full grid-cols-5 items-center">
-          <div>
-            <MenuOpenButton
-              onClick={onClick}
-              showMenu={showMenu}
-              headerMode={headerMode}
-            />
-          </div>
+        <VCenterRow>
+          <MenuOpenButton
+            onClick={onClick}
+            showMenu={showMenu}
+            headerMode={headerMode}
+          />
 
-          <HCenterRow className="col-span-3 items-center">
-            <BaseLink href="/" ariaLabel="Goto Homepage">
-              <LogoIcon headerMode={headerMode} />
-            </BaseLink>
-          </HCenterRow>
-          <div></div>
-        </div>
+          <BaseLink href="/" ariaLabel="Goto Homepage">
+            <LogoIcon headerMode={headerMode} className="w-12" />
+          </BaseLink>
+        </VCenterRow>
       </nav>
     </>
   )

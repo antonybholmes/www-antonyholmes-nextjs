@@ -35,7 +35,7 @@ function AuthorFilter({
       </ToggleSwitch> */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex w-full flex-row items-center gap-x-1 stroke-slate-900"
+        className="flex w-full flex-row items-center gap-x-1 stroke-gray-900"
       >
         <ExpandIcon expanded={isExpanded} className="w-3 stroke-2" />
 

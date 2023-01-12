@@ -1,8 +1,9 @@
 import { gsap } from "gsap"
 import { useEffect, useRef } from "react"
 import { ANIMATION_DURATION_MS } from "../../constants"
-import LogoIcon from "../../icons/logo-icon-com"
+import LogoIcon from "../../icons/logo-icon"
 import cn from "../../lib/class-names"
+import BaseRow from "../base-row"
 import HCenterRow from "../h-center-row"
 import BaseLink from "../link/base-link"
 import IHeaderProps from "./header-props"
@@ -71,16 +72,25 @@ export default function MenuOverlay({
         "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/50 backdrop-blur-sm"
       )}
     >
-      <div ref={ref1} className=" h-full w-3/4 bg-white py-2">
-        {/* <MenuOpenButton showMenu={showMenu} onClick={onClick} />
+      <div ref={ref1} className=" h-full w-3/4 bg-white">
+        <BaseRow className="h-full">
+          {/* <MenuOpenButton showMenu={showMenu} onClick={onClick} />
 
         <div className="mt-2 mr-2 w-full">
           <MenuLinks title={title} tab={tab} onClick={onClick} />
         </div> */}
-        <BaseLink href="/">
-          <LogoIcon className="mx-8 mt-1 mb-4" />
-        </BaseLink>
-        <MenuLinks title={title} tab={tab} onClick={onClick} />
+          <div>
+            <BaseLink href="/">
+              <LogoIcon className="shrink-0" />
+            </BaseLink>
+          </div>
+          <MenuLinks
+            title={title}
+            tab={tab}
+            onClick={onClick}
+            className="border-l border-gray-200 grow h-full"
+          />
+        </BaseRow>
       </div>
       <div ref={ref2} onClick={onClick} className="h-full">
         <HCenterRow>

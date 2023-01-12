@@ -43,11 +43,11 @@ export default function Page({ author, posts }) {
             </BaseLink>
             <BaseCol className="gap-y-2">
               <VCenterRow className="group gap-x-2">
-                <EnvelopeIcon className="w-4 fill-slate-500" />
+                <EnvelopeIcon className="w-4 fill-gray-500" />
                 <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
               </VCenterRow>
               <VCenterRow className="group  gap-x-2">
-                <LinkIcon className="w-4 fill-slate-500" />
+                <LinkIcon className="w-4 fill-gray-500" />
                 <BlueLink href="https://github.com/antonybholmes">
                   github.com/antonybholmes
                 </BlueLink>
@@ -55,7 +55,7 @@ export default function Page({ author, posts }) {
             </BaseCol>
           </VCenterCol>
 
-          <VCenterCol className="gap-y-16 bg-gradient-to-br from-slate-50 to-slate-100 p-8 xl:p-16">
+          <VCenterCol className="gap-y-16 bg-gradient-to-br from-gray-50 to-gray-100 p-8 xl:p-16">
             <HCenterCol className="gap-y-5 text-lg">
               <h1 className="text-5xl font-semibold">Hi There.</h1>
 
@@ -101,7 +101,7 @@ export default function Page({ author, posts }) {
             </VCenterRow>
           </VCenterCol>
         </div>
-        <section className="mt-16 border-t border-slate-200 pt-16">
+        <section className="mt-16 border-t border-gray-200 pt-16">
           <PostsPage posts={posts} page={0} pages={1} />
         </section>
       </>

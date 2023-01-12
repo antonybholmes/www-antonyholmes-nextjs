@@ -39,11 +39,11 @@ export default function Breadcrumb({
 
     ret.push(
       <li key={`divider-${i}`} className="group flex flex-row gap-x-2">
-        <BreadcrumbChevronIcon className="transition-ani transition-color w-4 stroke-slate-400 group-hover:translate-x-0.5 group-hover:stroke-slate-900" />
+        <BreadcrumbChevronIcon className="transition-ani transition-color w-4 stroke-gray-400 group-hover:translate-x-0.5 group-hover:stroke-gray-900" />
         <BaseLink
           href={crumb[1]}
           ariaLabel={`Visit ${crumb[0]}`}
-          className="transition-ani transition-color text-blue-600 group-hover:text-slate-900"
+          className="transition-ani transition-color text-blue-600 group-hover:text-gray-900"
         >
           {crumb[0]}
         </BaseLink>

@@ -6,21 +6,15 @@ interface IProps extends IClassProps {
 }
 
 export default function LogoIcon({ headerMode = "light", className }: IProps) {
-  const textClass = cn("transition-ani transition-color", [
-    headerMode === "light",
-    "fill-sky-600 group-hover:fill-sky-500",
-    "fill-gray-300 group-hover:fill-gray-200",
-  ])
-
   return (
     <svg
-      viewBox="0 0 62 24"
+      viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("group h-9 border font-bold", className)}
+      className={cn("w-14 group font-bold", className)}
     >
       <rect
-        width="24"
-        height="24"
+        width="32"
+        height="32"
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "  fill-sky-600 text-white group-hover:fill-sky-500",
@@ -30,8 +24,8 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
       <text
         alignmentBaseline="middle"
         textAnchor="middle"
-        x="12"
-        y="14"
+        x="16"
+        y="17"
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "fill-white",
@@ -39,18 +33,6 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
         ])}
       >
         ah
-      </text>
-      <text
-        alignmentBaseline="middle"
-        textAnchor="middle"
-        x="28"
-        y="14"
-        className={textClass}
-      >
-        .
-      </text>
-      <text alignmentBaseline="middle" x="21" y="14" className={textClass}>
-        dev
       </text>
     </svg>
   )

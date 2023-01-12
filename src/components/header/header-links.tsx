@@ -28,7 +28,7 @@ const HeaderLinks = ({
         const selected = link.name.toLowerCase() === tab
 
         return (
-          <li key={index} className="inline">
+          <li key={index}>
             <HeaderLink
               link={link}
               selected={selected}

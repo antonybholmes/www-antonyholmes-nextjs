@@ -20,7 +20,7 @@ const ExpandArrow = ({ expanded, hover = false }: IProps) => {
         className={cn(
           `w-2 transition-all duration-300 `,
           [expanded, "rotate-180", "rotate-0"],
-          [hover || _hover, "fill-blue-400", "fill-slate-400"]
+          [hover || _hover, "fill-blue-400", "fill-gray-400"]
         )}
       />
     </div>

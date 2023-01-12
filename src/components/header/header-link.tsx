@@ -154,17 +154,17 @@ export default function HeaderLink({
       onMouseDown={() => setDown(true)}
       onMouseUp={() => setDown(false)}
     >
-      <VCenterCol className="group relative h-16 justify-center overflow-hidden">
+      <VCenterCol className="group relative justify-center overflow-hidden h-14">
         <div
           className={cn(LINK_CLS, [
             selected,
-            [headerMode === "dark", "text-slate-50", "text-blue-600"],
+            [headerMode === "dark", "text-gray-50", "text-blue-600"],
             [
               headerMode === "dark",
               [[down, "bg-white/10"], "text-white/60 group-hover:text-white"],
               [
                 [down, "border-blue-500 bg-gray-100"],
-                "text-slate-500 group-hover:text-slate-900",
+                "text-gray-500 group-hover:text-gray-900",
               ],
             ],
           ])}
@@ -183,7 +183,7 @@ export default function HeaderLink({
                 [headerMode === "light", "bg-blue-600", "bg-white"],
                 [scrollY > 10, "opacity-100", "opacity-0"],
               ],
-              ["w-0", [headerMode === "light", "bg-slate-900", "bg-white"]],
+              ["w-0", [headerMode === "light", "bg-gray-900", "bg-white"]],
             ]
           )}
           style={{ height: BAR_WIDTH }}

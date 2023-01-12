@@ -13,7 +13,7 @@ const RestPosts = ({ posts }: IProps) => (
           <PreviewPost
             post={post}
             showAvatarImage={false}
-            className="border-t border-slate-200 pt-6"
+            className="border-t border-gray-200 pt-6"
             imageClassName="h-48"
             headerClassName="text-2xl"
           />

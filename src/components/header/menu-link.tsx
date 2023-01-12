@@ -56,13 +56,13 @@ export default function MenuLink({ link, selected, onClick }: IProps) {
       onClick={onClick}
       className={cn(
         "transition-ani flex flex-row items-center gap-x-2 overflow-hidden  px-8 py-3 outline-none transition-colors",
-        [selected, " text-blue-600", "text-slate-900"],
-        [hover || hasFocus, "bg-slate-100"]
+        [selected, " text-blue-600", "text-gray-900"],
+        [hover || hasFocus, "bg-gray-200"]
       )}
     >
       {/* <HCenterRow
           className={cn(
-            `h-8 min-w-8 items-center overflow-hidden rounded-md border border-slate-200 bg-white transition-all duration-300`
+            `h-8 min-w-8 items-center overflow-hidden rounded-md border border-gray-200 bg-white transition-all duration-300`
           )}
         >
           {getIcon(link.name)}

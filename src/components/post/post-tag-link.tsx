@@ -9,7 +9,7 @@ const PostTagLink = ({ tag }: IProps) => (
   <PillButtonLink
     href={getTagBaseUrl(tag)}
     ariaLabel={`View all articles related to ${tag}`}
-    className="my-1 mr-2 bg-slate-200 px-3 py-1 hover:bg-slate-300"
+    className="my-1 mr-2 bg-gray-200 px-3 py-1 hover:bg-gray-300"
   >
     {tag}
   </PillButtonLink>

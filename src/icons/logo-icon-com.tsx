@@ -9,7 +9,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
   const textClass = cn("transition-ani transition-color", [
     headerMode === "light",
     "fill-sky-600 group-hover:fill-sky-500",
-    "fill-slate-300 group-hover:fill-slate-200",
+    "fill-gray-300 group-hover:fill-gray-200",
   ])
 
   return (
@@ -24,7 +24,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "  fill-sky-600 text-white group-hover:fill-sky-500",
-          "fill-slate-300 group-hover:fill-slate-200",
+          "fill-gray-300 group-hover:fill-gray-200",
         ])}
       />
       <text
@@ -35,7 +35,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
         className={cn("transition-ani transition-color", [
           headerMode === "light",
           "fill-white",
-          "fill-slate-900",
+          "fill-gray-900",
         ])}
       >
         ah

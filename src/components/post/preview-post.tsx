@@ -48,7 +48,7 @@ export default function PreviewPost({
         {showDescription && (
           <HTML
             html={post.excerpt}
-            className={cn("text-slate-600", contentClassName)}
+            className={cn("text-gray-600", contentClassName)}
           />
         )}
 

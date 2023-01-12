@@ -41,7 +41,7 @@ export default function CheckBox({
           className={cn("transition-ani transition-color", [
             isSelected,
             "fill-blue-600 stroke-blue-600",
-            "fill-white stroke-slate-300 group-hover:stroke-slate-400",
+            "fill-white stroke-gray-300 group-hover:stroke-gray-400",
           ])}
         />
         {isSelected && (

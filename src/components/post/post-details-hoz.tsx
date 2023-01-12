@@ -14,7 +14,7 @@ const PostDetailsHoz = ({ post, className }: IPostProps) => (
 
     <DateFormatter
       date={post.fields.date}
-      className="border-l border-slate-300 py-1 pl-6"
+      className="border-l border-gray-300 py-1 pl-6"
     />
 
     {/* <PostTags post={post} /> */}

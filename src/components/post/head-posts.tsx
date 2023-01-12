@@ -13,7 +13,7 @@ const HeadPosts = ({ posts, showAvatar = true }: IProps) => (
           <PreviewPost
             post={post}
             showAvatar={showAvatar}
-            className="border-t border-slate-200 pt-6"
+            className="border-t border-gray-200 pt-6"
             imageClassName="h-64 md:h-72"
           />
         </li>

@@ -479,7 +479,7 @@ export default function Page({ publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="w-full lg:w-3/4"
+          className="w-full xl:w-60/100"
         />
       }
       crumbs={[["Publications", "/publications"]]}
@@ -490,11 +490,11 @@ export default function Page({ publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="mb-8 lg:hidden"
+          className="mb-8 md:hidden"
         />
 
         <VCenterRow className="justify-between">
-          <span className="text-sm text-slate-500">
+          <span className="text-sm text-gray-500">
             {results(query, pageStart, yearFilteredPublications)}
           </span>
           <ToggleSwitch

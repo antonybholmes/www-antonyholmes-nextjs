@@ -23,7 +23,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               return (
                 <PreviewPost
                   post={post}
-                  className={cn([index > 0, "border-t border-slate-200 pt-8"])}
+                  className={cn([index > 0, "border-t border-gray-200 pt-8"])}
                   headerClassName="text-3xl"
                   imageClassName="h-64 md:h-48"
                   showAvatarImage={true}
@@ -40,7 +40,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               return (
                 <PreviewPost
                   post={post}
-                  className={cn([index > 0, "border-t border-slate-200 pt-8"])}
+                  className={cn([index > 0, "border-t border-gray-200 pt-8"])}
                   headerClassName="text-3xl"
                   showAvatarImage={false}
                   key={index}
@@ -56,7 +56,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               return (
                 <PreviewPost
                   post={post}
-                  className={cn([index > 0, "border-t border-slate-200 pt-8"])}
+                  className={cn([index > 0, "border-t border-gray-200 pt-8"])}
                   headerClassName="text-3xl"
                   imageClassName="h-48"
                   showAvatarImage={true}

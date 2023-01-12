@@ -39,7 +39,7 @@ export const TableOfContents = () => {
                 [
                   activeId === heading.id,
                   "border-black text-black",
-                  "border-slate-200 text-slate-500",
+                  "border-gray-200 text-gray-500",
                 ]
               )}
             >

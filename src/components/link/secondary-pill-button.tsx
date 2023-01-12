@@ -11,7 +11,7 @@ const SecondaryPillButtonLink = ({
   <PillButtonLink
     href={href}
     ariaLabel={ariaLabel}
-    className={cn("bg-slate-200 hover:bg-slate-100", className)}
+    className={cn("bg-gray-200 hover:bg-gray-100", className)}
   >
     {children}
   </PillButtonLink>

@@ -56,14 +56,14 @@ export default function Page() {
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <header className="mt-4">
                     <h3 className="font-bold">{job.title}</h3>
-                    <h4 className="mt-1 text-sm font-normal text-slate-500">
+                    <h4 className="mt-1 text-sm font-normal text-gray-500">
                       {job.company}
                     </h4>
-                    <h4 className="text-sm font-normal text-slate-500">
+                    <h4 className="text-sm font-normal text-gray-500">
                       {job.date}
                     </h4>
                   </header>
-                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-slate-100 p-6 hover:bg-slate-200  lg:p-10">
+                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-gray-100 p-6 hover:bg-gray-200  lg:p-10">
                     <p>{job.overview}</p>
                     <ul className="ml-6 mt-4 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
@@ -85,14 +85,14 @@ export default function Page() {
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <header className="mt-4">
                     <h3 className="font-bold">{job.title}</h3>
-                    <h4 className="mt-1 text-sm font-normal text-slate-500">
+                    <h4 className="mt-1 text-sm font-normal text-gray-500">
                       {job.company}
                     </h4>
-                    <h4 className="text-sm font-normal text-slate-500">
+                    <h4 className="text-sm font-normal text-gray-500">
                       {job.date}
                     </h4>
                   </header>
-                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-slate-100 p-8  hover:bg-slate-200">
+                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-gray-100 p-8  hover:bg-gray-200">
                     <ul className="ml-6 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
                         <li key={detailIndex}>{detail}</li>
@@ -113,7 +113,7 @@ export default function Page() {
               <li>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <div />
-                  <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-blue-400">
+                  <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-gray-200 px-8 py-12 hover:border-blue-400">
                     <header>
                       <h3 className="text-xl font-bold">{degree.title}</h3>
                       {/* {degree.date !== '' && (
@@ -122,7 +122,7 @@ export default function Page() {
                       <h4 className="font-light">{degree.school}</h4>
                     </header>
 
-                    <ul className="mt-2 text-sm text-slate-500">
+                    <ul className="mt-2 text-sm text-gray-500">
                       {degree.details.map((detail, detailIndex) => (
                         <li>{detail}</li>
                       ))}

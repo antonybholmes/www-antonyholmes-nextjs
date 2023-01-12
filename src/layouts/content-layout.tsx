@@ -20,7 +20,7 @@ export default function ContentLayout({
   showTitle = false,
   tab,
   isIndexed,
-  headerClassName, //"text-white bg-card-blue lg:text-slate-900 lg:bg-white",
+  headerClassName, //"text-white bg-card-blue lg:text-gray-900 lg:bg-white",
   crumbs,
   showCrumbs,
   className,
