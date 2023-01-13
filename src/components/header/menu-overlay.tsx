@@ -72,7 +72,7 @@ export default function MenuOverlay({
         "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/50 backdrop-blur-sm"
       )}
     >
-      <div ref={ref1} className=" h-full w-3/4 bg-white">
+      <div ref={ref1} className="h-full w-3/4 bg-white">
         <BaseRow>
           {/* <MenuOpenButton showMenu={showMenu} onClick={onClick} />
 

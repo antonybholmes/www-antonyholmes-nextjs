@@ -33,6 +33,7 @@ export default function MenuButtonOpen({
   headerMode = "light",
   onClick,
   className,
+  style,
 }: IMenuButtonProps) {
   const [focus, setFocus] = useState(false)
   const [hover, setHover] = useState(false)
@@ -251,13 +252,14 @@ export default function MenuButtonOpen({
     <AnchorButton
       onClick={onClick}
       className={cn(
-        "group relative h-14 min-w-14",
+        "group relative h-15 min-w-15",
         [
           headerMode !== "dark",
           "transition-ani transition-color hover:bg-slate-200",
         ],
         className
       )}
+      style={style}
       aria-label={showMenu ? "Close Menu" : "Open Menu"}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

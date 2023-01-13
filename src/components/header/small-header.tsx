@@ -62,10 +62,14 @@ export default function SmallHeader({
             onClick={onClick}
             showMenu={showMenu}
             headerMode={headerMode}
+            style={{ marginBottom: "-1px" }}
           />
 
           <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon headerMode={headerMode} className="w-12" />
+            <LogoIcon
+              headerMode={headerMode}
+              style={{ marginBottom: "-1px" }}
+            />
           </BaseLink>
         </VCenterRow>
       </nav>
