@@ -17,7 +17,7 @@ function Bar({ x, y, height, width, isColored, isHighlighted }) {
   )
 }
 
-const YearSelector = ({ x, y, r = 8, onMouseUp, onMouseDown }) => {
+function YearSelector({ x, y, r = 8, onMouseUp, onMouseDown }) {
   return (
     <circle
       cx={x}
@@ -43,8 +43,8 @@ export default function PubRangeSlider({
   r2,
   setYear2,
 }) {
-  const ref = useRef()
-  const refHint = useRef()
+  const ref = useRef(null)
+  const refHint = useRef(null)
   const [highlightIdx, setHighlightIdx] = useState(-1)
 
   if (yMax === -1) {
@@ -66,13 +66,13 @@ export default function PubRangeSlider({
     setYear1(Math.max(0, Math.min(p, data.length - 1)))
   }
 
-  const onMouseDownYear1 = (e: any) => {
+  function onMouseDownYear1(e: any) {
     // @ts-ignore
     window.addEventListener("mousemove", onMouseMoveYear1)
     window.addEventListener("mouseup", onMouseUpYear1)
   }
 
-  const onMouseUpYear1 = () => {
+  function onMouseUpYear1() {
     // @ts-ignore
     window.removeEventListener("mousemove", onMouseMoveYear1)
     window.removeEventListener("mouseup", onMouseUpYear1)
@@ -84,13 +84,13 @@ export default function PubRangeSlider({
     setYear2(Math.max(r1, Math.min(data.length - 1, p)))
   }
 
-  const onMouseDownYear2 = (e: any) => {
+  function onMouseDownYear2(e: any) {
     // @ts-ignore
     window.addEventListener("mousemove", onMouseMoveYear2)
     window.addEventListener("mouseup", onMouseUpYear2)
   }
 
-  const onMouseUpYear2 = () => {
+  function onMouseUpYear2() {
     // @ts-ignore
     window.removeEventListener("mousemove", onMouseMoveYear2)
     window.removeEventListener("mouseup", onMouseUpYear2)
@@ -101,14 +101,17 @@ export default function PubRangeSlider({
     refHint.current.style.visibility = "visible"
   }
 
-  const onMouseMove = (e: any) => {
-    if (e.offsetY < height) {
+  function onMouseMove(e: any) {
+    if (e.nativeEvent.offsetY < height) {
       // @ts-ignore
       refHint.current.style.visibility = "visible"
 
       const idx = Math.max(
         0,
-        Math.min(data.length - 1, Math.floor((e.offsetX - xMargin) / barW))
+        Math.min(
+          data.length - 1,
+          Math.floor((e.nativeEvent.offsetX - xMargin) / barW)
+        )
       )
       const p = idx * barW + halfBarWidth + xMargin
 
@@ -124,7 +127,7 @@ export default function PubRangeSlider({
     }
   }
 
-  const onMouseLeave = () => {
+  function onMouseLeave() {
     // @ts-ignore
     refHint.current.style.visibility = "hidden"
 
@@ -134,7 +137,10 @@ export default function PubRangeSlider({
   function onClick(e: any) {
     const idx = Math.max(
       0,
-      Math.min(data.length - 1, Math.floor((e.offsetX - xMargin) / barW))
+      Math.min(
+        data.length - 1,
+        Math.floor((e.nativeEvent.offsetX - xMargin) / barW)
+      )
     )
 
     setYear1(idx)

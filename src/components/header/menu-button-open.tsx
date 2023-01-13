@@ -8,7 +8,7 @@ import {
 } from "react"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
-import Button from "../link/button"
+import BaseButton from "../link/base-button"
 import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
@@ -249,7 +249,7 @@ export default function MenuButtonOpen({
   ])
 
   return (
-    <Button
+    <BaseButton
       onClick={onClick}
       className={cn(
         "group relative h-15 min-w-15",
@@ -290,6 +290,6 @@ export default function MenuButtonOpen({
           shapeRendering="crispEdges"
         />
       </svg>
-    </Button>
+    </BaseButton>
   )
 }

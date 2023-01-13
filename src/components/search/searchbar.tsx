@@ -3,7 +3,7 @@ import CloseIcon from "../../icons/close"
 import SearchIcon from "../../icons/search"
 import type IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
-import Button from "../link/button"
+import BaseButton from "../link/base-button"
 import VCenterRow from "../v-center-row"
 
 const H = "h-12"
@@ -15,13 +15,13 @@ interface ISearchButtonProps {
 
 function SearchButton({ globalHover, onClick }: ISearchButtonProps) {
   return (
-    <Button
+    <BaseButton
       onClick={onClick}
       ariaLabel="Search"
       className="transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded fill-slate-400 transition-colors hover:fill-slate-900"
     >
       <SearchIcon className="w-4" />
-    </Button>
+    </BaseButton>
   )
 }
 
@@ -32,7 +32,7 @@ interface ClearButtonProps {
 
 function ClearButton({ onClick, visible }: ClearButtonProps) {
   return (
-    <Button
+    <BaseButton
       className={cn(
         "transition-ani flex h-7 w-7 min-w-7 grow-0 flex-row items-center justify-center rounded stroke-slate-400 transition-colors hover:stroke-slate-900",
         [visible, "visible", "invisible"]
@@ -41,7 +41,7 @@ function ClearButton({ onClick, visible }: ClearButtonProps) {
       onClick={onClick}
     >
       <CloseIcon className="w-4 stroke-2" />
-    </Button>
+    </BaseButton>
   )
 }
 

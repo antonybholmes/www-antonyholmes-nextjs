@@ -1,5 +1,5 @@
 import cn from "../../lib/class-names"
-import Button, { IButtonProps } from "./button"
+import BaseButton, { IButtonProps } from "./base-button"
 import { PILL_BUTTON_LINK_CLS } from "./pill-button-link"
 
 export default function PillButton({
@@ -14,7 +14,7 @@ export default function PillButton({
   children,
 }: IButtonProps) {
   return (
-    <Button
+    <BaseButton
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -25,7 +25,7 @@ export default function PillButton({
       style={style}
     >
       {children}
-    </Button>
+    </BaseButton>
   )
 }
 

@@ -1,7 +1,7 @@
 import type IChildrenProps from "../../interfaces/children-props"
 import cn from "../../lib/class-names"
 import VCenterRow from "../v-center-row"
-import Button from "./button"
+import BaseButton from "./base-button"
 
 // export const RADIO_SIZE = "18px"
 // export const ORB_SIZE = "10px"
@@ -21,7 +21,10 @@ export default function RadioButton({
 }: IRadioButtonProps) {
   return (
     <VCenterRow className="gap-x-2 text-left">
-      <Button onClick={() => onClick(index)} className="group cursor-pointer">
+      <BaseButton
+        onClick={() => onClick(index)}
+        className="group cursor-pointer"
+      >
         {/* <div
           className={cn(
             `relative overflow-hidden rounded-full border bg-white`,
@@ -64,7 +67,7 @@ export default function RadioButton({
 
           {selected && <circle cx="8" cy="8" r="4" className="fill-blue-600" />}
         </svg>
-      </Button>
+      </BaseButton>
       <span className="grow">{children}</span>
     </VCenterRow>
   )

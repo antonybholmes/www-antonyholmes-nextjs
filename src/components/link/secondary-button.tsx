@@ -1,6 +1,6 @@
 import { useState } from "react"
 import cn from "../../lib/class-names"
-import type { IButtonProps } from "./button"
+import type { IButtonProps } from "./base-button"
 import OutlineRoundedButton from "./outline-rounded-button"
 import { SECONDARY_BUTTON_CLS } from "./secondary-button-link"
 
@@ -24,8 +24,8 @@ export default function SecondaryButton({
       ariaLabel={ariaLabel}
       className={cn(
         SECONDARY_BUTTON_CLS,
-        [down, "bg-slate-100", [hover, "bg-slate-50"]],
-        [hover || down, "border-slate-300"],
+        [down, "bg-slate-100"],
+        [hover || down, "border-slate-400"],
         className
       )}
       style={style}

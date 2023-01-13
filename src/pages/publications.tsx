@@ -27,7 +27,7 @@ import ThreeQuarterLayout from "../layouts/three-quarter-layout"
 import BaseCol from "../components/base-col"
 import HCenterCol from "../components/h-center-col"
 import BlueRoundedButton from "../components/link/blue-rounded-button"
-import Button from "../components/link/button"
+import BaseButton from "../components/link/base-button"
 import ToggleSwitch from "../components/link/toggle-switch"
 import PubRangeSlider from "../components/publication/pub-range-slider"
 import PubMedLink from "../components/publication/pubmed-link"
@@ -573,13 +573,13 @@ export default function Page({ author, publications }: IProps) {
           <VCenterRow className="justify-between">
             <h2>Sort</h2>
             <BaseRow className="overflow-hidden">
-              <Button
+              <BaseButton
                 ariaLabel="Sort ascending"
                 onClick={() => setDescending(!descending)}
                 className="flex h-6 w-6 flex-row items-center justify-center  transition-colors "
               >
                 <SortIcon className="w-4" descending={descending} />
-              </Button>
+              </BaseButton>
             </BaseRow>
           </VCenterRow>
 

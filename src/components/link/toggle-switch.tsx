@@ -1,6 +1,6 @@
 import cn from "../../lib/class-names"
 import VCenterRow from "../v-center-row"
-import Button from "./button"
+import BaseCheckBoxButton from "./base-checkbox-button"
 import type { ICheckBoxProps } from "./check-box"
 
 export default function ToggleSwitch({
@@ -12,9 +12,9 @@ export default function ToggleSwitch({
 }: ICheckBoxProps) {
   return (
     <VCenterRow className={cn("justify-between gap-x-4", className)}>
-      {" "}
       <span>{children}</span>
-      <Button
+      <BaseCheckBoxButton
+        isSelected={isSelected}
         onClick={() => onClick(index, !isSelected)}
         className="group cursor-pointer"
       >
@@ -43,7 +43,7 @@ export default function ToggleSwitch({
             ])}
           />
         </svg>
-      </Button>
+      </BaseCheckBoxButton>
     </VCenterRow>
   )
 }

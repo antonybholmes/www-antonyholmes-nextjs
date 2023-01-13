@@ -1,6 +1,7 @@
 import cn from "../../lib/class-names"
+import { IButtonProps } from "./base-button"
+import Button from "./button"
 import { ROUNDED_BUTTON_CLS } from "./rounded-button-link"
-import Button, { IButtonProps } from "./button"
 
 export default function RoundedButton({
   onClick,

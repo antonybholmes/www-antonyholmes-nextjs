@@ -1,7 +1,7 @@
 import type IChildrenProps from "../../interfaces/children-props"
 import cn from "../../lib/class-names"
 import VCenterRow from "../v-center-row"
-import Button from "./button"
+import BaseCheckBoxButton from "./base-checkbox-button"
 
 export interface ICheckBoxProps extends IChildrenProps {
   index?: number
@@ -18,7 +18,8 @@ export default function CheckBox({
 }: ICheckBoxProps) {
   return (
     <VCenterRow className={cn("gap-x-2 text-left", className)}>
-      <Button
+      <BaseCheckBoxButton
+        isSelected={isSelected}
         onClick={() => onClick(index, !isSelected)}
         className={"group cursor-pointer"}
       >
@@ -48,7 +49,7 @@ export default function CheckBox({
             <path d="M 4,8 L 7,11 L 12,5" className="stroke-white stroke-2" />
           )}
         </svg>
-      </Button>
+      </BaseCheckBoxButton>
       <span className="grow">{children}</span>
     </VCenterRow>
   )
