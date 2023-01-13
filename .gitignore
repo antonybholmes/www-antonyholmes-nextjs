@@ -26,7 +26,8 @@ yarn-error.log*
 .pnpm-debug.log*
 pnpm-lock.yaml
 
-
+# constantly modified so
+# don't index
 public/atom.xml
 public/rss.xml
 public/rss.json
