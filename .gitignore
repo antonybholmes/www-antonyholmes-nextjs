@@ -25,7 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 pnpm-lock.yaml
-yarn.lock
+
 
 public/atom.xml
 public/rss.xml
