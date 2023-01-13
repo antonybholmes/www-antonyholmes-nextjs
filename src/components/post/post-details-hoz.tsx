@@ -18,9 +18,9 @@ const PostDetailsHoz = ({ post, stats, className }: IProps) => (
   >
     <Avatars authors={post.authors} />
 
-    <div className="flex flex-col md:flex-row md:items-center text-slate-500 gap-2 md:gap-3 text-sm border-l border-slate-300 py-1 pl-4 md:pl-6">
+    <div className="flex flex-col gap-2 border-l border-slate-300 py-1 pl-4 text-sm text-slate-500 md:flex-row md:items-center md:gap-3 md:pl-6">
       <DateFormatter date={post.fields.date} />
-      <span className="hidden md:inline rounded-full bg-slate-400 w-1 h-1" />
+      <span className="hidden h-1 w-1 rounded-full bg-slate-400 md:inline" />
       <span>{stats.text}</span>
     </div>
     {/* <PostTags post={post} /> */}

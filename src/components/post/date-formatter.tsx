@@ -12,14 +12,14 @@ const DateFormatter = ({ date, className }: IProps) => {
     <>
       <time
         dateTime={date}
-        className={cn("md:hidden text-sm text-slate-500", className)}
+        className={cn("text-sm text-slate-500 md:hidden", className)}
       >
         {/* {format(d, 'eee LLL d, yyyy')} */}
         {format(d, "LLL d, yyyy")}
       </time>
       <time
         dateTime={date}
-        className={cn("hidden md:inline text-sm text-slate-500", className)}
+        className={cn("hidden text-sm text-slate-500 md:inline", className)}
       >
         {/* {format(d, 'eee LLL d, yyyy')} */}
         {format(d, "LLLL d, yyyy")}

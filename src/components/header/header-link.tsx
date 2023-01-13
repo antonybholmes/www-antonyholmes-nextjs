@@ -152,7 +152,7 @@ export default function HeaderLink({
       onMouseDown={() => setDown(true)}
       onMouseUp={() => setDown(false)}
     >
-      <VCenterCol className="group relative justify-center overflow-hidden h-14">
+      <VCenterCol className="group relative h-14 justify-center overflow-hidden">
         <div
           className={cn(LINK_CLS, [
             selected,
@@ -161,11 +161,11 @@ export default function HeaderLink({
               headerMode === "dark",
               [
                 [down, "bg-white/10"],
-                "text-white/60 group-hover:text-white group-hover:bg-slate-600",
+                "text-white/60 group-hover:bg-slate-600 group-hover:text-white",
               ],
               [
                 [down, "border-blue-500 bg-slate-300"],
-                "text-slate-500 group-hover:text-slate-900 group-hover:bg-slate-200",
+                "text-slate-500 group-hover:bg-slate-200 group-hover:text-slate-900",
               ],
             ],
           ])}

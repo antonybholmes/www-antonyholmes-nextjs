@@ -15,7 +15,7 @@ export default function StarRating({ rating, stars = 5 }: IProps) {
     items.push(
       <li
         key={i}
-        className="transition-ani transition-all  fill-amber-300 hover:fill-amber-400 hover:scale-110"
+        className="transition-ani fill-amber-300  transition-all hover:scale-110 hover:fill-amber-400"
       >
         <StarIcon className="w-5" />
       </li>
@@ -26,7 +26,7 @@ export default function StarRating({ rating, stars = 5 }: IProps) {
     items.push(
       <li
         key={items.length}
-        className="transition-ani transition-all  fill-amber-300 hover:fill-amber-400 hover:scale-110"
+        className="transition-ani fill-amber-300  transition-all hover:scale-110 hover:fill-amber-400"
       >
         <HalfStarIcon className="w-5" />
       </li>

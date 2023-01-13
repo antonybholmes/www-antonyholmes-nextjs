@@ -49,7 +49,7 @@ export default function RadioButton({
         <svg
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
-          className="shrink-0 w-5"
+          className="w-5 shrink-0"
         >
           <circle
             cx="8"

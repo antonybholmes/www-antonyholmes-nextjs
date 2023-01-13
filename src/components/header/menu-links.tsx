@@ -72,7 +72,7 @@ function MenuLinks({
   return (
     <ul
       className={cn(
-        "flex flex-col border-t border-slate-200 pt-2  px-4 font-semibold",
+        "flex flex-col border-t border-slate-200 px-4  pt-2 font-semibold",
         [headerMode === "dark", "bg-slate-800"],
         className
       )}

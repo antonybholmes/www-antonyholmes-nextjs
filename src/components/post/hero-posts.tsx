@@ -8,14 +8,14 @@ export default function HeroPosts({ posts }: IPostsProps) {
   const topPosts = posts.slice(1, 4)
 
   return (
-    <section className="flex flex-col xl:flex-row gap-12">
+    <section className="flex flex-col gap-12 xl:flex-row">
       <PreviewPost
         post={topPost}
         className="w-full xl:w-60/100"
         loading="eager"
       />
 
-      <ul className="flex flex-col gap-y-4 w-full xl:w-40/100">
+      <ul className="flex w-full flex-col gap-y-4 xl:w-40/100">
         {topPosts.map((post, index) => {
           return (
             <li key={index}>

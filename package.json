@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "prebuild": "pnpm rss",
+    "prebuild": "yarn rss",
     "postbuild": "next-sitemap",
-    "export": "pnpm build && next export",
+    "export": "next export",
+    "build-export": "yarn build && yarn export",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "update-version": "node scripts/update-version.js",
     "image-optimize": "node scripts/image-optimize.js",
