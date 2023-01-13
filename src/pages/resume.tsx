@@ -110,7 +110,7 @@ export default function Page() {
 
           <ul className="mt-16 flex flex-col gap-y-4">
             {education.map((degree, degreeIndex) => (
-              <li>
+              <li key={degreeIndex}>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <div />
                   <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-blue-400">
@@ -124,7 +124,7 @@ export default function Page() {
 
                     <ul className="mt-2 text-sm text-slate-500">
                       {degree.details.map((detail, detailIndex) => (
-                        <li>{detail}</li>
+                        <li key={detailIndex}>{detail}</li>
                       ))}
                     </ul>
                   </div>

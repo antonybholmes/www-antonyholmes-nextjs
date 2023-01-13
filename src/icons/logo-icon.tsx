@@ -22,7 +22,7 @@ export default function LogoIcon({
         height="48"
         className={cn("transition-ani transition-color", [
           headerMode === "dark",
-          "fill-slate-400",
+          "fill-slate-600",
           "fill-sky-600 text-white group-hover:fill-sky-500",
         ])}
       />
