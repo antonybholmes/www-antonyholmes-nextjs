@@ -5,7 +5,7 @@ import getCopyright from "../lib/copyright"
 import { INFO_LINKS } from "../menus"
 import ContentDiv from "./content-div"
 import HCenterRow from "./h-center-row"
-import BaseLink from "./link/base-link"
+import ExtLink from "./link/ext-link"
 import WhiteLink from "./link/white-link"
 
 export default function Footer() {
@@ -24,13 +24,13 @@ export default function Footer() {
       <ContentDiv className="pt-8">
         <></>
         <HCenterRow className="items-center gap-x-4">
-          <BaseLink href={GITHUB_URL}>
+          <ExtLink href={GITHUB_URL}>
             <GitHubIcon className="w-5" />
-          </BaseLink>
+          </ExtLink>
 
-          <BaseLink href="/rss.xml">
+          <ExtLink href="/rss.xml">
             <RssIcon className="w-5 fill-orange-500" />
-          </BaseLink>
+          </ExtLink>
         </HCenterRow>
       </ContentDiv>
 
