@@ -9,6 +9,7 @@ import VCenterCol from "../components/v-center-col"
 import VCenterRow from "../components/v-center-row"
 import { EMAIL, GITHUB_URL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
+import GitHubIcon from "../icons/github"
 import LinkIcon from "../icons/link"
 import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
@@ -43,7 +44,7 @@ export default function Page({ author, posts }) {
                 <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
               </VCenterRow>
               <VCenterRow className="group  gap-x-2">
-                <LinkIcon className="w-4 fill-slate-500" />
+                <GitHubIcon className="w-4 fill-slate-500" />
                 <BlueLink href={GITHUB_URL}>github.com/antonybholmes</BlueLink>
               </VCenterRow>
             </BaseCol>

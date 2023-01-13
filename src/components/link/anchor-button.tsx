@@ -1,3 +1,4 @@
+import { MouseEvent } from "react"
 import useMouseUpListener from "../../hooks/use-mouseup-listener"
 import type IAriaProps from "../../interfaces/aria-props"
 import type IChildrenProps from "../../interfaces/children-props"
@@ -25,11 +26,17 @@ export default function AnchorButton({
 }: IButtonProps) {
   useMouseUpListener(onMouseUp)
 
+  function _onClick(e: MouseEvent) {
+    // prevent jumping to top of page
+    e.preventDefault()
+    onClick(e)
+  }
+
   return (
     <a
       href="#"
       role="button"
-      onClick={onClick}
+      onClick={_onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onMouseUp={onMouseUp}

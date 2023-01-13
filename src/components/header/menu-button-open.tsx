@@ -8,7 +8,7 @@ import {
 } from "react"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
-import AnchorButton from "../link/anchor-button"
+import Button from "../link/button"
 import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
@@ -249,7 +249,7 @@ export default function MenuButtonOpen({
   ])
 
   return (
-    <AnchorButton
+    <Button
       onClick={onClick}
       className={cn(
         "group relative h-15 min-w-15",
@@ -260,7 +260,7 @@ export default function MenuButtonOpen({
         className
       )}
       style={style}
-      aria-label={showMenu ? "Close Menu" : "Open Menu"}
+      ariaLabel={showMenu ? "Close Menu" : "Open Menu"}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={onFocus}
@@ -290,6 +290,6 @@ export default function MenuButtonOpen({
           shapeRendering="crispEdges"
         />
       </svg>
-    </AnchorButton>
+    </Button>
   )
 }

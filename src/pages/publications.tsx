@@ -25,20 +25,20 @@ import SortIcon from "../icons/sort"
 import ThreeQuarterLayout from "../layouts/three-quarter-layout"
 
 import BaseCol from "../components/base-col"
+import HCenterCol from "../components/h-center-col"
 import BlueRoundedButton from "../components/link/blue-rounded-button"
+import Button from "../components/link/button"
 import ToggleSwitch from "../components/link/toggle-switch"
 import PubRangeSlider from "../components/publication/pub-range-slider"
+import PubMedLink from "../components/publication/pubmed-link"
+import IPostAuthor from "../interfaces/post-author"
 import { getSelectedPublications } from "../lib/api"
+import { getAuthorBySlug } from "../lib/api/author"
 import getAuthorPublications from "../lib/pub/author-publications"
 import getJournalPublications from "../lib/pub/journal-publications"
 import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
 import { getShortName } from "../lib/text"
-import AnchorButton from "../components/link/anchor-button"
-import { getAuthorBySlug } from "../lib/api/author"
-import IPostAuthor from "../interfaces/post-author"
-import HCenterCol from "../components/h-center-col"
-import PubMedLink from "../components/publication/pubmed-link"
 
 const EMPTY_QUERY = ""
 
@@ -573,13 +573,13 @@ export default function Page({ author, publications }: IProps) {
           <VCenterRow className="justify-between">
             <h2>Sort</h2>
             <BaseRow className="overflow-hidden">
-              <AnchorButton
-                aria-label="Sort ascending"
+              <Button
+                ariaLabel="Sort ascending"
                 onClick={() => setDescending(!descending)}
                 className="flex h-6 w-6 flex-row items-center justify-center  transition-colors "
               >
                 <SortIcon className="w-4" descending={descending} />
-              </AnchorButton>
+              </Button>
             </BaseRow>
           </VCenterRow>
 

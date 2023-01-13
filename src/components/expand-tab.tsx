@@ -6,7 +6,7 @@ import ExpandTabButton from "./expand-tab-button"
 interface IProps extends IChildrenProps {
   title: string
   isExpanded?: boolean
-  onClick?: MouseEventHandler
+  onClick?: (e: MouseEvent) => void
 }
 
 export default function ExpandTab({
@@ -18,7 +18,7 @@ export default function ExpandTab({
 }: IProps) {
   const [expanded, setExpanded] = useState(isExpanded)
 
-  const handleClick: MouseEventHandler = e => {
+  function _onClick(e: MouseEvent) {
     if (onClick) {
       onClick(e)
     } else {
@@ -30,11 +30,7 @@ export default function ExpandTab({
 
   return (
     <div className={className}>
-      <ExpandTabButton
-        expanded={status}
-        onClick={handleClick}
-        className="hover:underline"
-      >
+      <ExpandTabButton expanded={status} onClick={_onClick}>
         {title}
       </ExpandTabButton>
 

@@ -1,6 +1,5 @@
 import { useState } from "react"
-import ExpandIcon from "../../icons/expand"
-import AnchorButton from "../link/anchor-button"
+import ExpandTab from "../expand-tab"
 import ToggleSwitch from "../link/toggle-switch"
 
 import { Journal } from "./journal-filter"
@@ -34,40 +33,32 @@ function AuthorFilter({
       >
         Authors
       </ToggleSwitch> */}
-      <AnchorButton
+      <ExpandTab
+        title="Authors"
+        isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex w-full flex-row items-center gap-x-1 stroke-slate-900"
       >
-        <ExpandIcon expanded={isExpanded} className="w-3 stroke-2" />
-
-        <h2>Authors</h2>
-
-        {/* <PlusIcon isPlus={!showAll} className="w-4 stroke-2" /> */}
-      </AnchorButton>
-      {isExpanded && (
-        <>
-          <ToggleSwitch
-            className="mt-2 w-full"
-            onClick={() => setShowAll(!showAll)}
-            isSelected={showAll}
-          >
-            Show All
-          </ToggleSwitch>
-          <ul className="mt-2 flex flex-col gap-y-1">
-            {authors.map((journal: any, index: number) => {
-              return (
-                <Journal
-                  index={index}
-                  journal={journal}
-                  isSelected={selected.has(journal[0])}
-                  key={index}
-                  onClick={onClick}
-                />
-              )
-            })}
-          </ul>
-        </>
-      )}
+        <ToggleSwitch
+          className="mt-2 w-full"
+          onClick={() => setShowAll(!showAll)}
+          isSelected={showAll}
+        >
+          Show All
+        </ToggleSwitch>
+        <ul className="mt-2 flex flex-col gap-y-1">
+          {authors.map((journal: any, index: number) => {
+            return (
+              <Journal
+                index={index}
+                journal={journal}
+                isSelected={selected.has(journal[0])}
+                key={index}
+                onClick={onClick}
+              />
+            )
+          })}
+        </ul>
+      </ExpandTab>
     </div>
   )
 }

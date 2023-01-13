@@ -1,7 +1,6 @@
 import { useState } from "react"
-import ExpandIcon from "../../icons/expand"
 import { getShortName } from "../../lib/text"
-import AnchorButton from "../link/anchor-button"
+import ExpandTab from "../expand-tab"
 import CheckBox from "../link/check-box"
 import ToggleSwitch from "../link/toggle-switch"
 import VCenterRow from "../v-center-row"
@@ -64,47 +63,32 @@ function JournalFilter({
       >
         Journals
       </ToggleSwitch> */}
-      <AnchorButton
+      <ExpandTab
+        title="Journals"
+        isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex w-full flex-row items-center gap-x-1 stroke-slate-900"
       >
-        {/* <ChevronRightIcon
-          className={cn("transition-ani w-3 stroke-2 transition-transform", [
-            showAll,
-            "rotate-90",
-          ])}
-        /> */}
-
-        <ExpandIcon expanded={isExpanded} className="w-3 stroke-2" />
-
-        <h2>Journals</h2>
-
-        {/* <PlusIcon isPlus={!showAll} className="w-4 stroke-2" /> */}
-      </AnchorButton>
-      {isExpanded && (
-        <>
-          <ToggleSwitch
-            className="mt-2 w-full"
-            onClick={() => setShowAll(!showAll)}
-            isSelected={showAll}
-          >
-            Show All
-          </ToggleSwitch>
-          <ul className="mt-2 flex flex-col gap-y-1">
-            {journals.map((journal: any, index: number) => {
-              return (
-                <Journal
-                  index={index}
-                  journal={journal}
-                  isSelected={selected.has(journal[0])}
-                  key={index}
-                  onClick={onClick}
-                />
-              )
-            })}
-          </ul>
-        </>
-      )}
+        <ToggleSwitch
+          className="mt-2 w-full"
+          onClick={() => setShowAll(!showAll)}
+          isSelected={showAll}
+        >
+          Show All
+        </ToggleSwitch>
+        <ul className="mt-2 flex flex-col gap-y-1">
+          {journals.map((journal: any, index: number) => {
+            return (
+              <Journal
+                index={index}
+                journal={journal}
+                isSelected={selected.has(journal[0])}
+                key={index}
+                onClick={onClick}
+              />
+            )
+          })}
+        </ul>
+      </ExpandTab>
       {/* <Button
         onClick={onShowAll}
         ariaLabel="Show more items"
