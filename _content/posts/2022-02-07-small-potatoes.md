@@ -4,6 +4,7 @@ description: "Small changes, big outcomes."
 authors: ["Antony Holmes"]
 categories: ["Opinions", "Investing"]
 tags: ["Investing"]
+type: "post"
 hero: "potatoes"
 heroCaption: "With enough small potatoes, we could reach the moon."
 status: "published"

@@ -5,6 +5,7 @@ description: "My review of the Fidelity Rewards Visa Signature credit card."
 authors: ["Antony Holmes"]
 readTime: "1 min"
 categories: ["Reviews/Credit Cards"]
+type: "review"
 hero: "credit-cards"
 tags: ["Cash Back"]
 rating: 4.5

@@ -7,11 +7,11 @@ import { getAuthorMap } from "../../lib/api/author"
 import {
   addAuthorsToPosts,
   addExcerpts,
-  getAllPostsAndReviews,
+  getAllPosts,
   getAuthorPostMap,
   sortPosts,
 } from "../../lib/api/post"
-import { getPageCount, getPagePosts } from "../../lib/paginate"
+import { getPageCount, getPageItems } from "../../lib/paginate"
 
 interface IProps {
   author: IAuthor
@@ -49,7 +49,7 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = sortPosts(
-    getAllPostsAndReviews().filter(post =>
+    getAllPosts().filter(post =>
       post.frontmatter.authors.includes(author.frontmatter.name)
     )
   )
@@ -57,7 +57,7 @@ export async function getStaticProps({ params }: Params) {
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, page))),
     getAuthorMap()
   )
 
@@ -69,7 +69,7 @@ export async function getStaticProps({ params }: Params) {
 export async function getStaticPaths() {
   const authorMap = getAuthorMap()
 
-  const posts = getAllPostsAndReviews()
+  const posts = getAllPosts()
 
   const postMap = getAuthorPostMap(posts)
 

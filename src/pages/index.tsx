@@ -15,10 +15,10 @@ import { getAuthorMap } from "../lib/api/author"
 import {
   addAuthorsToPosts,
   addExcerpts,
-  getAllPostsAndReviews,
+  getAllPosts,
   sortPosts,
 } from "../lib/api/post"
-import { getPageCount, getPagePosts } from "../lib/paginate"
+import { getPageCount, getPageItems } from "../lib/paginate"
 import { getUrlFriendlyTag } from "../lib/tags"
 import { getAuthorUrl } from "../lib/urls"
 
@@ -109,11 +109,11 @@ export default function Page({ author, posts }) {
 export async function getStaticProps() {
   const authorMap = getAuthorMap()
 
-  const allPosts = sortPosts(getAllPostsAndReviews())
+  const allPosts = sortPosts(getAllPosts())
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, 0, 10))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, 0, 10))),
     authorMap
   )
 

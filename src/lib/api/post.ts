@@ -7,20 +7,18 @@ import IPost from "../../interfaces/post"
 import IPostAuthor from "../../interfaces/post-author"
 import IPreviewPost from "../../interfaces/preview-post"
 import markdownHtml from "../markdown-html"
-import { getCanonicalPostSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllMDFiles } from "./files"
 import { getFields, getPostFrontmatter } from "./markdown"
-import readingTime from "reading-time"
 
 export const POSTS_DIR = join(process.cwd(), "_content", "posts")
 export const REVIEWS_DIR = join(process.cwd(), "_content", "reviews")
 
-export const getPostPaths = () => {
+export function getPostPaths() {
   return getAllMDFiles(POSTS_DIR)
 }
 
-export const getReviewPaths = () => {
+export function getReviewPaths() {
   return getAllMDFiles(REVIEWS_DIR)
 }
 
@@ -48,21 +46,26 @@ export function addAuthorsToPosts(
   return posts.map(post => addAuthors(post, authorMap))
 }
 
-export const getPostByPath = (
-  path: string,
-  type: string = "post",
-  index: number = -1
-): IBasePost => {
+/**
+ * Turns a slug into a file path and uses that to read
+ * the post data.
+ *
+ * @param slug a post slug
+ * @returns a post with basic frontmatter loaded.
+ */
+export function getPostBySlug(slug: string): IBasePost {
+  return getPostByPath(join(POSTS_DIR, `${slug}.md`))
+}
+
+export function getPostByPath(path: string, index: number = -1): IBasePost {
   // const fullPath = join(
   //   isPublished ? POSTS_DIR : DRAFTS_DIR,
   //   `${slug}.md`
   // )
 
-  const fm = getPostFrontmatter(path)
-
   const post = {
-    fields: getFields(index, path, type),
-    frontmatter: fm,
+    fields: getFields(index, path),
+    frontmatter: getPostFrontmatter(path),
   }
 
   // if (post.frontmatter.hero === "") {
@@ -110,7 +113,7 @@ export function sortPosts(posts: IBasePost[]): IBasePost[] {
 //   )
 // }
 
-// export function getAllPostsAndReviews(authorMap: IAuthorMap): IAuthorPost[] {
+// export function getAllPosts(authorMap: IAuthorMap): IAuthorPost[] {
 //   return sortPosts(
 //     getPostPaths()
 //       .map(path => getPostByPath(path))
@@ -142,12 +145,12 @@ export function getAllPosts(): IBasePost[] {
 }
 
 export function getAllReviews(): IBasePost[] {
-  return getReviewPaths().map(path => getPostByPath(path, "review"))
+  return getAllPosts().filter(post => post.frontmatter.type === "review") //getReviewPaths().map(path => getPostByPath(path, "review"))
 }
 
-export function getAllPostsAndReviews(): IBasePost[] {
-  return getAllPosts().concat(getAllReviews())
-}
+// export function getAllPostsAndReviews(): IBasePost[] {
+//   return getAllPosts().concat(getAllReviews())
+// }
 
 export const allPostsBySlugMap = (
   posts: { slug: string; fields: IFieldMap }[]

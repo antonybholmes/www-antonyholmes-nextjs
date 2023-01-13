@@ -4,8 +4,8 @@ import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
 import VCenterCol from "../v-center-col"
 
-const DURATION = 0.5
-const BAR_WIDTH = "3px"
+//const DURATION = 0.5
+//const BAR_WIDTH = "3px"
 
 export const LINK_CLS = cn(
   "font-semibold",

@@ -14,7 +14,7 @@ export const getPageBySlug = (slug: string): IBasePage => {
   const fullPath = join(PAGE_DIR, `${realPath}.md`)
 
   return {
-    fields: getFields(-1, slug, "page"),
+    fields: getFields(-1, slug),
     frontmatter: getPageFrontmatter(fullPath),
   }
 }

@@ -6,12 +6,11 @@ import { getAuthorMap } from "../../../lib/api/author"
 import {
   addAuthorsToPosts,
   addExcerpts,
-  getAllPostsAndReviews,
+  getAllPosts,
   getCategoryPostMap,
   sortPosts,
 } from "../../../lib/api/post"
-import markdownHtml from "../../../lib/markdown-html"
-import { getPageCount, getPagePosts } from "../../../lib/paginate"
+import { getPageCount, getPageItems } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
 import { toCapitalCase } from "../../../lib/text"
 
@@ -59,7 +58,7 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = sortPosts(
-    getAllPostsAndReviews().filter(post => {
+    getAllPosts().filter(post => {
       const categories = post.frontmatter.categories.map(category =>
         getUrlFriendlyTag(category)
       )
@@ -78,11 +77,11 @@ export async function getStaticProps({ params }: Params) {
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, page))),
     getAuthorMap()
   )
 
-  // const allPosts = getAllPostsAndReviews(getAuthorMap())
+  // const allPosts = getAllPosts(getAuthorMap())
 
   // const categoryMap = getCategoryPostMap(allPosts)
 
@@ -96,7 +95,7 @@ export async function getStaticProps({ params }: Params) {
   //   })
   // )
 
-  // const pagePosts = getPagePosts(catPosts, page)
+  // const pagePosts = getPageItems(catPosts, page)
   // const pages = getPageCount(catPosts)
 
   return {
@@ -112,7 +111,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews()
+  const posts = getAllPosts()
 
   const categoryMap = getCategoryPostMap(posts)
 

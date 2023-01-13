@@ -5,6 +5,7 @@ description: "My review of Schwab."
 authors: ["Antony Holmes"]
 categories: ["Reviews/Brokerages"]
 tags: ["Low Cost"]
+type: "review"
 hero: "bank"
 rating: 4
 pros:

@@ -4,6 +4,7 @@ description: "How to simplify conditional class name strings."
 authors: ["Antony Holmes"]
 categories: ["Web Development"]
 tags: ["Tailwind", "Tutorials"]
+type: "post"
 related: ""
 status: "published"
 hero: "code"

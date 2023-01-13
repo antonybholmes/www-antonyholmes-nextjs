@@ -12,10 +12,9 @@ function getDate(slug: string): string {
   return match ? match.slice(1, 4).join("-") : "2022-01-01"
 }
 
-export function getFields(index: number, slug: string, type: string) {
+export function getFields(index: number, slug: string) {
   return {
     index,
-    type,
     slug: getCanonicalPostSlug(slug),
     date: getDate(slug),
   }
@@ -98,6 +97,7 @@ export const getPostFrontmatter = (path: string): IPostFields => {
     authors: [],
     categories: [],
     tags: [],
+    type: "post",
     related: [],
     status: "draft",
     pros: [],

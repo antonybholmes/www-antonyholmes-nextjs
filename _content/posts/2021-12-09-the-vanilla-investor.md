@@ -4,6 +4,7 @@ authors: ["Antony Holmes"]
 description: "You get what you don't pay for."
 categories: ["Investing"]
 tags: ["Portfolio Design", "Guides"]
+type: "post"
 hero: "vanilla"
 heroCaption: "If you don't eat your cake, you can't have any pudding!"
 status: "published"

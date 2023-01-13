@@ -6,6 +6,7 @@ authors: ["Antony Holmes"]
 categories: ["Reviews/Cell Phones"]
 hero: "phone"
 tags: ["Low Cost", "MNVO"]
+type: "review"
 rating: 4.5
 pros: ["$22 for 10GB service.", "Hot spot included."]
 cons: ["Have to buy 1 year of service for best monthly price."]

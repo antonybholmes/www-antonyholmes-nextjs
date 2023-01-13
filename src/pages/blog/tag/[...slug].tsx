@@ -6,12 +6,12 @@ import { getAuthorMap } from "../../../lib/api/author"
 import {
   addAuthorsToPosts,
   addExcerpts,
-  getAllPostsAndReviews,
+  getAllPosts,
   getTagPostMap,
   sortPosts,
 } from "../../../lib/api/post"
 import markdownHtml from "../../../lib/markdown-html"
-import { getPageCount, getPagePosts } from "../../../lib/paginate"
+import { getPageCount, getPageItems } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
 import { fixName, toCapitalCase } from "../../../lib/text"
 
@@ -49,14 +49,14 @@ export async function getStaticProps({ params }: Params) {
       : 0
 
   const allPosts = sortPosts(
-    getAllPostsAndReviews().filter(post =>
+    getAllPosts().filter(post =>
       post.frontmatter.tags.map(tag => getUrlFriendlyTag(tag)).includes(tag)
     )
   )
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, page))),
     getAuthorMap()
   )
 
@@ -66,7 +66,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews()
+  const posts = getAllPosts()
 
   const tagMap = getTagPostMap(posts)
 

@@ -6,6 +6,7 @@ authors: ["Antony Holmes"]
 readTime: "1 min"
 categories: ["Reviews/Credit Cards"]
 tags: ["Cash Back"]
+type: "review"
 hero: "credit-cards"
 rating: 4
 pros:

@@ -4,13 +4,13 @@ import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
 import { getAuthorMap } from "../../../lib/api/author"
 import {
-  getAllPostsAndReviews,
-  sortPosts,
-  addExcerpts,
   addAuthorsToPosts,
+  addExcerpts,
+  getAllPosts,
+  getPostPaths,
+  sortPosts,
 } from "../../../lib/api/post"
-import markdownHtml from "../../../lib/markdown-html"
-import { getPageCount, getPagePosts } from "../../../lib/paginate"
+import { getPageCount, getPageItems } from "../../../lib/paginate"
 
 interface IProps {
   posts: IPost[]
@@ -37,11 +37,11 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const page = parseInt(params.slug) - 1
 
-  const allPosts = sortPosts(getAllPostsAndReviews())
+  const allPosts = sortPosts(getAllPosts())
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, page))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, page))),
     getAuthorMap()
   )
 
@@ -51,7 +51,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews()
+  const posts = getPostPaths()
 
   const pages = getPageCount(posts)
 

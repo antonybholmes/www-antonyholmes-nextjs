@@ -3,10 +3,10 @@ title: "Capital One Secured Mastercard Credit Card"
 product: "Capital One Secured Mastercard"
 description: "My review of the Capital One Secured Mastercard credit card."
 authors: ["Antony Holmes"]
-readTime: "1 min"
 categories: ["Reviews/Credit Cards"]
-hero: "credit-cards"
 tags: ["Secured"]
+type: "review"
+hero: "credit-cards"
 rating: 4
 pros:
   [

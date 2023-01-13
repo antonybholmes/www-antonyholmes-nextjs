@@ -21,7 +21,8 @@ import {
   addAuthors,
   addExcerpt,
   addHtml,
-  getAllPostsAndReviews,
+  getAllPosts,
+  getPostBySlug,
 } from "../../lib/api/post"
 interface IProps {
   post: IPost
@@ -53,7 +54,9 @@ export default function Page({
                 <PostSocialMediaVert post={post} />
 
                 <BaseCol className="gap-y-8">
-                  {post.fields.type === "review" && <ProsAndCons post={post} />}
+                  {post.frontmatter.type === "review" && (
+                    <ProsAndCons post={post} />
+                  )}
 
                   <PostBody html={post.html} className="text-justify" />
                   <PostTags post={post} />
@@ -94,17 +97,10 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const authorMap = getAuthorMap()
 
-  const allPosts = getAllPostsAndReviews()
-
   //const tagMap = getTagPostMap(allPosts)
 
   const post = await addHtml(
-    addAuthors(
-      await addExcerpt(
-        allPosts.filter(post => post.fields.slug === params.slug)[0]
-      ),
-      authorMap
-    )
+    addAuthors(await addExcerpt(getPostBySlug(params.slug)), authorMap)
   )
 
   // const file = join(
@@ -127,7 +123,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPostsAndReviews()
+  const posts = getAllPosts()
 
   return {
     paths: posts.map((post: IBasePost) => {

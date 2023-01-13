@@ -5,10 +5,10 @@ import { getAuthorMap } from "../lib/api/author"
 import {
   addAuthorsToPosts,
   addExcerpts,
-  getAllPostsAndReviews,
+  getAllPosts,
   sortPosts,
 } from "../lib/api/post"
-import { getPageCount, getPagePosts } from "../lib/paginate"
+import { getPageCount, getPageItems } from "../lib/paginate"
 
 interface IProps {
   posts: IPost[]
@@ -26,11 +26,11 @@ export default function Page({ posts, pages }: IProps) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = sortPosts(getAllPostsAndReviews())
+  const allPosts = sortPosts(getAllPosts())
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPagePosts(allPosts, 0, 10))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, 0, 10))),
     getAuthorMap()
   )
 
