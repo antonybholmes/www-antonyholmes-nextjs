@@ -11,7 +11,7 @@ const BAR_WIDTH = "3px"
 export const LINK_CLS = cn(
   "font-semibold",
   "px-3",
-  "py-2",
+  "py-1.5",
   "whitespace-nowrap",
   "transition-ani",
   "transition-colors",
@@ -165,7 +165,7 @@ export default function HeaderLink({
                 "text-white/60 group-hover:text-white group-hover:bg-slate-600",
               ],
               [
-                [down, "border-blue-500 bg-slate-200"],
+                [down, "border-blue-500 bg-slate-300"],
                 "text-slate-500 group-hover:text-slate-900 group-hover:bg-slate-200",
               ],
             ],

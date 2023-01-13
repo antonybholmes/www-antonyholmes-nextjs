@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       width: {
         4.5: "1.125rem",
+        15: "3.75rem",
         "1/20": "5%",
         "9/20": "45%",
         "5/100": "5%",
@@ -187,6 +188,9 @@ module.exports = {
       },
       animation: {
         "header-link": "header-link 200ms ease-in-out 200ms forwards",
+      },
+      opacity: {
+        98: ".98",
       },
     },
   },
