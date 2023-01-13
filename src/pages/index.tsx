@@ -7,7 +7,7 @@ import PostsPage from "../components/pages/posts-page"
 import AvatarImageLarge from "../components/person/avatar-image-large"
 import VCenterCol from "../components/v-center-col"
 import VCenterRow from "../components/v-center-row"
-import { EMAIL } from "../constants"
+import { EMAIL, GITHUB_URL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
 import LinkIcon from "../icons/link"
 import ContentLayout from "../layouts/content-layout"
@@ -44,9 +44,7 @@ export default function Page({ author, posts }) {
               </VCenterRow>
               <VCenterRow className="group  gap-x-2">
                 <LinkIcon className="w-4 fill-slate-500" />
-                <BlueLink href="https://github.com/antonybholmes">
-                  github.com/antonybholmes
-                </BlueLink>
+                <BlueLink href={GITHUB_URL}>github.com/antonybholmes</BlueLink>
               </VCenterRow>
             </BaseCol>
           </VCenterCol>

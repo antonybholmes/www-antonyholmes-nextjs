@@ -14,7 +14,7 @@ export const VERSION = env.VERSION
 export const UPDATED = env.UPDATED
 export const GENERIC_IMAGES = env.GENERIC_IMAGES
 export const IMAGEKIT_URL = env.IMAGEKIT_URL
-
+export const GITHUB_URL = env.GITHUB_URL
 export const CLS_TEXT_GRAY_HOVER = env.CLS_TEXT_GRAY_HOVER
 
 export const DEFAULT_SECTION = env.DEFAULT_SECTION

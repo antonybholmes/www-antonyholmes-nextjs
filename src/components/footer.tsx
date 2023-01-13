@@ -1,7 +1,11 @@
-import React from "react"
+import { GITHUB_URL } from "../constants"
+import GitHubIcon from "../icons/github"
+import RssIcon from "../icons/rss"
 import getCopyright from "../lib/copyright"
 import { INFO_LINKS } from "../menus"
 import ContentDiv from "./content-div"
+import HCenterRow from "./h-center-row"
+import BaseLink from "./link/base-link"
 import WhiteLink from "./link/white-link"
 
 export default function Footer() {
@@ -15,6 +19,19 @@ export default function Footer() {
           </ul>
         </>
         <></>
+      </ContentDiv>
+
+      <ContentDiv className="pt-8">
+        <></>
+        <HCenterRow className="items-center gap-x-4">
+          <BaseLink href={GITHUB_URL}>
+            <GitHubIcon className="w-5" />
+          </BaseLink>
+
+          <BaseLink href="/rss.xml">
+            <RssIcon className="w-5 fill-orange-500" />
+          </BaseLink>
+        </HCenterRow>
       </ContentDiv>
 
       <ContentDiv className="pt-8">

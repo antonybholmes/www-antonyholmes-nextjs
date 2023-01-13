@@ -88,13 +88,13 @@ export default function Page({
   )
 }
 
-type Params = {
+interface Props {
   params: {
     slug: string
   }
 }
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: Props) {
   const authorMap = getAuthorMap()
 
   //const tagMap = getTagPostMap(allPosts)

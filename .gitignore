@@ -27,6 +27,11 @@ yarn-error.log*
 pnpm-lock.yaml
 yarn.lock
 
+public/atom.xml
+public/rss.xml
+public/rss.json
+public/sitemap*
+
 # local env files
 .env*.local
 

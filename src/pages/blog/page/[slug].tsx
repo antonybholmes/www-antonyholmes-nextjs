@@ -28,13 +28,13 @@ export default function Page({ posts, page, pages }: IProps) {
   )
 }
 
-type Params = {
+interface Props {
   params: {
     slug: string
   }
 }
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: Props) {
   const page = parseInt(params.slug) - 1
 
   const allPosts = sortPosts(getAllPosts())

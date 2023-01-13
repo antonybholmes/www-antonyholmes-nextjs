@@ -34,13 +34,13 @@ export default function Page({ title, posts, page, pages }: IProps) {
   )
 }
 
-type Params = {
+interface Props {
   params: {
     slug: string
   }
 }
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: Props) {
   const tag = params.slug[0]
 
   const page =

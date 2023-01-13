@@ -1,5 +1,6 @@
 import fs from "fs-extra"
 import { join } from "path"
+import { getCanonicalSlug } from "./slug"
 
 export const CONTENT_DIR = join(process.cwd(), "_content")
 export const POSTS_DIR = join(CONTENT_DIR, "posts")
@@ -23,8 +24,9 @@ export function getAllFiles(dir: string, ret: string[] = []) {
   return ret
 }
 
-export function getSelectedPublications(personId: string) {
-  const file = join(PUBLICATIONS_DIR, `${personId}.json`)
+export function getSelectedPublications(slug: string) {
+  slug = getCanonicalSlug(slug)
+  const file = join(PUBLICATIONS_DIR, `${slug}.json`)
 
   let allPublications = []
 

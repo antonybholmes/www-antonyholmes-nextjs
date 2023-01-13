@@ -35,6 +35,10 @@ import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
 import { getShortName } from "../lib/text"
 import AnchorButton from "../components/link/anchor-button"
+import { getAuthorBySlug } from "../lib/api/author"
+import IPostAuthor from "../interfaces/post-author"
+import HCenterCol from "../components/h-center-col"
+import PubMedLink from "../components/publication/pubmed-link"
 
 const EMPTY_QUERY = ""
 
@@ -208,10 +212,11 @@ function results(search: string, page: number, filteredPublications: any[]) {
 }
 
 interface IProps {
+  author: IPostAuthor
   publications: any[]
 }
 
-export default function Page({ publications }: IProps) {
+export default function Page({ author, publications }: IProps) {
   //const [publications, setPublications] = useState<any[]>([])
 
   const [journals, setJournals] = useState<any[]>([])
@@ -484,7 +489,7 @@ export default function Page({ publications }: IProps) {
         />
       }
       crumbs={[["Publications", "/publications"]]}
-      className="mb-32 gap-x-16"
+      className="gap-x-16"
     >
       <div>
         <SearchBar
@@ -539,6 +544,11 @@ export default function Page({ publications }: IProps) {
             />
           </HCenterRow>
         )}
+
+        <HCenterCol className="mt-32 items-center gap-y-2">
+          <span>See more on</span>
+          <PubMedLink person={author} />
+        </HCenterCol>
       </div>
 
       <BaseCol className="gap-y-6 text-sm">
@@ -595,10 +605,11 @@ export default function Page({ publications }: IProps) {
 }
 
 export async function getStaticProps() {
-  const publications = getSelectedPublications("antony-holmes")
-
+  const publications = getSelectedPublications("Antony Holmes")
+  const author = getAuthorBySlug("Antony Holmes")
   return {
     props: {
+      author,
       publications,
     },
   }

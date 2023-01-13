@@ -1,22 +1,22 @@
-import fs from "fs"
-import path, { join } from "path"
+import { join } from "path"
+import IAuthor from "../../interfaces/author"
 import IAuthorMap from "../../interfaces/author-map"
 import IPostAuthor from "../../interfaces/post-author"
-import { getCanonicalAuthorSlug } from "../slug"
+import markdownHtml from "../markdown-html"
+import { getCanonicalSlug } from "../slug"
 import { getUrlFriendlyTag } from "../tags"
 import { getAllFiles } from "./files"
 import { getAuthorFrontmatter } from "./markdown"
 
-const authorsDir = join(process.cwd(), "_content", "authors")
+const PEOPLE_DIR = join(process.cwd(), "_content", "people")
 
 export const getAuthorPaths = () => {
-  return getAllFiles(authorsDir)
+  return getAllFiles(PEOPLE_DIR)
 }
 
 export const getAuthorBySlug = (slug: string): IPostAuthor => {
-  slug = getCanonicalAuthorSlug(slug)
-  const realPath = slug.replace(/\.md$/, "")
-  const fullPath = join(authorsDir, `${realPath}.md`)
+  slug = getCanonicalSlug(slug)
+  const fullPath = join(PEOPLE_DIR, `${slug}.md`)
 
   return { slug: slug, frontmatter: getAuthorFrontmatter(fullPath) }
 }
@@ -35,4 +35,11 @@ export const getAuthorMap = (authors: IPostAuthor[] = []): IAuthorMap => {
   return Object.fromEntries(
     authors.map(x => [getUrlFriendlyTag(x.frontmatter.name), x])
   )
+}
+
+export async function addAuthorHtml(post: IPostAuthor): Promise<IAuthor> {
+  return {
+    ...post,
+    html: await markdownHtml(post.frontmatter.rawContent || ""),
+  }
 }
