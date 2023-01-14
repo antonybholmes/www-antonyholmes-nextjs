@@ -24,11 +24,11 @@ export default function Footer() {
       <ContentDiv className="pt-8">
         <></>
         <HCenterRow className="items-center gap-x-4">
-          <ExtLink href={GITHUB_URL}>
+          <ExtLink href={GITHUB_URL} ariaLabel="View my GitHub profile">
             <GitHubIcon className="w-5" />
           </ExtLink>
 
-          <ExtLink href="/rss.xml">
+          <ExtLink href="/rss.xml" ariaLabel="View RSS feed">
             <RssIcon className="w-5 fill-orange-500" />
           </ExtLink>
         </HCenterRow>

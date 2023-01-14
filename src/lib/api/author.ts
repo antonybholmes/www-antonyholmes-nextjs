@@ -37,9 +37,13 @@ export const getAuthorMap = (authors: IPostAuthor[] = []): IAuthorMap => {
   )
 }
 
-export async function addAuthorHtml(post: IPostAuthor): Promise<IAuthor> {
+export async function addAuthorHtml(author: IPostAuthor): Promise<IAuthor> {
   return {
-    ...post,
-    html: await markdownHtml(post.frontmatter.rawContent || ""),
+    ...author,
+    html: await markdownHtml(author.frontmatter.rawContent || ""),
   }
+}
+
+export function addHtmlToAuthors(authors: IPostAuthor[]): Promise<IAuthor>[] {
+  return authors.map(author => addAuthorHtml(author))
 }
