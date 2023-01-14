@@ -12,20 +12,28 @@ interface IProps extends IPostProps {
 const PostDetailsHoz = ({ post, stats, className }: IProps) => (
   <section
     className={cn(
-      "flex flex-row items-center justify-between border-b-2 border-blue-500 pb-4",
+      "flex flex-col gap-y-3 border-b-2 border-blue-500 pb-4",
       className
     )}
   >
-    <Avatars authors={post.authors} />
+    <VCenterRow className="justify-between">
+      <Avatars authors={post.authors} />
 
-    <div className="flex flex-col gap-2 border-l border-slate-300 py-1 pl-4 text-sm text-slate-500 md:flex-row md:items-center md:gap-3 md:pl-6">
-      <DateFormatter date={post.fields.date} />
-      <span className="hidden h-1 w-1 rounded-full bg-slate-400 md:inline" />
-      <span>{stats.text}</span>
-    </div>
+      <VCenterRow className="hidden gap-2 gap-x-3 border-l border-slate-300 py-1 pl-4 text-sm text-slate-500 md:flex md:pl-6">
+        <DateFormatter date={post.fields.date} />
+        <span className="block h-1 w-1 rounded-full bg-slate-400" />
+        <span>{stats.text}</span>
+      </VCenterRow>
+    </VCenterRow>
     {/* <PostTags post={post} /> */}
 
     {/* <PostSocialMedia post={post} /> */}
+
+    <VCenterRow className="gap-x-3 text-sm text-slate-500 md:hidden">
+      <DateFormatter date={post.fields.date} />
+      <span className="block h-1 w-1 rounded-full bg-slate-400" />
+      <span>{stats.text}</span>
+    </VCenterRow>
   </section>
 )
 

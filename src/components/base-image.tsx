@@ -1,8 +1,12 @@
+import { CSSProperties } from "react"
 import type IClassProps from "../interfaces/class-props"
 import IImageProps from "../interfaces/image-props"
 import { parse } from "../lib/path"
 
-export interface IProps extends IImageProps, IClassProps {}
+export interface IProps extends IImageProps, IClassProps {
+  onLoad?: any
+  pictureStyle?: CSSProperties
+}
 
 export default function BaseImage({
   src,
@@ -11,8 +15,10 @@ export default function BaseImage({
   sizes = [],
   loading = "lazy",
   decoding = "async",
+  onLoad,
   className,
   style,
+  pictureStyle,
 }: IProps) {
   if (sizes.length === 0) {
     sizes = [
@@ -34,7 +40,7 @@ export default function BaseImage({
   //const _sizes = sizes.map(s => `(min-width: ${s}px) ${s}px`).join(", ") //+ `, ${sizes[sizes.length - 1]}px`
 
   return (
-    <picture>
+    <picture style={pictureStyle}>
       <img
         src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
         srcSet={srcset}
@@ -46,6 +52,7 @@ export default function BaseImage({
         loading={loading}
         decoding={decoding}
         alt={alt}
+        onLoad={onLoad}
       />
     </picture>
   )
