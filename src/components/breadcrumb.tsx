@@ -55,7 +55,7 @@ export default function Breadcrumb({
     <VCenterRow>
       <ul
         className={cn(
-          "flex flex-row flex-nowrap items-center gap-x-2 text-sm font-bold",
+          "flex flex-row flex-nowrap items-center gap-x-2 text-sm font-semibold",
           className
         )}
       >

@@ -25,7 +25,7 @@ interface IProps extends IPostProps, IImageLoadProps {
 export default function PreviewPost({
   post,
   className,
-  imageClassName = "h-64 md:h-72",
+  imageClassName = "w-full h-64 md:h-72",
   headerClassName = "text-2xl md:text-4xl",
   innerClassName,
   contentClassName = "text-base",

@@ -4,6 +4,7 @@ import BlueLink from "../components/link/blue-link"
 import { ROUNDED_BUTTON_CLS } from "../components/link/rounded-button-link"
 import { SITE_NAME, UPDATED, VERSION, YEAR } from "../constants"
 import LogoIcon from "../icons/logo-icon"
+import ContentLayout from "../layouts/content-layout"
 import SideLayout from "../layouts/side-layout"
 import cn from "../lib/class-names"
 
@@ -11,9 +12,10 @@ const CLS = cn(ROUNDED_BUTTON_CLS, "block px-5 py-2 bg-sky-100 font-medium")
 
 export default function Page() {
   return (
-    <SideLayout title="Help" showTitle={false}>
+    <ContentLayout title="Help" showTitle={false}>
+      <></>
       <>
-        <BaseCol className="gap-y-4 rounded-xl bg-apple-gray p-6 text-sm">
+        <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-6 text-sm lg:w-1/2">
           <BaseRow>
             <LogoIcon />
           </BaseRow>
@@ -21,33 +23,20 @@ export default function Page() {
           <div>
             <p>{`Version ${VERSION}`}</p>
             <p>{`Updated ${UPDATED}`}</p>
+
+            <p>
+              Copyright &copy; {YEAR} {SITE_NAME}. All rights reserved.
+            </p>
           </div>
         </BaseCol>
 
-        <div className="mt-8 rounded-xl bg-apple-gray p-6 text-sm">
-          <p>{SITE_NAME}</p>
-          <p>
-            Copyright &copy; {YEAR} {SITE_NAME}. All rights reserved.
-          </p>
-          <p>
-            Developed by{" "}
-            <BlueLink
-              href="https://www.antonyholmes.com"
-              ariaLabel="Email Antony Holmes"
-            >
-              Antony Holmes
-            </BlueLink>
-            .
-          </p>
-        </div>
-
-        <div className="mt-16">
+        <div className="mt-16 text-sm">
           <p>
             This website is made possible by open source software and other
             services:
           </p>
 
-          <ul className="mt-4 flex flex-row flex-wrap gap-2 text-sm">
+          <ul className="mt-4 flex w-full flex-col gap-y-2 text-sm lg:w-1/2">
             <li className={CLS}>
               <BlueLink href="https://nextjs.org/" ariaLabel="View tool">
                 Next.js
@@ -94,7 +83,6 @@ export default function Page() {
           </ul>
         </div>
       </>
-      <></>
-    </SideLayout>
+    </ContentLayout>
   )
 }

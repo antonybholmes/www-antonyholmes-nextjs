@@ -15,7 +15,7 @@ export default function HeadPosts({ posts, showAvatar = true }: IProps) {
               post={post}
               showAvatar={showAvatar}
               className="border-t border-slate-200 pt-6"
-              imageClassName="h-64 md:h-72"
+              imageClassName="h-48 md:h-64 xl:h-72"
             />
           </li>
         ))}
