@@ -15,13 +15,11 @@ export default function Document() {
           rel="stylesheet"
         /> */}
 
-        <link href="/themes/prism.css" rel="stylesheet" />
+        {/* <link href="/themes/prism.css" rel="stylesheet" /> */}
       </Head>
       <body>
         <Main />
         <NextScript />
-
-        <script src="/themes/prism.js" />
       </body>
     </Html>
   )
