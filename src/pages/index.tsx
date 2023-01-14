@@ -35,7 +35,10 @@ export default function Page({ author, posts }) {
               ariaLabel="View profile"
             >
               <div className="relative z-10 overflow-hidden rounded-full">
-                <AvatarImageLarge author={author} className="max-w-64" />
+                <AvatarImageLarge
+                  author={author}
+                  className="transition-ani max-w-64 scale-102 transition-transform hover:scale-105"
+                />
               </div>
             </BaseLink>
             <BaseCol className="gap-y-2">
