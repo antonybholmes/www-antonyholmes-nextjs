@@ -15,7 +15,7 @@ export default function Page() {
     <ContentLayout title="Help" showTitle={false}>
       <></>
       <>
-        <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-6 text-sm lg:w-1/2">
+        <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-6 text-sm xl:w-1/2">
           <BaseRow>
             <LogoIcon />
           </BaseRow>
@@ -36,7 +36,7 @@ export default function Page() {
             services:
           </p>
 
-          <ul className="mt-4 flex w-full flex-col gap-y-2 text-sm lg:w-1/2">
+          <ul className="mt-4 flex w-full flex-col gap-y-2 text-sm xl:w-1/2">
             <li className={CLS}>
               <BlueLink href="https://nextjs.org/" ariaLabel="View tool">
                 Next.js

@@ -23,7 +23,9 @@ export const getAuthorBySlug = (slug: string): IPostAuthor => {
 
 export const getAllAuthors = (): IPostAuthor[] => {
   const paths = getAuthorPaths()
-  const authors = paths.map(path => getAuthorBySlug(path))
+  const authors = paths
+    .map(path => getAuthorBySlug(path))
+    .sort((a, b) => a.frontmatter.name.localeCompare(b.frontmatter.name))
   return authors
 }
 

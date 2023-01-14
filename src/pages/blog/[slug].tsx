@@ -2,7 +2,7 @@ import Prism from "prismjs"
 
 import "prismjs/components/prism-jsx.min"
 import "prismjs/components/prism-typescript"
-import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"
+//import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"
 import { useEffect } from "react"
 import readingTime from "reading-time"
 import BaseCol from "../../components/base-col"
