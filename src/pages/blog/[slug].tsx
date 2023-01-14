@@ -1,5 +1,9 @@
-import Head from "next/head"
-import Script from "next/script"
+import Prism from "prismjs"
+
+import "prismjs/components/prism-jsx.min"
+import "prismjs/components/prism-typescript"
+import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js"
+import { useEffect } from "react"
 import readingTime from "reading-time"
 import BaseCol from "../../components/base-col"
 import ContentDiv from "../../components/content-div"
@@ -39,60 +43,59 @@ export default function Page({
   morePosts = [],
   readMorePosts = [],
 }: IProps) {
+  useEffect(() => {
+    console.log("sss")
+    Prism.highlightAll()
+  }, [])
+
   return (
-    <>
-      <Head>
-        <link href="/themes/prism.css" rel="stylesheet" />
-      </Head>
-      <Script src="/themes/prism.js" strategy="afterInteractive" />
-      <BaseLayout title={post.frontmatter.title} tab="Blog" headerMode="dark">
-        <>
-          <article>
-            <PostHeader post={post} />
+    <BaseLayout title={post.frontmatter.title} tab="Blog" headerMode="dark">
+      <>
+        <article>
+          <PostHeader post={post} />
 
-            <ContentDiv className="my-40">
-              <></>
-              <BaseCol className="gap-y-4 lg:gap-y-8">
-                <PostDetailsHoz post={post} stats={stats} />
+          <ContentDiv className="my-40">
+            <></>
+            <BaseCol className="gap-y-4 lg:gap-y-8">
+              <PostDetailsHoz post={post} stats={stats} />
 
-                <PostSocialMedia post={post} className="lg:hidden" />
+              <PostSocialMedia post={post} className="lg:hidden" />
 
-                <PostLayout>
-                  <PostSocialMediaVert post={post} />
+              <PostLayout>
+                <PostSocialMediaVert post={post} />
 
-                  <BaseCol className="gap-y-8">
-                    {post.frontmatter.type === "review" && (
-                      <ProsAndCons post={post} />
-                    )}
+                <BaseCol className="gap-y-8">
+                  {post.frontmatter.type === "review" && (
+                    <ProsAndCons post={post} />
+                  )}
 
-                    <PostBody html={post.html} className="text-justify" />
-                    <PostTags post={post} />
-                  </BaseCol>
+                  <PostBody html={post.html} className="text-justify" />
+                  <PostTags post={post} />
+                </BaseCol>
 
-                  <div>
-                    {morePosts.length > 0 && (
-                      <MorePosts
-                        posts={morePosts}
-                        title={`More on ${post.frontmatter.tags[0]}`}
-                      />
-                    )}
-                  </div>
-                </PostLayout>
-              </BaseCol>
-              <></>
-            </ContentDiv>
-          </article>
+                <div>
+                  {morePosts.length > 0 && (
+                    <MorePosts
+                      posts={morePosts}
+                      title={`More on ${post.frontmatter.tags[0]}`}
+                    />
+                  )}
+                </div>
+              </PostLayout>
+            </BaseCol>
+            <></>
+          </ContentDiv>
+        </article>
 
-          {readMorePosts.length > 0 && (
-            <ContentDiv className="py-16">
-              <></>
-              <RelatedPosts posts={readMorePosts} title="Keep Reading" />
-              <></>
-            </ContentDiv>
-          )}
-        </>
-      </BaseLayout>
-    </>
+        {readMorePosts.length > 0 && (
+          <ContentDiv className="py-16">
+            <></>
+            <RelatedPosts posts={readMorePosts} title="Keep Reading" />
+            <></>
+          </ContentDiv>
+        )}
+      </>
+    </BaseLayout>
   )
 }
 
