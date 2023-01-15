@@ -42,11 +42,11 @@ export default function IndexArrow({ selected = false, className }: IProps) {
         y1="9"
         x2="11"
         y2="9"
-        className="transition-ani opacity-0 transition-opacity group-hover:opacity-100"
+        className="trans-ani-300 opacity-0 transition-opacity group-hover:opacity-100"
       />
       <path
         d="M 6,5 L 10,9 L 6,13"
-        className="transition-ani transition-transform group-hover:translate-x-0.5"
+        className="trans-ani-300 transition-transform group-hover:translate-x-0.5"
       />
     </svg>
   )

@@ -14,10 +14,10 @@ import IMenuProps from "./menu-props"
 const DURATION = 0.2
 
 const X1 = 20
-const X2 = 42
-const Y1 = 25
+const X2 = 44
+const Y1 = 26
 const Y2 = 32
-const Y3 = 37
+const Y3 = 38
 
 const LINE_STYLE = {
   strokeWidth: 2,
@@ -139,7 +139,7 @@ export default function MenuButtonOpen({
           ref1.current,
           {
             duration: DURATION,
-            attr: { y1: 32, y2: 32 },
+            attr: { y1: Y2, y2: Y2 },
           },
           0
         )
@@ -147,7 +147,7 @@ export default function MenuButtonOpen({
           ref3.current,
           {
             duration: DURATION,
-            attr: { y1: 32, y2: 32 },
+            attr: { y1: Y2, y2: Y2 },
           },
           0
         )
@@ -252,10 +252,10 @@ export default function MenuButtonOpen({
     <BaseButton
       onClick={onClick}
       className={cn(
-        "group relative h-14 min-w-14",
+        "group relative  h-10 w-10 shrink-0 grow-0 rounded-full",
         [
           headerMode !== "dark",
-          "transition-ani transition-color hover:bg-slate-200",
+          "trans-ani-300 transition-color hover:bg-slate-200",
         ],
         className
       )}

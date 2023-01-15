@@ -6,7 +6,7 @@ interface IProps extends IClassProps {
 }
 
 export default function LogoIcon({ headerMode = "light", className }: IProps) {
-  const textClass = cn("transition-ani transition-color", [
+  const textClass = cn("trans-ani-300 transition-color", [
     headerMode === "light",
     "fill-sky-600 group-hover:fill-sky-500",
     "fill-slate-300 group-hover:fill-slate-200",
@@ -21,7 +21,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
       <rect
         width="24"
         height="24"
-        className={cn("transition-ani transition-color", [
+        className={cn("trans-ani-300 transition-color", [
           headerMode === "light",
           "  fill-sky-600 text-white group-hover:fill-sky-500",
           "fill-slate-300 group-hover:fill-slate-200",
@@ -32,7 +32,7 @@ export default function LogoIcon({ headerMode = "light", className }: IProps) {
         textAnchor="middle"
         x="12"
         y="14"
-        className={cn("transition-ani transition-color", [
+        className={cn("trans-ani-300 transition-color", [
           headerMode === "light",
           "fill-white",
           "fill-slate-900",

@@ -5,8 +5,8 @@ import getCopyright from "../lib/copyright"
 import { INFO_LINKS } from "../menus"
 import ContentDiv from "./content-div"
 import HCenterRow from "./h-center-row"
+import BlackLink from "./link/black-link"
 import ExtLink from "./link/ext-link"
-import WhiteLink from "./link/white-link"
 
 export default function Footer() {
   return (
@@ -42,13 +42,13 @@ export default function Footer() {
               {INFO_LINKS.map(
                 (link: { name: string; url: string }, index: number) => (
                   <li key={index}>
-                    <WhiteLink
+                    <BlackLink
                       href={link.url}
                       ariaLabel={`View ${link.name}`}
                       underline={true}
                     >
                       {link.name}
-                    </WhiteLink>
+                    </BlackLink>
                   </li>
                 )
               )}

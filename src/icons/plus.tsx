@@ -20,7 +20,7 @@ export default function PlusIcon({ isPlus = true, className, style }: IProps) {
 
       <path
         d="M 4,8 L 12,8"
-        className={cn("transition-ani origin-center transition-transform", [
+        className={cn("trans-ani-300 origin-center transition-transform", [
           isPlus,
           "-rotate-90",
         ])}

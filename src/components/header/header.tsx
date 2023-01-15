@@ -45,11 +45,15 @@ export default function Header({
 
       <header
         className={cn(
-          "transition-ani transition-color fixed top-0 z-50 w-full border-b backdrop-blur",
-          [headerMode === "light", "bg-white/98", "bg-slate-800/95"],
+          "trans-ani-700 fixed top-0 z-50 w-full border-b py-3 backdrop-blur transition-all",
+          [headerMode === "light", "bg-white/95", "bg-slate-800/95"],
           [
             scrollY > 10,
-            [headerMode === "light", "border-slate-200", "border-white/20"],
+            [
+              headerMode === "light",
+              "border-slate-200 shadow-header",
+              "border-white/20",
+            ],
             "border-transparent",
           ],
           className

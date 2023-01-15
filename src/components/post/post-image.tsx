@@ -14,13 +14,13 @@ export default function PostImage({
   className,
 }: IProps) {
   const image = (
-    <div className={cn("relative overflow-hidden rounded-lg", className)}>
+    <div className={cn("relative overflow-hidden rounded-xl", className)}>
       <BasePostImage
         post={post}
         size={size}
         loading={loading}
         className={className}
-        imgClassName="scale-102 transition-ani transition-transform hover:scale-105"
+        imgClassName="scale-102 trans-ani-300 transition-transform hover:scale-105"
       />
     </div>
   )

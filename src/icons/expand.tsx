@@ -10,7 +10,7 @@ export default function ExpandIcon({ expanded, className }: IProps) {
   return (
     <ChevronRightIcon
       className={cn(
-        "transition-ani transition-transform",
+        "trans-ani-300 transition-transform",
         [expanded, "rotate-90"],
         className
       )}

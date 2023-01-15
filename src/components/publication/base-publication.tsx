@@ -149,7 +149,7 @@ function BasePublication({
           onClick={() => setExpanded(!isExpanded)}
         >
           {/* <ChevronRightIcon
-            className={cn("transition-ani w-3 stroke-2  transition-transform", [
+            className={cn("trans-ani-300 w-3 stroke-2  transition-transform", [
               isExpanded,
               "rotate-90",
             ])}
@@ -197,7 +197,7 @@ function BasePublication({
             >
               <ChevronRightIcon
                 className={cn(
-                  "transition-ani w-3 stroke-2  transition-transform",
+                  "trans-ani-300 w-3 stroke-2  transition-transform",
                   [isExpanded, "rotate-90"]
                 )}
               />

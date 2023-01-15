@@ -27,7 +27,7 @@ export default function ToggleSwitch({
             width="24"
             height="16"
             rx="8"
-            className={cn("transition-ani transition-colors", [
+            className={cn("trans-ani-300 transition-colors", [
               isSelected,
               "fill-blue-600",
               "fill-slate-200 group-hover:fill-slate-300",
@@ -37,7 +37,7 @@ export default function ToggleSwitch({
             cx="8"
             cy="8"
             r="7"
-            className={cn("transition-ani fill-white transition-transform", [
+            className={cn("trans-ani-300 fill-white transition-transform", [
               isSelected,
               "translate-x-toggle",
             ])}

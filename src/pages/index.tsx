@@ -3,6 +3,7 @@ import HCenterCol from "../components/h-center-col"
 import BaseLink from "../components/link/base-link"
 import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
 import BlueLink from "../components/link/blue-link"
+import WhiteLink from "../components/link/white-link"
 import PostsPage from "../components/pages/posts-page"
 import AvatarImageLarge from "../components/person/avatar-image-large"
 import VCenterCol from "../components/v-center-col"
@@ -27,34 +28,54 @@ export default function Page({ author, posts }) {
     <ContentLayout title="Home" showCrumbs={false}>
       <></>
       <>
-        <div className="grid grid-cols-1 gap-y-8 xl:grid-cols-2 xl:gap-x-12">
-          <VCenterCol className="h-full items-center gap-y-8">
-            <BaseLink
-              href={getAuthorBaseUrl("Antony Holmes")}
-              ariaLabel="View profile"
-            >
-              <div className="relative z-10 overflow-hidden rounded-full">
-                <AvatarImageLarge
-                  author={author}
-                  className="transition-ani max-w-64 scale-102 transition-transform hover:scale-105"
+        <div className="grid grid-cols-1 gap-y-16 xl:grid-cols-2 xl:gap-x-12">
+          <VCenterCol className="h-full items-center gap-y-16 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 p-8 xl:p-16">
+            <VCenterCol className="items-center gap-y-8">
+              <BaseLink
+                href={getAuthorBaseUrl("Antony Holmes")}
+                ariaLabel="View profile"
+              >
+                <div className="relative z-10 overflow-hidden rounded-full">
+                  <AvatarImageLarge
+                    author={author}
+                    className="trans-ani-300 max-w-64 scale-102 transition-transform hover:scale-105"
+                  />
+                </div>
+              </BaseLink>
+              <BaseCol className="gap-y-2">
+                <VCenterRow className="group gap-x-2">
+                  <EnvelopeIcon className="w-4 fill-slate-500" />
+                  <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
+                </VCenterRow>
+                <VCenterRow className="group  gap-x-2">
+                  <GitHubIcon className="w-4 fill-slate-500" />
+                  <BlueLink href={GITHUB_URL}>
+                    github.com/antonybholmes
+                  </BlueLink>
+                </VCenterRow>
+              </BaseCol>
+            </VCenterCol>
+            <VCenterRow className="justify-center font-semibold">
+              <div className="flex flex-row gap-6">
+                <BlueButtonArrowLink
+                  href="/resume"
+                  className="px-4 py-2"
+                  text="Resume"
                 />
+
+                <BlueLink
+                  href="/publications"
+                  className="flex flex-row items-center "
+                >
+                  Publications
+                </BlueLink>
               </div>
-            </BaseLink>
-            <BaseCol className="gap-y-2">
-              <VCenterRow className="group gap-x-2">
-                <EnvelopeIcon className="w-4 fill-slate-500" />
-                <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
-              </VCenterRow>
-              <VCenterRow className="group  gap-x-2">
-                <GitHubIcon className="w-4 fill-slate-500" />
-                <BlueLink href={GITHUB_URL}>github.com/antonybholmes</BlueLink>
-              </VCenterRow>
-            </BaseCol>
+            </VCenterRow>
           </VCenterCol>
 
-          <VCenterCol className="gap-y-16 bg-gradient-to-br from-slate-50 to-slate-100 p-8 xl:p-16">
+          <VCenterCol className="gap-y-16 rounded-3xl bg-gradient-to-br from-blue-700 to-blue-600 p-8 font-medium text-white xl:p-16">
             <HCenterCol className="gap-y-5 text-lg">
-              <h1 className="text-5xl font-semibold">Hi There.</h1>
+              <h1 className="text-5xl font-bold">Hi There.</h1>
 
               <p className="text-center">
                 I'm Antony Holmes, and welcome to my personal website.
@@ -79,23 +100,6 @@ export default function Page({ author, posts }) {
 
               <p>My life story probably won't be optioned.</p>
             </HCenterCol>
-
-            <VCenterRow className="justify-center font-semibold">
-              <div className="flex flex-row gap-6">
-                <BlueButtonArrowLink
-                  href="/resume"
-                  className="px-4 py-2"
-                  text="Resume"
-                />
-
-                <BlueLink
-                  href="/publications"
-                  className="flex flex-row items-center "
-                >
-                  Publications
-                </BlueLink>
-              </div>
-            </VCenterRow>
           </VCenterCol>
         </div>
         <section className="mt-16 border-t border-slate-200 pt-16">

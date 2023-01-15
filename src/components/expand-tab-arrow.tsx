@@ -10,7 +10,7 @@ export default function ExpandTabArrow({ expanded, hover = false }: IProps) {
   return (
     <ChevronUpIcon //{isExpanded ? "chevron-up" : "chevron-down"}
       className={cn(
-        "transition-ani w-4 shrink-0 stroke-2 transition-all",
+        "trans-ani-300 w-4 shrink-0 stroke-2 transition-all",
         [expanded, "rotate-180", "rotate-0"],
         [hover, "stroke-slate-900", "stroke-slate-400"]
       )}

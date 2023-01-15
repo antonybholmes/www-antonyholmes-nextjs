@@ -109,6 +109,7 @@ module.exports = {
         "2/3": "66.666667%",
       },
       screens: {
+        "2lg": "1152px",
         "2xl": "1440px",
         "3xl": "1600px",
         "4xl": "1800px",
@@ -147,6 +148,7 @@ module.exports = {
       boxShadow: {
         box: "0 0 16px 4px rgba(0, 0, 0, 0.1)",
         box2: "0 0 16px 4px rgba(0, 0, 0, 0.15)",
+        header: "0 4px 16px 4px rgba(0, 0, 0, 0.1)",
       },
       borderWidth: {
         3: "3px",

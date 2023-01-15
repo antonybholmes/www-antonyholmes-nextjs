@@ -9,10 +9,11 @@ import VCenterCol from "../v-center-col"
 
 export const LINK_CLS = cn(
   "font-semibold",
-  "px-3",
-  "py-1.5",
+  "px-2",
+  "h-10",
+  "justify-center",
   "whitespace-nowrap",
-  "transition-ani",
+  "trans-ani-300",
   "transition-colors",
   "whitespace-nowrap",
   "rounded-lg",
@@ -152,30 +153,29 @@ export default function HeaderLink({
       onMouseDown={() => setDown(true)}
       onMouseUp={() => setDown(false)}
     >
-      <VCenterCol className="group relative h-14 justify-center overflow-hidden">
-        <div
-          className={cn(LINK_CLS, [
-            selected,
-            [headerMode === "dark", "text-slate-50", "text-blue-600"],
+      <VCenterCol
+        className={cn(LINK_CLS, [
+          selected,
+          [headerMode === "dark", "text-slate-50", "text-blue-600"],
+          [
+            headerMode === "dark",
             [
-              headerMode === "dark",
-              [
-                [down, "bg-white/10"],
-                "text-white/60 group-hover:bg-slate-600 group-hover:text-white",
-              ],
-              [
-                [down, "border-blue-500 bg-slate-300"],
-                "text-slate-500 group-hover:bg-slate-200 group-hover:text-slate-900",
-              ],
+              [down, "bg-white/10"],
+              "text-white/60 hover:bg-slate-600 hover:text-white",
             ],
-          ])}
-        >
-          {link.name}
-        </div>
+            [
+              [down, "border-blue-500 bg-slate-300"],
+              "text-slate-500 hover:bg-slate-200 hover:text-slate-900",
+            ],
+          ],
+        ])}
+      >
+        {link.name}
+
         {/* <div
           ref={ref}
           className={cn(
-            "transition-ani absolute bottom-0 transition-opacity",
+            "trans-ani-300 absolute bottom-0 transition-opacity",
             [headerMode === "light", "bg-blue-600", "bg-white"],
             [
               selected,

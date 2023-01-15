@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react"
 import { ANIMATION_DURATION_S } from "../../constants"
 import LogoIcon from "../../icons/logo-icon"
 import cn from "../../lib/class-names"
-import BaseRow from "../base-row"
 import BaseLink from "../link/base-link"
+import VCenterRow from "../v-center-row"
 import IHeaderProps from "./header-props"
 import MenuOpenButton from "./menu-button-open"
 import MenuLinks from "./menu-links"
@@ -162,14 +162,14 @@ export default function MenuOverlay({
         className="h-full w-72 bg-white"
         style={{ visibility: "hidden" }}
       >
-        <BaseRow>
+        <VCenterRow className="mx-2 gap-x-2 py-3">
           <MenuOpenButton showMenu={showMenu} onClick={onClick} />
           <div>
             <BaseLink href="/">
               <LogoIcon className="shrink-0" />
             </BaseLink>
           </div>
-        </BaseRow>
+        </VCenterRow>
         <MenuLinks title={title} tab={tab} onClick={onClick} className="grow" />
       </div>
       <div onClick={onClick} className="h-full grow">

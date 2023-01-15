@@ -36,7 +36,7 @@ export default function PubMedLink({ person }: IPubMedLinkProps) {
   return (
     <BaseLink
       href={url}
-      className="transition-ani flex flex-row items-center gap-x-3 opacity-80 transition-opacity hover:opacity-100"
+      className="trans-ani-300 flex flex-row items-center gap-x-3 opacity-80 transition-opacity hover:opacity-100"
       ariaLabel="View PubMed article"
       onHover={onHover}
     >

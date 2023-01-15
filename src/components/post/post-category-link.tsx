@@ -35,7 +35,7 @@ export default function PostCategoryLink({
 
     items.push(
       <li key={items.length}>
-        <VCenterRow className="gap-x-1">
+        <VCenterRow className="gap-x-2">
           <BaseLink
             href={getCategoryBaseUrl(path[0])}
             ariaLabel={`Read more ${path[0]} posts`}
@@ -52,7 +52,7 @@ export default function PostCategoryLink({
           {showSections && path.length > 1 && (
             <>
               {/* <span className="text-white">/</span> */}
-              <BreadcrumbChevronIcon className="w-4 stroke-white" />
+              <BreadcrumbChevronIcon className="w-3 stroke-white stroke-2" />
               <BaseLink
                 href={getSectionBaseUrl(path[0], path[1])}
                 ariaLabel={`Read more ${category} posts`}

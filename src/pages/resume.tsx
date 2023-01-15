@@ -32,7 +32,7 @@ export default function Page() {
                 <li
                   key={index}
                   className={cn(
-                    "transition-ani transition-color rounded-lg bg-gradient-to-br px-4 py-8 text-white",
+                    "trans-ani-300 transition-color rounded-lg bg-gradient-to-br px-4 py-8 text-white",
                     [
                       index % 2 == 0,
                       "bg-fuchsia-400 hover:bg-fuchsia-500",
@@ -63,7 +63,7 @@ export default function Page() {
                       {job.date}
                     </h4>
                   </header>
-                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-slate-100 p-6 hover:bg-slate-200  lg:p-10">
+                  <div className="trans-ani-300 transition-color col-span-3 rounded-2xl bg-slate-100 p-6 hover:bg-slate-200  lg:p-10">
                     <p>{job.overview}</p>
                     <ul className="ml-6 mt-4 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
@@ -92,7 +92,7 @@ export default function Page() {
                       {job.date}
                     </h4>
                   </header>
-                  <div className="transition-ani transition-color col-span-3 rounded-2xl bg-slate-100 p-8  hover:bg-slate-200">
+                  <div className="trans-ani-300 transition-color col-span-3 rounded-2xl bg-slate-100 p-8  hover:bg-slate-200">
                     <ul className="ml-6 flex list-disc flex-col gap-y-2">
                       {job.details.map((detail, detailIndex) => (
                         <li key={detailIndex}>{detail}</li>
@@ -113,7 +113,7 @@ export default function Page() {
               <li key={degreeIndex}>
                 <article className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-4">
                   <div />
-                  <div className="transition-ani transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-blue-400">
+                  <div className="trans-ani-300 transition-color col-span-3 h-full w-full rounded-2xl border border-slate-200 px-8 py-12 hover:border-blue-400">
                     <header>
                       <h3 className="text-xl font-bold">{degree.title}</h3>
                       {/* {degree.date !== '' && (

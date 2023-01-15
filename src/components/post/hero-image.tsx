@@ -11,14 +11,19 @@ export default function HeroImage({
   className,
 }: IProps) {
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <div className="group relative overflow-hidden rounded-2xl">
       <BasePostImage
         post={post}
         size={size}
         className={className}
         imgClassName={className}
       />
-      {post.frontmatter.heroCaption !== "" && <HeroImageCaption post={post} />}
+      {post.frontmatter.heroCaption !== "" && (
+        <HeroImageCaption
+          post={post}
+          className="trans-ani-700 opacity-0 group-hover:opacity-100"
+        />
+      )}
     </div>
   )
 }

@@ -72,7 +72,7 @@ export default function MenuLinks({
   return (
     <ul
       className={cn(
-        "flex flex-col px-4 pt-8",
+        "flex flex-col px-2 pt-4",
         [headerMode === "dark", "bg-slate-800"],
         className
       )}

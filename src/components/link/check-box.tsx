@@ -39,7 +39,7 @@ export default function CheckBox({
             width="14"
             height="14"
             rx="3"
-            className={cn("transition-ani transition-color", [
+            className={cn("trans-ani-300 transition-color", [
               isSelected,
               "fill-blue-600 stroke-blue-600",
               "fill-white stroke-slate-300 group-hover:stroke-slate-400",

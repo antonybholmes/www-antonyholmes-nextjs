@@ -15,7 +15,7 @@ export default function ToBlueLink({
       ariaLabel={ariaLabel}
       underline={underline}
       className={cn(
-        `transition-ani transition-colors hover:text-blue-600`,
+        `trans-ani-300 transition-colors hover:text-blue-600`,
         className
       )}
     >
