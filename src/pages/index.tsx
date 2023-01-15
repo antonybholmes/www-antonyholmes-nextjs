@@ -10,7 +10,6 @@ import VCenterRow from "../components/v-center-row"
 import { EMAIL, GITHUB_URL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
 import GitHubIcon from "../icons/github"
-import LinkIcon from "../icons/link"
 import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
 import {
@@ -21,7 +20,7 @@ import {
 } from "../lib/api/post"
 import { getPageCount, getPageItems } from "../lib/paginate"
 import { getUrlFriendlyTag } from "../lib/tags"
-import { getAuthorUrl } from "../lib/urls"
+import { getAuthorBaseUrl } from "../lib/urls"
 
 export default function Page({ author, posts }) {
   return (
@@ -31,7 +30,7 @@ export default function Page({ author, posts }) {
         <div className="grid grid-cols-1 gap-y-8 xl:grid-cols-2 xl:gap-x-12">
           <VCenterCol className="h-full items-center gap-y-8">
             <BaseLink
-              href={getAuthorUrl("Antony Holmes")}
+              href={getAuthorBaseUrl("Antony Holmes")}
               ariaLabel="View profile"
             >
               <div className="relative z-10 overflow-hidden rounded-full">

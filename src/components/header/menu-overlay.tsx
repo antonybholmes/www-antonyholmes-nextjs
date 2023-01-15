@@ -4,7 +4,6 @@ import { ANIMATION_DURATION_MS } from "../../constants"
 import LogoIcon from "../../icons/logo-icon"
 import cn from "../../lib/class-names"
 import BaseRow from "../base-row"
-import HCenterRow from "../h-center-row"
 import BaseLink from "../link/base-link"
 import IHeaderProps from "./header-props"
 import MenuOpenButton from "./menu-button-open"
@@ -21,32 +20,114 @@ export default function MenuOverlay({
   showMenu,
   onClick,
 }: IMenuOverlayProps) {
-  const ref1 = useRef(null)
-  const ref2 = useRef(null)
+  const overlayRef = useRef(null)
+  const sideMenuRef = useRef(null)
 
   useEffect(() => {
+    animateMenu()
+  }, [])
+
+  useEffect(() => {
+    animateMenu()
+  }, [showMenu])
+
+  function animateMenu() {
     if (showMenu) {
       // @ts-ignore
       gsap
         .timeline()
-        .from(
-          ref1.current,
+        .set(
+          overlayRef.current,
+          {
+            visibility: "visible",
+          },
+          0
+        )
+        .set(
+          sideMenuRef.current,
+          {
+            visibility: "visible",
+          },
+          0
+        )
+        .to(
+          overlayRef.current,
+          {
+            duration: ANIMATION_DURATION_MS,
+            opacity: 1,
+          },
+          0
+        )
+        .to(
+          sideMenuRef.current,
+          {
+            duration: ANIMATION_DURATION_MS,
+            opacity: 1,
+          },
+          0
+        )
+        .to(
+          sideMenuRef.current,
+          {
+            x: 0,
+            duration: ANIMATION_DURATION_MS,
+          },
+          0
+        )
+    } else {
+      gsap
+        .timeline()
+
+        .to(
+          overlayRef.current,
           {
             duration: ANIMATION_DURATION_MS,
             opacity: 0,
           },
           0
         )
-        .from(
-          ref1.current,
+        .to(
+          overlayRef.current,
           {
-            x: "-2rem",
+            duration: ANIMATION_DURATION_MS,
+            opacity: 0,
+          },
+          0
+        )
+        .to(
+          sideMenuRef.current,
+          {
+            duration: ANIMATION_DURATION_MS,
+            opacity: 0,
+          },
+          0
+        )
+        .to(
+          sideMenuRef.current,
+          {
+            x: "-4rem",
             duration: ANIMATION_DURATION_MS,
           },
           0
         )
+        .set(
+          overlayRef.current,
+          {
+            visibility: "hidden",
+            delay: ANIMATION_DURATION_MS,
+          },
+          0
+        )
+        .set(
+          sideMenuRef.current,
+          {
+            visibility: "hidden",
+            delay: ANIMATION_DURATION_MS,
+          },
+          0
+        )
     }
-  }, [showMenu])
+  }
 
   // useEffect(() => {
   //   if (!isFirstRun.current) {
@@ -68,38 +149,35 @@ export default function MenuOverlay({
 
   return (
     <div
+      ref={overlayRef}
       className={cn(
-        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/50 backdrop-blur-sm"
+        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/70 backdrop-blur-sm"
       )}
+      style={{ visibility: "hidden" }}
     >
-      <div ref={ref1} className="h-full w-3/4 bg-white">
+      <div
+        ref={sideMenuRef}
+        className="h-full w-72 bg-white"
+        style={{ visibility: "hidden" }}
+      >
         <BaseRow>
-          {/* <MenuOpenButton showMenu={showMenu} onClick={onClick} />
-
-        <div className="mt-2 mr-2 w-full">
-          <MenuLinks title={title} tab={tab} onClick={onClick} />
-        </div> */}
+          <MenuOpenButton showMenu={showMenu} onClick={onClick} />
           <div>
             <BaseLink href="/">
               <LogoIcon className="shrink-0" />
             </BaseLink>
           </div>
-          <MenuLinks
-            title={title}
-            tab={tab}
-            onClick={onClick}
-            className="grow"
-          />
         </BaseRow>
+        <MenuLinks title={title} tab={tab} onClick={onClick} className="grow" />
       </div>
-      <div ref={ref2} onClick={onClick}>
-        <HCenterRow>
+      <div onClick={onClick} className="h-full grow">
+        {/* <HCenterRow>
           <MenuOpenButton
             showMenu={showMenu}
             onClick={onClick}
             headerMode="dark"
           />
-        </HCenterRow>
+        </HCenterRow>  */}
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ interface IProps extends IClassProps {
   onClick: any
 }
 
-function MenuLinks({
+export default function MenuLinks({
   title,
   headerMode = "light",
   tab = "",
@@ -72,7 +72,7 @@ function MenuLinks({
   return (
     <ul
       className={cn(
-        "flex flex-col border-t border-slate-200 px-4  pt-2",
+        "flex flex-col px-4 pt-8",
         [headerMode === "dark", "bg-slate-800"],
         className
       )}
@@ -95,5 +95,3 @@ function MenuLinks({
     </ul>
   )
 }
-
-export default MenuLinks

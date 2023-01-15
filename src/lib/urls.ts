@@ -11,7 +11,7 @@ import {
 } from "../constants"
 import { getUrlFriendlyTag } from "./tags"
 
-export const getAuthorUrl = (name: string) => {
+export const getAuthorBaseUrl = (name: string) => {
   return `${PEOPLE_SLUG}/${getUrlFriendlyTag(name)}`
 }
 

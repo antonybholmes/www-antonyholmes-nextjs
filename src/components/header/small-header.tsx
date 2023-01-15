@@ -4,7 +4,7 @@ import MenuOpenButton from "./menu-button-open"
 import LogoIcon from "../../icons/logo-icon"
 import VCenterRow from "../v-center-row"
 import IHeaderProps from "./header-props"
-import MenuOverlay, { IMenuOverlayProps } from "./menu-overlay"
+import { IMenuOverlayProps } from "./menu-overlay"
 
 interface IProps extends IHeaderProps, IMenuOverlayProps {}
 
@@ -47,32 +47,19 @@ export default function SmallHeader({
   // }, [showMenu])
 
   return (
-    <>
-      {showMenu && (
-        <MenuOverlay
-          title={title}
-          tab={tab}
-          showMenu={showMenu}
+    <nav className="w-full md:hidden">
+      <VCenterRow>
+        <MenuOpenButton
           onClick={onClick}
+          showMenu={showMenu}
+          headerMode={headerMode}
+          style={{ marginBottom: "-1px" }}
         />
-      )}
-      <nav className="w-full md:hidden">
-        <VCenterRow>
-          <MenuOpenButton
-            onClick={onClick}
-            showMenu={showMenu}
-            headerMode={headerMode}
-            style={{ marginBottom: "-1px" }}
-          />
 
-          <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon
-              headerMode={headerMode}
-              style={{ marginBottom: "-1px" }}
-            />
-          </BaseLink>
-        </VCenterRow>
-      </nav>
-    </>
+        <BaseLink href="/" ariaLabel="Goto Homepage">
+          <LogoIcon headerMode={headerMode} style={{ marginBottom: "-1px" }} />
+        </BaseLink>
+      </VCenterRow>
+    </nav>
   )
 }
