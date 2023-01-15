@@ -65,7 +65,7 @@ export default function Page({ author, posts }) {
 
                 <BlueLink
                   href="/publications"
-                  className="flex flex-row items-center "
+                  className="flex flex-row items-center"
                 >
                   Publications
                 </BlueLink>
