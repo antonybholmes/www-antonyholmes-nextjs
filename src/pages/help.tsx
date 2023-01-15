@@ -23,11 +23,10 @@ export default function Page() {
           <div>
             <p>{`Version ${VERSION}`}</p>
             <p>{`Updated ${UPDATED}`}</p>
-
-            <p>
-              Copyright &copy; {YEAR} {SITE_NAME}. All rights reserved.
-            </p>
           </div>
+          <p>
+            &copy; {YEAR} {SITE_NAME}. All rights reserved.
+          </p>
         </BaseCol>
 
         <div className="mt-16 text-sm">
