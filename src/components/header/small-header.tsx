@@ -47,7 +47,7 @@ export default function SmallHeader({
   // }, [showMenu])
 
   return (
-    <nav className="w-full md:hidden">
+    <nav className="w-full xl:hidden">
       <VCenterRow>
         <MenuOpenButton
           onClick={onClick}

@@ -6,7 +6,6 @@ import cn from "../../lib/class-names"
 import IHeaderProps from "./header-props"
 import LargeHeader from "./large-header"
 import MenuOverlay from "./menu-overlay"
-import SmallHeader from "./small-header"
 
 export default function Header({
   title,
@@ -37,14 +36,12 @@ export default function Header({
 
   return (
     <>
-      {showMenu && (
-        <MenuOverlay
-          title={title}
-          tab={tab}
-          showMenu={showMenu}
-          onClick={onClick}
-        />
-      )}
+      <MenuOverlay
+        title={title}
+        tab={tab}
+        showMenu={showMenu}
+        onClick={onClick}
+      />
 
       <header
         className={cn(
@@ -59,19 +56,21 @@ export default function Header({
         )}
         style={{ marginTop: "-1px" }}
       >
-        <SmallHeader
+        {/* <SmallHeader
           title={title}
           tab={tab}
           showMenu={showMenu}
           headerMode={headerMode}
           onClick={onClick}
-        />
+        /> */}
 
         <LargeHeader
           title={title}
           tab={tab}
           headerMode={headerMode}
           scrollY={scrollY}
+          showMenu={showMenu}
+          onClick={onClick}
         >
           {children}
         </LargeHeader>

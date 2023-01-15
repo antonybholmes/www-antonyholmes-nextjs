@@ -1,28 +1,38 @@
 import BaseLink from "../link/base-link"
 //import Search from '../search/search'
 import LogoIcon from "../../icons/logo-icon"
-import ContentDiv from "../content-div"
+import VCenterRow from "../v-center-row"
 import HeaderLinks from "./header-links"
 import IHeaderProps from "./header-props"
+import { IMenuOverlayProps } from "./menu-overlay"
+import MenuOpenButton from "./menu-button-open"
 
-interface IProps extends IHeaderProps {
+interface IProps extends IHeaderProps, IMenuOverlayProps {
   scrollY: number
 }
 
 export default function LargeHeader({
   title,
   tab,
+  showMenu,
+  onClick,
   headerMode = "light",
   scrollY,
   children,
 }: IProps) {
   return (
-    <ContentDiv className="hidden md:flex">
-      <></>
-      <nav className="flex h-full flex-row items-center gap-x-8 lg:gap-x-12">
-        <BaseLink href="/" ariaLabel="Goto Homepage">
-          <LogoIcon headerMode={headerMode} style={{ marginBottom: "-1px" }} />
-        </BaseLink>
+    <nav className="grid h-full grid-cols-3 items-center gap-x-4">
+      <VCenterRow className="gap-x-2 2xl:gap-x-8">
+        <VCenterRow>
+          <MenuOpenButton
+            onClick={onClick}
+            showMenu={showMenu}
+            headerMode={headerMode}
+          />
+          <BaseLink href="/" ariaLabel="Goto Homepage">
+            <LogoIcon headerMode={headerMode} />
+          </BaseLink>
+        </VCenterRow>
 
         <HeaderLinks
           title={title}
@@ -30,9 +40,9 @@ export default function LargeHeader({
           headerMode={headerMode}
           scrollY={scrollY}
         />
-        <div className="grow">{children && children}</div>
-      </nav>
-      <></>
-    </ContentDiv>
+      </VCenterRow>
+      <div className="hidden lg:block">{children && children}</div>
+      <div />
+    </nav>
   )
 }

@@ -1,6 +1,6 @@
 import { gsap } from "gsap"
 import { useEffect, useRef } from "react"
-import { ANIMATION_DURATION_MS } from "../../constants"
+import { ANIMATION_DURATION_S } from "../../constants"
 import LogoIcon from "../../icons/logo-icon"
 import cn from "../../lib/class-names"
 import BaseRow from "../base-row"
@@ -8,6 +8,8 @@ import BaseLink from "../link/base-link"
 import IHeaderProps from "./header-props"
 import MenuOpenButton from "./menu-button-open"
 import MenuLinks from "./menu-links"
+
+//const ANIMATION_DURATION_S = 500
 
 export interface IMenuOverlayProps extends IHeaderProps {
   showMenu: boolean
@@ -23,9 +25,9 @@ export default function MenuOverlay({
   const overlayRef = useRef(null)
   const sideMenuRef = useRef(null)
 
-  useEffect(() => {
-    animateMenu()
-  }, [])
+  // useEffect(() => {
+  //   animateMenu()
+  // }, [])
 
   useEffect(() => {
     animateMenu()
@@ -53,7 +55,7 @@ export default function MenuOverlay({
         .to(
           overlayRef.current,
           {
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
             opacity: 1,
           },
           0
@@ -61,7 +63,7 @@ export default function MenuOverlay({
         .to(
           sideMenuRef.current,
           {
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
             opacity: 1,
           },
           0
@@ -70,7 +72,7 @@ export default function MenuOverlay({
           sideMenuRef.current,
           {
             x: 0,
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
           },
           0
         )
@@ -81,7 +83,7 @@ export default function MenuOverlay({
         .to(
           overlayRef.current,
           {
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
             opacity: 0,
           },
           0
@@ -89,7 +91,7 @@ export default function MenuOverlay({
         .to(
           overlayRef.current,
           {
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
             opacity: 0,
           },
           0
@@ -97,7 +99,7 @@ export default function MenuOverlay({
         .to(
           sideMenuRef.current,
           {
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
             opacity: 0,
           },
           0
@@ -106,7 +108,7 @@ export default function MenuOverlay({
           sideMenuRef.current,
           {
             x: "-4rem",
-            duration: ANIMATION_DURATION_MS,
+            duration: ANIMATION_DURATION_S,
           },
           0
         )
@@ -114,7 +116,7 @@ export default function MenuOverlay({
           overlayRef.current,
           {
             visibility: "hidden",
-            delay: ANIMATION_DURATION_MS,
+            delay: ANIMATION_DURATION_S,
           },
           0
         )
@@ -122,7 +124,7 @@ export default function MenuOverlay({
           sideMenuRef.current,
           {
             visibility: "hidden",
-            delay: ANIMATION_DURATION_MS,
+            delay: ANIMATION_DURATION_S,
           },
           0
         )

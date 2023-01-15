@@ -485,7 +485,7 @@ export default function Page({ author, publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="w-full xl:w-60/100"
+          className="w-full"
         />
       }
       crumbs={[["Publications", "/publications"]]}
@@ -496,7 +496,7 @@ export default function Page({ author, publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="mb-8 md:hidden"
+          className="mb-8 lg:hidden"
         />
 
         <VCenterRow className="justify-between">

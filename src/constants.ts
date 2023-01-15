@@ -33,7 +33,7 @@ export const PORTFOLIO_SLUG = env.PORTFOLIO_SLUG
 export const BOOK_SLUG = env.BOOK_SLUG
 export const TAG_SLUG = env.TAG_SLUG
 export const PAGE_1_SLUG = env.PAGE_1_SLUG
-export const ANIMATION_DURATION_MS = env.ANIMATION_DURATION_MS
+export const ANIMATION_DURATION_S = env.ANIMATION_DURATION_S
 
 export const YEAR = new Date().getFullYear()
 

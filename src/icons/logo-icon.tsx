@@ -14,10 +14,12 @@ export default function LogoIcon({
     <svg
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("group w-15 font-bold", className)}
+      className={cn("group w-14 font-bold", className)}
       style={style}
     >
       <rect
+        x="0"
+        y="0"
         width="48"
         height="48"
         className={cn("transition-ani transition-color", [

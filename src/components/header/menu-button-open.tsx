@@ -252,7 +252,7 @@ export default function MenuButtonOpen({
     <BaseButton
       onClick={onClick}
       className={cn(
-        "group relative h-15 min-w-15",
+        "group relative h-14 min-w-14",
         [
           headerMode !== "dark",
           "transition-ani transition-color hover:bg-slate-200",
