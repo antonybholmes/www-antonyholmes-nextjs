@@ -9,14 +9,12 @@ import cn from "../lib/class-names"
 
 interface IProps extends ILayoutProps {
   headerChildren?: ReactNode
-  footerClassName?: string
 }
 
 export default function BaseLayout({
   title,
   tab,
   className,
-  footerClassName,
   headerMode,
   headerChildren,
   children,

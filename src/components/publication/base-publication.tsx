@@ -145,7 +145,7 @@ function BasePublication({
 
         <AnchorButton
           ariaLabel="Show abstract"
-          className="rounded border border-slate-200  stroke-slate-400 hover:border-slate-400 hover:stroke-slate-900"
+          className="trans-ani-300 transition-color rounded border border-slate-200 stroke-slate-400 hover:border-slate-400 hover:stroke-slate-900"
           onClick={() => setExpanded(!isExpanded)}
         >
           {/* <ChevronRightIcon
@@ -155,7 +155,7 @@ function BasePublication({
             ])}
           /> */}
 
-          <PlusIcon isPlus={!isExpanded} className="w-3 stroke-2" />
+          <PlusIcon isPlus={!isExpanded} className="w-6 stroke-2 md:w-4" />
         </AnchorButton>
       </HCenterCol>
 

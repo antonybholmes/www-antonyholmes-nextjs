@@ -31,8 +31,9 @@ export default function CompactAvatars({
               >
                 <AvatarImage
                   author={author}
-                  className={cn(
-                    "absolute h-12 w-12 border border-white",
+                  className="h-12 w-12"
+                  containerClassName={cn(
+                    "absolute border border-white",
                     `ml-${index * 2}`
                   )}
                   key={index}

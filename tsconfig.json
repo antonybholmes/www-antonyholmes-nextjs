@@ -16,5 +16,12 @@
     "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/lib/remark-rehype.d.tsaa",
+    "src/lib/remark-html.d.tsw",
+    "src/lib/rehype-stringify.d.s"
+  ]
 }

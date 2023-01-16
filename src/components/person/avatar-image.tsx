@@ -1,11 +1,12 @@
+import IClassProps from "../../interfaces/class-props"
+import IImageSizeProps from "../../interfaces/image-size-props"
+import IPlaceholderProps from "../../interfaces/placeholder-props"
+import IPostAuthor from "../../interfaces/post-author"
 import cn from "../../lib/class-names"
 import { getUrlFriendlyTag } from "../../lib/tags"
-import IClassProps from "../../interfaces/class-props"
-import IPostAuthor from "../../interfaces/post-author"
-import BaseImage from "../base-image"
-import IImageSizeProps from "../../interfaces/image-size-props"
+import PlaceholderImage from "../placeholder-image"
 
-export interface IAvatarProps extends IClassProps {
+export interface IAvatarProps extends IClassProps, IPlaceholderProps {
   author: IPostAuthor
 }
 
@@ -16,9 +17,11 @@ export default function AvatarImage({
   size = [320, 320],
   loading = "lazy",
   className,
+  containerClassName,
+  imgClassName,
 }: IProps) {
   return (
-    <BaseImage
+    <PlaceholderImage
       src={`/assets/images/people/${getUrlFriendlyTag(
         author.frontmatter.name
       )}.webp`}
@@ -26,6 +29,8 @@ export default function AvatarImage({
       size={size}
       loading={loading}
       className={cn("rounded-full", className)}
+      containerClassName={containerClassName}
+      imgClassName={imgClassName}
     />
   )
 }

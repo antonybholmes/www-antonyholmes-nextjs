@@ -148,7 +148,7 @@ module.exports = {
       boxShadow: {
         box: "0 0 16px 4px rgba(0, 0, 0, 0.1)",
         box2: "0 0 16px 4px rgba(0, 0, 0, 0.15)",
-        header: "0 4px 16px 4px rgba(0, 0, 0, 0.1)",
+        header: "0 4px 16px 0 rgba(0, 0, 0, 0.1)",
       },
       borderWidth: {
         3: "3px",

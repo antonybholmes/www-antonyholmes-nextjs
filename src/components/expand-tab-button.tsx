@@ -29,7 +29,7 @@ export default function ExpandTabButton({
     <AnchorButton
       onClick={onClick}
       className={cn(
-        "transition-color -mx-3 flex cursor-pointer flex-row items-center justify-between gap-x-2 rounded py-1 px-3 font-bold transition hover:bg-slate-100",
+        "transition-color -mx-3 flex cursor-pointer flex-row items-center justify-between gap-x-2 rounded-md py-1 px-3 font-bold transition hover:bg-slate-100",
         className
       )}
       onMouseEnter={onMouseEnter}

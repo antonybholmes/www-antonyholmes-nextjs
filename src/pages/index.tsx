@@ -1,5 +1,7 @@
 import BaseCol from "../components/base-col"
+import ContentDiv from "../components/content-div"
 import HCenterCol from "../components/h-center-col"
+import HCenterRow from "../components/h-center-row"
 import BaseLink from "../components/link/base-link"
 import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
 import BlueLink from "../components/link/blue-link"
@@ -11,6 +13,7 @@ import VCenterRow from "../components/v-center-row"
 import { EMAIL, GITHUB_URL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
 import GitHubIcon from "../icons/github"
+import BaseLayout from "../layouts/base-layout"
 import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
 import {
@@ -25,37 +28,68 @@ import { getAuthorBaseUrl } from "../lib/urls"
 
 export default function Page({ author, posts }) {
   return (
-    <ContentLayout title="Home" showCrumbs={false}>
-      <></>
-      <>
-        <div className="grid grid-cols-1 gap-y-16 xl:grid-cols-2 xl:gap-x-12">
-          <VCenterCol className="h-full items-center gap-y-16 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 p-8 xl:p-16">
-            <VCenterCol className="items-center gap-y-8">
-              <BaseLink
-                href={getAuthorBaseUrl("Antony Holmes")}
-                ariaLabel="View profile"
-              >
-                <div className="relative z-10 overflow-hidden rounded-full">
-                  <AvatarImageLarge
-                    author={author}
-                    className="trans-ani-300 max-w-64 scale-102 transition-transform hover:scale-105"
-                  />
-                </div>
-              </BaseLink>
-              <BaseCol className="gap-y-2">
-                <VCenterRow className="group gap-x-2">
-                  <EnvelopeIcon className="w-4 fill-slate-500" />
-                  <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
-                </VCenterRow>
-                <VCenterRow className="group  gap-x-2">
-                  <GitHubIcon className="w-4 fill-slate-500" />
-                  <BlueLink href={GITHUB_URL}>
-                    github.com/antonybholmes
-                  </BlueLink>
-                </VCenterRow>
-              </BaseCol>
-            </VCenterCol>
-            <VCenterRow className="justify-center font-semibold">
+    <BaseLayout title="Home">
+      <HCenterRow className="bg-gradient-to-br from-blue-700 to-blue-600 py-16  px-8 pt-32">
+        <VCenterCol className="w-full gap-y-16 font-medium  text-white lg:w-1/2 xl:p-16">
+          <HCenterCol className="gap-y-5 text-lg">
+            <h1 className="text-6xl font-extrabold">Hi There.</h1>
+
+            <p className="text-center">
+              I'm Antony Holmes, and welcome to my personal website.
+            </p>
+
+            <p className="text-center">
+              That's me in the photo, posing by the Hudson River for no
+              particular reason.
+            </p>
+
+            <p className="text-center">
+              I'm a full stack developer and researcher in New York with
+              experience using Java, Python, React, Gatsby, Next.js, Astro and
+              other tech, some of which was used to make this very site.
+            </p>
+
+            <p className="text-center ">
+              I have an aptly named publications page where you can view all of
+              the scientific literature I have written, primarily focused on
+              cancer genetics.
+            </p>
+
+            <p>My life story probably won't be optioned.</p>
+          </HCenterCol>
+        </VCenterCol>
+      </HCenterRow>
+
+      <HCenterRow className="py-32">
+        <div className="grid w-3/4 grid-cols-1 gap-16 lg:grid-cols-2 xl:w-1/2">
+          <VCenterCol className="items-center gap-y-8">
+            <BaseLink
+              href={getAuthorBaseUrl("Antony Holmes")}
+              ariaLabel="View profile"
+            >
+              <div className="relative z-10 overflow-hidden">
+                <AvatarImageLarge
+                  author={author}
+                  className="max-w-64 overflow-hidden"
+                  imgClassName="trans-ani-300 scale-102 transition-transform hover:scale-105"
+                />
+              </div>
+            </BaseLink>
+          </VCenterCol>
+
+          <VCenterCol className="items-center gap-y-16">
+            <BaseCol className="gap-y-2 rounded-2xl border border-slate-100 p-16 shadow-xl">
+              <VCenterRow className="group gap-x-2">
+                <EnvelopeIcon className="w-4 fill-slate-500" />
+                <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
+              </VCenterRow>
+              <VCenterRow className="group gap-x-2">
+                <GitHubIcon className="w-4 fill-slate-500" />
+                <BlueLink href={GITHUB_URL}>github.com/antonybholmes</BlueLink>
+              </VCenterRow>
+            </BaseCol>
+
+            <VCenterRow className="justify-center text-sm font-semibold">
               <div className="flex flex-row gap-6">
                 <BlueButtonArrowLink
                   href="/resume"
@@ -72,42 +106,17 @@ export default function Page({ author, posts }) {
               </div>
             </VCenterRow>
           </VCenterCol>
-
-          <VCenterCol className="gap-y-16 rounded-3xl bg-gradient-to-br from-blue-700 to-blue-600 p-8 font-medium text-white xl:p-16">
-            <HCenterCol className="gap-y-5 text-lg">
-              <h1 className="text-5xl font-bold">Hi There.</h1>
-
-              <p className="text-center">
-                I'm Antony Holmes, and welcome to my personal website.
-              </p>
-
-              <p className="text-center">
-                That's me in the photo, posing by the Hudson River for no
-                particular reason.
-              </p>
-
-              <p className="text-center">
-                I'm a full stack developer and researcher in New York with
-                experience using Java, Python, React, Gatsby, Next.js, Astro and
-                other tech, some of which was used to make this very site.
-              </p>
-
-              <p className="text-center ">
-                I have an aptly named publications page where you can view all
-                of the scientific literature I have written, primarily focused
-                on cancer genetics.
-              </p>
-
-              <p>My life story probably won't be optioned.</p>
-            </HCenterCol>
-          </VCenterCol>
         </div>
-        <section className="mt-16 border-t border-slate-200 pt-16">
+      </HCenterRow>
+
+      <section className="bg-gradient-to-b from-slate-50 to-white pt-16 lg:pt-32">
+        <ContentDiv>
+          <></>
           <PostsPage posts={posts} page={0} pages={1} />
-        </section>
-      </>
-      <></>
-    </ContentLayout>
+          <></>
+        </ContentDiv>
+      </section>
+    </BaseLayout>
   )
 }
 

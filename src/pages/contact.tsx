@@ -1,21 +1,19 @@
-import MarkdownLayout from "../layouts/markdown-layout"
+import MarkdownPage, {
+  IMarkdownPageProps,
+} from "../components/pages/markdown-page"
 import { getPageBySlug } from "../lib/api/page"
 import markdownToHtml from "../lib/markdown-html"
 
-interface IProps {
-  html: string
-}
-
-export default function Page({ html }: IProps) {
-  return <MarkdownLayout title="Contact" html={html} />
+export default function Page({ page, html }: IMarkdownPageProps) {
+  return <MarkdownPage page={page} html={html} />
 }
 
 export async function getStaticProps() {
-  const post = getPageBySlug("contact")
+  const page = getPageBySlug("contact")
 
-  const html = await markdownToHtml(post.frontmatter.rawContent || "")
+  const html = await markdownToHtml(page.frontmatter.rawContent || "")
 
   return {
-    props: { html },
+    props: { page, html },
   }
 }

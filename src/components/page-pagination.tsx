@@ -7,8 +7,6 @@ import type IClassProps from "../interfaces/class-props"
 import cn from "../lib/class-names"
 import RoundedButtonLink from "./link/rounded-button-link"
 
-const INTERMEDIATE_BUTTONS = 3
-
 const BTN_CLS =
   "flex flex-row justify-center items-center min-w-8 h-8 border border-transparent"
 

@@ -9,6 +9,7 @@ import VCenterCol from "../v-center-col"
 
 export const LINK_CLS = cn(
   "font-semibold",
+  "text-sm",
   "px-2",
   "h-10",
   "justify-center",

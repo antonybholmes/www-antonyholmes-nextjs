@@ -110,7 +110,7 @@ export default function SearchBar({
   return (
     <VCenterRow
       className={cn(
-        "trans-ani-300 m-0 gap-x-2 overflow-hidden rounded-lg border border-slate-100 bg-slate-100 py-1.5 pl-3 pr-2 transition hover:border-slate-200 hover:bg-white",
+        "trans-ani-300 m-0 gap-x-2 overflow-hidden rounded-full border border-slate-100 bg-slate-100 py-1 pl-4 pr-2 transition hover:border-slate-200 hover:bg-white",
         className
       )}
       onMouseEnter={onMouseEnter}

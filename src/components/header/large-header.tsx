@@ -21,8 +21,8 @@ export default function LargeHeader({
   children,
 }: IProps) {
   return (
-    <nav className="grid h-full grid-cols-3 items-center">
-      <VCenterRow className="ml-2 gap-x-2 2xl:gap-x-4">
+    <nav className="grid h-full grid-cols-3 items-center gap-x-1">
+      <VCenterRow className="ml-2 gap-x-4">
         <VCenterRow className="gap-x-2">
           <MenuOpenButton
             onClick={onClick}
