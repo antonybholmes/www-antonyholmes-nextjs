@@ -27,17 +27,13 @@ export default function CompactAvatars({
             <li key={index}>
               <BaseLink
                 href={getAuthorBaseUrl(author.frontmatter.name)}
-                ariaLabel={`Click to read more about ${author}`}
+                ariaLabel={`Click to read more about ${author.frontmatter.name}`}
+                className={cn(
+                  "absolute block rounded-full border border-white",
+                  `ml-${index * 2}`
+                )}
               >
-                <AvatarImage
-                  author={author}
-                  className="h-12 w-12"
-                  containerClassName={cn(
-                    "absolute border border-white",
-                    `ml-${index * 2}`
-                  )}
-                  key={index}
-                />
+                <AvatarImage author={author} className="h-12 w-12" />
               </BaseLink>
             </li>
           ))}

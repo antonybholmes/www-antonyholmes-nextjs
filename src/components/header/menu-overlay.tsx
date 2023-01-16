@@ -1,7 +1,7 @@
 import { gsap } from "gsap"
 import { useEffect, useRef } from "react"
 import { ANIMATION_DURATION_S } from "../../constants"
-import LogoIcon from "../../icons/logo-icon"
+import SmallLogoIcon from "../../icons/logo-icon-small"
 import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
 import VCenterRow from "../v-center-row"
@@ -166,7 +166,7 @@ export default function MenuOverlay({
           <MenuOpenButton showMenu={showMenu} onClick={onClick} />
           <div>
             <BaseLink href="/">
-              <LogoIcon className="shrink-0" />
+              <SmallLogoIcon className="shrink-0" />
             </BaseLink>
           </div>
         </VCenterRow>

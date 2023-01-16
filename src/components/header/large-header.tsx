@@ -6,6 +6,7 @@ import HeaderLinks from "./header-links"
 import IHeaderProps from "./header-props"
 import { IMenuOverlayProps } from "./menu-overlay"
 import MenuOpenButton from "./menu-button-open"
+import LogoIconSmall from "../../icons/logo-icon-small"
 
 interface IProps extends IHeaderProps, IMenuOverlayProps {
   scrollY: number
@@ -30,7 +31,8 @@ export default function LargeHeader({
             headerMode={headerMode}
           />
           <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIcon headerMode={headerMode} />
+            <LogoIconSmall headerMode={headerMode} className="3xl:hidden" />
+            <LogoIcon headerMode={headerMode} className="hidden 3xl:block" />
           </BaseLink>
         </VCenterRow>
 

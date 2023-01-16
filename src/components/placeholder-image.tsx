@@ -52,7 +52,10 @@ export default function PlaceholderImage({
   }, [])
 
   return (
-    <div ref={containerRef} className={cn(className, containerClassName)}>
+    <div
+      ref={containerRef}
+      className={cn("overflow-hidden", className, containerClassName)}
+    >
       {/* <div
         style={{ gridArea: "1/1" }}
         className={cn(

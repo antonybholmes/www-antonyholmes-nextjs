@@ -5,14 +5,14 @@ interface IProps extends IClassProps {
   headerMode?: string
 }
 
-export default function LogoIcon({
+export default function SmallLogoIcon({
   headerMode = "light",
   className,
   style,
 }: IProps) {
   return (
     <svg
-      viewBox="0 0 160 40"
+      viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("group h-10 font-bold", className)}
       style={style}
@@ -35,14 +35,6 @@ export default function LogoIcon({
         className="fill-white"
       >
         ah
-      </text>
-      <text
-        alignmentBaseline="middle"
-        x="48"
-        y="21"
-        className={cn([headerMode === "dark", "fill-white", "fill-gray-900"])}
-      >
-        antonyholmes
       </text>
     </svg>
   )
