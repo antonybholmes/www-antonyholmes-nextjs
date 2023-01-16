@@ -13,7 +13,7 @@ interface IProps {
 
 export default function ProsAndCons({ post }: IProps) {
   return (
-    <BaseCol className="gap-y-2">
+    <BaseCol className="gap-y-4">
       <VCenterRow>
         <StarRating rating={post.frontmatter.rating} />
       </VCenterRow>

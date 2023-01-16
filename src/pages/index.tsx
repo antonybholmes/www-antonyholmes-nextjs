@@ -2,8 +2,10 @@ import BaseCol from "../components/base-col"
 import ContentDiv from "../components/content-div"
 import HCenterCol from "../components/h-center-col"
 import HCenterRow from "../components/h-center-row"
+import ArrowLink from "../components/link/arrow-link"
 import BaseLink from "../components/link/base-link"
 import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
+import BlueButtonLink from "../components/link/blue-button-link"
 import BlueLink from "../components/link/blue-link"
 import WhiteLink from "../components/link/white-link"
 import PostsPage from "../components/pages/posts-page"
@@ -29,39 +31,9 @@ import { getAuthorBaseUrl } from "../lib/urls"
 export default function Page({ author, posts }) {
   return (
     <BaseLayout title="Home">
-      <HCenterRow className="bg-gradient-to-br from-blue-700 to-blue-600 py-16  px-8 pt-32">
-        <VCenterCol className="w-full gap-y-16 font-medium  text-white lg:w-1/2 xl:p-16">
-          <HCenterCol className="gap-y-5 text-lg">
-            <h1 className="text-6xl font-extrabold">Hi There.</h1>
-
-            <p className="text-center">
-              I'm Antony Holmes, and welcome to my personal website.
-            </p>
-
-            <p className="text-center">
-              That's me in the photo, posing by the Hudson River for no
-              particular reason.
-            </p>
-
-            <p className="text-center">
-              I'm a full stack developer and researcher in New York with
-              experience using Java, Python, React, Gatsby, Next.js, Astro and
-              other tech, some of which was used to make this very site.
-            </p>
-
-            <p className="text-center ">
-              I have an aptly named publications page where you can view all of
-              the scientific literature I have written, primarily focused on
-              cancer genetics.
-            </p>
-
-            <p>My life story probably won't be optioned.</p>
-          </HCenterCol>
-        </VCenterCol>
-      </HCenterRow>
-
-      <HCenterRow className="py-32">
-        <div className="grid w-3/4 grid-cols-1 gap-16 lg:grid-cols-2 xl:w-1/2">
+      <ContentDiv className="px-8 py-24">
+        <></>
+        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2">
           <VCenterCol className="items-center gap-y-8">
             <BaseLink
               href={getAuthorBaseUrl("Antony Holmes")}
@@ -75,21 +47,8 @@ export default function Page({ author, posts }) {
                 />
               </div>
             </BaseLink>
-          </VCenterCol>
 
-          <VCenterCol className="items-center gap-y-16">
-            <BaseCol className="gap-y-2 rounded-2xl border border-slate-100 p-16 shadow-xl">
-              <VCenterRow className="group gap-x-2">
-                <EnvelopeIcon className="w-4 fill-slate-500" />
-                <BlueLink href={`mailto:${EMAIL}`}>{EMAIL}</BlueLink>
-              </VCenterRow>
-              <VCenterRow className="group gap-x-2">
-                <GitHubIcon className="w-4 fill-slate-500" />
-                <BlueLink href={GITHUB_URL}>github.com/antonybholmes</BlueLink>
-              </VCenterRow>
-            </BaseCol>
-
-            <VCenterRow className="justify-center text-sm font-semibold">
+            {/*<VCenterRow className="justify-center text-sm font-semibold">
               <div className="flex flex-row gap-6">
                 <BlueButtonArrowLink
                   href="/resume"
@@ -97,19 +56,68 @@ export default function Page({ author, posts }) {
                   text="Resume"
                 />
 
-                <BlueLink
+                 <BlueLink
                   href="/publications"
                   className="flex flex-row items-center"
                 >
                   Publications
-                </BlueLink>
+                </BlueLink> 
               </div>
-            </VCenterRow>
+            </VCenterRow>*/}
+          </VCenterCol>
+
+          <VCenterCol className="gap-y-16 font-medium xl:py-16">
+            <HCenterCol className="gap-y-5 text-lg">
+              <h1 className="text-6xl font-extrabold">Hi There.</h1>
+
+              <p className="text-center">
+                I'm Antony Holmes, and welcome to my personal website.
+              </p>
+
+              <p className="text-center">
+                That's me in the photo, posing by the Hudson River for no
+                particular reason.
+              </p>
+
+              <p className="text-center">
+                I'm a full stack developer and researcher in New York with
+                experience using Java, Python, React, Gatsby, Next.js, Astro and
+                other tech, some of which was used to make this very site.
+              </p>
+
+              <p className="text-center ">
+                I have an aptly named publications page where you can view all
+                of the scientific literature I have written, primarily focused
+                on cancer genetics.
+              </p>
+
+              <p>My life story probably won't be optioned.</p>
+            </HCenterCol>
+
+            <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
+              <BlueButtonLink
+                href={`mailto:${EMAIL}`}
+                className="gap-x-2 rounded-lg border border-transparent bg-blue-600 fill-white px-4 py-2.5 font-semibold text-white shadow-md"
+              >
+                <EnvelopeIcon className="w-4" />
+                <span>{EMAIL}</span>
+              </BlueButtonLink>
+              <ArrowLink
+                href={GITHUB_URL}
+                className="rounded-lg border border-slate-100 stroke-gray-900 px-4 py-2.5 font-semibold shadow-md"
+              >
+                <VCenterRow className="gap-x-2">
+                  <GitHubIcon className="w-4" />
+                  <span>antonybholmes</span>
+                </VCenterRow>
+              </ArrowLink>
+            </div>
           </VCenterCol>
         </div>
-      </HCenterRow>
+        <></>
+      </ContentDiv>
 
-      <section className="bg-gradient-to-b from-slate-50 to-white pt-16 lg:pt-32">
+      <section className="mt-16 bg-gradient-to-b from-slate-50 to-white pt-16 lg:pt-32">
         <ContentDiv>
           <></>
           <PostsPage posts={posts} page={0} pages={1} />

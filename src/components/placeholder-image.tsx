@@ -24,22 +24,35 @@ export default function PlaceholderImage({
 }: IProps) {
   const [isLoaded, setIsLoaded] = useState(false)
 
-  const ref1 = useRef(null)
+  const containerRef = useRef(null)
+  const imageRef = useRef(null)
+
+  // useEffect(() => {
+  //   // @ts-ignore
+  //   gsap.timeline().from(
+  //     containerRef.current,
+  //     {
+  //       duration: 0.8,
+  //       opacity: 0,
+  //     },
+  //     0
+  //   )
+  // }, [])
 
   useEffect(() => {
     // @ts-ignore
     gsap.timeline().from(
-      ref1.current,
+      imageRef.current,
       {
-        duration: 0.8,
-        opacity: 0,
+        duration: 1,
+        filter: "blur(10px)",
       },
       0
     )
   }, [])
 
   return (
-    <div ref={ref1} className={cn(className, containerClassName)}>
+    <div ref={containerRef} className={cn(className, containerClassName)}>
       {/* <div
         style={{ gridArea: "1/1" }}
         className={cn(
@@ -54,6 +67,7 @@ export default function PlaceholderImage({
         style={{ gridArea: "1/1" }}
       > */}
       <BaseImage
+        ref={imageRef}
         src={src}
         size={size}
         sizes={sizes}
@@ -64,6 +78,7 @@ export default function PlaceholderImage({
         style={style}
         onLoad={() => setIsLoaded(true)}
       />
+
       {/* </div> */}
     </div>
   )
