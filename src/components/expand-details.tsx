@@ -1,8 +1,7 @@
-import IChildrenProps from "../interfaces/children-props"
 import { gsap } from "gsap"
 import { useEffect, useRef } from "react"
 import { ANIMATION_DURATION_S } from "../constants"
-import cn from "../lib/class-names"
+import IChildrenProps from "../interfaces/children-props"
 
 interface IProps extends IChildrenProps {
   isExpanded: boolean
