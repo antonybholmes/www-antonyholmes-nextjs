@@ -1,4 +1,5 @@
 import IBaseFields from "./base-fields"
+import PostStatus from "./post-status"
 
 export default interface IPostFields extends IBaseFields {
   index: number
@@ -10,7 +11,7 @@ export default interface IPostFields extends IBaseFields {
   authors: string[]
   categories: string[]
   related: string[]
-  status: string
+  status: "draft" | "published"
   tags: string[]
   pros: string[]
   cons: string[]

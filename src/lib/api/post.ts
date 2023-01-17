@@ -141,7 +141,13 @@ export function addExcerpts(posts: IBasePost[]): Promise<IPreviewPost>[] {
 }
 
 export function getAllPosts(): IBasePost[] {
-  return getPostPaths().map(path => getPostByPath(path))
+  return getPostPaths()
+    .map(path => getPostByPath(path))
+    .filter(
+      post =>
+        post.frontmatter.status === "published" ||
+        process.env.NODE_ENV === "development"
+    )
 }
 
 export function getAllReviews(): IBasePost[] {

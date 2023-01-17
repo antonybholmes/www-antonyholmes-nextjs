@@ -7,7 +7,6 @@ import {
   addAuthorsToPosts,
   addExcerpts,
   getAllPosts,
-  getPostPaths,
   sortPosts,
 } from "../../../lib/api/post"
 import { getPageCount, getPageItems } from "../../../lib/paginate"
@@ -51,7 +50,7 @@ export async function getStaticProps({ params }: Props) {
 }
 
 export async function getStaticPaths() {
-  const posts = getPostPaths()
+  const posts = getAllPosts() //getPostPaths()
 
   const pages = getPageCount(posts)
 
