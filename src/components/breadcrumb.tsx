@@ -3,6 +3,7 @@ import HomeIcon from "../icons/home"
 import type IClassProps from "../interfaces/class-props"
 import type ICrumbProps from "../interfaces/crumb-props"
 import cn from "../lib/class-names"
+import tw from "../lib/tw"
 import BaseLink from "./link/base-link"
 import ToBlackLink from "./link/to-black-link"
 import VCenterRow from "./v-center-row"
@@ -39,11 +40,28 @@ export default function Breadcrumb({
 
     ret.push(
       <li key={`divider-${i}`} className="group flex flex-row gap-x-2">
-        <BreadcrumbChevronIcon className="trans-ani-300 transition-color w-4 stroke-slate-400 group-hover:translate-x-0.5 group-hover:stroke-slate-900" />
+        <BreadcrumbChevronIcon
+          className={cn(
+            "trans-ani-300",
+            tw({
+              transition: "color",
+              w: 4,
+              stroke: "slate-400",
+              "group-hover": { "translate-x": 0.5, stroke: "slate-900" },
+            })
+          )}
+        />
         <BaseLink
           href={crumb[1]}
           ariaLabel={`Visit ${crumb[0]}`}
-          className="trans-ani-300 transition-color text-blue-600 group-hover:text-slate-900"
+          className={cn(
+            "trans-ani-300",
+            tw({
+              transition: "color",
+              text: "blue-600",
+              "group-hover": { text: "slate-900" },
+            })
+          )}
         >
           {crumb[0]}
         </BaseLink>

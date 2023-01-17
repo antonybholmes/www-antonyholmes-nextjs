@@ -1,13 +1,10 @@
-import BaseCol from "../components/base-col"
 import ContentDiv from "../components/content-div"
 import HCenterCol from "../components/h-center-col"
-import HCenterRow from "../components/h-center-row"
 import ArrowLink from "../components/link/arrow-link"
 import BaseLink from "../components/link/base-link"
-import BlueButtonArrowLink from "../components/link/blue-button-arrow-link"
 import BlueButtonLink from "../components/link/blue-button-link"
-import BlueLink from "../components/link/blue-link"
-import WhiteLink from "../components/link/white-link"
+import { OUTLINE_CLS } from "../components/link/outline-rounded-button-link"
+import { SECONDARY_BUTTON_CLS } from "../components/link/secondary-button-link"
 import PostsPage from "../components/pages/posts-page"
 import AvatarImageLarge from "../components/person/avatar-image-large"
 import VCenterCol from "../components/v-center-col"
@@ -16,7 +13,6 @@ import { EMAIL, GITHUB_URL } from "../constants"
 import EnvelopeIcon from "../icons/envelope"
 import GitHubIcon from "../icons/github"
 import BaseLayout from "../layouts/base-layout"
-import ContentLayout from "../layouts/content-layout"
 import { getAuthorMap } from "../lib/api/author"
 import {
   addAuthorsToPosts,
@@ -24,6 +20,7 @@ import {
   getAllPosts,
   sortPosts,
 } from "../lib/api/post"
+import cn from "../lib/class-names"
 import { getPageCount, getPageItems } from "../lib/paginate"
 import { getUrlFriendlyTag } from "../lib/tags"
 import { getAuthorBaseUrl } from "../lib/urls"
@@ -97,14 +94,18 @@ export default function Page({ author, posts }) {
             <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
               <BlueButtonLink
                 href={`mailto:${EMAIL}`}
-                className="gap-x-2 rounded-lg border border-transparent bg-blue-600 fill-white px-4 py-2.5 font-semibold text-white shadow-md"
+                className="gap-x-2 rounded-lg border border-transparent fill-white px-4 py-2.5 font-semibold text-white shadow-xl"
               >
                 <EnvelopeIcon className="w-4" />
                 <span>{EMAIL}</span>
               </BlueButtonLink>
               <ArrowLink
                 href={GITHUB_URL}
-                className="rounded-lg border border-slate-100 stroke-gray-900 px-4 py-2.5 font-semibold shadow-md"
+                className={cn(
+                  OUTLINE_CLS,
+                  SECONDARY_BUTTON_CLS,
+                  "rounded-lg  stroke-slate-900 px-4 py-2.5 font-semibold shadow-lg"
+                )}
               >
                 <VCenterRow className="gap-x-2">
                   <GitHubIcon className="w-4" />

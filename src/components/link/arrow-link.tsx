@@ -3,8 +3,9 @@ import IndexArrow from "../../icons/index-arrow"
 import type IUnderlineLinkProps from "../../interfaces/underline-link-props"
 import cn from "../../lib/class-names"
 import BaseLink from "./base-link"
+import { BUTTON_CLS } from "./button-link"
 
-export const ARROW_CLS = "group flex flex-row gap-x-1"
+export const ARROW_CLS = "group gap-x-1"
 
 export default function ArrowLink({
   href,
@@ -42,7 +43,7 @@ export default function ArrowLink({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       underline={underline}
-      className={cn(ARROW_CLS, className)}
+      className={cn(BUTTON_CLS, ARROW_CLS, className)}
     >
       {children}
 

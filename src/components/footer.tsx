@@ -2,6 +2,7 @@ import { GITHUB_URL } from "../constants"
 import GitHubIcon from "../icons/github"
 import RssIcon from "../icons/rss"
 import getCopyright from "../lib/copyright"
+import tw from "../lib/tw"
 import { INFO_LINKS } from "../menus"
 import ContentDiv from "./content-div"
 import HCenterRow from "./h-center-row"
@@ -14,7 +15,17 @@ export default function Footer() {
       <ContentDiv>
         <></>
         <>
-          <ul className="flex flex-row justify-center gap-x-8 border-t border-slate-200 pt-16 text-sm font-semibold">
+          <ul
+            className={tw({
+              flex: ["", "row"],
+              justify: "center",
+              "gap-x": 8,
+              border: ["t", "slate-200"],
+              pt: 16,
+              text: "sm",
+              font: "semibold",
+            })}
+          >
             <li>{getCopyright()}</li>
           </ul>
         </>

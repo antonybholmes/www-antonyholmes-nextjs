@@ -194,7 +194,11 @@ export default function PubRangeSlider({
       <VCenterRow className="justify-between">
         <h2>Years</h2>
 
-        <SecondaryButton onClick={onResetClick} ariaLabel="Reset year range">
+        <SecondaryButton
+          onClick={onResetClick}
+          ariaLabel="Reset year range"
+          className="py-1 px-2"
+        >
           Reset
         </SecondaryButton>
       </VCenterRow>

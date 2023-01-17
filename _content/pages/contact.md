@@ -8,7 +8,7 @@ layout: ../layouts/MarkdownLayout.astro
 
 There are a number of email addresses you can use to contact me, but in reality I'll probably see the email regardless of which address you use:
 
-## Contact me directly
+## Contact me
 
 [hello@antonyholmes.com](mailto:hello@antonyholmes.com)
 
@@ -20,6 +20,6 @@ There are a number of email addresses you can use to contact me, but in reality 
 
 [press@antonyholmes.com](mailto:press@antonyholmes.com)
 
-## Site issues
+## Website
 
 [admin@antonyholmes.com](mailto:admin@antonyholmes.com)

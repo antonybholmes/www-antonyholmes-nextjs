@@ -24,8 +24,7 @@ export default function SecondaryButton({
       ariaLabel={ariaLabel}
       className={cn(
         SECONDARY_BUTTON_CLS,
-        [down, "bg-slate-100"],
-        [hover || down, "border-slate-400"],
+        [down, "border-slate-400 bg-slate-100"],
         className
       )}
       style={style}
