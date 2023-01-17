@@ -20,7 +20,9 @@ export default function ExpandDetails({
       ref.current,
       {
         duration: ANIMATION_DURATION_S,
-        height: isExpanded ? `${ref.current.scrollHeight}px` : 0,
+        height: isExpanded
+          ? `${ref.current ? ref.current.scrollHeight : 0}px`
+          : 0,
         opacity: isExpanded ? 1 : 0,
       },
       0
