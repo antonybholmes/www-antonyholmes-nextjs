@@ -8,7 +8,11 @@ interface IProps extends IChildrenProps {
   onClick?: MouseEventHandler
 }
 
-const ExpandButton = ({ expanded = false, onClick, children }: IProps) => {
+export default function ExpandButton({
+  expanded = false,
+  onClick,
+  children,
+}: IProps) {
   const [hover, setHover] = useState(false)
 
   const handleMouseEnter: MouseEventHandler = e => {
@@ -41,5 +45,3 @@ const ExpandButton = ({ expanded = false, onClick, children }: IProps) => {
     </VCenterRow>
   )
 }
-
-export default ExpandButton

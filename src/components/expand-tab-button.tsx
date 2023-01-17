@@ -5,12 +5,12 @@ import ExpandTabArrow from "./expand-tab-arrow"
 import AnchorButton from "./link/anchor-button"
 
 interface IProps extends IChildrenProps {
-  expanded?: boolean
+  isExpanded?: boolean
   onClick?: (e: MouseEvent) => void
 }
 
 export default function ExpandTabButton({
-  expanded = false,
+  isExpanded = false,
   onClick,
   className,
   children,
@@ -36,7 +36,7 @@ export default function ExpandTabButton({
       onMouseLeave={onMouseLeave}
     >
       <div>{children}</div>
-      <ExpandTabArrow expanded={expanded} hover={hover} />
+      <ExpandTabArrow expanded={isExpanded} hover={hover} />
     </AnchorButton>
   )
 }

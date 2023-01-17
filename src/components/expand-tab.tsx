@@ -30,11 +30,11 @@ export default function ExpandTab({
 
   return (
     <div className={className}>
-      <ExpandTabButton expanded={status} onClick={_onClick}>
+      <ExpandTabButton isExpanded={status} onClick={_onClick}>
         {title}
       </ExpandTabButton>
 
-      <ExpandDetails expanded={status}>{children}</ExpandDetails>
+      <ExpandDetails isExpanded={status}>{children}</ExpandDetails>
     </div>
   )
 }

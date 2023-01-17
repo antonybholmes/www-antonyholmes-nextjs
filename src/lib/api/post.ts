@@ -140,6 +140,13 @@ export function addExcerpts(posts: IBasePost[]): Promise<IPreviewPost>[] {
   return posts.map(post => addExcerpt(post))
 }
 
+/**
+ * Gets a list of post objects containing basic frontmatter.
+ * The list is filtered for published posts only (frontmatter.status === "published")
+ * if process.env.NODE_ENV === "development", otherwise all poss are loaded.
+ *
+ * @returns A list of posts with basic frontmatter loaded.
+ */
 export function getAllPosts(): IBasePost[] {
   return getPostPaths()
     .map(path => getPostByPath(path))
@@ -150,9 +157,9 @@ export function getAllPosts(): IBasePost[] {
     )
 }
 
-export function getAllReviews(): IBasePost[] {
-  return getAllPosts().filter(post => post.frontmatter.type === "review") //getReviewPaths().map(path => getPostByPath(path, "review"))
-}
+// export function getAllReviews(): IBasePost[] {
+//   return getAllPosts().filter(post => post.frontmatter.type === "review") //getReviewPaths().map(path => getPostByPath(path, "review"))
+// }
 
 // export function getAllPostsAndReviews(): IBasePost[] {
 //   return getAllPosts().concat(getAllReviews())

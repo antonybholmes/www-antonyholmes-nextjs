@@ -10,7 +10,7 @@ interface IProps {
   hover?: boolean
 }
 
-const ExpandArrow = ({ expanded, hover = false }: IProps) => {
+export default function ExpandArrow({ expanded, hover = false }: IProps) {
   const [_hover, _setHover] = useState(false)
   const arrowEl = useRef(null)
 
@@ -26,5 +26,3 @@ const ExpandArrow = ({ expanded, hover = false }: IProps) => {
     </div>
   )
 }
-
-export default ExpandArrow
