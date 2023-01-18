@@ -22,17 +22,18 @@ export default function LargeHeader({
   children,
 }: IProps) {
   return (
-    <nav className="grid h-full grid-cols-3 items-center gap-x-1">
-      <VCenterRow className="ml-2 gap-x-4">
+    <nav className="mx-4 grid h-full grid-cols-2 items-center gap-x-1 xl:grid-cols-3">
+      <VCenterRow className="gap-x-4">
         <VCenterRow className="gap-x-2">
           <MenuOpenButton
             onClick={onClick}
             showMenu={showMenu}
             headerMode={headerMode}
+            className="-ml-3"
           />
           <BaseLink href="/" ariaLabel="Goto Homepage">
-            <LogoIconSmall headerMode={headerMode} className="3xl:hidden" />
-            <LogoIcon headerMode={headerMode} className="hidden 3xl:block" />
+            <LogoIconSmall headerMode={headerMode} />
+            {/* <LogoIcon headerMode={headerMode} className="hidden 3xl:block" /> */}
           </BaseLink>
         </VCenterRow>
 
@@ -44,7 +45,7 @@ export default function LargeHeader({
         />
       </VCenterRow>
       <div className="hidden lg:block">{children && children}</div>
-      <div />
+      {/* <div /> */}
     </nav>
   )
 }

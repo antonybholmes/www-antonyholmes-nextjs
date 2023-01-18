@@ -13,11 +13,11 @@ import IMenuProps from "./menu-props"
 
 const DURATION = 0.2
 
-const X1 = 20
-const X2 = 44
-const Y1 = 26
-const Y2 = 32
-const Y3 = 38
+const X1 = 0
+const X2 = 16
+const Y1 = 2
+const Y2 = 8
+const Y3 = 14
 
 const LINE_STYLE = {
   strokeWidth: 2,
@@ -226,19 +226,19 @@ export default function MenuButtonOpen({
     }
   }, [showMenu])
 
-  const onMouseEnter: MouseEventHandler = () => {
+  function onMouseEnter() {
     setHover(true)
   }
 
-  const onMouseLeave: MouseEventHandler = () => {
+  function onMouseLeave() {
     setHover(false)
   }
 
-  const onFocus: FocusEventHandler = () => {
+  function onFocus() {
     setFocus(true)
   }
 
-  const onBlur: FocusEventHandler = () => {
+  function onBlur() {
     setFocus(false)
   }
 
@@ -252,10 +252,10 @@ export default function MenuButtonOpen({
     <BaseButton
       onClick={onClick}
       className={cn(
-        "group relative  h-10 w-10 shrink-0 grow-0 rounded-full",
+        "group relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center rounded-full",
         [
           headerMode !== "dark",
-          "trans-ani-300 transition-color hover:bg-slate-200",
+          "trans-ani-300 transition-color group hover:bg-slate-200",
         ],
         className
       )}
@@ -269,7 +269,11 @@ export default function MenuButtonOpen({
       {/* <span ref={refl1} className={cn(cls, "top-7")} style={style} />
       <span ref={refl3} className={cn(cls, "top-9")} style={style} /> */}
 
-      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-4 w-4"
+      >
         <line
           ref={ref1}
           x1={X1}
