@@ -1,10 +1,11 @@
+import { gsap, Power3 } from "gsap"
 import { useEffect, useRef, useState } from "react"
-import type IClassProps from "../interfaces/class-props"
+import IChildrenProps from "../interfaces/children-props"
 import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
-import BaseImage from "./base-image"
-import { gsap } from "gsap"
-import IChildrenProps from "../interfaces/children-props"
+import { getSizes, getSizeStr, getSrcSet } from "./base-image"
+
+const DURATION_S = 0.4
 
 export interface IPlaceholderProps extends IChildrenProps {
   containerClassName?: string
@@ -28,65 +29,111 @@ export default function PlaceholderImage({
 }: IProps) {
   const [isLoaded, setIsLoaded] = useState(false)
 
-  const containerRef = useRef(null)
+  //const containerRef = useRef(null)
   const imageRef = useRef(null)
+  const bgRef = useRef(null)
+
+  useEffect(() => {
+    if (isLoaded) {
+      // once loaded, fade the image in, whilst
+      // also making the placeholder container
+      // background transparent to prevent bleeding
+      // at the corners. We use a slight delay to
+      // affect the transparency so there is a more
+      // seamless blend from background to image
+      gsap
+        .timeline()
+        .to(
+          imageRef.current,
+          {
+            duration: DURATION_S,
+            opacity: 1,
+            delay: 0.1,
+            ease: Power3.easeOut,
+          },
+          0
+        )
+        .to(
+          bgRef.current,
+          {
+            duration: DURATION_S,
+            opacity: 0,
+            delay: 0.1,
+            ease: Power3.easeOut,
+          },
+          0
+        )
+    }
+  }, [isLoaded])
 
   // useEffect(() => {
   //   // @ts-ignore
-  //   gsap.timeline().from(
-  //     containerRef.current,
+  //   gsap.timeline()
+  //   .set(
+  //     imageRef.current,
   //     {
-  //       duration: 0.8,
-  //       opacity: 0,
+  //       filter: "blur(32px)",
+  //     },
+  //   ).to(
+  //     imageRef.current,
+  //     {
+  //       duration: 0.4,
+  //       delay: 0.1,
+  //       filter: "blur(0px)",
   //     },
   //     0
   //   )
   // }, [])
 
   useEffect(() => {
-    // @ts-ignore
-    gsap.timeline().from(
-      imageRef.current,
-      {
-        duration: 1,
-        filter: "blur(10px)",
-      },
-      0
-    )
-  }, [])
+    // make sure the image src is added after the onload handler
+    if (imageRef.current) {
+      imageRef.current.src = src
+    }
+  }, [src, imageRef])
+
+  if (sizes.length === 0) {
+    sizes = getSizes(size)
+  }
+
+  const srcset = getSrcSet(src, sizes)
 
   return (
     <div
-      ref={containerRef}
-      className={cn("relative overflow-hidden", className, containerClassName)}
+      className={cn(
+        "overflow-hidden grid grid-cols-1 grid-rows-1",
+        className,
+        containerClassName
+      )}
     >
-      {/* <div
+      <div className={cn("relative h-full w-full")} style={{ gridArea: "1/1" }}>
+        <picture>
+          <img
+            ref={imageRef}
+            // src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
+            srcSet={srcset}
+            sizes={getSizeStr(size)}
+            width={size[0]}
+            height={size[1]}
+            className={cn("opacity-0", className, imgClassName)}
+            style={style}
+            loading={loading}
+            decoding={decoding}
+            alt={alt}
+            onLoad={() => setIsLoaded(true)}
+          />
+        </picture>
+
+        {children && children}
+      </div>
+
+      <div
+        ref={bgRef}
         style={{ gridArea: "1/1" }}
         className={cn(
-          "delay-1000 duration-1000 transition-opacity h-full w-full backdrop-blur",
-          [isLoaded, "opacity-0"]
+          "h-full w-full bg-gradient-to-br from-yellow-50 to-rose-100 via-blue-100"
         )}
-      /> */}
-
-      {/* <div ref={ref1}
-        className={cn("h-full w-full"
-        )}
-        style={{ gridArea: "1/1" }}
-      > */}
-      <BaseImage
-        ref={imageRef}
-        src={src}
-        size={size}
-        sizes={sizes}
-        loading={loading}
-        decoding={decoding}
-        alt={alt}
-        className={cn("w-full", className, imgClassName)}
-        style={style}
-        onLoad={() => setIsLoaded(true)}
       />
-
-      {children && children}
     </div>
   )
 }

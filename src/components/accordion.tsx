@@ -36,7 +36,7 @@ export default function Accordion({
       </AccordionButton>
 
       <ExpandDetails isExpanded={status}>
-        <div className="p-3">{children}</div>
+        <div className="px-4 py-2">{children}</div>
       </ExpandDetails>
     </div>
   )
