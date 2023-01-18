@@ -39,6 +39,7 @@ import getJournalPublications from "../lib/pub/journal-publications"
 import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
 import { getShortName } from "../lib/text"
+import Accordion from "../components/accordion"
 
 const EMPTY_QUERY = ""
 
@@ -551,7 +552,7 @@ export default function Page({ author, publications }: IProps) {
         </HCenterCol>
       </div>
 
-      <BaseCol className="gap-y-6 text-sm">
+      <BaseCol className="text-sm">
         {/* <ToggleSwitch
                 isSelected={showAbstract}
                 onClick={onShowAbstractsChange}
@@ -560,18 +561,19 @@ export default function Page({ author, publications }: IProps) {
               </ToggleSwitch> */}
 
         {yearData.length > 0 && (
-          <PubRangeSlider
-            data={yearData}
-            r1={year1}
-            setYear1={setYear1}
-            r2={year2}
-            setYear2={setYear2}
-          />
+          <Accordion title="Years">
+            <PubRangeSlider
+              data={yearData}
+              r1={year1}
+              setYear1={setYear1}
+              r2={year2}
+              setYear2={setYear2}
+            />
+          </Accordion>
         )}
 
-        <div>
+        <Accordion title="Sort">
           <VCenterRow className="justify-between">
-            <h2>Sort</h2>
             <BaseRow className="overflow-hidden">
               <BaseButton
                 ariaLabel="Sort ascending"
@@ -584,7 +586,7 @@ export default function Page({ author, publications }: IProps) {
           </VCenterRow>
 
           <SortOrder onChange={onSortChange} selected={sortOrder} />
-        </div>
+        </Accordion>
 
         <JournalFilter
           journals={journals}

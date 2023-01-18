@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { getShortName } from "../../lib/text"
+import Accordion from "../accordion"
 import ExpandTab from "../expand-tab"
 import CheckBox from "../link/check-box"
 import ToggleSwitch from "../link/toggle-switch"
@@ -63,7 +64,7 @@ function JournalFilter({
       >
         Journals
       </ToggleSwitch> */}
-      <ExpandTab
+      <Accordion
         title="Journals"
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -88,7 +89,7 @@ function JournalFilter({
             )
           })}
         </ul>
-      </ExpandTab>
+      </Accordion>
       {/* <Button
         onClick={onShowAll}
         ariaLabel="Show more items"

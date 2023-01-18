@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ExpandTab from "../expand-tab"
+import Accordion from "../accordion"
 import ToggleSwitch from "../link/toggle-switch"
 
 import { Journal } from "./journal-filter"
@@ -33,7 +33,7 @@ function AuthorFilter({
       >
         Authors
       </ToggleSwitch> */}
-      <ExpandTab
+      <Accordion
         title="Authors"
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -58,7 +58,7 @@ function AuthorFilter({
             )
           })}
         </ul>
-      </ExpandTab>
+      </Accordion>
     </div>
   )
 }
