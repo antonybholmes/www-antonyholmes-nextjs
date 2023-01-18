@@ -41,7 +41,7 @@ export default function ContentLayout({
     >
       <ContentDiv className={headerClassName}>
         <></>
-        <div className="mt-28">
+        <div className="mt-24">
           <LayoutTitles
             title={title}
             superTitle={superTitle}

@@ -29,7 +29,7 @@ export default function AccordionButton({
     <AnchorButton
       onClick={onClick}
       className={cn(
-        "transition-color flex cursor-pointer flex-row items-center justify-between gap-x-2 rounded-md p-3 font-semibold transition hover:bg-slate-100",
+        "trans-ani-300 transition-color flex cursor-pointer flex-row items-center justify-between gap-x-2 rounded-md p-3 font-semibold hover:bg-slate-100",
         className
       )}
       onMouseEnter={onMouseEnter}

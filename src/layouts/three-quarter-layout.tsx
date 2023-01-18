@@ -36,6 +36,7 @@ export default function ThreeQuarterLayout({
         tab={tab}
         isRight={isRight}
         crumbs={crumbs}
+        showCrumbs={showCrumbs}
       >
         {children}
       </BaseThreeQuarterLayout>

@@ -47,7 +47,7 @@ function JournalFilter({
   onClick,
   max = 10,
 }: JournalFilterProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [showAll, setShowAll] = useState(false)
 
   journals = journals.slice(

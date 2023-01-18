@@ -490,6 +490,7 @@ export default function Page({ author, publications }: IProps) {
         />
       }
       crumbs={[["Publications", "/publications"]]}
+      showCrumbs={false}
       className="gap-x-16"
     >
       <div>
@@ -561,7 +562,7 @@ export default function Page({ author, publications }: IProps) {
               </ToggleSwitch> */}
 
         {yearData.length > 0 && (
-          <Accordion title="Years">
+          <Accordion title="Years" isExpanded={true}>
             <PubRangeSlider
               data={yearData}
               r1={year1}
@@ -578,7 +579,7 @@ export default function Page({ author, publications }: IProps) {
               <BaseButton
                 ariaLabel="Sort ascending"
                 onClick={() => setDescending(!descending)}
-                className="flex h-6 w-6 flex-row items-center justify-center  transition-colors "
+                className="flex h-5 w-5 flex-row items-center justify-center  transition-colors "
               >
                 <SortIcon className="w-4" descending={descending} />
               </BaseButton>

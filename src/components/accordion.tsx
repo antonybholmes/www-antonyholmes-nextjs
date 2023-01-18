@@ -12,7 +12,7 @@ interface IProps extends IChildrenProps {
 
 export default function Accordion({
   title,
-  isExpanded = true,
+  isExpanded = false,
   className,
   children,
   onClick,

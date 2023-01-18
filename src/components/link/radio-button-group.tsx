@@ -3,14 +3,14 @@ import RadioButton from "./radio-button"
 
 interface RadioButtonGroupProps {
   items: string[]
-  selected: string
+  selected?: string
   onClick: (index: number) => void
   className?: string
 }
 
 export default function RadioButtonGroup({
   items,
-  selected,
+  selected = "",
   onClick,
   className,
 }: RadioButtonGroupProps) {

@@ -14,15 +14,14 @@ export default function PostImage({
   className,
 }: IProps) {
   const image = (
-    <div className={cn("relative overflow-hidden rounded-xl", className)}>
-      <BasePostImage
-        post={post}
-        size={size}
-        loading={loading}
-        className={className}
-        imgClassName="scale-102 trans-ani-300 transition-transform hover:scale-105"
-      />
-    </div>
+    <BasePostImage
+      post={post}
+      size={size}
+      loading={loading}
+      className={className}
+      containerClassName={cn("rounded-xl", className)}
+      imgClassName="scale-102 trans-ani-300 transition-transform hover:scale-105"
+    />
   )
 
   if (post.fields.slug) {

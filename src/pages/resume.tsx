@@ -20,7 +20,7 @@ export default function Page() {
   })
 
   return (
-    <ContentLayout title="Resume" showTitle={false}>
+    <ContentLayout title="Resume" showTitle={false} showCrumbs={false}>
       <></>
       <div className="mb-32 flex flex-col gap-y-32">
         <div>

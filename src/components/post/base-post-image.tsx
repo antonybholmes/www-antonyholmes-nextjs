@@ -1,18 +1,18 @@
 import IImageSizeProps from "../../interfaces/image-size-props"
 import IPostProps from "../../interfaces/post-props"
 import cn from "../../lib/class-names"
-import PlaceholderImage from "../placeholder-image"
+import PlaceholderImage, { IPlaceholderProps } from "../placeholder-image"
 
-interface IProps extends IPostProps, IImageSizeProps {
-  imgClassName?: string
-}
+interface IProps extends IPostProps, IImageSizeProps, IPlaceholderProps {}
 
 const BasePostImage = ({
   post,
   size = [1600, 800],
   loading = "lazy",
+  containerClassName,
   imgClassName,
   className,
+  children,
 }: IProps) => (
   <PlaceholderImage
     src={`/assets/images/posts/${post.frontmatter.hero}.webp`}
@@ -20,8 +20,11 @@ const BasePostImage = ({
     size={size}
     loading={loading}
     className={className}
+    containerClassName={containerClassName}
     imgClassName={cn("object-cover", imgClassName)}
-  />
+  >
+    {children}
+  </PlaceholderImage>
 )
 
 export default BasePostImage

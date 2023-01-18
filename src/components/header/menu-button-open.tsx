@@ -15,9 +15,9 @@ const DURATION = 0.2
 
 const X1 = 0
 const X2 = 16
-const Y1 = 2
+const Y1 = 4
 const Y2 = 8
-const Y3 = 14
+const Y3 = 12
 
 const LINE_STYLE = {
   strokeWidth: 2,

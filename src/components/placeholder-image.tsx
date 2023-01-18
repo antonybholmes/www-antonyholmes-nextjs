@@ -4,11 +4,14 @@ import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
 import BaseImage from "./base-image"
 import { gsap } from "gsap"
+import IChildrenProps from "../interfaces/children-props"
 
-export interface IProps extends IImageProps, IClassProps {
+export interface IPlaceholderProps extends IChildrenProps {
   containerClassName?: string
   imgClassName?: string
 }
+
+interface IProps extends IImageProps, IPlaceholderProps {}
 
 export default function PlaceholderImage({
   src,
@@ -21,6 +24,7 @@ export default function PlaceholderImage({
   containerClassName,
   imgClassName,
   style,
+  children,
 }: IProps) {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -54,7 +58,7 @@ export default function PlaceholderImage({
   return (
     <div
       ref={containerRef}
-      className={cn("overflow-hidden", className, containerClassName)}
+      className={cn("relative overflow-hidden", className, containerClassName)}
     >
       {/* <div
         style={{ gridArea: "1/1" }}
@@ -77,12 +81,12 @@ export default function PlaceholderImage({
         loading={loading}
         decoding={decoding}
         alt={alt}
-        className={cn(className, imgClassName)}
+        className={cn("w-full", className, imgClassName)}
         style={style}
         onLoad={() => setIsLoaded(true)}
       />
 
-      {/* </div> */}
+      {children && children}
     </div>
   )
 }

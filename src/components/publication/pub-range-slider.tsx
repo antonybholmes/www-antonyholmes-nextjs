@@ -191,7 +191,7 @@ export default function PubRangeSlider({
 
   return (
     <div className="w-full">
-      <VCenterRow className="justify-between">
+      <VCenterRow className="justify-end">
         <SecondaryButton
           onClick={onResetClick}
           ariaLabel="Reset year range"

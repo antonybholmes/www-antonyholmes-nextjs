@@ -17,7 +17,7 @@ function AuthorFilter({
   onClick,
   max = 10,
 }: AuthorFilterProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [showAll, setShowAll] = useState(false)
 
   if (max > -1 && !showAll) {
