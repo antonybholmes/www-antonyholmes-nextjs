@@ -94,7 +94,7 @@ export default function Page({ author, posts }) {
             <div className="flex flex-col items-center justify-center gap-6  xl:flex-row">
               <BlueButtonLink
                 href={`mailto:${EMAIL}`}
-                className="w-full gap-x-2 rounded-lg border border-transparent fill-white px-4 py-2.5 font-semibold text-white lg:w-auto"
+                className="w-full gap-x-2 rounded-lg border border-transparent fill-white px-4 py-2.5 font-semibold text-white xl:w-auto"
               >
                 <EnvelopeIcon className="w-4" />
                 <span>{EMAIL}</span>
@@ -104,7 +104,7 @@ export default function Page({ author, posts }) {
                 className={cn(
                   OUTLINE_CLS,
                   SECONDARY_BUTTON_CLS,
-                  "w-full  rounded-lg stroke-slate-900 px-4 py-2.5 font-semibold shadow-lg lg:w-auto"
+                  "w-full  rounded-lg stroke-slate-900 px-4 py-2.5 font-semibold shadow-lg xl:w-auto"
                 )}
               >
                 <VCenterRow className="gap-x-2">
