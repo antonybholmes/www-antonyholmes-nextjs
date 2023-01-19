@@ -11,7 +11,7 @@ import PostImage from "./post-image"
 import PostTitleLink from "./post-title-link"
 
 interface IProps extends IPostProps, IImageLoadProps {
-  imageClassName?: string
+  imgClassName?: string
   headerClassName?: string
   innerClassName?: string
   contentClassName?: string
@@ -25,7 +25,7 @@ interface IProps extends IPostProps, IImageLoadProps {
 export default function PreviewPost({
   post,
   className,
-  imageClassName = "w-full h-64 md:h-72",
+  imgClassName = "h-64 md:h-72",
   headerClassName = "text-2xl md:text-4xl",
   innerClassName,
   contentClassName = "text-base",
@@ -38,7 +38,7 @@ export default function PreviewPost({
 }: IProps) {
   return (
     <article className={cn("flex flex-col gap-y-4", className)}>
-      <PostImage post={post} loading={loading} className={imageClassName} />
+      <PostImage post={post} loading={loading} className={imgClassName} />
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
         <BaseCol className="gap-y-1">

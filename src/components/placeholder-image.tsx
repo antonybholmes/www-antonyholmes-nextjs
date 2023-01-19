@@ -110,7 +110,7 @@ export default function PlaceholderImage({
     <div
       ref={containerRef}
       className={cn(
-        "overflow-hidden bg-gradient-to-br from-blue-100 via-slate-100 to-yellow-50",
+        "relative overflow-hidden bg-gradient-to-br from-blue-100 via-slate-100 to-yellow-50",
         className,
         containerClassName
       )}
@@ -124,7 +124,7 @@ export default function PlaceholderImage({
           sizes={getSizeStr(size)}
           width={size[0]}
           height={size[1]}
-          className={cn("opacity-0 blur-lg", className, imgClassName)}
+          className={cn("w-full opacity-0 blur-lg", className, imgClassName)}
           style={style}
           loading={loading}
           decoding={decoding}
