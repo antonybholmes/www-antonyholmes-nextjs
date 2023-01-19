@@ -52,7 +52,7 @@ export default function PostCategoryLink({
           {showSections && path.length > 1 && (
             <>
               {/* <span className="text-white">/</span> */}
-              <BreadcrumbChevronIcon className="w-3 stroke-white stroke-2" />
+              <BreadcrumbChevronIcon className="w-4 stroke-slate-500 stroke-1" />
               <BaseLink
                 href={getSectionBaseUrl(path[0], path[1])}
                 ariaLabel={`Read more ${category} posts`}

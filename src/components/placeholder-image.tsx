@@ -5,7 +5,7 @@ import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
 import { getSizes, getSizeStr, getSrcSet } from "./base-image"
 
-const DURATION_S = 0.4
+const DURATION_S = 1
 
 export interface IPlaceholderProps extends IChildrenProps {
   containerClassName?: string
@@ -29,9 +29,9 @@ export default function PlaceholderImage({
 }: IProps) {
   const [isLoaded, setIsLoaded] = useState(false)
 
-  //const containerRef = useRef(null)
+  const containerRef = useRef(null)
   const imageRef = useRef(null)
-  const bgRef = useRef(null)
+  //const bgRef = useRef(null)
 
   useEffect(() => {
     if (isLoaded) {
@@ -43,26 +43,34 @@ export default function PlaceholderImage({
       // seamless blend from background to image
       gsap
         .timeline()
+        .set(containerRef.current, { background: "transparent" })
         .to(
           imageRef.current,
           {
             duration: DURATION_S,
             opacity: 1,
-            delay: 0.1,
+
             ease: Power3.easeOut,
           },
           0
         )
         .to(
-          bgRef.current,
+          imageRef.current,
           {
             duration: DURATION_S,
-            opacity: 0,
-            delay: 0.1,
+            filter: "blur(0px)",
             ease: Power3.easeOut,
           },
           0
         )
+      //.to(
+      //   bgRef.current,
+      //   {
+      //     duration: DURATION_S,
+      //     opacity: 0,
+      //     ease: Power3.easeOut,
+      //   },
+      // )
     }
   }, [isLoaded])
 
@@ -100,40 +108,41 @@ export default function PlaceholderImage({
 
   return (
     <div
+      ref={containerRef}
       className={cn(
-        "overflow-hidden grid grid-cols-1 grid-rows-1",
+        "overflow-hidden bg-gradient-to-br from-blue-100 via-slate-100 to-yellow-50",
         className,
         containerClassName
       )}
     >
-      <div className={cn("relative h-full w-full")} style={{ gridArea: "1/1" }}>
-        <picture>
-          <img
-            ref={imageRef}
-            // src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
-            srcSet={srcset}
-            sizes={getSizeStr(size)}
-            width={size[0]}
-            height={size[1]}
-            className={cn("opacity-0", className, imgClassName)}
-            style={style}
-            loading={loading}
-            decoding={decoding}
-            alt={alt}
-            onLoad={() => setIsLoaded(true)}
-          />
-        </picture>
+      {/* <div className={cn("relative h-full w-full")} style={{ gridArea: "1/1" }}> */}
+      <picture>
+        <img
+          ref={imageRef}
+          // src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
+          srcSet={srcset}
+          sizes={getSizeStr(size)}
+          width={size[0]}
+          height={size[1]}
+          className={cn("opacity-0 blur-lg", className, imgClassName)}
+          style={style}
+          loading={loading}
+          decoding={decoding}
+          alt={alt}
+          onLoad={() => setIsLoaded(true)}
+        />
+      </picture>
 
-        {children && children}
-      </div>
+      {children && children}
+      {/* </div> */}
 
-      <div
+      {/* <div
         ref={bgRef}
         style={{ gridArea: "1/1" }}
         className={cn(
-          "h-full w-full bg-gradient-to-br from-yellow-50 to-rose-100 via-blue-100"
+          "h-full w-full bg-gradient-to-br from-blue-100 to-yellow-50 via-slate-100"
         )}
-      />
+      /> */}
     </div>
   )
 }
