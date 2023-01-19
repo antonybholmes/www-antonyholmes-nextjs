@@ -124,8 +124,8 @@ export default function PlaceholderImage({
           sizes={getSizeStr(size)}
           width={size[0]}
           height={size[1]}
-          className={cn("w-full opacity-0 blur-lg", className, imgClassName)}
-          style={style}
+          className={cn("w-full opacity-0", className, imgClassName)}
+          style={{ filter: "blur(16px)", ...style }}
           loading={loading}
           decoding={decoding}
           alt={alt}
