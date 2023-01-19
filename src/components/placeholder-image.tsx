@@ -54,15 +54,15 @@ export default function PlaceholderImage({
           },
           0
         )
-        .to(
-          imageRef.current,
-          {
-            duration: DURATION_S,
-            filter: "blur(0px)",
-            ease: Power3.easeOut,
-          },
-          0
-        )
+      // .to(
+      //   imageRef.current,
+      //   {
+      //     duration: DURATION_S,
+      //     filter: "blur(0px)",
+      //     ease: Power3.easeOut,
+      //   },
+      //   0
+      // )
       //.to(
       //   bgRef.current,
       //   {
@@ -125,7 +125,7 @@ export default function PlaceholderImage({
           width={size[0]}
           height={size[1]}
           className={cn("w-full opacity-0", className, imgClassName)}
-          style={{ filter: "blur(16px)", ...style }}
+          style={style}
           loading={loading}
           decoding={decoding}
           alt={alt}
