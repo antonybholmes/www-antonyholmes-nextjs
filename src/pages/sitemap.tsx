@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <ContentLayout title="Site Map">
       <></>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-8" slot="main">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-4" slot="main">
         <section>
           <h3 className="mt-4 font-bold">Learn More</h3>
           <ul className="mt-4 flex flex-col gap-y-2">

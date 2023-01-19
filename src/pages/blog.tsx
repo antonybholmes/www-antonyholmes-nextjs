@@ -19,7 +19,7 @@ export default function Page({ posts, pages }: IProps) {
   return (
     <ContentLayout title="Blog" showTitle={false}>
       <></>
-      <PostsPage posts={posts} page={0} pages={pages} />
+      <PostsPage posts={posts} page={0} pages={pages} showLatest={true} />
       <></>
     </ContentLayout>
   )
@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
   const pages = getPageCount(allPosts)
 
   const posts = addAuthorsToPosts(
-    await Promise.all(addExcerpts(getPageItems(allPosts, 0, 10))),
+    await Promise.all(addExcerpts(getPageItems(allPosts, 0))),
     getAuthorMap()
   )
 

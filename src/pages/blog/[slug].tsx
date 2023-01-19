@@ -44,7 +44,6 @@ export default function Page({
   readMorePosts = [],
 }: IProps) {
   useEffect(() => {
-    console.log("sss")
     Prism.highlightAll()
   }, [])
 

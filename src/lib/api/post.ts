@@ -148,13 +148,15 @@ export function addExcerpts(posts: IBasePost[]): Promise<IPreviewPost>[] {
  * @returns A list of posts with basic frontmatter loaded.
  */
 export function getAllPosts(): IBasePost[] {
-  return getPostPaths()
+  const ret = getPostPaths()
     .map(path => getPostByPath(path))
     .filter(
       post =>
         post.frontmatter.status === "published" ||
         process.env.NODE_ENV === "development"
     )
+
+  return ret
 }
 
 // export function getAllReviews(): IBasePost[] {

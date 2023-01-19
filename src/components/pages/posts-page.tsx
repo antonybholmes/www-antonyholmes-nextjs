@@ -14,13 +14,21 @@ interface IProps {
   posts: IAuthorPost[]
   page: number
   pages: number
+  showLatest?: boolean
   categoryMap?: IFieldMap
 }
 
-const PostsPage = ({ posts, page = 0, pages = 1, categoryMap }: IProps) => {
+const PostsPage = ({
+  posts,
+  page = 0,
+  pages = 1,
+  showLatest = false,
+  categoryMap,
+}: IProps) => {
   const heroPosts = posts.slice(0, 4)
   const headPosts = posts.slice(4, 6)
-  const restPosts = posts.slice(6)
+  const latestPosts = showLatest ? posts.slice(6, 10) : []
+  const restPosts = showLatest ? posts.slice(10) : posts.slice(6)
 
   return (
     <BaseCol className="mb-32 gap-y-16">
@@ -31,7 +39,8 @@ const PostsPage = ({ posts, page = 0, pages = 1, categoryMap }: IProps) => {
       {/* <HeroPost post={heroPost} /> */}
       {/* <MorePosts posts={morePosts} /> */}
 
-      {pages > 1 && restPosts.length > 0 && <RestPosts posts={restPosts} />}
+      {latestPosts.length > 0 && <LatestPosts posts={latestPosts} />}
+      {restPosts.length > 0 && <RestPosts posts={restPosts} />}
 
       {/* <Pagination page={page} pages={pages} /> */}
       {pages > 1 && (
@@ -39,7 +48,6 @@ const PostsPage = ({ posts, page = 0, pages = 1, categoryMap }: IProps) => {
           <PagePagination page={page} pages={pages} />
         </HCenterRow>
       )}
-      {pages === 0 && restPosts.length && <LatestPosts posts={restPosts} />}
 
       {categoryMap && (
         <>
