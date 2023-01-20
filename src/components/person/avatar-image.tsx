@@ -14,7 +14,7 @@ interface IProps extends IAvatarProps, IImageSizeProps {}
 
 export default function AvatarImage({
   author,
-  size = [320, 320],
+  size = [160, 160],
   loading = "lazy",
   className,
   containerClassName,
