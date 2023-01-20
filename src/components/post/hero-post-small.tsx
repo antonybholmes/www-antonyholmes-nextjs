@@ -7,6 +7,7 @@ import DateFormatter from "./date-formatter"
 import PostCategoryLink from "./post-category-link"
 import PostImage from "./post-image"
 import PostTitleLink from "./post-title-link"
+import CondComp from "../component"
 
 interface IProps extends IPostProps {
   showDescription?: boolean
@@ -34,11 +35,10 @@ export default function HeroPostSmall({
           <PostCategoryLink post={post} textSize="text-2xl md:text-base" />
           <PostTitleLink post={post} className="text-2xl" />
         </BaseCol>
-        {showDescription ? (
-          <HTML html={post.excerpt} className="text-sm text-slate-600" />
-        ) : (
-          <></>
-        )}
+        <CondComp
+          cond={showDescription}
+          c1={<HTML html={post.excerpt} className="text-sm text-slate-600" />}
+        />
 
         {showAvatar ? (
           <CompactAvatars

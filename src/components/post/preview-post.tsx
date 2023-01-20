@@ -46,12 +46,14 @@ export default function PreviewPost({
           {showSection ? <PostCategoryLink post={post} /> : <></>}
           <PostTitleLink post={post} className={headerClassName} />
         </BaseCol>
+
         <CondComp
           cond={showDescription}
           c1={
-            <p className={cn("text-slate-600", contentClassName)}>
-              {post.frontmatter.rawExcerpt}
-            </p>
+            <HTML
+              html={post.excerpt}
+              className={cn("text-slate-600", contentClassName)}
+            />
           }
         />
 
