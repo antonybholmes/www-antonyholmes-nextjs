@@ -37,11 +37,11 @@ export default function PreviewPost({
   loading = "lazy",
 }: IProps) {
   return (
-    <article className={cn("flex flex-col gap-y-4", className)}>
+    <article className={cn("flex flex-col gap-y-2", className)}>
       <PostImage post={post} loading={loading} className={imgClassName} />
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
-        <BaseCol className="gap-y-1">
+        <BaseCol>
           {showSection && <PostCategoryLink post={post} />}
           <PostTitleLink post={post} className={headerClassName} />
         </BaseCol>

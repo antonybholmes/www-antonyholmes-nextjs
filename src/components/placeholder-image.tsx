@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react"
 import IChildrenProps from "../interfaces/children-props"
 import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
-import { getSizes, getSizeStr, getSrcSet } from "./base-image"
+import { getSizes, getSizeStr, getSrc, getSrcSet } from "./base-image"
+import { parse } from "../lib/path"
 
 const DURATION_S = 1
 
@@ -27,6 +28,11 @@ export default function PlaceholderImage({
   style,
   children,
 }: IProps) {
+  const p = parse(src)
+  const dir = p.dir
+  const name = p.name
+  const ext = p.ext
+
   const [isLoaded, setIsLoaded] = useState(false)
 
   const containerRef = useRef(null)
@@ -96,7 +102,7 @@ export default function PlaceholderImage({
   useEffect(() => {
     // make sure the image src is added after the onload handler
     if (imageRef.current) {
-      imageRef.current.src = src
+      imageRef.current.src = getSrc(src, name, dir, ext, size) //src
     }
   }, [src, imageRef])
 
@@ -104,7 +110,7 @@ export default function PlaceholderImage({
     sizes = getSizes(size)
   }
 
-  const srcset = getSrcSet(src, sizes)
+  const srcset = getSrcSet(src, name, dir, ext, sizes)
 
   return (
     <div
@@ -119,7 +125,7 @@ export default function PlaceholderImage({
       <picture>
         <img
           ref={imageRef}
-          // src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
+          //src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
           srcSet={srcset}
           sizes={getSizeStr(size)}
           width={size[0]}

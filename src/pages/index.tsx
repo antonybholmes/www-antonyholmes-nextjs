@@ -3,6 +3,7 @@ import HCenterCol from "../components/h-center-col"
 import ArrowLink from "../components/link/arrow-link"
 import BaseLink from "../components/link/base-link"
 import BlueButtonLink from "../components/link/blue-button-link"
+import BlueLink from "../components/link/blue-link"
 import { OUTLINE_CLS } from "../components/link/outline-rounded-button-link"
 import { SECONDARY_BUTTON_CLS } from "../components/link/secondary-button-link"
 import PostsPage from "../components/pages/posts-page"
@@ -68,18 +69,28 @@ export default function Page({ author, posts }) {
               <h1 className="text-6xl font-extrabold">Hi There.</h1>
 
               <p className="text-center">
-                I'm Antony Holmes, and welcome to my personal website.
+                I'm Antony Holmes, and welcome to my personal website. That's me
+                in the photo, posing by the Hudson River for no particular
+                reason.
               </p>
 
               <p className="text-center">
-                That's me in the photo, posing by the Hudson River for no
-                particular reason.
+                I'm a developer and researcher in New York who learned how to do
+                a few cool things with Java, Python, React, Gatsby, Next.js,
+                Astro and other tech, some of which was used to make what your
+                looking at now.
               </p>
 
               <p className="text-center">
-                I'm a full stack developer and researcher in New York with
-                experience using Java, Python, React, Gatsby, Next.js, Astro and
-                other tech, some of which was used to make this very site.
+                I made this site with love, mostly to try and get high{" "}
+                <BlueLink href="https://pagespeed.web.dev/">
+                  Lighthouse
+                </BlueLink>{" "}
+                scores and a pass on the{" "}
+                <BlueLink href="https://validator.w3.org/">
+                  Markup Validation Service
+                </BlueLink>
+                . I think I mostly succeeded.
               </p>
 
               <p className="text-center ">

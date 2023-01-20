@@ -22,7 +22,7 @@ export default function HeroPostSmall({
   return (
     <article
       className={cn(
-        "grid grid-cols-1 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-3",
+        "grid grid-cols-1 md:grid-cols-4 gap-y-2 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-3",
         className
       )}
     >

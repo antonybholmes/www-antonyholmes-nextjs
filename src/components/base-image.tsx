@@ -20,15 +20,26 @@ export function getSizeStr(size: [number, number]): string {
   return `(min-width: ${size[0]}px) ${size[0]}px, 100vw`
 }
 
-export function getSrcSet(src: string, sizes: [number, number][]): string {
-  const p = parse(src)
-  const dir = p.dir
-  const name = p.name
-  const ext = p.ext
-
+export function getSrcSet(
+  src: string,
+  name: string,
+  dir: string,
+  ext: string,
+  sizes: [number, number][]
+): string {
   return sizes
     .map(s => `${dir}/opt/${name}-${s[0]}x${s[1]}.${ext} ${s[0]}w`)
     .join(", ")
+}
+
+export function getSrc(
+  src: string,
+  name: string,
+  dir: string,
+  ext: string,
+  size: [number, number]
+): string {
+  return `${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`
 }
 
 export default function BaseImage({
@@ -47,15 +58,18 @@ export default function BaseImage({
     sizes = getSizes(size)
   }
 
-  const srcset = getSrcSet(src, sizes)
+  const p = parse(src)
+  const dir = p.dir
+  const name = p.name
+  const ext = p.ext
+
+  const srcset = getSrcSet(src, name, dir, ext, sizes)
   //const _sizes = sizes.map(s => `(min-width: ${s}px) ${s}px`).join(", ") //+ `, ${sizes[sizes.length - 1]}px`
 
   return (
     <picture style={pictureStyle}>
       <img
-        // @ts-ignore
-        ref={ref}
-        // src={`${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`}
+        src={getSrc(src, name, dir, ext, size)}
         srcSet={srcset}
         sizes={getSizeStr(size)}
         width={size[0]}
