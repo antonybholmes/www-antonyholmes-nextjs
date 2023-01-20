@@ -36,7 +36,9 @@ export default function HeroPostSmall({
         </BaseCol>
         {showDescription ? (
           <HTML html={post.excerpt} className="text-sm text-slate-600" />
-        ) : null}
+        ) : (
+          <></>
+        )}
 
         {showAvatar ? (
           <CompactAvatars
@@ -44,7 +46,9 @@ export default function HeroPostSmall({
             showImages={false}
             className="mt-1"
           />
-        ) : null}
+        ) : (
+          <></>
+        )}
 
         <DateFormatter date={post.fields.date} />
       </BaseCol>

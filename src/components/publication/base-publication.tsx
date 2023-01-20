@@ -141,7 +141,9 @@ function BasePublication({
       <HCenterCol className="mt-1 grow-0 gap-y-2">
         {showCount ? (
           <div className="text-center text-slate-500">{`${index + 1}`}</div>
-        ) : null}
+        ) : (
+          <></>
+        )}
 
         <AnchorButton
           ariaLabel="Show abstract"
@@ -207,7 +209,9 @@ function BasePublication({
 
         {isExpanded && publication.abstract !== "" ? (
           <Abstract publication={publication} isExpanded={isExpanded} />
-        ) : null}
+        ) : (
+          <></>
+        )}
       </div>
     </article>
   )

@@ -40,7 +40,9 @@ export default function SideLayout({
               superTitle={superTitle}
               className="mb-8"
             />
-          ) : null}
+          ) : (
+            <></>
+          )}
           {children[0]}
         </>
         <>{children[1]}</>

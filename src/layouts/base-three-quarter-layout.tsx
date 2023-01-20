@@ -25,7 +25,9 @@ export default function BaseThreeQuarterLayout({
     >
       {!isRight ? (
         <div className="relative col-span-1 hidden xl:block">{children[1]}</div>
-      ) : null}
+      ) : (
+        <></>
+      )}
       <article className="col-span-3">
         <LayoutTitles
           title={title}
@@ -40,7 +42,9 @@ export default function BaseThreeQuarterLayout({
       </article>
       {isRight ? (
         <div className="relative col-span-1 hidden xl:block">{children[1]}</div>
-      ) : null}
+      ) : (
+        <></>
+      )}
     </div>
   )
 }

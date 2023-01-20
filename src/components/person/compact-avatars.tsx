@@ -38,7 +38,9 @@ export default function CompactAvatars({
             </li>
           ))}
         </ul>
-      ) : null}
+      ) : (
+        <></>
+      )}
 
       <ul className="flex flex-row flex-wrap items-center gap-x-1 text-sm font-bold">
         {authors.map((author, index) => (
@@ -50,10 +52,12 @@ export default function CompactAvatars({
             >
               {author.frontmatter.name}
             </BaseLink>
-            {index < authors.length - 2 ? <span>,</span> : null}
+            {index < authors.length - 2 ? <span>,</span> : <></>}
             {index === authors.length - 2 ? (
               <span className="ml-1">&</span>
-            ) : null}
+            ) : (
+              <></>
+            )}
           </li>
         ))}
       </ul>

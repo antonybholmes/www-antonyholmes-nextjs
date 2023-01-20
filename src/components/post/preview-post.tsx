@@ -9,6 +9,7 @@ import DateFormatter from "./date-formatter"
 import PostCategoryLink from "./post-category-link"
 import PostImage from "./post-image"
 import PostTitleLink from "./post-title-link"
+import CondComp from "../component"
 
 interface IProps extends IPostProps, IImageLoadProps {
   imgClassName?: string
@@ -42,39 +43,51 @@ export default function PreviewPost({
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
         <BaseCol>
-          {showSection ? <PostCategoryLink post={post} /> : null}
+          {showSection ? <PostCategoryLink post={post} /> : <></>}
           <PostTitleLink post={post} className={headerClassName} />
         </BaseCol>
-        {showDescription ? (
-          <HTML
-            html={post.excerpt}
-            className={cn("text-slate-600", contentClassName)}
-          />
-        ) : null}
+        <CondComp
+          cond={showDescription}
+          c1={
+            <p className={cn("text-slate-600", contentClassName)}>
+              {post.frontmatter.rawExcerpt}
+            </p>
+          }
+        />
 
-        {dateBelow ? (
-          <>
-            {showAvatar ? (
-              <CompactAvatars
-                authors={post.authors}
-                showImages={showAvatarImage}
+        <CondComp
+          cond={dateBelow}
+          c1={
+            <>
+              <CondComp
+                cond={showAvatar}
+                c1={
+                  <CompactAvatars
+                    authors={post.authors}
+                    showImages={showAvatarImage}
+                  />
+                }
               />
-            ) : null}
 
-            <DateFormatter date={post.fields.date} />
-          </>
-        ) : (
-          <VCenterRow className="justify-between">
-            {showAvatar ? (
-              <CompactAvatars
-                authors={post.authors}
-                showImages={showAvatarImage}
+              <DateFormatter date={post.fields.date} />
+            </>
+          }
+          c2={
+            <VCenterRow className="justify-between">
+              <CondComp
+                cond={showAvatar}
+                c1={
+                  <CompactAvatars
+                    authors={post.authors}
+                    showImages={showAvatarImage}
+                  />
+                }
               />
-            ) : null}
 
-            <DateFormatter date={post.fields.date} />
-          </VCenterRow>
-        )}
+              <DateFormatter date={post.fields.date} />
+            </VCenterRow>
+          }
+        />
       </BaseCol>
     </article>
   )

@@ -66,7 +66,9 @@ export default function PostCategoryLink({
                 {path[1]}
               </BaseLink>
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </VCenterRow>
       </li>
     )

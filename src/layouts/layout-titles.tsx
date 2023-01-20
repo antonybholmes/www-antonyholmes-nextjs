@@ -15,7 +15,7 @@ export default function LayoutTitles({
 }: IProps) {
   return (
     <>
-      {showCrumbs ? <Breadcrumb crumbs={crumbs} className="mb-8" /> : null}
+      {showCrumbs ? <Breadcrumb crumbs={crumbs} className="mb-8" /> : <></>}
 
       {showTitle ? (
         <PageTitle
@@ -24,7 +24,9 @@ export default function LayoutTitles({
           superTitle={superTitle}
           className="mb-8"
         />
-      ) : null}
+      ) : (
+        <></>
+      )}
     </>
   )
 }

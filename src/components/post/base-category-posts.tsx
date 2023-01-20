@@ -22,7 +22,9 @@ const BaseCategoryPosts = ({ posts, rightMode = false }: IProps) => {
       <div className="mt-4 grid grid-cols-1 gap-12 lg:grid-cols-5">
         {!rightMode ? (
           <PreviewPost post={topPost} className="col-span-3 hidden lg:flex" />
-        ) : null}
+        ) : (
+          <></>
+        )}
         <BaseCol className="col-span-2">
           {topPosts.map((post, index) => {
             return (
@@ -41,7 +43,9 @@ const BaseCategoryPosts = ({ posts, rightMode = false }: IProps) => {
         </BaseCol>
         {rightMode ? (
           <PreviewPost post={topPost} className="col-span-3 hidden lg:flex" />
-        ) : null}
+        ) : (
+          <></>
+        )}
       </div>
     </>
   )

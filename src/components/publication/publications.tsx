@@ -56,7 +56,9 @@ function Publications({
           pageBreak={pageBreak}
           className={className}
         />
-      ) : null}
+      ) : (
+        <></>
+      )}
 
       {showMoreButton ? (
         <HCenterRow className="mt-8">
@@ -70,7 +72,9 @@ function Publications({
             </BluePillButton>
           </div>
         </HCenterRow>
-      ) : null}
+      ) : (
+        <></>
+      )}
     </>
   )
 }

@@ -66,7 +66,9 @@ export default function Page({
                 <BaseCol className="gap-y-8">
                   {post.frontmatter.type === "review" ? (
                     <ProsAndCons post={post} />
-                  ) : null}
+                  ) : (
+                    <></>
+                  )}
 
                   <PostBody html={post.html} className="text-justify" />
                   <PostTags post={post} />
@@ -78,7 +80,9 @@ export default function Page({
                       posts={morePosts}
                       title={`More on ${post.frontmatter.tags[0]}`}
                     />
-                  ) : null}
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </PostLayout>
             </BaseCol>
@@ -92,7 +96,9 @@ export default function Page({
             <RelatedPosts posts={readMorePosts} title="Keep Reading" />
             <></>
           </ContentDiv>
-        ) : null}
+        ) : (
+          <></>
+        )}
       </>
     </BaseLayout>
   )
