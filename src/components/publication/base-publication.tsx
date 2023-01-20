@@ -155,7 +155,7 @@ function BasePublication({
             ])}
           /> */}
 
-          <PlusIcon isPlus={!isExpanded} className="w-5 stroke-2 md:w-4" />
+          <PlusIcon isPlus={!isExpanded} className="w-4 stroke-2 md:w-3" />
         </AnchorButton>
       </HCenterCol>
 
