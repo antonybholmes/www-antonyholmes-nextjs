@@ -2,6 +2,7 @@ import cn from "../../lib/class-names"
 import IPostsProps from "../../interfaces/posts-props"
 import BaseCol from "../base-col"
 import PreviewPost from "./preview-post"
+import CondComp from "../component"
 
 interface IProps extends IPostsProps {
   rightMode?: boolean
@@ -14,10 +15,12 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
 
   return (
     <section className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-      {!rightMode ? <PreviewPost post={topPost} /> : <></>}
+      <CondComp cond={!rightMode}>
+        <PreviewPost post={topPost} />
+      </CondComp>
 
       <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
-        {rightMode && topPosts.length ? (
+        <CondComp cond={rightMode && topPosts.length > 0}>
           <BaseCol className="gap-y-8">
             {topPosts.map((post, index) => {
               return (
@@ -32,9 +35,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               )
             })}
           </BaseCol>
-        ) : (
-          <></>
-        )}
+        </CondComp>
 
         {otherPosts.length > 0 ? (
           <BaseCol className="gap-y-8">
@@ -74,7 +75,10 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
         )}
       </div>
 
-      {rightMode ? <PreviewPost post={topPost} /> : <></>}
+      <CondComp cond={rightMode}>
+        {" "}
+        <PreviewPost post={topPost} />{" "}
+      </CondComp>
     </section>
   )
 }

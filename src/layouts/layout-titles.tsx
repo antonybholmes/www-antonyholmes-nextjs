@@ -1,4 +1,5 @@
 import Breadcrumb from "../components/breadcrumb"
+import CondComp from "../components/component"
 import PageTitle from "../components/page-title"
 import type ICrumbProps from "../interfaces/crumb-props"
 import type ILayoutProps from "../interfaces/layout-props"
@@ -15,18 +16,19 @@ export default function LayoutTitles({
 }: IProps) {
   return (
     <>
-      {showCrumbs ? <Breadcrumb crumbs={crumbs} className="mb-8" /> : <></>}
+      <CondComp cond={showCrumbs}>
+        {" "}
+        <Breadcrumb crumbs={crumbs} className="mb-8" />
+      </CondComp>
 
-      {showTitle ? (
+      <CondComp cond={showTitle}>
         <PageTitle
           title={title}
           subTitle={subTitle}
           superTitle={superTitle}
           className="mb-8"
         />
-      ) : (
-        <></>
-      )}
+      </CondComp>
     </>
   )
 }

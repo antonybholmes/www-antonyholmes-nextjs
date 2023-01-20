@@ -35,10 +35,9 @@ export default function HeroPostSmall({
           <PostCategoryLink post={post} textSize="text-2xl md:text-base" />
           <PostTitleLink post={post} className="text-2xl" />
         </BaseCol>
-        <CondComp
-          cond={showDescription}
-          c1={<HTML html={post.excerpt} className="text-sm text-slate-600" />}
-        />
+        <CondComp cond={showDescription}>
+          <HTML html={post.excerpt} className="text-sm text-slate-600" />
+        </CondComp>
 
         {showAvatar ? (
           <CompactAvatars

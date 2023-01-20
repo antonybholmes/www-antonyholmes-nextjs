@@ -2,6 +2,7 @@ import cn from "../../lib/class-names"
 import IPostProps from "../../interfaces/post-props"
 import CompactAvatars from "../person/compact-avatars"
 import DateFormatter from "./date-formatter"
+import CondComp from "../component"
 
 interface IProps extends IPostProps {
   showAvatar?: boolean
@@ -14,7 +15,10 @@ const PostAuthor = ({ post, showAvatar = true, className }: IProps) => (
       className
     )}
   >
-    {showAvatar ? <CompactAvatars authors={post.authors} /> : <></>}
+    <CondComp cond={showAvatar}>
+      {" "}
+      <CompactAvatars authors={post.authors} />{" "}
+    </CondComp>
 
     <DateFormatter date={post.fields.date} />
   </div>

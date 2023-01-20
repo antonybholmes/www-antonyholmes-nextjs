@@ -1,9 +1,23 @@
-interface IProps {
+import IChildrenProps from "../interfaces/children-props"
+
+interface IProps extends IChildrenProps {
   cond: boolean
-  c1?: any
   c2?: any
 }
 
-export default function CondComp({ cond = true, c1, c2 = <></> }: IProps) {
-  return cond ? c1 : c2
+/**
+ * A conditional component that only displays its children if a
+ * condition is true otherwise a default (<></>). This is to
+ * standardize conditional rendering and clean up the use of x ? y : z
+ * inline statements.
+ *
+ * @param param0
+ * @returns
+ */
+export default function CondComp({
+  cond = true,
+  c2 = <></>,
+  children,
+}: IProps) {
+  return cond ? children : c2
 }

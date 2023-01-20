@@ -43,53 +43,43 @@ export default function PreviewPost({
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
         <BaseCol>
-          {showSection ? <PostCategoryLink post={post} /> : <></>}
+          <CondComp cond={showSection}>
+            <PostCategoryLink post={post} />
+          </CondComp>
           <PostTitleLink post={post} className={headerClassName} />
         </BaseCol>
 
-        <CondComp
-          cond={showDescription}
-          c1={
-            <HTML
-              html={post.excerpt}
-              className={cn("text-slate-600", contentClassName)}
-            />
-          }
-        />
+        <CondComp cond={showDescription}>
+          <HTML
+            html={post.excerpt}
+            className={cn("text-slate-600", contentClassName)}
+          />
+        </CondComp>
 
         <CondComp
           cond={dateBelow}
-          c1={
-            <>
-              <CondComp
-                cond={showAvatar}
-                c1={
-                  <CompactAvatars
-                    authors={post.authors}
-                    showImages={showAvatarImage}
-                  />
-                }
-              />
-
-              <DateFormatter date={post.fields.date} />
-            </>
-          }
           c2={
             <VCenterRow className="justify-between">
-              <CondComp
-                cond={showAvatar}
-                c1={
-                  <CompactAvatars
-                    authors={post.authors}
-                    showImages={showAvatarImage}
-                  />
-                }
-              />
+              <CondComp cond={showAvatar}>
+                <CompactAvatars
+                  authors={post.authors}
+                  showImages={showAvatarImage}
+                />
+              </CondComp>
 
               <DateFormatter date={post.fields.date} />
             </VCenterRow>
           }
-        />
+        >
+          <CondComp cond={showAvatar}>
+            <CompactAvatars
+              authors={post.authors}
+              showImages={showAvatarImage}
+            />
+          </CondComp>
+
+          <DateFormatter date={post.fields.date} />
+        </CondComp>
       </BaseCol>
     </article>
   )
