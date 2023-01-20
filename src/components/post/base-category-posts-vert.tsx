@@ -14,10 +14,10 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
 
   return (
     <section className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-      {!rightMode && <PreviewPost post={topPost} />}
+      {!rightMode ? <PreviewPost post={topPost} /> : null}
 
       <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
-        {rightMode && topPosts.length && (
+        {rightMode && topPosts.length ? (
           <BaseCol className="gap-y-8">
             {topPosts.map((post, index) => {
               return (
@@ -32,9 +32,9 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               )
             })}
           </BaseCol>
-        )}
+        ) : null}
 
-        {otherPosts.length > 0 && (
+        {otherPosts.length > 0 ? (
           <BaseCol className="gap-y-8">
             {otherPosts.map((post, index) => {
               return (
@@ -48,9 +48,9 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               )
             })}
           </BaseCol>
-        )}
+        ) : null}
 
-        {!rightMode && topPosts.length && (
+        {!rightMode && topPosts.length ? (
           <BaseCol className="gap-y-8">
             {topPosts.map((post, index) => {
               return (
@@ -65,10 +65,10 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
               )
             })}
           </BaseCol>
-        )}
+        ) : null}
       </div>
 
-      {rightMode && <PreviewPost post={topPost} />}
+      {rightMode ? <PreviewPost post={topPost} /> : null}
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import { CSSProperties } from "react"
+import { CSSProperties, memo } from "react"
 import type IClassProps from "../interfaces/class-props"
 import IImageProps from "../interfaces/image-props"
 import { parse } from "../lib/path"
@@ -42,7 +42,7 @@ export function getSrc(
   return `${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`
 }
 
-export default function BaseImage({
+export default memo(function BaseImage({
   src,
   alt,
   size = [640, 320],
@@ -83,4 +83,4 @@ export default function BaseImage({
       />
     </picture>
   )
-}
+})

@@ -41,7 +41,6 @@ export default function Page({ author, posts }) {
                 <AvatarImageLarge
                   author={author}
                   className="max-w-64 overflow-hidden"
-                  imgClassName="trans-ani-300 scale-102 transition-transform hover:scale-105"
                 />
               </div>
             </BaseLink>

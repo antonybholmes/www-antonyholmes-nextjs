@@ -23,9 +23,9 @@ export default function BaseThreeQuarterLayout({
     <div
       className={cn("grid grid-cols-1 xl:grid-cols-4 xl:gap-x-16", className)}
     >
-      {!isRight && (
+      {!isRight ? (
         <div className="relative col-span-1 hidden xl:block">{children[1]}</div>
-      )}
+      ) : null}
       <article className="col-span-3">
         <LayoutTitles
           title={title}
@@ -38,9 +38,9 @@ export default function BaseThreeQuarterLayout({
 
         {children[0]}
       </article>
-      {isRight && (
+      {isRight ? (
         <div className="relative col-span-1 hidden xl:block">{children[1]}</div>
-      )}
+      ) : null}
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import cn from "../../lib/class-names"
 import AvatarImage, { IAvatarProps } from "./avatar-image"
 
 export default function AvatarImageLarge({
@@ -12,7 +13,7 @@ export default function AvatarImageLarge({
       size={[640, 640]}
       className={className}
       containerClassName={containerClassName}
-      imgClassName={imgClassName}
+      imgClassName={cn("scale-102 hover:scale-105", imgClassName)}
       loading="eager"
     />
   )

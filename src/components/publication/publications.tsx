@@ -47,7 +47,7 @@ function Publications({
         </HCenterRow>
       )} */}
 
-      {publications.length > 0 && (
+      {publications.length > 0 ? (
         <BasePublicationList
           publications={publications}
           showAbstract={showAbstract}
@@ -56,9 +56,9 @@ function Publications({
           pageBreak={pageBreak}
           className={className}
         />
-      )}
+      ) : null}
 
-      {showMoreButton && (
+      {showMoreButton ? (
         <HCenterRow className="mt-8">
           <div>
             <BluePillButton
@@ -70,7 +70,7 @@ function Publications({
             </BluePillButton>
           </div>
         </HCenterRow>
-      )}
+      ) : null}
     </>
   )
 }

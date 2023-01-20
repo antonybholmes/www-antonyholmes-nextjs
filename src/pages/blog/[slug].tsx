@@ -64,21 +64,21 @@ export default function Page({
                 <PostSocialMediaVert post={post} />
 
                 <BaseCol className="gap-y-8">
-                  {post.frontmatter.type === "review" && (
+                  {post.frontmatter.type === "review" ? (
                     <ProsAndCons post={post} />
-                  )}
+                  ) : null}
 
                   <PostBody html={post.html} className="text-justify" />
                   <PostTags post={post} />
                 </BaseCol>
 
                 <div>
-                  {morePosts.length > 0 && (
+                  {morePosts.length > 0 ? (
                     <MorePosts
                       posts={morePosts}
                       title={`More on ${post.frontmatter.tags[0]}`}
                     />
-                  )}
+                  ) : null}
                 </div>
               </PostLayout>
             </BaseCol>
@@ -86,13 +86,13 @@ export default function Page({
           </ContentDiv>
         </article>
 
-        {readMorePosts.length > 0 && (
+        {readMorePosts.length > 0 ? (
           <ContentDiv className="py-16">
             <></>
             <RelatedPosts posts={readMorePosts} title="Keep Reading" />
             <></>
           </ContentDiv>
-        )}
+        ) : null}
       </>
     </BaseLayout>
   )

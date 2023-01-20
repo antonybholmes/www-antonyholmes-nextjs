@@ -15,16 +15,16 @@ export default function LayoutTitles({
 }: IProps) {
   return (
     <>
-      {showCrumbs && <Breadcrumb crumbs={crumbs} className="mb-8" />}
+      {showCrumbs ? <Breadcrumb crumbs={crumbs} className="mb-8" /> : null}
 
-      {showTitle && (
+      {showTitle ? (
         <PageTitle
           title={title}
           subTitle={subTitle}
           superTitle={superTitle}
           className="mb-8"
         />
-      )}
+      ) : null}
     </>
   )
 }

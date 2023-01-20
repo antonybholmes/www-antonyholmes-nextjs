@@ -14,7 +14,7 @@ const PostAuthor = ({ post, showAvatar = true, className }: IProps) => (
       className
     )}
   >
-    {showAvatar && <CompactAvatars authors={post.authors} />}
+    {showAvatar ? <CompactAvatars authors={post.authors} /> : null}
 
     <DateFormatter date={post.fields.date} />
   </div>

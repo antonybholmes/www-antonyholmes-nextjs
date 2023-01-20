@@ -139,9 +139,9 @@ function BasePublication({
       className={cn("publication flex flex-row gap-x-2 text-sm", className)}
     >
       <HCenterCol className="mt-1 grow-0 gap-y-2">
-        {showCount && (
+        {showCount ? (
           <div className="text-center text-slate-500">{`${index + 1}`}</div>
-        )}
+        ) : null}
 
         <AnchorButton
           ariaLabel="Show abstract"
@@ -205,9 +205,9 @@ function BasePublication({
           </VCenterRow> */}
         </BaseRow>
 
-        {isExpanded && publication.abstract !== "" && (
+        {isExpanded && publication.abstract !== "" ? (
           <Abstract publication={publication} isExpanded={isExpanded} />
-        )}
+        ) : null}
       </div>
     </article>
   )

@@ -49,7 +49,7 @@ export default function PostCategoryLink({
             {path[0]}
           </BaseLink>
 
-          {showSections && path.length > 1 && (
+          {showSections && path.length > 1 ? (
             <>
               {/* <span className="text-white">/</span> */}
               <BreadcrumbChevronIcon className="w-4 stroke-slate-500 stroke-1" />
@@ -66,7 +66,7 @@ export default function PostCategoryLink({
                 {path[1]}
               </BaseLink>
             </>
-          )}
+          ) : null}
         </VCenterRow>
       </li>
     )

@@ -175,6 +175,7 @@ module.exports = {
       },
       transitionProperty: {
         filter: "filter",
+        placeholder: "opacity, filter, transform",
       },
       margin: {
         18: "4.5rem",

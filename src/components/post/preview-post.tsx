@@ -42,35 +42,35 @@ export default function PreviewPost({
 
       <BaseCol className={cn("gap-y-2", innerClassName)}>
         <BaseCol>
-          {showSection && <PostCategoryLink post={post} />}
+          {showSection ? <PostCategoryLink post={post} /> : null}
           <PostTitleLink post={post} className={headerClassName} />
         </BaseCol>
-        {showDescription && (
+        {showDescription ? (
           <HTML
             html={post.excerpt}
             className={cn("text-slate-600", contentClassName)}
           />
-        )}
+        ) : null}
 
         {dateBelow ? (
           <>
-            {showAvatar && (
+            {showAvatar ? (
               <CompactAvatars
                 authors={post.authors}
                 showImages={showAvatarImage}
               />
-            )}
+            ) : null}
 
             <DateFormatter date={post.fields.date} />
           </>
         ) : (
           <VCenterRow className="justify-between">
-            {showAvatar && (
+            {showAvatar ? (
               <CompactAvatars
                 authors={post.authors}
                 showImages={showAvatarImage}
               />
-            )}
+            ) : null}
 
             <DateFormatter date={post.fields.date} />
           </VCenterRow>

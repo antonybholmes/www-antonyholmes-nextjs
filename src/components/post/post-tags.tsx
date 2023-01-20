@@ -15,7 +15,9 @@ export default function PostTags({ post, className }: IPostProps) {
             return (
               <li key={index}>
                 <PostTagLinkBlue tag={tag} />
-                {index < post.frontmatter.tags.length - 1 && <span>,</span>}
+                {index < post.frontmatter.tags.length - 1 ? (
+                  <span>,</span>
+                ) : null}
               </li>
             )
           })}

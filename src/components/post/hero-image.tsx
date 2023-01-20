@@ -18,12 +18,12 @@ export default function HeroImage({
       containerClassName="group rounded-2xl"
       imgClassName={className}
     >
-      {post.frontmatter.heroCaption !== "" && (
+      {post.frontmatter.heroCaption !== "" ? (
         <HeroImageCaption
           post={post}
           className="trans-ani-700 opacity-0 group-hover:opacity-100"
         />
-      )}
+      ) : null}
     </BasePostImage>
   )
 }
