@@ -3,9 +3,14 @@ import PreviewPost from "./preview-post"
 
 interface IProps extends IPostsProps {
   showAvatar?: boolean
+  showAvatarImage?: boolean
 }
 
-export default function HeadPosts({ posts, showAvatar = true }: IProps) {
+export default function HeadPosts({
+  posts,
+  showAvatar = true,
+  showAvatarImage = false,
+}: IProps) {
   return (
     <section>
       <ul className="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -14,6 +19,7 @@ export default function HeadPosts({ posts, showAvatar = true }: IProps) {
             <PreviewPost
               post={post}
               showAvatar={showAvatar}
+              showAvatarImage={showAvatarImage}
               className="border-t border-slate-200 pt-6"
               imgClassName="h-48 md:h-64 xl:h-72"
             />

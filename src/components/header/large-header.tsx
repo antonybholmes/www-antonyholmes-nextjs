@@ -29,7 +29,7 @@ export default function LargeHeader({
             onClick={onClick}
             showMenu={showMenu}
             headerMode={headerMode}
-            className="-ml-3"
+            className="-ml-3 md:hidden"
           />
           <BaseLink href="/" ariaLabel="Goto Homepage">
             <LogoIconSmall headerMode={headerMode} />

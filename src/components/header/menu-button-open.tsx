@@ -11,7 +11,7 @@ import cn from "../../lib/class-names"
 import BaseButton from "../link/base-button"
 import IMenuProps from "./menu-props"
 
-const DURATION = 0.2
+const DURATION = 0.1
 
 const X1 = 0
 const X2 = 16

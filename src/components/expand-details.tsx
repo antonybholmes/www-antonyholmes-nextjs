@@ -4,6 +4,8 @@ import { ANIMATION_DURATION_S } from "../constants"
 import IChildrenProps from "../interfaces/children-props"
 import cn from "../lib/class-names"
 
+const OPACITY_ANIMATION_S = 2 * ANIMATION_DURATION_S
+
 interface IProps extends IChildrenProps {
   isExpanded: boolean
 }
@@ -13,43 +15,66 @@ export default function ExpandDetails({
   className,
   children,
 }: IProps) {
-  const ref = useRef(null)
+  const containerRef = useRef(null)
+  const innerRef = useRef(null)
   const didMount = useRef(false)
 
   useEffect(() => {
     gsap
       .timeline()
       .to(
-        ref.current,
+        containerRef.current,
         {
           duration: ANIMATION_DURATION_S,
           height: isExpanded
             ? didMount.current
-              ? `${ref.current.scrollHeight}px`
+              ? `${containerRef.current.scrollHeight}px`
               : "auto"
+            : 0,
+
+          ease: Power3.easeOut,
+        },
+        0
+      )
+      // .to(
+      //   containerRef.current,
+      //   {
+      //     duration: OPACITY_ANIMATION_S,
+      //     opacity: isExpanded ? 1 : 0,
+      //     ease: Power3.easeOut,
+      //   },
+      //   0
+      // )
+      .to(
+        innerRef.current,
+        {
+          duration: ANIMATION_DURATION_S,
+          y: isExpanded
+            ? 0
+            : didMount.current
+            ? `-${containerRef.current.scrollHeight}px`
             : 0,
           ease: Power3.easeOut,
         },
         0
       )
-      .to(
-        ref.current,
-        {
-          duration: ANIMATION_DURATION_S,
-          opacity: isExpanded ? 1 : 0,
-          ease: Power3.easeOut,
-        },
-        0
-      )
 
-    if (didMount.current) {
-      didMount.current = true
-    }
+    // .to(
+    //   ref.current,
+    //   {
+    //     duration: OPACITY_ANIMATION_S,
+    //     opacity: isExpanded ? 1 : 0,
+    //     ease: Power3.easeOut,
+    //   },
+    //   0
+    // )
+
+    didMount.current = true
   }, [isExpanded])
 
   return (
-    <div ref={ref} className={cn("overflow-hidden", className)}>
-      {children}
+    <div ref={containerRef} className={cn("overflow-hidden", className)}>
+      <div ref={innerRef}>{children}</div>
     </div>
   )
 }
