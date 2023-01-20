@@ -40,7 +40,7 @@ export default function PlaceholderImage({
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [currentSrc, setCurrentSrc] = useState(BLANK_PNG)
-  const [srcSet, setSrcSet] = useState("")
+  const [srcSet, setSrcSet] = useState(`${BLANK_PNG} ${size[0]}w`)
 
   const containerRef = useRef(null)
   const imageRef = useRef(null)
