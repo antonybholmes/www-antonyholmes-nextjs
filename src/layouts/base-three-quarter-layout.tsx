@@ -1,3 +1,4 @@
+import CondComp from "../components/component"
 import type ICrumbProps from "../interfaces/crumb-props"
 import type ILayoutProps from "../interfaces/layout-props"
 import cn from "../lib/class-names"
@@ -10,11 +11,10 @@ export interface IProps extends ILayoutProps, ICrumbProps {
 export default function BaseThreeQuarterLayout({
   title,
   showTitle = false,
-  showCrumbs = true,
   superTitle,
   subTitle,
   tab,
-  crumbs,
+  crumbs = [],
   isRight = true,
   className,
   children,
@@ -35,16 +35,13 @@ export default function BaseThreeQuarterLayout({
           subTitle={subTitle}
           crumbs={crumbs}
           showTitle={showTitle}
-          showCrumbs={showCrumbs}
         />
 
         {children[0]}
       </article>
-      {isRight ? (
+      <CondComp cond={isRight}>
         <div className="relative col-span-1 hidden xl:block">{children[1]}</div>
-      ) : (
-        <></>
-      )}
+      </CondComp>
     </div>
   )
 }

@@ -1,11 +1,7 @@
-import { useRouter } from "next/router"
-import Breadcrumb from "../components/breadcrumb"
 import ContentDiv from "../components/content-div"
-import PageTitle from "../components/page-title"
 import type ICrumbProps from "../interfaces/crumb-props"
 import type ILayoutProps from "../interfaces/layout-props"
 import type IPageTitleProps from "../interfaces/page-title-props"
-import createCrumbs from "../lib/create-crumbs"
 import BaseLayout from "./base-layout"
 import LayoutTitles from "./layout-titles"
 
@@ -21,16 +17,11 @@ export default function ContentLayout({
   tab,
   isIndexed,
   headerClassName, //"text-white bg-card-blue lg:text-slate-900 lg:bg-white",
-  crumbs,
-  showCrumbs,
+  crumbs = [],
   className,
   headerChildren,
   children,
 }: IProps) {
-  if (!crumbs) {
-    crumbs = createCrumbs(useRouter().asPath)
-  }
-
   return (
     <BaseLayout
       title={title}
@@ -48,7 +39,6 @@ export default function ContentLayout({
             subTitle={subTitle}
             crumbs={crumbs}
             showTitle={showTitle}
-            showCrumbs={showCrumbs}
           />
 
           {

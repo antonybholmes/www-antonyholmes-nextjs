@@ -1,4 +1,5 @@
 import { range } from "lodash"
+import { useRouter } from "next/router"
 import BaseRow from "../../components/base-row"
 import HCenterRow from "../../components/h-center-row"
 import PageTitle from "../../components/page-title"
@@ -16,6 +17,7 @@ import {
   getAuthorPostMap,
   sortPosts,
 } from "../../lib/api/post"
+import createCrumbs from "../../lib/create-crumbs"
 import { getPageCount, getPageItems } from "../../lib/paginate"
 
 interface IProps {
@@ -27,7 +29,10 @@ interface IProps {
 
 export default function Page({ author, posts, page, pages }: IProps) {
   return (
-    <ContentLayout title={author.frontmatter.name}>
+    <ContentLayout
+      title={author.frontmatter.name}
+      crumbs={createCrumbs(useRouter().asPath)}
+    >
       <></>
       <>
         <BaseRow className="gap-x-8">

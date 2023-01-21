@@ -12,9 +12,10 @@ export default function MarkdownLayout({
   superTitle,
   html,
   tab,
+  crumbs = [],
 }: IProps) {
   return (
-    <SideLayout title={title} superTitle={superTitle} tab={tab}>
+    <SideLayout title={title} superTitle={superTitle} tab={tab} crumbs={crumbs}>
       <div>
         <MarkdownBody html={html} className="text-justify" />
       </div>

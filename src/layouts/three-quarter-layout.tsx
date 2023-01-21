@@ -10,11 +10,10 @@ export interface IProps extends ILayoutProps, ICrumbProps {
 export default function ThreeQuarterLayout({
   title,
   showTitle = false,
-  showCrumbs = true,
   superTitle,
   subTitle,
   tab,
-  crumbs,
+  crumbs = [],
   isRight = true,
   className,
   headerChildren,
@@ -25,7 +24,6 @@ export default function ThreeQuarterLayout({
       title={title}
       tab={tab}
       showTitle={false}
-      showCrumbs={false}
       headerChildren={headerChildren}
       className={className}
     >
@@ -36,7 +34,6 @@ export default function ThreeQuarterLayout({
         tab={tab}
         isRight={isRight}
         crumbs={crumbs}
-        showCrumbs={showCrumbs}
       >
         {children}
       </BaseThreeQuarterLayout>

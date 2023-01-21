@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import BaseCol from "../components/base-col"
 import BaseRow from "../components/base-row"
 import BlueLink from "../components/link/blue-link"
@@ -7,12 +8,17 @@ import LogoIcon from "../icons/logo-icon"
 import ContentLayout from "../layouts/content-layout"
 import SideLayout from "../layouts/side-layout"
 import cn from "../lib/class-names"
+import createCrumbs from "../lib/create-crumbs"
 
 const CLS = cn(ROUNDED_BUTTON_CLS, "block px-5 py-2 bg-sky-100 font-medium")
 
 export default function Page() {
   return (
-    <ContentLayout title="Help" showTitle={false}>
+    <ContentLayout
+      title="Help"
+      showTitle={false}
+      crumbs={createCrumbs(useRouter().asPath)}
+    >
       <></>
       <>
         <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-6 text-sm xl:w-1/2">

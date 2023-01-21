@@ -13,7 +13,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": ["node_modules"],
   "include": [
@@ -22,6 +27,7 @@
     "**/*.tsx",
     "src/lib/remark-rehype.d.tsaa",
     "src/lib/remark-html.d.tsw",
-    "src/lib/rehype-stringify.d.s"
+    "src/lib/rehype-stringify.d.s",
+    ".next/types/**/*.ts"
   ]
 }

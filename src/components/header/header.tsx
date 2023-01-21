@@ -1,4 +1,3 @@
-//import Search from '../search/search'
 import { useState } from "react"
 import useScrollListener from "../../hooks/use-scroll-listener"
 import useWindowResize from "../../hooks/use-window-resize"

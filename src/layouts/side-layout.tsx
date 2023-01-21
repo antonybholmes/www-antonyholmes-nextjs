@@ -13,7 +13,7 @@ export default function SideLayout({
   showTitle = true,
   tab,
   isIndexed,
-  crumbs,
+  crumbs = [],
   superTitle,
   subTitle,
   sideClassName,

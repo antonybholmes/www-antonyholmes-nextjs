@@ -1,10 +1,12 @@
+import { useRouter } from "next/router"
 import BlueLink from "../components/link/blue-link"
 import ContentLayout from "../layouts/content-layout"
+import createCrumbs from "../lib/create-crumbs"
 import { HEADER_LINKS } from "../menus"
 
 export default function Page() {
   return (
-    <ContentLayout title="Site Map">
+    <ContentLayout title="Site Map" crumbs={createCrumbs(useRouter().asPath)}>
       <></>
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-4" slot="main">
         <section>

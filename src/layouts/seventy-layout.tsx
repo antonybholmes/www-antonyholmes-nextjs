@@ -1,5 +1,3 @@
-import * as React from "react"
-
 import IChildrenProps from "../interfaces/children-props"
 import MainSideLayout from "./main-side-layout"
 

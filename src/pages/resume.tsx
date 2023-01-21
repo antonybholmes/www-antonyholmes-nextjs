@@ -3,7 +3,6 @@ import jobs from "../../_content/jobs.json"
 import skills from "../../_content/skills.json"
 import volunteer from "../../_content/volunteer.json"
 import ContentLayout from "../layouts/content-layout"
-import { getAllAuthors } from "../lib/api/author"
 import cn from "../lib/class-names"
 
 export default function Page() {
@@ -20,7 +19,7 @@ export default function Page() {
   })
 
   return (
-    <ContentLayout title="Resume" showTitle={false} showCrumbs={false}>
+    <ContentLayout title="Resume" showTitle={false}>
       <></>
       <div className="mb-32 flex flex-col gap-y-32">
         <div>
@@ -136,12 +135,4 @@ export default function Page() {
       </div>
     </ContentLayout>
   )
-}
-
-export const getStaticProps = async () => {
-  const allPeople = getAllAuthors()
-
-  return {
-    props: { allPeople },
-  }
 }

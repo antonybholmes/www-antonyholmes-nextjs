@@ -62,4 +62,4 @@ Antony Holmes reserves the right to do any of the following, at any time, withou
 
 In no event shall Antony Holmes or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption), arising out of the use or inability to use the materials on politeinvestor.com, even if Antony Holmes or an Antony Holmes authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
 
-IN ADDITION, Antony Holmes WILL NOT UNDER ANY CIRCUMSTANCES BE LIABLE FOR LOST PROFITS, CONSEQUENTIAL, INDIRECT, PUNITIVE, EXEMPLARY OR SPECIAL DAMAGES.
+IN ADDITION, ANTONY HOLMES WILL NOT UNDER ANY CIRCUMSTANCES BE LIABLE FOR LOST PROFITS, CONSEQUENTIAL, INDIRECT, PUNITIVE, EXEMPLARY OR SPECIAL DAMAGES.

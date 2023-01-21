@@ -24,10 +24,11 @@ import { SEARCH_RECORDS_PER_PAGE, TEXT_SHOW_MORE } from "../constants"
 import SortIcon from "../icons/sort"
 import ThreeQuarterLayout from "../layouts/three-quarter-layout"
 
+import Accordion from "../components/accordion"
 import BaseCol from "../components/base-col"
 import HCenterCol from "../components/h-center-col"
-import BlueRoundedButton from "../components/link/blue-rounded-button"
 import BaseButton from "../components/link/base-button"
+import BlueRoundedButton from "../components/link/blue-rounded-button"
 import ToggleSwitch from "../components/link/toggle-switch"
 import PubRangeSlider from "../components/publication/pub-range-slider"
 import PubMedLink from "../components/publication/pubmed-link"
@@ -39,7 +40,6 @@ import getJournalPublications from "../lib/pub/journal-publications"
 import pubYearCount from "../lib/pub/pub-year-count"
 import sortPublications from "../lib/pub/sort-publications"
 import { getShortName } from "../lib/text"
-import Accordion from "../components/accordion"
 
 const EMPTY_QUERY = ""
 
@@ -489,8 +489,6 @@ export default function Page({ author, publications }: IProps) {
           className="w-full"
         />
       }
-      crumbs={[["Publications", "/publications"]]}
-      showCrumbs={false}
       className="gap-x-16"
     >
       <div>

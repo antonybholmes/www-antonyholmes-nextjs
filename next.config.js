@@ -19,4 +19,7 @@ module.exports = {
     // placeholder images in the console.
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
+  // experimental: {
+  //   appDir: true,
+  // },
 }

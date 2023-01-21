@@ -9,15 +9,13 @@ export interface IProps extends ILayoutProps, ICrumbProps {}
 export default function LayoutTitles({
   title,
   showTitle = false,
-  showCrumbs = true,
   superTitle,
   subTitle,
-  crumbs,
+  crumbs = [],
 }: IProps) {
   return (
     <>
-      <CondComp cond={showCrumbs}>
-        {" "}
+      <CondComp cond={crumbs.length > 0}>
         <Breadcrumb crumbs={crumbs} className="mb-8" />
       </CondComp>
 

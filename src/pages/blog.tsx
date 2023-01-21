@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import PostsPage from "../components/pages/posts-page"
 import IPost from "../interfaces/post"
 import ContentLayout from "../layouts/content-layout"
@@ -8,6 +9,7 @@ import {
   getAllPosts,
   sortPosts,
 } from "../lib/api/post"
+import createCrumbs from "../lib/create-crumbs"
 import { getPageCount, getPageItems } from "../lib/paginate"
 
 interface IProps {
@@ -17,7 +19,11 @@ interface IProps {
 
 export default function Page({ posts, pages }: IProps) {
   return (
-    <ContentLayout title="Blog" showTitle={false}>
+    <ContentLayout
+      title="Blog"
+      showTitle={false}
+      crumbs={createCrumbs(useRouter().asPath)}
+    >
       <></>
       <PostsPage posts={posts} page={0} pages={pages} showLatest={true} />
       <></>

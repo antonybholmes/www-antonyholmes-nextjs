@@ -1,4 +1,5 @@
 import { range } from "lodash"
+import { useRouter } from "next/router"
 import PostsPage from "../../../components/pages/posts-page"
 import IPost from "../../../interfaces/post"
 import ContentLayout from "../../../layouts/content-layout"
@@ -10,6 +11,7 @@ import {
   getCategoryPostMap,
   sortPosts,
 } from "../../../lib/api/post"
+import createCrumbs from "../../../lib/create-crumbs"
 import { getPageCount, getPageItems } from "../../../lib/paginate"
 import { getUrlFriendlyTag } from "../../../lib/tags"
 import { toCapitalCase } from "../../../lib/text"
@@ -30,7 +32,11 @@ export default function Page({
   pages,
 }: IProps) {
   return (
-    <ContentLayout title={title} superTitle={superTitle}>
+    <ContentLayout
+      title={title}
+      superTitle={superTitle}
+      crumbs={createCrumbs(useRouter().asPath)}
+    >
       <></>
       <PostsPage posts={posts} page={page} pages={pages} />
       <></>

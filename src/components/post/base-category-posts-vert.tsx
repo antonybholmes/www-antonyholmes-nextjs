@@ -76,8 +76,7 @@ const BaseCategoryPostsVert = ({ posts, rightMode = true }: IProps) => {
       </div>
 
       <CondComp cond={rightMode}>
-        {" "}
-        <PreviewPost post={topPost} />{" "}
+        <PreviewPost post={topPost} />
       </CondComp>
     </section>
   )
