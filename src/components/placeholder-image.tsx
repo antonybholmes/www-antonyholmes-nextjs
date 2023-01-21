@@ -32,26 +32,21 @@ export default memo(function PlaceholderImage({
   const dir = p.dir
   const name = p.name
   const ext = p.ext
+  const currentSrc = getSrc(src, name, dir, ext, size)
 
   if (sizes.length === 0) {
     sizes = getSizes(size)
   }
 
   const [isLoaded, setIsLoaded] = useState(false)
-  const [currentSrc, setCurrentSrc] = useState(BLANK_PNG)
-  const [srcSet, setSrcSet] = useState(`${BLANK_PNG} ${size[0]}w`)
 
   useEffect(() => {
     // Based on https://codeburst.io/how-to-progressively-load-images-in-react-using-hooks-80c50fd447cd
 
-    const s = getSrc(src, name, dir, ext, size)
     // start loading original image
     const imageToLoad = new Image()
-    imageToLoad.src = s
+    imageToLoad.src = currentSrc
     imageToLoad.onload = () => {
-      // When image is loaded replace the src and set loaded to true
-      setCurrentSrc(s)
-      setSrcSet(getSrcSet(src, name, dir, ext, sizes))
       setIsLoaded(true)
     }
   }, [src])
@@ -62,14 +57,33 @@ export default memo(function PlaceholderImage({
     >
       <picture>
         <img
+          src={BLANK_PNG}
+          width={size[0]}
+          height={size[1]}
+          className={cn(
+            "w-full",
+            [isLoaded, "hidden", "block"],
+            className,
+            imgClassName
+          )}
+          loading={loading}
+          decoding={decoding}
+          alt={alt}
+        />
+
+        <img
           src={currentSrc}
-          srcSet={srcSet}
+          srcSet={getSrcSet(src, name, dir, ext, sizes)}
           sizes={getSizeStr(size)}
           width={size[0]}
           height={size[1]}
           className={cn(
             "w-full trans-ani-700 transition-placeholder",
-            [isLoaded, "blur-none opacity-100", "blur-lg opacity-50"],
+            [
+              isLoaded,
+              "blur-none opacity-100 visible",
+              "blur-lg opacity-50 invisible",
+            ],
             className,
             imgClassName
           )}
