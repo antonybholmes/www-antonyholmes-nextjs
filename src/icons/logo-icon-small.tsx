@@ -17,10 +17,9 @@ export default function SmallLogoIcon({
       className={cn("group h-10 font-bold", className)}
       style={style}
     >
-      <circle
-        cx="20"
-        cy="20"
-        r="20"
+      <rect
+        width="40"
+        height="40"
         className={cn("trans-ani-300 transition-color ", [
           headerMode === "dark",
           "fill-slate-600",

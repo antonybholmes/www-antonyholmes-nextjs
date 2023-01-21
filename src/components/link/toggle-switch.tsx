@@ -29,7 +29,7 @@ export default function ToggleSwitch({
             rx="8"
             className={cn("trans-ani-300 transition-colors", [
               isSelected,
-              "fill-blue-600",
+              "fill-blue-600 group-hover:fill-blue-500",
               "fill-slate-200 group-hover:fill-slate-300",
             ])}
           />
