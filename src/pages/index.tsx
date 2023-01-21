@@ -37,12 +37,7 @@ export default function Page({ author, posts }) {
               href={getAuthorBaseUrl("Antony Holmes")}
               ariaLabel="View profile"
             >
-              <div className="relative z-10 overflow-hidden">
-                <AvatarImageLarge
-                  author={author}
-                  className="max-w-64 overflow-hidden"
-                />
-              </div>
+              <AvatarImageLarge author={author} className="w-64 max-w-64" />
             </BaseLink>
 
             {/*<VCenterRow className="justify-center text-sm font-semibold">
@@ -130,7 +125,7 @@ export default function Page({ author, posts }) {
         <></>
       </ContentDiv>
 
-      <section className="mt-16 bg-gradient-to-b from-slate-50 to-white pt-16 lg:pt-32">
+      <section className="pt-16">
         <ContentDiv>
           <></>
           <PostsPage posts={posts} page={0} pages={1} />
