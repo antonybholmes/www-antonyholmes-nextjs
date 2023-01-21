@@ -92,13 +92,15 @@ export default function Page({ author, posts }) {
                 . I think I mostly succeeded.
               </p>
 
-              <p className="text-center ">
+              <p className="text-center">
                 I have an aptly named publications page where you can view all
                 of the scientific literature I have written, primarily focused
                 on cancer genetics.
               </p>
 
-              <p>My life story probably won't be optioned.</p>
+              <p className="text-center">
+                My life story probably won't be optioned.
+              </p>
             </HCenterCol>
 
             <div className="flex flex-col items-center justify-center gap-6  xl:flex-row">
@@ -114,7 +116,7 @@ export default function Page({ author, posts }) {
                 className={cn(
                   OUTLINE_CLS,
                   SECONDARY_BUTTON_CLS,
-                  "w-full  rounded-lg stroke-slate-900 px-4 py-2.5 font-semibold shadow-lg xl:w-auto"
+                  "w-full  rounded-lg stroke-slate-900 px-4 py-2.5 font-semibold xl:w-auto"
                 )}
               >
                 <VCenterRow className="gap-x-2">

@@ -44,7 +44,7 @@ export default function Header({
 
       <header
         className={cn(
-          "trans-ani-700 fixed top-0 z-50 block w-full py-3 backdrop-blur transition-all",
+          "trans-ani-700 fixed top-0 z-50 block w-full backdrop-blur transition-all",
           [headerMode === "light", "bg-white/95", "bg-slate-800/95"],
           [
             scrollY > 10,

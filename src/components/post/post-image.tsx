@@ -18,8 +18,7 @@ export default function PostImage({
       post={post}
       size={size}
       loading={loading}
-      className={className}
-      containerClassName={cn("rounded-xl", className)}
+      className={cn("rounded-xl", className)}
       imgClassName="scale-102 hover:scale-105"
     />
   )

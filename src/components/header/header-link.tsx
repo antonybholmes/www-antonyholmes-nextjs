@@ -1,4 +1,3 @@
-import { useRef, useState } from "react"
 import ILink from "../../interfaces/link"
 import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
@@ -35,25 +34,13 @@ export default function HeaderLink({
   scrollY,
   headerMode = "light",
 }: IProps) {
-  const ref = useRef(null)
-  const [hover, setHover] = useState(false)
-  const [down, setDown] = useState(false)
+  // const ref = useRef(null)
+  // const [hover, setHover] = useState(false)
+  //const [down, setDown] = useState(false)
 
-  const isFirstRun = useRef(true)
-  const t1 = useRef(null)
-  const t2 = useRef(null)
-
-  const onMouseEnter = () => {
-    if (!selected) {
-      setHover(true)
-    }
-  }
-
-  const onMouseLeave = () => {
-    if (!selected) {
-      setHover(false)
-    }
-  }
+  // const isFirstRun = useRef(true)
+  // const t1 = useRef(null)
+  // const t2 = useRef(null)
 
   // useEffect(() => {
   //   // @ts-ignore
@@ -149,10 +136,10 @@ export default function HeaderLink({
     <BaseLink
       href={link.url}
       ariaLabel={`View ${link.name}`}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onMouseDown={() => setDown(true)}
-      onMouseUp={() => setDown(false)}
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
+      // onMouseDown={() => setDown(true)}
+      // onMouseUp={() => setDown(false)}
     >
       <VCenterCol
         className={cn(LINK_CLS, [
@@ -160,14 +147,8 @@ export default function HeaderLink({
           [headerMode === "dark", "text-slate-50", "text-blue-600"],
           [
             headerMode === "dark",
-            [
-              [down, "bg-white/10"],
-              "text-white/60 hover:bg-slate-600 hover:text-white",
-            ],
-            [
-              [down, "border-blue-500 bg-slate-300"],
-              "text-slate-500 hover:bg-slate-200 hover:text-slate-900",
-            ],
+            "text-white/60 hover:bg-slate-600 hover:bg-white/10 hover:text-white active:bg-white/20",
+            "text-slate-500 hover:bg-slate-100 hover:text-slate-900 active:border-blue-500 active:bg-slate-200",
           ],
         ])}
       >

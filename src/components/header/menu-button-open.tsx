@@ -1,11 +1,5 @@
 import { gsap } from "gsap"
-import {
-  FocusEventHandler,
-  MouseEventHandler,
-  useEffect,
-  useRef,
-  useState,
-} from "react"
+import { useEffect, useRef, useState } from "react"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
 import BaseButton from "../link/base-button"
@@ -19,10 +13,6 @@ const Y1 = 4
 const Y2 = 8
 const Y3 = 12
 
-const LINE_STYLE = {
-  strokeWidth: 2,
-}
-
 export interface IMenuButtonProps extends IMenuProps, IClassProps {
   showMenu: boolean
   headerMode?: string
@@ -35,8 +25,8 @@ export default function MenuButtonOpen({
   className,
   style,
 }: IMenuButtonProps) {
-  const [focus, setFocus] = useState(false)
-  const [hover, setHover] = useState(false)
+  //const [focus, setFocus] = useState(false)
+  //const [hover, setHover] = useState(false)
 
   //const t1 = useRef(null)
   //const t2 = useRef(null)
@@ -226,45 +216,42 @@ export default function MenuButtonOpen({
     }
   }, [showMenu])
 
-  function onMouseEnter() {
-    setHover(true)
-  }
+  // function onMouseEnter() {
+  //   setHover(true)
+  // }
 
-  function onMouseLeave() {
-    setHover(false)
-  }
+  // function onMouseLeave() {
+  //   setHover(false)
+  // }
 
-  function onFocus() {
-    setFocus(true)
-  }
+  // function onFocus() {
+  //   setFocus(true)
+  // }
 
-  function onBlur() {
-    setFocus(false)
-  }
+  // function onBlur() {
+  //   setFocus(false)
+  // }
 
-  const cls = cn("stroke-1", [
-    headerMode === "dark",
-    "stroke-white",
-    "stroke-slate-900",
-  ])
+  const cls = cn([headerMode === "dark", "stroke-white", "stroke-slate-900"])
 
   return (
     <BaseButton
       onClick={onClick}
       className={cn(
-        "group relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center rounded-full",
+        "relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center trans-ani-300 transition-color",
         [
-          headerMode !== "dark",
-          "trans-ani-300 transition-color group hover:bg-slate-200",
+          headerMode === "dark",
+          "hover:bg-white/10 active:bg-white/20",
+          "hover:bg-slate-200 active:bg-slate-300",
         ],
         className
       )}
       style={style}
       ariaLabel={showMenu ? "Close Menu" : "Open Menu"}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onFocus={onFocus}
-      onBlur={onBlur}
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
+      // onFocus={onFocus}
+      // onBlur={onBlur}
     >
       {/* <span ref={refl1} className={cn(cls, "top-7")} style={style} />
       <span ref={refl3} className={cn(cls, "top-9")} style={style} /> */}
