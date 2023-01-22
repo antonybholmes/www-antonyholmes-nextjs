@@ -41,7 +41,7 @@ export default function PostCategoryLink({
             ariaLabel={`Read more ${path[0]} posts`}
             underline={true}
             className={cn(
-              "bg-gradient-to-r from-purple-500 to-red-500 bg-clip-text font-bold text-transparent",
+              "bg-gradient-to-r from-violet-500 to-red-500 bg-clip-text font-bold text-transparent",
               textSize,
               className
             )}
