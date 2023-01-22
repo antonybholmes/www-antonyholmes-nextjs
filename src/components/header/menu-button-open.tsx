@@ -238,7 +238,7 @@ export default function MenuButtonOpen({
     <BaseButton
       onClick={onClick}
       className={cn(
-        "relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center trans-ani-300 transition-color",
+        "relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center trans-ani-300 transition-color rounded",
         [
           headerMode === "dark",
           "hover:bg-white/10 active:bg-white/20",

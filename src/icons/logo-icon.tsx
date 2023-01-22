@@ -14,7 +14,7 @@ export default function LogoIcon({
     <svg
       viewBox="0 0 160 40"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("group h-10 font-bold", className)}
+      className={cn("group h-10 font-bold rounded", className)}
       style={style}
     >
       <circle
