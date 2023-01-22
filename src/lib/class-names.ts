@@ -1,6 +1,8 @@
 export function clean(cn: string) {
   // replace multi spaces globally and ignore new lines
-  return cn.replace(/(\s+|\r\n|\n|\r)/gm, " ").trim()
+  const ret = cn.replace(/(\s+|\r\n|\n|\r)/gm, " ").trim()
+
+  return ret !== "" ? ret : undefined
 }
 
 type CSSClass =

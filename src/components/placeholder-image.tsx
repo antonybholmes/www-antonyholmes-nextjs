@@ -29,18 +29,22 @@ export default memo(function PlaceholderImage({
   children,
 }: IProps) {
   const p = useMemo(() => parse(src), [src])
+
   const currentSrc = useMemo(
     () => getSrc(src, p.name, p.dir, p.ext, size),
     [src]
   )
+
   const currentSizes = useMemo(
     () => (sizes.length === 0 ? getSizes(size) : sizes),
     [src]
   )
+
   const currentSrcSet = useMemo(
     () => getSrcSet(src, p.name, p.dir, p.ext, currentSizes),
     [src]
   )
+
   const currentSizeStr = useMemo(() => getSizeStr(size), [src])
 
   const [isLoaded, setIsLoaded] = useState(false)
