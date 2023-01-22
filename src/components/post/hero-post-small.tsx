@@ -32,24 +32,19 @@ export default function HeroPostSmall({
       </div>
       <BaseCol className="col-span-3 gap-y-1 lg:col-span-3 xl:col-span-2 ">
         <BaseCol>
-          <PostCategoryLink post={post} textSize="text-2xl md:text-base" />
-          <PostTitleLink post={post} className="text-2xl" />
+          <PostCategoryLink post={post} textSize="text-xl md:text-base" />
+          <PostTitleLink post={post} className="text-2xl lg:text-xl" />
         </BaseCol>
         <CondComp cond={showDescription}>
           <HTML html={post.excerpt} className="text-sm text-slate-600" />
         </CondComp>
 
-        {showAvatar ? (
-          <CompactAvatars
-            authors={post.authors}
-            showImages={false}
-            className="mt-1"
-          />
-        ) : (
-          <></>
-        )}
-
-        <DateFormatter date={post.fields.date} />
+        <BaseCol className="xl:gap-y-1">
+          <CondComp cond={showAvatar}>
+            <CompactAvatars authors={post.authors} showImages={false} />
+          </CondComp>
+          <DateFormatter date={post.fields.date} />
+        </BaseCol>
       </BaseCol>
     </article>
   )

@@ -42,7 +42,7 @@ export default function CompactAvatars({
         <></>
       )}
 
-      <ul className="flex flex-row flex-wrap items-center gap-x-1 text-sm font-bold">
+      <ul className="flex flex-row flex-wrap items-center gap-x-1 text-sm font-semibold">
         {authors.map((author, index) => (
           <li key={index}>
             <BaseLink

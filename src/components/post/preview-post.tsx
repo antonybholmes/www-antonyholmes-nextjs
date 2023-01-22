@@ -29,7 +29,7 @@ export default function PreviewPost({
   imgClassName = "h-64 md:h-72",
   headerClassName = "text-2xl md:text-4xl",
   innerClassName,
-  contentClassName = "text-base",
+  contentClassName = "text-sm md:text-base",
   showSection = true,
   showDescription = true,
   showAvatar = true,
@@ -71,14 +71,16 @@ export default function PreviewPost({
             </VCenterRow>
           }
         >
-          <CondComp cond={showAvatar}>
-            <CompactAvatars
-              authors={post.authors}
-              showImages={showAvatarImage}
-            />
-          </CondComp>
+          <BaseCol className="lg:gap-y-1">
+            <CondComp cond={showAvatar}>
+              <CompactAvatars
+                authors={post.authors}
+                showImages={showAvatarImage}
+              />
+            </CondComp>
 
-          <DateFormatter date={post.fields.date} />
+            <DateFormatter date={post.fields.date} />
+          </BaseCol>
         </CondComp>
       </BaseCol>
     </article>

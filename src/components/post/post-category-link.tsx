@@ -12,7 +12,7 @@ interface IProps extends IPostProps {
 
 export default function PostCategoryLink({
   post,
-  textSize = "text-2xl md:text-lg",
+  textSize = "text-xl md:text-lg",
   showSections = false,
   className,
 }: IProps) {
