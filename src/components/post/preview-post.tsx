@@ -56,32 +56,25 @@ export default function PreviewPost({
           />
         </CondComp>
 
-        <CondComp
-          cond={dateBelow}
-          c2={
-            <VCenterRow className="justify-between">
-              <CondComp cond={showAvatar}>
-                <CompactAvatars
-                  authors={post.authors}
-                  showImages={showAvatarImage}
-                />
-              </CondComp>
-
-              <DateFormatter date={post.fields.date} />
-            </VCenterRow>
-          }
+        <div
+          className={cn("flex", [
+            dateBelow,
+            "flex-col lg:gap-y-1",
+            [
+              "flex-col md:flex-row md:justify-between md:items-center",
+              [showAvatarImage, "gap-y-1", "lg:gap-y-1"],
+            ],
+          ])}
         >
-          <BaseCol className="lg:gap-y-1">
-            <CondComp cond={showAvatar}>
-              <CompactAvatars
-                authors={post.authors}
-                showImages={showAvatarImage}
-              />
-            </CondComp>
+          <CondComp cond={showAvatar}>
+            <CompactAvatars
+              authors={post.authors}
+              showImages={showAvatarImage}
+            />
+          </CondComp>
 
-            <DateFormatter date={post.fields.date} />
-          </BaseCol>
-        </CondComp>
+          <DateFormatter date={post.fields.date} />
+        </div>
       </BaseCol>
     </article>
   )
