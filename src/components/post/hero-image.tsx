@@ -1,5 +1,6 @@
 import IImageSizeProps from "../../interfaces/image-size-props"
 import IPostProps from "../../interfaces/post-props"
+import cn from "../../lib/class-names"
 import BasePostImage from "./base-post-image"
 import HeroImageCaption from "./hero-image-caption"
 
@@ -14,8 +15,8 @@ export default function HeroImage({
     <BasePostImage
       post={post}
       size={size}
-      className={className}
-      containerClassName="group rounded-2xl"
+      className={cn("rounded-2xl", className)}
+      containerClassName="group"
       imgClassName={className}
     >
       {post.frontmatter.heroCaption !== "" ? (

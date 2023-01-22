@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 import { BLANK_PNG } from "../constants"
 import IChildrenProps from "../interfaces/children-props"
 import IImageProps from "../interfaces/image-props"
@@ -28,15 +28,20 @@ export default memo(function PlaceholderImage({
   style,
   children,
 }: IProps) {
-  const p = parse(src)
-  const dir = p.dir
-  const name = p.name
-  const ext = p.ext
-  const currentSrc = getSrc(src, name, dir, ext, size)
-
-  if (sizes.length === 0) {
-    sizes = getSizes(size)
-  }
+  const p = useMemo(() => parse(src), [src])
+  const currentSrc = useMemo(
+    () => getSrc(src, p.name, p.dir, p.ext, size),
+    [src]
+  )
+  const currentSizes = useMemo(
+    () => (sizes.length === 0 ? getSizes(size) : sizes),
+    [src]
+  )
+  const currentSrcSet = useMemo(
+    () => getSrcSet(src, p.name, p.dir, p.ext, currentSizes),
+    [src]
+  )
+  const currentSizeStr = useMemo(() => getSizeStr(size), [src])
 
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -57,33 +62,14 @@ export default memo(function PlaceholderImage({
     >
       <picture>
         <img
-          src={BLANK_PNG}
-          width={size[0]}
-          height={size[1]}
-          className={cn(
-            "w-full",
-            [isLoaded, "hidden", "block"],
-            className,
-            imgClassName
-          )}
-          loading={loading}
-          decoding={decoding}
-          alt={alt}
-        />
-
-        <img
-          src={currentSrc}
-          srcSet={getSrcSet(src, name, dir, ext, sizes)}
-          sizes={getSizeStr(size)}
+          src={isLoaded ? currentSrc : BLANK_PNG}
+          srcSet={isLoaded ? currentSrcSet : undefined}
+          sizes={currentSizeStr}
           width={size[0]}
           height={size[1]}
           className={cn(
             "w-full trans-ani-700 transition-placeholder",
-            [
-              isLoaded,
-              "blur-none opacity-100 visible",
-              "blur-lg opacity-50 invisible",
-            ],
+            [isLoaded, "blur-none opacity-100", "blur-lg opacity-50"],
             className,
             imgClassName
           )}
