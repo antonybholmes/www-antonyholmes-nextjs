@@ -1,3 +1,4 @@
+import { animated, useSpring } from "@react-spring/web"
 import { gsap } from "gsap"
 import { useEffect, useRef } from "react"
 import { ANIMATION_DURATION_S } from "../../constants"
@@ -25,9 +26,29 @@ export default function MenuOverlay({
   const overlayRef = useRef(null)
   const sideMenuRef = useRef(null)
 
-  // useEffect(() => {
-  //   animateMenu()
-  // }, [])
+  const overlayStyle = useSpring({
+    from: {
+      opacity: showMenu ? 0 : 1,
+      //visibility: showMenu ? "hidden" : "visible",
+      width: showMenu ? "0%" : "100%",
+    },
+    to: {
+      opacity: showMenu ? 1 : 0,
+      //visibility: showMenu ? "visible" : "hidden",
+      width: showMenu ? "100%" : "0%",
+    },
+  })
+
+  const sideMenuStyle = useSpring({
+    from: {
+      //opacity: showMenu ? 0 : 1,
+      x: showMenu ? "-2rem" : "0rem",
+    },
+    to: {
+      //opacity: showMenu ? 1 : 0,
+      x: showMenu ? "0rem" : "-2rem",
+    },
+  })
 
   useEffect(() => {
     animateMenu()
@@ -36,98 +57,95 @@ export default function MenuOverlay({
   function animateMenu() {
     if (showMenu) {
       // @ts-ignore
-      gsap
-        .timeline()
-        .set(
-          overlayRef.current,
-          {
-            visibility: "visible",
-          },
-          0
-        )
-        .set(
-          sideMenuRef.current,
-          {
-            visibility: "visible",
-          },
-          0
-        )
-        .to(
-          overlayRef.current,
-          {
-            duration: ANIMATION_DURATION_S,
-            opacity: 1,
-          },
-          0
-        )
-        .to(
-          sideMenuRef.current,
-          {
-            duration: ANIMATION_DURATION_S,
-            opacity: 1,
-          },
-          0
-        )
-        .to(
-          sideMenuRef.current,
-          {
-            x: 0,
-            duration: ANIMATION_DURATION_S,
-          },
-          0
-        )
+      gsap.timeline()
+      // .set(
+      //   overlayRef.current,
+      //   {
+      //     visibility: "visible",
+      //   },
+      //   0
+      // )
+      // .set(
+      //   sideMenuRef.current,
+      //   {
+      //     visibility: "visible",
+      //   },
+      //   0
+      // )
+      // .to(
+      //   overlayRef.current,
+      //   {
+      //     duration: ANIMATION_DURATION_S,
+      //     opacity: 1,
+      //   },
+      //   0
+      // )
+      // .to(
+      //   sideMenuRef.current,
+      //   {
+      //     duration: ANIMATION_DURATION_S,
+      //     opacity: 1,
+      //   },
+      //   0
+      // )
+      // .to(
+      //   sideMenuRef.current,
+      //   {
+      //     x: 0,
+      //     duration: ANIMATION_DURATION_S,
+      //   },
+      //   0
+      // )
     } else {
-      gsap
-        .timeline()
-
-        .to(
-          overlayRef.current,
-          {
-            duration: ANIMATION_DURATION_S,
-            opacity: 0,
-          },
-          0
-        )
-        .to(
-          overlayRef.current,
-          {
-            duration: ANIMATION_DURATION_S,
-            opacity: 0,
-          },
-          0
-        )
-        .to(
-          sideMenuRef.current,
-          {
-            duration: ANIMATION_DURATION_S,
-            opacity: 0,
-          },
-          0
-        )
-        .to(
-          sideMenuRef.current,
-          {
-            x: "-4rem",
-            duration: ANIMATION_DURATION_S,
-          },
-          0
-        )
-        .set(
-          overlayRef.current,
-          {
-            visibility: "hidden",
-            delay: ANIMATION_DURATION_S,
-          },
-          0
-        )
-        .set(
-          sideMenuRef.current,
-          {
-            visibility: "hidden",
-            delay: ANIMATION_DURATION_S,
-          },
-          0
-        )
+      gsap.timeline()
+      // .to(
+      //   overlayRef.current,
+      //   {
+      //     duration: ANIMATION_DURATION_S,
+      //     opacity: 0,
+      //   },
+      //   0
+      // )
+      // .to(
+      //   overlayRef.current,
+      //   {
+      //     duration: ANIMATION_DURATION_S,
+      //     opacity: 0,
+      //   },
+      //   0
+      // )
+      // .to(
+      //   sideMenuRef.current,
+      //   {
+      //     duration: ANIMATION_DURATION_S,
+      //     opacity: 0,
+      //   },
+      //   0
+      // )
+      // .to(
+      //   sideMenuRef.current,
+      //   {
+      //     x: "-4rem",
+      //     duration: ANIMATION_DURATION_S,
+      //   },
+      //   0
+      // )
+      // .set(
+      //   overlayRef.current,
+      //   {
+      //     visibility: "hidden",
+      //     delay: ANIMATION_DURATION_S,
+      //   },
+      //   0
+      // )
+      // .set(
+      //   sideMenuRef.current,
+      //   {
+      //     visibility: "hidden",
+      //     delay: ANIMATION_DURATION_S,
+      //   },
+      //   0
+      // )
     }
   }
 
@@ -150,17 +168,17 @@ export default function MenuOverlay({
   // }, [showMenu])
 
   return (
-    <div
-      ref={overlayRef}
+    <animated.div
+      //ref={overlayRef}
       className={cn(
-        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/70 backdrop-blur-sm"
+        "fixed left-0 top-0 z-100 flex h-screen w-0 flex-row bg-black/70 backdrop-blur-sm overflow-hidden"
       )}
-      style={{ visibility: "hidden" }}
+      style={overlayStyle}
     >
-      <div
-        ref={sideMenuRef}
+      <animated.div
+        //ref={sideMenuRef}
         className="h-full w-72 bg-white"
-        style={{ visibility: "hidden" }}
+        style={sideMenuStyle}
       >
         <VCenterRow className="gap-x-5 px-5 py-3">
           <MenuOpenButton showMenu={showMenu} onClick={onClick} />
@@ -171,7 +189,7 @@ export default function MenuOverlay({
           </div>
         </VCenterRow>
         <MenuLinks title={title} tab={tab} onClick={onClick} className="grow" />
-      </div>
+      </animated.div>
       <div onClick={onClick} className="h-full grow">
         {/* <HCenterRow>
           <MenuOpenButton
@@ -181,6 +199,6 @@ export default function MenuOverlay({
           />
         </HCenterRow>  */}
       </div>
-    </div>
+    </animated.div>
   )
 }
