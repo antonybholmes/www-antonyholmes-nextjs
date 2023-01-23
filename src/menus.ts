@@ -1,4 +1,4 @@
-import env from "../env.json"
+import env from "../config.json"
 
 export const HEADER_LINKS = env.menus.HEADER_LINKS
 export const FOOTER_LINKS = env.menus.FOOTER_LINKS

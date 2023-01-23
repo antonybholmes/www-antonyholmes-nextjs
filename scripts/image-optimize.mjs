@@ -1,7 +1,6 @@
-const fs = require("fs-extra")
-const path = require("path")
-const { exit } = require("process")
-const sharp = require("sharp")
+import fs from "fs-extra"
+import path from "path"
+import sharp from "sharp"
 
 let maxSize = "1024x1024"
 let sizes = [40, 80, 160, 320, 640]
@@ -24,7 +23,7 @@ files
     const name = path.parse(file).name
 
     sizes.forEach(size => {
-      out = `${dir}/opt/${name.replace(maxSize, `${size}x${size}`)}.webp`
+      const out = `${dir}/opt/${name.replace(maxSize, `${size}x${size}`)}.webp`
 
       if (!fs.existsSync(out)) {
         console.log(out)
@@ -56,7 +55,7 @@ files
     const name = path.parse(file).name
 
     sizes.forEach(size => {
-      out = `${dir}/opt/${name.replace(
+      const out = `${dir}/opt/${name.replace(
         maxSize,
         `${size}x${Math.floor(size / 2)}`
       )}.webp`

@@ -9,7 +9,7 @@ function getDate(slug) {
   return match ? match.slice(1, 4).join("-") : "2022-01-01"
 }
 
-const ENV = JSON.parse(fs.readFileSync("./env.json"))
+const config = JSON.parse(fs.readFileSync("./config.json"))
 
 const POSTS_DIR = path.join(process.cwd(), "_content", "posts")
 
@@ -39,16 +39,16 @@ const posts = fs
 const feedOptions = {
   title: "Antony Holmes | RSS Feed",
   //description: "Welcome to this blog posts!",
-  id: ENV.SITE_URL,
-  link: ENV.SITE_URL,
+  id: config.SITE_URL,
+  link: config.SITE_URL,
   //image: `${ENV.SITE_URL}/logo.png`,
   //favicon: `${ENV.SITE_URL}/favicon.png`,
   copyright: `Copyright (C) ${new Date().getFullYear()} Antony Holmes. All rights reserved.`,
   //generator: "Feed for Node.js",
   feedLinks: {
-    rss2: `${ENV.SITE_URL}/rss.xml`,
-    json: `${ENV.SITE_URL}/rss.json`,
-    atom: `${ENV.SITE_URL}/atom.xml`,
+    rss2: `${config.SITE_URL}/rss.xml`,
+    json: `${config.SITE_URL}/rss.json`,
+    atom: `${config.SITE_URL}/atom.xml`,
   },
 }
 
@@ -57,8 +57,8 @@ const feed = new Feed(feedOptions)
 posts.forEach(post => {
   feed.addItem({
     title: post.frontmatter.title,
-    id: `${ENV.SITE_URL}/blog/${post.slug}`,
-    link: `${ENV.SITE_URL}/blog/${post.slug}`,
+    id: `${config.SITE_URL}/blog/${post.slug}`,
+    link: `${config.SITE_URL}/blog/${post.slug}`,
     //description: post.description,
     date: new Date(post.date),
   })
