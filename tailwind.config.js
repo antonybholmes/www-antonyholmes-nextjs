@@ -193,21 +193,10 @@ module.exports = {
           "0%": { opacity: 1 },
           "100%": { opacity: 0, display: "none" },
         },
-
-        "overlay-show": {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-        "overlay-hide": {
-          "0%": { opacity: 1 },
-          "100%": { opacity: 0, visibility: "hidden" },
-        },
       },
       animation: {
         "header-links-show": "header-links-show 300ms ease-out forwards",
         "header-links-hide": "header-links-hide 300ms ease-out forwards",
-        "overlay-show": "overlay-show 1000ms ease-out forwards",
-        "overlay-hide": "overlay-hide 300ms ease-out forwards",
       },
       opacity: {
         98: ".98",

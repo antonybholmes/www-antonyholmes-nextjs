@@ -1,7 +1,3 @@
-import { animated, useSpring } from "@react-spring/web"
-import { gsap } from "gsap"
-import { useEffect, useRef } from "react"
-import { ANIMATION_DURATION_S } from "../../constants"
 import SmallLogoIcon from "../../icons/logo-icon-small"
 import cn from "../../lib/class-names"
 import BaseLink from "../link/base-link"
@@ -23,131 +19,134 @@ export default function MenuOverlay({
   showMenu,
   onClick,
 }: IMenuOverlayProps) {
-  const overlayRef = useRef(null)
-  const sideMenuRef = useRef(null)
+  // const overlayRef = useRef(null)
+  // const sideMenuRef = useRef(null)
 
-  const overlayStyle = useSpring({
-    from: {
-      opacity: showMenu ? 0 : 1,
-      //visibility: showMenu ? "hidden" : "visible",
-      width: showMenu ? "0%" : "100%",
-    },
-    to: {
-      opacity: showMenu ? 1 : 0,
-      //visibility: showMenu ? "visible" : "hidden",
-      width: showMenu ? "100%" : "0%",
-    },
-  })
+  // const overlayStyle = useSpring({
+  //   from: {
+  //     opacity: showMenu ? 0 : 1,
+  //     visibility: "visible",
+  //     //width: showMenu ? "0%" : "100%",
+  //   },
+  //   to: [
+  //     {
+  //       opacity: showMenu ? 1 : 0,
+  //     },
+  //     { visibility: showMenu ? "visible" : "hidden" },
+  //   ],
+  //   //visibility: showMenu ? "visible" : "hidden",
+  //   //width: showMenu ? "100%" : "0%",
+  // })
 
-  const sideMenuStyle = useSpring({
-    from: {
-      //opacity: showMenu ? 0 : 1,
-      x: showMenu ? "-2rem" : "0rem",
-    },
-    to: {
-      //opacity: showMenu ? 1 : 0,
-      x: showMenu ? "0rem" : "-2rem",
-    },
-  })
+  // const sideMenuStyle = useSpring({
+  //   from: {
+  //     //opacity: showMenu ? 0 : 1,
+  //     x: showMenu ? "-2rem" : "0rem",
+  //   },
+  //   to: {
+  //     //opacity: showMenu ? 1 : 0,
+  //     x: showMenu ? "0rem" : "-2rem",
+  //   },
+  // })
 
-  useEffect(() => {
-    animateMenu()
-  }, [showMenu])
+  // useEffect(() => {
+  //   animateMenu()
+  // }, [showMenu])
 
-  function animateMenu() {
-    if (showMenu) {
-      // @ts-ignore
-      gsap.timeline()
-      // .set(
-      //   overlayRef.current,
-      //   {
-      //     visibility: "visible",
-      //   },
-      //   0
-      // )
-      // .set(
-      //   sideMenuRef.current,
-      //   {
-      //     visibility: "visible",
-      //   },
-      //   0
-      // )
-      // .to(
-      //   overlayRef.current,
-      //   {
-      //     duration: ANIMATION_DURATION_S,
-      //     opacity: 1,
-      //   },
-      //   0
-      // )
-      // .to(
-      //   sideMenuRef.current,
-      //   {
-      //     duration: ANIMATION_DURATION_S,
-      //     opacity: 1,
-      //   },
-      //   0
-      // )
-      // .to(
-      //   sideMenuRef.current,
-      //   {
-      //     x: 0,
-      //     duration: ANIMATION_DURATION_S,
-      //   },
-      //   0
-      // )
-    } else {
-      gsap.timeline()
-      // .to(
-      //   overlayRef.current,
-      //   {
-      //     duration: ANIMATION_DURATION_S,
-      //     opacity: 0,
-      //   },
-      //   0
-      // )
-      // .to(
-      //   overlayRef.current,
-      //   {
-      //     duration: ANIMATION_DURATION_S,
-      //     opacity: 0,
-      //   },
-      //   0
-      // )
-      // .to(
-      //   sideMenuRef.current,
-      //   {
-      //     duration: ANIMATION_DURATION_S,
-      //     opacity: 0,
-      //   },
-      //   0
-      // )
-      // .to(
-      //   sideMenuRef.current,
-      //   {
-      //     x: "-4rem",
-      //     duration: ANIMATION_DURATION_S,
-      //   },
-      //   0
-      // )
-      // .set(
-      //   overlayRef.current,
-      //   {
-      //     visibility: "hidden",
-      //     delay: ANIMATION_DURATION_S,
-      //   },
-      //   0
-      // )
-      // .set(
-      //   sideMenuRef.current,
-      //   {
-      //     visibility: "hidden",
-      //     delay: ANIMATION_DURATION_S,
-      //   },
-      //   0
-      // )
-    }
-  }
+  // function animateMenu() {
+  //   if (showMenu) {
+  //     // @ts-ignore
+  //     gsap.timeline()
+  //     // .set(
+  //     //   overlayRef.current,
+  //     //   {
+  //     //     visibility: "visible",
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .set(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     visibility: "visible",
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   overlayRef.current,
+  //     //   {
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //     opacity: 1,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //     opacity: 1,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     x: 0,
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //   },
+  //     //   0
+  //     // )
+  //   } else {
+  //     gsap.timeline()
+  //     // .to(
+  //     //   overlayRef.current,
+  //     //   {
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //     opacity: 0,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   overlayRef.current,
+  //     //   {
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //     opacity: 0,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //     opacity: 0,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .to(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     x: "-4rem",
+  //     //     duration: ANIMATION_DURATION_S,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .set(
+  //     //   overlayRef.current,
+  //     //   {
+  //     //     visibility: "hidden",
+  //     //     delay: ANIMATION_DURATION_S,
+  //     //   },
+  //     //   0
+  //     // )
+  //     // .set(
+  //     //   sideMenuRef.current,
+  //     //   {
+  //     //     visibility: "hidden",
+  //     //     delay: ANIMATION_DURATION_S,
+  //     //   },
+  //     //   0
+  //     // )
+  //   }
+  // }
 
   // useEffect(() => {
   //   if (!isFirstRun.current) {
@@ -168,19 +167,25 @@ export default function MenuOverlay({
   // }, [showMenu])
 
   return (
-    <animated.div
+    <div
       //ref={overlayRef}
       className={cn(
-        "fixed left-0 top-0 z-100 flex h-screen w-0 flex-row bg-black/70 backdrop-blur-sm overflow-hidden"
+        "fixed left-0 top-0 z-100 flex h-screen w-full flex-row bg-black/70 backdrop-blur-sm overflow-hidden",
+        [
+          showMenu,
+          "overlay-show opacity-100 visible",
+          "overlay-hide opacity-0 invisible",
+        ]
       )}
-      style={overlayStyle}
     >
-      <animated.div
+      <div
         //ref={sideMenuRef}
-        className="h-full w-72 bg-white"
-        style={sideMenuStyle}
+        className={cn(
+          "h-full w-72 bg-white trans-ani-300 transition-translation",
+          [showMenu, "ml-0", "-ml-8"]
+        )}
       >
-        <VCenterRow className="gap-x-5 px-5 py-3">
+        <VCenterRow className="gap-x-2 px-5 py-3">
           <MenuOpenButton showMenu={showMenu} onClick={onClick} />
           <div>
             <BaseLink href="/">
@@ -189,7 +194,7 @@ export default function MenuOverlay({
           </div>
         </VCenterRow>
         <MenuLinks title={title} tab={tab} onClick={onClick} className="grow" />
-      </animated.div>
+      </div>
       <div onClick={onClick} className="h-full grow">
         {/* <HCenterRow>
           <MenuOpenButton
@@ -199,6 +204,6 @@ export default function MenuOverlay({
           />
         </HCenterRow>  */}
       </div>
-    </animated.div>
+    </div>
   )
 }

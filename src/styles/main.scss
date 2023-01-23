@@ -160,3 +160,11 @@ td {
   margin-left: -10px;
   margin-top: -10px;
 }
+
+.overlay-show {
+  transition: opacity 300ms ease-out, visibility 0s ease-out;
+}
+
+.overlay-hide {
+  transition: opacity 300ms ease-out, visibility 0s ease-out 300ms;
+}

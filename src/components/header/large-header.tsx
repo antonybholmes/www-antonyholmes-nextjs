@@ -26,7 +26,7 @@ export default function LargeHeader({
       <></>
       <nav className="h-full  items-center gap-x-1 grid grid-cols-2 2lg:grid-cols-3">
         <VCenterRow className="gap-x-4">
-          <VCenterRow className="gap-x-5">
+          <VCenterRow className="gap-x-2">
             <MenuOpenButton
               onClick={onClick}
               showMenu={showMenu}
