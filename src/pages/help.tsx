@@ -4,9 +4,8 @@ import BaseRow from "../components/base-row"
 import BlueLink from "../components/link/blue-link"
 import { ROUNDED_BUTTON_CLS } from "../components/link/rounded-button-link"
 import { SITE_NAME, UPDATED, VERSION, YEAR } from "../constants"
-import LogoIcon from "../icons/logo-icon"
+import LogoIcon from "../icons/logo-icon-small"
 import ContentLayout from "../layouts/content-layout"
-import SideLayout from "../layouts/side-layout"
 import cn from "../lib/class-names"
 import createCrumbs from "../lib/create-crumbs"
 
@@ -21,7 +20,7 @@ export default function Page() {
     >
       <></>
       <>
-        <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-6 text-sm xl:w-1/2">
+        <BaseCol className="w-full gap-y-4 rounded-xl bg-apple-gray p-5 text-sm xl:w-1/2">
           <BaseRow>
             <LogoIcon />
           </BaseRow>

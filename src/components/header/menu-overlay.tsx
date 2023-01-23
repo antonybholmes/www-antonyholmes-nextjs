@@ -162,7 +162,7 @@ export default function MenuOverlay({
         className="h-full w-72 bg-white"
         style={{ visibility: "hidden" }}
       >
-        <VCenterRow className="gap-x-2 p-3">
+        <VCenterRow className="gap-x-5 px-5 py-3">
           <MenuOpenButton showMenu={showMenu} onClick={onClick} />
           <div>
             <BaseLink href="/">

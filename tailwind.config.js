@@ -185,13 +185,18 @@ module.exports = {
         toggle: "8px",
       },
       keyframes: {
-        "header-link": {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1, width: "calc(100% - 2rem)" },
+        "header-links-show": {
+          "0%": { opacity: 0, display: "block" },
+          "100%": { opacity: 1 },
+        },
+        "header-links-hide": {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0, display: "none" },
         },
       },
       animation: {
-        "header-link": "header-link 200ms ease-in-out 200ms forwards",
+        "header-links-show": "header-links-show 300ms ease-out forwards",
+        "header-links-hide": "header-links-hide 300ms ease-out forwards",
       },
       opacity: {
         98: ".98",

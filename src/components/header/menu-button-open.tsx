@@ -232,17 +232,15 @@ export default function MenuButtonOpen({
   //   setFocus(false)
   // }
 
-  const cls = cn([headerMode === "dark", "stroke-white", "stroke-slate-900"])
-
   return (
     <BaseButton
       onClick={onClick}
       className={cn(
-        "relative flex h-10 w-10 shrink-0 grow-0 flex-row items-center justify-center trans-ani-300 transition-color rounded",
+        "relative flex shrink-0 grow-0 flex-row items-center justify-center trans-ani-300 transition-color",
         [
           headerMode === "dark",
-          "hover:bg-white/10 active:bg-white/20",
-          "hover:bg-slate-200 active:bg-slate-300",
+          "stroke-white",
+          "stroke-slate-400 hover:stroke-slate-900",
         ],
         className
       )}
@@ -267,7 +265,6 @@ export default function MenuButtonOpen({
           y1={Y1}
           x2={X2}
           y2={Y1}
-          className={cls}
           shapeRendering="crispEdges"
         />
         {/* <line ref={ref2} x1={X1} y1={Y2} x2={X2} y2={Y2} className={cls} /> */}
@@ -277,7 +274,6 @@ export default function MenuButtonOpen({
           y1={Y3}
           x2={X2}
           y2={Y3}
-          className={cls}
           shapeRendering="crispEdges"
         />
       </svg>

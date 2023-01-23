@@ -14,7 +14,11 @@ export default function SmallLogoIcon({
     <svg
       viewBox="0 0 40 40"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("group h-10 font-bold rounded", className)}
+      className={cn(
+        "group h-10 font-bold rounded border",
+        [headerMode === "dark", "border-white/20", "border-transparent"],
+        className
+      )}
       style={style}
     >
       <rect
@@ -22,7 +26,7 @@ export default function SmallLogoIcon({
         height="40"
         className={cn("trans-ani-300 transition-color ", [
           headerMode === "dark",
-          "fill-slate-600",
+          "fill-transparent",
           "fill-blue-600 text-white group-hover:fill-blue-500",
         ])}
       />

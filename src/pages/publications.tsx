@@ -496,7 +496,7 @@ export default function Page({ author, publications }: IProps) {
           onSearch={onSearch}
           placeholder="Search publications..."
           text={query}
-          className="mb-8 lg:hidden"
+          className="mb-8 md:hidden"
         />
 
         <VCenterRow className="justify-between">
