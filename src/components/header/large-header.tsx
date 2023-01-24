@@ -7,6 +7,9 @@ import HeaderLinks from "./header-links"
 import IHeaderProps from "./header-props"
 import MenuOpenButton from "./menu-button-open"
 import { IMenuOverlayProps } from "./menu-overlay"
+import useWindowResize from "../../hooks/use-window-resize"
+import { useState } from "react"
+import cn from "../../lib/class-names"
 
 interface IProps extends IHeaderProps, IMenuOverlayProps {
   scrollY: number
@@ -21,6 +24,12 @@ export default function LargeHeader({
   scrollY,
   children,
 }: IProps) {
+  const [showLinks, setShowLinks] = useState(false)
+
+  useWindowResize(({ width, height }) => {
+    setShowLinks(width > 768)
+  })
+
   return (
     <ContentDiv className="py-3">
       <></>
@@ -42,14 +51,18 @@ export default function LargeHeader({
               {/* <LogoIcon headerMode={headerMode} className="hidden 3xl:block" /> */}
             </BaseLink>
           </VCenterRow>
-          <div className="animate-header-links-hide md:animate-header-links-show">
-            <HeaderLinks
-              title={title}
-              tab={tab}
-              headerMode={headerMode}
-              scrollY={scrollY}
-            />
-          </div>
+
+          <HeaderLinks
+            title={title}
+            tab={tab}
+            headerMode={headerMode}
+            scrollY={scrollY}
+            className={cn([
+              showLinks,
+              "overlay-show opacity-100 visible",
+              "overlay-hide opacity-0 invisible",
+            ])}
+          />
         </VCenterRow>
         <div className="hidden md:block">{children && children}</div>
         {/* <div /> */}
