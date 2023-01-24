@@ -1,5 +1,5 @@
 import { gsap } from "gsap"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import IClassProps from "../../interfaces/class-props"
 import cn from "../../lib/class-names"
 import BaseButton from "../link/base-button"
