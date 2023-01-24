@@ -19,7 +19,6 @@
   "dependencies": {
     "@fontsource/plus-jakarta-sans": "^4.5.11",
     "date-fns": "^2.29.3",
-    "fs-extra": "^11.1.0",
     "gsap": "^3.11.4",
     "lodash": "^4.17.21",
     "next": "latest",
@@ -36,6 +35,7 @@
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
     "feed": "^4.2.2",
+    "fs-extra": "^11.1.0",
     "gray-matter": "^4.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
