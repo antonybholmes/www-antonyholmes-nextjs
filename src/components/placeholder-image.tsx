@@ -73,7 +73,7 @@ export default memo(function PlaceholderImage({
           height={size[1]}
           className={cn(
             "w-full trans-ani-700 transition-placeholder",
-            [isLoaded, "blur-none opacity-100", "blur-lg opacity-75"],
+            [isLoaded, "blur-none opacity-100", "blur-lg opacity-90"],
             className,
             imgClassName
           )}
