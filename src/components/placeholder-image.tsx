@@ -83,7 +83,7 @@ export default memo(function PlaceholderImage({
           width={size[0]}
           height={size[1]}
           className={cn(
-            "w-full h-full absolute trans-ani-700 transition-placeholder",
+            "w-full h-full absolute trans-ani-700 transition-placeholder object-cover",
             className,
             imgClassName
           )}
@@ -103,7 +103,7 @@ export default memo(function PlaceholderImage({
         loading={loading}
         decoding={decoding}
         alt={alt}
-        className={cn("absolute w-full h-full z-1", [
+        className={cn("absolute w-full h-full z-1 object-cover", [
           isLoaded,
           "opacity-0 invisible placeholder-hide",
           "opacity-100",

@@ -1,6 +1,5 @@
 import IImageSizeProps from "../../interfaces/image-size-props"
 import IPostProps from "../../interfaces/post-props"
-import cn from "../../lib/class-names"
 import PlaceholderImage, { IPlaceholderProps } from "../placeholder-image"
 
 interface IProps extends IPostProps, IImageSizeProps, IPlaceholderProps {}
@@ -21,7 +20,7 @@ const BasePostImage = ({
     loading={loading}
     className={className}
     containerClassName={containerClassName}
-    imgClassName={cn("object-cover", imgClassName)}
+    imgClassName={imgClassName}
   >
     {children}
   </PlaceholderImage>
