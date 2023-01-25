@@ -168,3 +168,11 @@ td {
 .overlay-hide {
   transition: opacity 300ms ease-out, visibility 0s ease-out 300ms;
 }
+
+.placeholder-show {
+  transition: opacity 300ms ease-out, visibility 0s ease-out;
+}
+
+.placeholder-hide {
+  transition: opacity 700ms ease-out, visibility 0s ease-out 700ms;
+}

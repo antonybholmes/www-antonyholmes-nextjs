@@ -27,11 +27,17 @@ files
 
       if (!fs.existsSync(out)) {
         console.log(out)
-        sharp(f)
-          .resize((width = size))
-          .toFile(out)
+        sharp(f).resize({ width: size }).toFile(out)
       }
     })
+
+    // placeholder
+    const out = `${dir}/opt/${name.replace(maxSize, `placeholder`)}.webp`
+
+    if (!fs.existsSync(out)) {
+      console.log(out)
+      sharp(f).resize({ width: 32 }).blur(4).toFile(out)
+    }
   })
 
 maxSize = "2048x1024"
@@ -67,4 +73,12 @@ files
           .toFile(out)
       }
     })
+
+    // placeholder
+    const out = `${dir}/opt/${name.replace(maxSize, `placeholder`)}.webp`
+
+    if (!fs.existsSync(out)) {
+      console.log(out)
+      sharp(f).resize({ width: 32 }).blur(4).toFile(out)
+    }
   })

@@ -42,6 +42,15 @@ export function getSrc(
   return `${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`
 }
 
+export function getPlaceholderSrc(
+  src: string,
+  name: string,
+  dir: string,
+  ext: string
+): string {
+  return `${dir}/opt/${name}-placeholder.${ext}`
+}
+
 export default memo(function BaseImage({
   src,
   alt,

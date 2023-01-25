@@ -4,7 +4,13 @@ import IChildrenProps from "../interfaces/children-props"
 import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
 import { parse } from "../lib/path"
-import { getSizes, getSizeStr, getSrc, getSrcSet } from "./base-image"
+import {
+  getPlaceholderSrc,
+  getSizes,
+  getSizeStr,
+  getSrc,
+  getSrcSet,
+} from "./base-image"
 
 export interface IPlaceholderProps extends IChildrenProps {
   containerClassName?: string
@@ -32,6 +38,11 @@ export default memo(function PlaceholderImage({
 
   const currentSrc = useMemo(
     () => getSrc(src, p.name, p.dir, p.ext, size),
+    [src]
+  )
+
+  const placeholderSrc = useMemo(
+    () => getPlaceholderSrc(src, p.name, p.dir, p.ext),
     [src]
   )
 
@@ -66,17 +77,12 @@ export default memo(function PlaceholderImage({
     >
       <picture>
         <img
-          src={isLoaded ? currentSrc : BLANK_PNG}
-          srcSet={isLoaded ? currentSrcSet : undefined}
+          src={currentSrc}
+          srcSet={currentSrcSet}
           sizes={currentSizeStr}
           width={size[0]}
           height={size[1]}
-          className={cn(
-            "w-full trans-ani-700 transition-placeholder",
-            [isLoaded, "blur-none", "blur-lg"],
-            className,
-            imgClassName
-          )}
+          className={cn("w-full h-full absolute", className, imgClassName)}
           style={style}
           loading={loading}
           decoding={decoding}
@@ -85,6 +91,20 @@ export default memo(function PlaceholderImage({
       </picture>
 
       {children && children}
+
+      <img
+        src={placeholderSrc}
+        width={size[0]}
+        height={size[1]}
+        loading={loading}
+        decoding={decoding}
+        alt={alt}
+        className={cn("absolute w-full h-full z-1", [
+          isLoaded,
+          "opacity-0 invisible placeholder-hide",
+          "opacity-100",
+        ])}
+      />
     </figure>
   )
 })
