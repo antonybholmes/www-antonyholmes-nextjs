@@ -24,7 +24,7 @@ interface IProps extends IChildrenProps {
   pageBreak?: number
 }
 
-function Publications({
+export default function Publications({
   publications,
   showAbstract,
   showCount,
@@ -78,5 +78,3 @@ function Publications({
     </>
   )
 }
-
-export default Publications
