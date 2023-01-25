@@ -61,7 +61,7 @@ export default memo(function PlaceholderImage({
   }, [src])
 
   return (
-    <div
+    <figure
       className={cn("relative overflow-hidden", className, containerClassName)}
     >
       <picture>
@@ -85,6 +85,6 @@ export default memo(function PlaceholderImage({
       </picture>
 
       {children && children}
-    </div>
+    </figure>
   )
 })

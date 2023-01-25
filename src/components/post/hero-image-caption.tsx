@@ -3,7 +3,7 @@ import IPostProps from "../../interfaces/post-props"
 
 export default function HeroImageCaption({ post, className }: IPostProps) {
   return (
-    <div
+    <figcaption
       className={cn(
         "absolute bottom-0 w-full py-3 text-center text-xs text-white",
         className
@@ -11,6 +11,6 @@ export default function HeroImageCaption({ post, className }: IPostProps) {
       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
     >
       {post.frontmatter.heroCaption}
-    </div>
+    </figcaption>
   )
 }
