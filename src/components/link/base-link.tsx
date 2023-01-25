@@ -9,7 +9,7 @@ interface IProps extends ILinkProps, IMouseProps, IFocusProps {
   underline?: boolean
 }
 
-const BaseLink = ({
+export default function BaseLink({
   href,
   target = "_blank",
   ariaLabel,
@@ -23,7 +23,7 @@ const BaseLink = ({
   onFocus,
   onBlur,
   children,
-}: IProps) => {
+}: IProps) {
   if (!ariaLabel) {
     ariaLabel = `Click to visit ${href}`
   }
@@ -69,5 +69,3 @@ const BaseLink = ({
     )
   }
 }
-
-export default BaseLink

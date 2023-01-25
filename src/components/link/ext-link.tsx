@@ -8,7 +8,7 @@ interface IProps extends ILinkProps, IMouseProps, IFocusProps {
   underline?: boolean
 }
 
-const ExtLink = ({
+export default function ExtLink({
   href,
   ariaLabel,
   target = "_blank",
@@ -22,7 +22,7 @@ const ExtLink = ({
   onBlur,
   className,
   children,
-}: IProps) => {
+}: IProps) {
   if (children === undefined || children === null) {
     children = <>{href}</>
   }
@@ -45,5 +45,3 @@ const ExtLink = ({
     </a>
   )
 }
-
-export default ExtLink
