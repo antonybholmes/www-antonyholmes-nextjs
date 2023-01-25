@@ -82,7 +82,11 @@ export default memo(function PlaceholderImage({
           sizes={currentSizeStr}
           width={size[0]}
           height={size[1]}
-          className={cn("w-full h-full absolute", className, imgClassName)}
+          className={cn(
+            "w-full h-full absolute trans-ani-700 transition-placeholder",
+            className,
+            imgClassName
+          )}
           style={style}
           loading={loading}
           decoding={decoding}

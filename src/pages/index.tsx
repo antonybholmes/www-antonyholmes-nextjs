@@ -37,7 +37,7 @@ export default function Page({ author, posts }) {
               href={getAuthorBaseUrl("Antony Holmes")}
               ariaLabel="View profile"
             >
-              <AvatarImageLarge author={author} className="w-64 max-w-64" />
+              <AvatarImageLarge author={author} className="w-64 h-64" />
             </BaseLink>
 
             {/*<VCenterRow className="justify-center text-sm font-semibold">
