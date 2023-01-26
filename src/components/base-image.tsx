@@ -24,7 +24,7 @@ export function getSrcSet(
   src: string,
   name: string,
   dir: string,
-  ext: string,
+  ext: string = "avif",
   sizes: [number, number][]
 ): string {
   return sizes
@@ -36,7 +36,7 @@ export function getSrc(
   src: string,
   name: string,
   dir: string,
-  ext: string,
+  ext: string = "avif",
   size: [number, number]
 ): string {
   return `${dir}/opt/${name}-${size[0]}x${size[1]}.${ext}`
@@ -46,7 +46,7 @@ export function getPlaceholderSrc(
   src: string,
   name: string,
   dir: string,
-  ext: string
+  ext: string = "avif"
 ): string {
   return `${dir}/opt/${name}-placeholder.${ext}`
 }

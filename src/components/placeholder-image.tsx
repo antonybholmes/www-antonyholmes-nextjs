@@ -1,5 +1,4 @@
 import { memo, useEffect, useMemo, useState } from "react"
-import { BLANK_PNG } from "../constants"
 import IChildrenProps from "../interfaces/children-props"
 import IImageProps from "../interfaces/image-props"
 import cn from "../lib/class-names"
