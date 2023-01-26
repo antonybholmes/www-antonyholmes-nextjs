@@ -5,55 +5,54 @@ import { getAuthorBaseUrl } from "../../lib/urls"
 import AvatarImage from "./avatar-image"
 import BaseLink from "../link/base-link"
 import VCenterRow from "../v-center-row"
+import CondComp from "../component"
 
 interface IProps extends IClassProps {
-  authors: IPostAuthor[]
+  people: IPostAuthor[]
   showImages?: boolean
 }
 
 export default function CompactAvatars({
-  authors,
+  people,
   showImages = true,
   className,
 }: IProps) {
   return (
     <VCenterRow className="gap-x-3">
-      {showImages ? (
+      <CondComp cond={showImages}>
         <ul
           className={cn("relative h-12", className)}
-          style={{ width: `${3 + (authors.length - 1) * 0.5}rem` }}
+          style={{ width: `${3 + (people.length - 1) * 0.5}rem` }}
         >
-          {authors.map((author, index) => (
+          {people.map((person, index) => (
             <li key={index}>
               <BaseLink
-                href={getAuthorBaseUrl(author.frontmatter.name)}
-                ariaLabel={`Click to read more about ${author.frontmatter.name}`}
+                href={getAuthorBaseUrl(person.frontmatter.name)}
+                ariaLabel={`Click to read more about ${person.frontmatter.name}`}
                 className={cn(
                   "absolute block rounded-full border border-white",
                   `ml-${index * 2}`
                 )}
               >
-                <AvatarImage author={author} className="h-12 w-12" />
+                <AvatarImage person={person} className="h-12 w-12" />
               </BaseLink>
             </li>
           ))}
         </ul>
-      ) : (
-        <></>
-      )}
+      </CondComp>
 
       <ul className="flex flex-row flex-wrap items-center gap-x-1 text-sm font-semibold">
-        {authors.map((author, index) => (
+        {people.map((person, index) => (
           <li key={index}>
             <BaseLink
-              href={getAuthorBaseUrl(author.frontmatter.name)}
-              ariaLabel={`Click to read more about ${author}`}
+              href={getAuthorBaseUrl(person.frontmatter.name)}
+              ariaLabel={`Click to read more about ${person}`}
               underline={true}
             >
-              {author.frontmatter.name}
+              {person.frontmatter.name}
             </BaseLink>
-            {index < authors.length - 2 ? <span>,</span> : <></>}
-            {index === authors.length - 2 ? (
+            {index < people.length - 2 ? <span>,</span> : <></>}
+            {index === people.length - 2 ? (
               <span className="ml-1">&</span>
             ) : (
               <></>

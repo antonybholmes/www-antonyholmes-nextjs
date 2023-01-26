@@ -26,7 +26,7 @@ import { getPageCount, getPageItems } from "../lib/paginate"
 import { getUrlFriendlyTag } from "../lib/tags"
 import { getAuthorBaseUrl } from "../lib/urls"
 
-export default function Page({ author, posts }) {
+export default function Page({ person, posts }) {
   return (
     <BaseLayout title="Home">
       <ContentDiv className="px-8 py-24">
@@ -37,7 +37,7 @@ export default function Page({ author, posts }) {
               href={getAuthorBaseUrl("Antony Holmes")}
               ariaLabel="View profile"
             >
-              <AvatarImageLarge author={author} className="w-64 h-64" />
+              <AvatarImageLarge person={person} className="w-64 h-64" />
             </BaseLink>
 
             {/*<VCenterRow className="justify-center text-sm font-semibold">
@@ -147,11 +147,11 @@ export async function getStaticProps() {
     authorMap
   )
 
-  const author = authorMap[getUrlFriendlyTag("Antony Holmes")]
+  const person = authorMap[getUrlFriendlyTag("Antony Holmes")]
 
   return {
     props: {
-      author,
+      person,
       posts,
     },
   }

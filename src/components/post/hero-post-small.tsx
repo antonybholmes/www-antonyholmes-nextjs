@@ -41,7 +41,7 @@ export default function HeroPostSmall({
 
         <BaseCol className="xl:gap-y-1">
           <CondComp cond={showAvatar}>
-            <CompactAvatars authors={post.authors} showImages={false} />
+            <CompactAvatars people={post.authors} showImages={false} />
           </CondComp>
           <DateFormatter date={post.fields.date} />
         </BaseCol>

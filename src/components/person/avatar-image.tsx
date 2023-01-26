@@ -7,13 +7,13 @@ import { getUrlFriendlyTag } from "../../lib/tags"
 import PlaceholderImage from "../placeholder-image"
 
 export interface IAvatarProps extends IClassProps, IPlaceholderProps {
-  author: IPostAuthor
+  person: IPostAuthor
 }
 
 interface IProps extends IAvatarProps, IImageSizeProps {}
 
 export default function AvatarImage({
-  author,
+  person,
   size = [160, 160],
   loading = "lazy",
   className,
@@ -23,9 +23,9 @@ export default function AvatarImage({
   return (
     <PlaceholderImage
       src={`/assets/images/people/${getUrlFriendlyTag(
-        author.frontmatter.name
+        person.frontmatter.name
       )}.webp`}
-      alt={`Picture of ${author.frontmatter.name}`}
+      alt={`Picture of ${person.frontmatter.name}`}
       size={size}
       loading={loading}
       className={cn("rounded-full", className)}

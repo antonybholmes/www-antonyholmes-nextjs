@@ -8,41 +8,43 @@ import BaseLink from "../link/base-link"
 import VCenterRow from "../v-center-row"
 
 interface IProps extends IClassProps {
-  author: IPostAuthor
+  person: IPostAuthor
   showTitle?: boolean
   isSmall?: boolean
 }
 
 export default function Avatar({
-  author,
+  person,
   showTitle = false,
   isSmall = false,
   className,
 }: IProps) {
-  const href = getAuthorBaseUrl(author.frontmatter.name)
+  const href = getAuthorBaseUrl(person.frontmatter.name)
 
   return (
     <VCenterRow className={cn("gap-x-3", className)}>
       <BaseLink
         href={href}
-        ariaLabel={`Click to read more about ${author.frontmatter.name}`}
-        className={cn("block", [isSmall, "h-10 w-10", "h-12 w-12"])}
+        ariaLabel={`Click to read more about ${person.frontmatter.name}`}
       >
-        <AvatarImage author={author} />
+        <AvatarImage
+          person={person}
+          className={cn([isSmall, "h-10 w-10", "h-12 w-12"])}
+        />
       </BaseLink>
       <BaseCol>
         <BaseLink
           href={href}
-          ariaLabel={`Click to read more information about ${author.frontmatter.name}`}
+          ariaLabel={`Click to read more information about ${person.frontmatter.name}`}
           underline={true}
           className={cn("font-bold", [isSmall, "text-sm"])}
         >
-          {author.frontmatter.name}
+          {person.frontmatter.name}
         </BaseLink>
 
         {showTitle && (
           <div className="text-sm font-light text-slate-500">
-            {author.frontmatter.title.split(",")[0].trim()}
+            {person.frontmatter.title.split(",")[0].trim()}
           </div>
         )}
       </BaseCol>

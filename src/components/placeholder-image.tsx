@@ -73,8 +73,26 @@ export default memo(function PlaceholderImage({
 
   return (
     <figure
-      className={cn("relative overflow-hidden", className, containerClassName)}
+      className={cn(
+        "relative overflow-hidden z-20",
+        className,
+        containerClassName
+      )}
     >
+      <img
+        src={placeholderSrc}
+        width={size[0]}
+        height={size[1]}
+        loading={loading}
+        decoding={decoding}
+        alt={alt}
+        className={cn("absolute w-full h-full z-10 object-cover", [
+          isLoaded,
+          "opacity-0 invisible placeholder-hide",
+          "opacity-100",
+        ])}
+      />
+
       <picture>
         <img
           src={currentSrc}
@@ -83,7 +101,7 @@ export default memo(function PlaceholderImage({
           width={size[0]}
           height={size[1]}
           className={cn(
-            "w-full h-full absolute trans-ani-700 transition-placeholder object-cover",
+            "w-full h-full absolute trans-ani-700 transition-placeholder object-cover z-0",
             className,
             imgClassName
           )}
@@ -95,20 +113,6 @@ export default memo(function PlaceholderImage({
       </picture>
 
       {children && children}
-
-      <img
-        src={placeholderSrc}
-        width={size[0]}
-        height={size[1]}
-        loading={loading}
-        decoding={decoding}
-        alt={alt}
-        className={cn("absolute w-full h-full z-1 object-cover", [
-          isLoaded,
-          "opacity-0 invisible placeholder-hide",
-          "opacity-100",
-        ])}
-      />
     </figure>
   )
 })

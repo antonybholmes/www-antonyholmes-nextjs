@@ -17,7 +17,7 @@ const PostDetailsHoz = ({ post, stats, className }: IProps) => (
     )}
   >
     <VCenterRow className="justify-between">
-      <Avatars authors={post.authors} />
+      <Avatars people={post.authors} />
 
       <VCenterRow className="hidden gap-2 gap-x-3 border-l border-slate-300 py-1 pl-4 text-sm text-slate-500 md:flex md:pl-6">
         <DateFormatter date={post.fields.date} />

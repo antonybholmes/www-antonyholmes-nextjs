@@ -21,16 +21,16 @@ import createCrumbs from "../../lib/create-crumbs"
 import { getPageCount, getPageItems } from "../../lib/paginate"
 
 interface IProps {
-  author: IAuthor
+  person: IAuthor
   posts: IPost[]
   page: number
   pages: number
 }
 
-export default function Page({ author, posts, page, pages }: IProps) {
+export default function Page({ person, posts, page, pages }: IProps) {
   return (
     <ContentLayout
-      title={author.frontmatter.name}
+      title={person.frontmatter.name}
       crumbs={createCrumbs(useRouter().asPath)}
     >
       <></>
@@ -39,19 +39,19 @@ export default function Page({ author, posts, page, pages }: IProps) {
           <div className="w-full">
             <HCenterRow className="mb-8 lg:hidden">
               <div>
-                <AvatarImageLarge author={author} className="w-56" />
+                {/* <AvatarImageLarge person={person} className="w-64 h-64" /> */}
               </div>
             </HCenterRow>
             <PageTitle
-              title={author.frontmatter.name}
+              title={person.frontmatter.name}
               superTitle="Posts by"
-              subTitle={author.frontmatter.title}
+              subTitle={person.frontmatter.title}
               className="text-center lg:text-left"
             />
-            <PostBody html={author.html} className="mt-8" />
+            <PostBody html={person.html} className="mt-8" />
           </div>
           <div className="hidden lg:block ">
-            <AvatarImageLarge author={author} className="w-64" />
+            <AvatarImageLarge person={person} className="w-64 h-64" />
           </div>
         </BaseRow>
 
@@ -73,9 +73,9 @@ interface Props {
 export async function getStaticProps({ params }: Props) {
   const id = params.slug[0]
 
-  const authorMap = getAuthorMap()
+  const personMap = getAuthorMap()
 
-  const author = await addAuthorHtml(authorMap[id])
+  const person = await addAuthorHtml(personMap[id])
 
   const page =
     params.slug.length > 1
@@ -84,7 +84,7 @@ export async function getStaticProps({ params }: Props) {
 
   const allPosts = sortPosts(
     getAllPosts().filter(post =>
-      post.frontmatter.authors.includes(author.frontmatter.name)
+      post.frontmatter.authors.includes(person.frontmatter.name)
     )
   )
 
@@ -96,12 +96,12 @@ export async function getStaticProps({ params }: Props) {
   )
 
   return {
-    props: { author, posts, page, pages },
+    props: { person, posts, page, pages },
   }
 }
 
 export async function getStaticPaths() {
-  const authorMap = getAuthorMap()
+  const personMap = getAuthorMap()
 
   const posts = getAllPosts()
 
@@ -109,20 +109,20 @@ export async function getStaticPaths() {
 
   const paths = []
 
-  Object.keys(authorMap).forEach(author => {
-    const authorPosts = postMap[author]
-    const pages = getPageCount(authorPosts)
+  Object.keys(personMap).forEach(person => {
+    const personPosts = postMap[person]
+    const pages = getPageCount(personPosts)
 
     paths.push({
       params: {
-        slug: [author],
+        slug: [person],
       },
     })
 
     range(0, pages).forEach(page => {
       paths.push({
         params: {
-          slug: [author, "page", (page + 1).toString()],
+          slug: [person, "page", (page + 1).toString()],
         },
       })
     })

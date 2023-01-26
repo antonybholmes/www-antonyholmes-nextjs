@@ -17,7 +17,7 @@ export default function Page({ authors }) {
         {authors.map((author: IPostAuthor, index: number) => {
           return (
             <li key={index}>
-              <CompactAvatars authors={[author]} />
+              <CompactAvatars people={[author]} />
             </li>
           )
         })}

@@ -16,7 +16,7 @@ const PostAuthor = ({ post, showAvatar = true, className }: IProps) => (
     )}
   >
     <CondComp cond={showAvatar}>
-      <CompactAvatars authors={post.authors} />
+      <CompactAvatars people={post.authors} />
     </CondComp>
 
     <DateFormatter date={post.fields.date} />
