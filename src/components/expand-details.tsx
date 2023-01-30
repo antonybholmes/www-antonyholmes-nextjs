@@ -4,8 +4,6 @@ import { ANIMATION_DURATION_S } from "../constants"
 import IChildrenProps from "../interfaces/children-props"
 import cn from "../lib/class-names"
 
-const OPACITY_ANIMATION_S = 2 * ANIMATION_DURATION_S
-
 interface IProps extends IChildrenProps {
   isExpanded: boolean
 }

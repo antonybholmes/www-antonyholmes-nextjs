@@ -4,7 +4,7 @@ import PlaceholderImage, { IPlaceholderProps } from "../placeholder-image"
 
 interface IProps extends IPostProps, IImageSizeProps, IPlaceholderProps {}
 
-const BasePostImage = ({
+export default function BasePostImage({
   post,
   size = [1600, 800],
   loading = "lazy",
@@ -12,18 +12,18 @@ const BasePostImage = ({
   imgClassName,
   className,
   children,
-}: IProps) => (
-  <PlaceholderImage
-    src={`/assets/images/posts/${post.frontmatter.hero}.webp`}
-    alt={post.frontmatter.title}
-    size={size}
-    loading={loading}
-    className={className}
-    containerClassName={containerClassName}
-    imgClassName={imgClassName}
-  >
-    {children}
-  </PlaceholderImage>
-)
-
-export default BasePostImage
+}: IProps) {
+  return (
+    <PlaceholderImage
+      src={`/assets/images/posts/${post.frontmatter.hero}.webp`}
+      alt={post.frontmatter.title}
+      size={size}
+      loading={loading}
+      className={className}
+      containerClassName={containerClassName}
+      imgClassName={imgClassName}
+    >
+      {children}
+    </PlaceholderImage>
+  )
+}

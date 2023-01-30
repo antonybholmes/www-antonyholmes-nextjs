@@ -1,6 +1,5 @@
 import { useState } from "react"
 import IChildrenProps from "../interfaces/children-props"
-import cn from "../lib/class-names"
 import AccordionButton from "./accordion-button"
 import ExpandDetails from "./expand-details"
 
